@@ -1,0 +1,1475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pzmods</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f9f9f7; --surface:#fcfcfb; --surface2:#f1f0ec;
+  --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --line:#e1e0d9; --axis:#c3c2b7;
+  --accent:#2a78d6; --warn:#eb6834; --ok:#1baf7a; --bad:#d03b3b;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme=light]){
+    color-scheme: dark;
+    --bg:#0d0d0d; --surface:#1a1a19; --surface2:#232322;
+    --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
+    --line:#2c2c2a; --axis:#383835;
+    --accent:#3987e5; --warn:#d95926; --ok:#199e70; --bad:#e66767;
+  }
+}
+*{box-sizing:border-box}
+:root{--hdr:112px;--flt:44px}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:0;z-index:20;background:var(--surface);
+  border-bottom:1px solid var(--line);padding:10px 14px}
+h1{margin:0;font-size:15px;font-weight:600;letter-spacing:.2px}
+.sub{color:var(--muted);font-size:11.5px;margin-top:2px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.spacer{flex:1}
+button,select,input[type=text],input[type=search],input[type=number]{
+  font:inherit;color:var(--ink);background:var(--surface2);
+  border:1px solid var(--line);border-radius:6px;padding:5px 9px}
+button{cursor:pointer}
+button:hover{border-color:var(--axis)}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button.primary:hover{filter:brightness(1.08)}
+button.small{padding:3px 7px;font-size:12px}
+button.tiny{padding:1px 5px;font-size:11px;line-height:1.3}
+button:disabled{opacity:.5;cursor:default}
+nav{display:flex;gap:2px;margin-top:9px}
+nav button{background:none;border:none;border-bottom:2px solid transparent;
+  border-radius:0;padding:6px 11px;color:var(--ink2)}
+nav button.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+main{padding:14px}
+section{display:none} section.on{display:block}
+table{width:100%;border-collapse:collapse}
+th{position:sticky;top:calc(var(--hdr) + var(--flt));background:var(--bg);text-align:left;font-weight:600;
+  font-size:11.5px;color:var(--muted);padding:6px 8px;border-bottom:1px solid var(--line);
+  text-transform:uppercase;letter-spacing:.4px}
+td{padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:hover td{background:var(--surface)}
+tr.sel td{background:color-mix(in oklab,var(--accent) 12%,transparent)}
+tr.pack td{background:var(--surface2);border-bottom:none;padding-top:8px}
+tr.pack:hover td{background:var(--surface2)}
+tr.kid td:nth-child(3){padding-left:16px;border-left:2px solid var(--axis);margin-left:8px}
+tr.kid.last td{border-bottom:1px solid var(--line)}
+tr.off td{opacity:.45}
+tr.off td a{color:var(--ink2)}
+.chip.off{border-color:var(--warn);color:var(--warn)}
+.chip.off.on{background:color-mix(in oklab,var(--warn) 18%,transparent);
+  border-color:var(--warn);color:var(--warn)}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px}
+.pill{display:inline-block;padding:1px 7px;border-radius:99px;font-size:11px;
+  border:1px solid var(--line);background:var(--surface2);color:var(--ink2);white-space:nowrap}
+.pill.warn{border-color:var(--warn);color:var(--warn)}
+.pill.bad{border-color:var(--bad);color:var(--bad)}
+.pill.ok{border-color:var(--ok);color:var(--ok)}
+.pill.acc{border-color:var(--accent);color:var(--accent)}
+.pill.req{border-color:var(--accent);color:var(--accent);
+  background:color-mix(in oklab,var(--accent) 12%,transparent);cursor:help}
+/* your own writing is the only thing in this app that came from you and not from
+   a file on disk, so it gets the loudest colour and never blends into a row.
+   Green once the whole note sits below the -OK- line, red while any of it is
+   still above that line - or while there is no line at all. */
+.pill.note{border-color:var(--bad);color:var(--bad);font-weight:600;
+  background:color-mix(in oklab,var(--bad) 16%,transparent);cursor:help}
+.pill.note.ok{border-color:var(--ok);color:var(--ok);
+  background:color-mix(in oklab,var(--ok) 16%,transparent)}
+.note{--nc:var(--bad);border:1px solid transparent;border-radius:9px;padding:2px 0;margin-top:9px}
+.note.ok{--nc:var(--ok)}
+.note.has{border-color:var(--nc);padding:2px 11px 10px;
+  background:color-mix(in oklab,var(--nc) 9%,transparent)}
+.note.has label.f{color:var(--nc)}
+.note.has textarea{border-color:color-mix(in oklab,var(--nc) 40%,var(--line))}
+.note textarea{min-height:140px}
+/* min - your build - max, on the id line. Red when your build is outside it. */
+.ver{white-space:nowrap}
+.ver.bad{color:var(--bad);font-weight:600}
+.chip{display:inline-block;padding:2px 9px;margin:2px 3px 2px 0;border-radius:99px;
+  font-size:11.5px;border:1px solid var(--line);background:var(--surface2);
+  color:var(--ink2);cursor:pointer;user-select:none}
+.chip.on{border-color:var(--accent);background:color-mix(in oklab,var(--accent) 16%,transparent);
+  color:var(--ink);font-weight:600}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:9px;
+  padding:12px 14px;margin-bottom:10px}
+.card h3{margin:0 0 4px;font-size:13.5px}
+.card .hint{color:var(--muted);font-size:12px;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.tagbox{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px}
+.count{color:var(--muted);font-size:11.5px}
+aside{position:fixed;top:0;right:0;width:min(750px,95vw);height:100vh;background:var(--surface);
+  border-left:1px solid var(--line);padding:16px;overflow:auto;z-index:40;
+  transform:translateX(100%);transition:transform .16s ease}
+aside.on{transform:none}
+aside h2{margin:0 0 2px;font-size:15px}
+/* the same picture the row shows, but a poster is wide - give it the whole width */
+img.poster{display:block;width:100%;max-height:195px;object-fit:contain;
+  border-radius:8px;background:var(--surface2);margin-top:10px}
+.desc{white-space:pre-wrap;font-size:12.5px;color:var(--ink2);
+  max-height:300px;overflow:auto;background:var(--surface2);padding:9px;border-radius:7px}
+textarea{width:100%;min-height:70px;font:inherit;background:var(--surface2);color:var(--ink);
+  border:1px solid var(--line);border-radius:7px;padding:7px;resize:vertical}
+label.f{display:block;font-size:11.5px;color:var(--muted);margin:9px 0 3px;
+  text-transform:uppercase;letter-spacing:.4px}
+.cmt{border-left:2px solid var(--line);padding:3px 0 3px 9px;margin:6px 0;
+  font-size:12px;color:var(--ink2);white-space:pre-wrap}
+.bar{height:6px;border-radius:3px;background:var(--accent);display:inline-block;vertical-align:middle}
+.prog{height:3px;background:var(--surface2);border-radius:2px;overflow:hidden;margin-top:6px}
+.prog i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:30;display:none}
+.scrim.on{display:block}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:60;
+  background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:7px;font-size:12.5px;
+  opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.on{opacity:1}
+code.bm{display:block;word-break:break-all;background:var(--surface2);padding:8px;
+  border-radius:7px;font-size:10.5px;max-height:110px;overflow:auto}
+.banner{border-radius:9px;padding:10px 13px;margin-bottom:10px;font-size:12.5px;
+  border:1px solid var(--warn);background:color-mix(in oklab,var(--warn) 10%,transparent)}
+.banner.acc{border-color:var(--accent);background:color-mix(in oklab,var(--accent) 10%,transparent)}
+.ord{display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px dashed var(--line)}
+.ord:last-child{border-bottom:none}
+.num{width:20px;color:var(--muted);font-size:11px;text-align:right}
+.filters{position:sticky;top:var(--hdr);z-index:15;background:var(--bg);
+  padding:8px 0;border-bottom:1px solid var(--line)}
+.srch{position:relative;display:inline-block}
+.srch input{min-width:280px;padding-right:26px}
+.srch input::-webkit-search-cancel-button{display:none}
+.srch button{position:absolute;right:3px;top:50%;transform:translateY(-50%);
+  border:none;background:none;color:var(--muted);font-size:16px;line-height:1;
+  padding:0 5px;border-radius:50%;display:none}
+.srch button:hover{color:var(--ink);background:var(--surface2)}
+.srch button.on{display:block}
+tr.drg{cursor:grab}
+tr.drg.dragging td{opacity:.35}
+tr.drg.over td{background:color-mix(in oklab,var(--accent) 20%,transparent)}
+a.dim{color:var(--muted);text-decoration:underline}
+a.dim:hover{color:var(--ink)}
+a.b,span.b{font-weight:700}
+/* sandbox: one card per mod, shut until you open it - 3000 option rows all at once
+   is a page nobody can read and a browser that stops answering */
+details.sbg>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px}
+details.sbg>summary::-webkit-details-marker{display:none}
+details.sbg>summary:before{content:"\25B8";color:var(--muted);font-size:11px}
+details.sbg[open]>summary:before{content:"\25BE"}
+details.sbg{padding:9px 12px}
+details.sbg[open]{border-color:color-mix(in oklab,var(--accent) 35%,var(--line))}
+table.sb{width:100%;border-collapse:collapse;margin-top:8px}
+table.sb td{padding:5px 6px;border-top:1px solid var(--line);vertical-align:top}
+table.sb td.v{width:190px}
+table.sb td.d{width:150px;text-align:right}
+table.sb input,table.sb select{width:100%;font-size:12px;padding:3px 6px}
+tr.sbrow.edited td{background:color-mix(in oklab,var(--accent) 13%,transparent)}
+tr.sbrow.absent .nm{color:var(--muted)}
+.sbname{font-size:12.5px}
+.sbdefault{cursor:pointer;text-decoration:underline dotted}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="row">
+    <h1>pzmods</h1>
+    <span class="sub" id="paths"></span>
+    <span class="spacer"></span>
+    <button class="primary small" id="btnUpdate" onclick="update(false)">Update</button>
+    <button class="small" onclick="writeCfg()">Save config file</button>
+  </div>
+  <div class="sub" id="summary"></div>
+  <div class="prog" id="prog" style="display:none"><i id="progBar"></i></div>
+  <nav>
+    <button data-tab="mods" class="on">Mods</button>
+    <button data-tab="tags">Tags</button>
+    <button data-tab="configs">Configs</button>
+    <button data-tab="sandbox">Sandbox <span id="sbDirty" class="pill warn"></span></button>
+    <button data-tab="issues">Issues <span id="issueCount" class="pill warn"></span></button>
+    <button data-tab="backups">Backups</button>
+    <button data-tab="setup">Setup</button>
+  </nav>
+</header>
+
+<main>
+  <div id="banners"></div>
+
+  <section id="mods" class="on">
+    <div class="row filters">
+      <span class="srch"><input type="search" id="q" placeholder="search name, mod id, workshop id"
+          oninput="renderMods()"><button id="qx" type="button" title="clear the search"
+          onclick="clearSearch()">&times;</button></span>
+      <select id="fTag" onchange="renderMods()"></select>
+      <select id="fStatus" onchange="renderMods()">
+        <option value="">any status</option>
+        <option value="ok">subscribed &amp; installed</option>
+        <option value="orphan">on disk, not subscribed</option>
+        <option value="missing">subscribed, not on disk</option>
+        <option value="notag">untagged</option>
+        <option value="multitag">more than one tag</option>
+        <option value="pack">workshop item with several mods</option>
+        <option value="disabled">disabled only</option>
+        <option value="required">required by another mod</option>
+        <option value="noted">has my notes</option>
+      </select>
+      <label style="font-size:12px;display:flex;align-items:center;gap:4px">
+        <input type="checkbox" id="hideOff" onchange="renderMods()"> hide disabled</label>
+      <select id="fOrder" onchange="orderChanged()" title="which config's load order to read the list in"></select>
+      <button class="small" id="btnReorder" onclick="toggleReorder()">reorder inside the tag</button>
+      <span class="spacer"></span>
+      <span class="count" id="selCount"></span>
+      <select id="bulkTag"></select>
+      <button class="small" onclick="bulk('add')">add tag</button>
+      <button class="small" onclick="bulk('remove')">remove tag</button>
+      <button class="small" onclick="bulk('clear')">clear all tags</button>
+    </div>
+    <div id="reorderHint" style="display:none;color:var(--muted);font-size:12px;padding:7px 2px 0"></div>
+    <table><thead><tr>
+      <th style="width:26px"><input type="checkbox" onchange="toggleAll(this)"></th>
+      <th id="thImg"></th>
+      <th>Mod</th><th style="width:250px">Tags</th><th style="width:130px" id="thLast">Status</th>
+    </tr></thead><tbody id="modRows"></tbody></table>
+  </section>
+
+  <section id="tags">
+    <div class="card">
+      <h3>The tag vocabulary</h3>
+      <div class="hint">Tags are defined here and nowhere else, so the list stays fixed and
+        typos cannot create new ones by accident. A mod may wear any number of tags; you put
+        them on from the Mods tab or a mod's own page. Name a tag whatever you like — it may
+        not contain <span class="mono">:</span> or <span class="mono">;</span>, may not look
+        like a config name (<span class="mono">-4- Something</span>) and may not start with
+        punctuation, which is how Mod Manager writes its own markers.
+        <b>-- Disabled</b> is built in: put a mod on it to keep the mod installed and filed
+        but leave it out of every config, and out of the dependency checks.</div>
+      <div class="row"><input type="text" id="newTag" placeholder="Sound" style="min-width:220px">
+        <button class="small" onclick="addTag()">Add tag</button></div>
+    </div>
+    <div class="card">
+      <div class="hint">The order here is the order the tag lines appear in the config file.
+        Each config picks its own order for the tags it uses, on the Configs tab; this one is
+        only the fallback the Mods tab reads by when no config is chosen.</div>
+      <div id="tagList"></div>
+    </div>
+  </section>
+
+  <section id="configs">
+    <div class="card">
+      <h3>Configs are synthetic tags</h3>
+      <div class="hint">You never list mods in a config by hand. You name an ordered list of
+        tags, and pzmods unions them in that order — first tag first, each later tag adding
+        only what is not already there. That is what fixes load order and kills duplicates.
+        A mod wearing several of these tags enters at the first one and is never moved again,
+        so the whole line is decided by two things: the tag order below, and the order of the
+        mods inside each tag — which you set on the Mods tab, filtered to that tag, with
+        <b>reorder inside the tag</b>.</div>
+      <div class="row"><input type="text" id="newConfig" placeholder="-4- New config" style="min-width:220px">
+        <button class="small" onclick="addConfig()">Add config</button>
+        <span class="spacer"></span>
+        <button class="small" onclick="previewCfg()">Preview the file that will be written</button></div>
+    </div>
+    <div id="configList"></div>
+  </section>
+
+  <section id="issues"><div id="issueList"></div></section>
+
+  <section id="backups">
+    <div class="card">
+      <h3>Backups</h3>
+      <div class="hint">One is taken automatically before every write. The most recent 40 are kept.
+        Restoring re-reads the tags and configs out of the restored file.</div>
+      <div id="backupList"></div>
+    </div>
+  </section>
+
+  <section id="sandbox">
+    <div class="row filters">
+      <select id="sbTarget" onchange="sbLoad()"></select>
+      <span class="srch"><input type="search" id="sbQ" placeholder="search option name, label or page"
+          oninput="sbRender()"><button id="sbQx" type="button" title="clear the search"
+          onclick="$('sbQ').value='';sbRender()">&times;</button></span>
+      <select id="sbFilter" onchange="sbRender()">
+        <option value="">every option</option>
+        <option value="infile">already written in this file</option>
+        <option value="absent">not in this file yet</option>
+        <option value="nondefault">not the mod's default</option>
+        <option value="edited">edited, not yet saved</option>
+      </select>
+      <label style="font-size:12px;display:flex;align-items:center;gap:4px">
+        <input type="checkbox" id="sbOnlyMods" checked onchange="sbRender()"> from a mod only</label>
+      <span class="spacer"></span>
+      <span class="count" id="sbCount"></span>
+      <button class="small" onclick="sbRevert()">Undo edits</button>
+      <button class="primary small" onclick="sbSave()">Write to file</button>
+    </div>
+    <div id="sbBody"><div class="card count">loading…</div></div>
+  </section>
+
+  <section id="setup"><div id="setupBody"></div></section>
+</main>
+
+<div class="scrim" id="scrim" onclick="closeDrawer()"></div>
+<aside id="drawer"></aside>
+<div class="toast" id="toast"></div>
+
+<script>
+let S=null, sel=new Set(), tab="mods", poll=null, reorderOn=false;
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const q1=s=>String(s).replace(/\\/g,"\\\\").replace(/'/g,"\\'");
+/* every id in the app is a link: a workshop id opens its Steam page, a mod id or
+   a mod name jumps to the Mods tab already filtered down to it. */
+function wsLink(id,label,cls){
+  if(!id||id==="local") return esc(label||id||"");
+  return `<a class="mono ${cls||""}" style="white-space:nowrap" target="_blank" rel="noopener"
+    title="open on Steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=${esc(id)}"
+    >${esc(label||id)}</a>`;
+}
+let ROWIDS=new Set();
+function modLink(id,label,cls){
+  if(!id) return "";
+  // an id nothing on disk declares and nothing in the config names has no row to
+  // jump to, so it stays plain text rather than a link that goes nowhere
+  if(!ROWIDS.has(id)) return `<span class="${cls||""}"
+    title="not installed, and not named anywhere in your config file">${esc(label||id)}</span>`;
+  return `<a href="#" class="${cls||""}" title="find it on the Mods tab"
+    onclick="goMod('${q1(id)}');return false">${esc(label||id)}</a>`;
+}
+function searchLink(text){
+  if(!text) return "";
+  return `<a href="#" title="search the Mods tab for this"
+    onclick="goSearch('${q1(text)}');return false">${esc(text)}</a>`;
+}
+function goSearch(t){
+  toMods();
+  $("fTag").value=""; $("fStatus").value=""; $("hideOff").checked=false;
+  $("q").value=t; renderMods();
+}
+function tagLink(t){
+  return `<a href="#" title="show the mods on this tag"
+    onclick="goTag('${q1(t)}');return false">${esc(t)}</a>`;
+}
+function toMods(){
+  document.querySelector('nav button[data-tab=mods]').click();
+  window.scrollTo(0,0);
+}
+function goMod(id){
+  toMods();
+  $("fTag").value=""; $("fStatus").value=""; $("hideOff").checked=false;
+  $("q").value=id; renderMods();
+}
+function goTag(t){
+  toMods();
+  $("q").value=""; $("fStatus").value=""; $("hideOff").checked=false;
+  $("fTag").value=t; renderMods();
+}
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("on");setTimeout(()=>t.classList.remove("on"),2400);}
+
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
+  tab=b.dataset.tab;
+  document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x===b));
+  document.querySelectorAll("main section").forEach(s=>s.classList.toggle("on",s.id===tab));
+  if(tab==="sandbox" && !SB.loaded) sbInit();
+  measureBars();
+});
+
+async function api(path,body){
+  const o=body?{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)}:{};
+  const r=await fetch(path,o);
+  const j=await r.json().catch(()=>({error:"bad response"}));
+  if(!r.ok||j.error) throw new Error(j.error||("HTTP "+r.status));
+  return j;
+}
+/* every mutating call hands back the whole new state, so nothing can drift */
+async function act(path,body){ const r=await api(path,body); if(r.state){S=r.state; renderAll();} return r; }
+
+/* ---------- model ---------- */
+function imgSize(){ return (S.settings&&S.settings.modImageSize)||40; }
+/* a note counts as written only when it says something - an entry left behind by
+   a save-then-clear must not keep the badge alive */
+function noteText(modId){ return ((S.notes[modId]||{}).text||"").trim(); }
+/* A note is a queue, not a paragraph: what stands above the -OK- line is still
+   waiting for you, what stands below it you have already read and accepted.
+   So a note is green only when nothing is left above the first such line. */
+const OK_LINE=/^[ \t]*-OK-[ \t]*$/i;
+function noteMode(modId){
+  const t=noteText(modId); if(!t) return "";
+  const lines=t.split(/\r?\n/), i=lines.findIndex(l=>OK_LINE.test(l));
+  return (i>=0 && lines.slice(0,i).every(l=>!l.trim())) ? "ok" : "todo";
+}
+function when(ts){
+  if(!ts) return "an unknown date";
+  return new Date(ts*1000).toISOString().slice(0,16).replace("T"," ");
+}
+function syncIsStale(){
+  return (S.subs||[]).length>0 && (S.subsFetched||0) < (S.acfMtime||0);
+}
+
+function buildPacks(){
+  const wsTitle={};
+  for(const [ws,d] of Object.entries(S.steam)) wsTitle[ws]=d.title||"";
+  for(const s of S.subs) if(!wsTitle[s.id]) wsTitle[s.id]=s.title||"";
+  const live=S.subs.length>0; S.subsLive=live;
+  const subs=new Set(live?S.subs.map(s=>s.id)
+                         :Object.keys(S.acf||{}).filter(k=>S.acf[k].subscribed));
+  const mt=S.modTags||{};
+  const OFF=new Set((S.tags||{})[S.disabledTag]||[]);
+  const REQ=S.requiredBy||{};
+  const packs=[], known=new Set();
+
+  for(const [ws,d] of Object.entries(S.disk)){
+    const mods=d.mods.map(m=>{ known.add(m.modId); return {
+      modId:m.modId, name:m.name||m.modId, folder:m.folder||"",
+      image:m.image?{local:false,path:m.image}:null,
+      versionFolders:m.versionFolders||[],
+      require:m.require||[], loadAfter:m.loadAfter||[], versionMin:m.versionMin||"",
+      versionMax:m.versionMax||"", versionFit:m.versionFit||"",
+      incompatible:m.incompatible||[], modIds:m.modIds||[m.modId], path:m.path||"",
+      activeFolder:m.activeFolder||"", tags:mt[m.modId]||[], off:OFF.has(m.modId),
+      neededBy:REQ[m.modId]||[], ws}; });
+    packs.push({ws, kind:"workshop", title:wsTitle[ws]||"", mods,
+      subscribed:subs.has(ws), onDisk:true,
+      image:(mods.find(m=>m.image)||{}).image||null});
+  }
+  for(const m of S.localMods){
+    known.add(m.modId);
+    packs.push({ws:"local:"+m.folder, kind:"local", title:m.folder, subscribed:true, onDisk:true,
+      image:m.localImage?{local:true,path:m.localImage}:null,
+      mods:[{modId:m.modId,name:m.name||m.modId,folder:m.folder,
+             image:m.localImage?{local:true,path:m.localImage}:null,
+             versionFolders:m.versionFolders||[],
+             require:m.require||[],loadAfter:m.loadAfter||[],versionMin:m.versionMin||"",
+             versionMax:m.versionMax||"",versionFit:m.versionFit||"",
+             incompatible:m.incompatible||[],modIds:m.modIds||[m.modId],path:m.path||"",
+             activeFolder:m.activeFolder||"",
+             tags:mt[m.modId]||[],off:OFF.has(m.modId),
+             neededBy:REQ[m.modId]||[],ws:"local"}]});
+  }
+  // Every id named anywhere in the config file gets a row, tagged or merely carried
+  // in a config, so a link from the Issues tab always lands on something. A mod you
+  // have written a note about gets one too, even after it is gone from disk and out
+  // of every tag: the note is kept for the day you subscribe again, and a note you
+  // cannot reach is the same as a note that was thrown away.
+  const named=new Set(Object.keys(mt));
+  for(const c of Object.values(S.configs||{})) (c.extras||[]).forEach(m=>named.add(m));
+  for(const id of Object.keys(S.notes||{})) if(noteText(id)) named.add(id);
+  const ghosts=[];
+  for(const id of named) if(!known.has(id))
+    ghosts.push({modId:id,name:id,image:null,tags:mt[id]||[],ws:null,missing:true,off:OFF.has(id),
+                 neededBy:REQ[id]||[],
+                 require:[],loadAfter:[],incompatible:[],modIds:[id],versionFolders:[],
+                 versionMin:"",versionMax:"",versionFit:""});
+  for(const [id,st] of Object.entries(subsNotOnDisk(subs)))
+    ghosts.push({modId:"("+id+")",name:st||id,image:null,tags:[],ws:id,notDownloaded:true,
+                 off:false,neededBy:[],require:[],loadAfter:[],incompatible:[],modIds:[],
+                 versionFolders:[],versionMin:"",versionMax:"",versionFit:""});
+  if(ghosts.length) packs.push({ws:null,kind:"ghost",title:"Named but not present on disk",
+                                mods:ghosts,subscribed:false,onDisk:false,image:null});
+  // Reading the list top to bottom is meant to be reading your load order, and a
+  // load order belongs to a config, not to the collection: each config puts the
+  // tags in its own sequence. So the list follows whichever config is chosen in
+  // the order box, exactly as that line will be written. With no config chosen
+  // there is only the tag order from the Tags tab to go by. Either way, inside a
+  // tag the tag's own order decides, untagged mods fall to the end, and a workshop
+  // item takes the key of its earliest mod so its mods stay together under it.
+  const TI={}; S.tagOrder.forEach((t,i)=>TI[t]=i);
+  const LAST=S.tagOrder.length+1;
+  const tagKey=m=>{
+    let best=[LAST,0];
+    for(const t of m.tags||[]){
+      const i=TI[t]; if(i===undefined) continue;
+      const pos=(S.tags[t]||[]).indexOf(m.modId);
+      if(i<best[0]) best=[i,pos<0?1e9:pos];
+    }
+    return best;
+  };
+  const co=(S.configOrder||{})[$("fOrder").value];
+  let keyOf=tagKey;
+  if(co){
+    const CI={}; co.forEach((m,i)=>CI[m]=i);
+    keyOf=m=>{
+      const i=CI[m.modId];
+      if(i!==undefined) return [i,0];
+      const k=tagKey(m);                    // not in this config at all: after it
+      return [co.length+1+k[0],k[1]];
+    };
+  }
+  for(const p of packs){
+    for(const m of p.mods) m.sk=keyOf(m);
+    p.mods.sort((a,b)=>a.sk[0]-b.sk[0]||a.sk[1]-b.sk[1]||
+      a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
+    // the earliest of its own mods - no sentinel to seed this with, because how big
+    // a key can get depends on which config is being read
+    p.sk=p.mods.length ? p.mods.map(m=>m.sk).reduce(
+           (a,b)=>(b[0]<a[0]||(b[0]===a[0]&&b[1]<a[1]))?b:a) : [Infinity,Infinity];
+  }
+  packs.sort((a,b)=>{
+    if(a.kind==="ghost") return 1; if(b.kind==="ghost") return -1;
+    if(a.sk[0]!==b.sk[0]) return a.sk[0]-b.sk[0];
+    if(a.sk[1]!==b.sk[1]) return a.sk[1]-b.sk[1];
+    const an=(a.title||a.mods[0]&&a.mods[0].name||"").toLowerCase();
+    const bn=(b.title||b.mods[0]&&b.mods[0].name||"").toLowerCase();
+    return an.localeCompare(bn);
+  });
+  return packs;
+}
+function subsNotOnDisk(subs){
+  const out={}; const wsTitle={};
+  for(const s of S.subs) wsTitle[s.id]=s.title||"";
+  for(const id of subs) if(!S.disk[id]) out[id]=wsTitle[id]||(S.steam[id]||{}).title||"";
+  return out;
+}
+
+function imgSrc(im){
+  return (im.local?"/img?local=":"/img?p=")+encodeURIComponent(im.path);
+}
+function imgTag(im,px){
+  if(!im) return `<div style="width:${px}px;height:${px}px;border-radius:5px;background:var(--surface2)"></div>`;
+  const src = imgSrc(im);
+  return `<img src="${src}" loading="lazy" width="${px}" height="${px}"
+     style="width:${px}px;height:${px}px;object-fit:cover;border-radius:5px;background:var(--surface2)"
+     onerror="this.style.visibility='hidden'">`;
+}
+function packStatus(p){
+  if(p.kind==="local") return ["local mod","ok"];
+  if(p.kind==="ghost") return ["",""];
+  if(!p.subscribed) return [S.subsLive?"not subscribed":"not in manifest","warn"];
+  return [S.subsLive?"subscribed":"installed","ok"];
+}
+
+/* ---------- render ---------- */
+function renderAll(){
+  $("paths").textContent = S.paths.cfg;
+  // filled before buildPacks, which sorts the list by whatever this box holds
+  const cfgNames=Object.keys(S.configOrder||{}).sort(), wasOrder=$("fOrder").value;
+  $("fOrder").innerHTML='<option value="">order: by tag</option>'+
+    cfgNames.map(c=>`<option value="${esc(c)}">order: ${esc(c)}</option>`).join("");
+  $("fOrder").value = cfgNames.includes(wasOrder) ? wasOrder : "";
+  window.__packs = buildPacks();
+  ROWIDS = new Set();
+  for(const p of window.__packs) for(const m of p.mods) ROWIDS.add(m.modId);
+  const nmods = window.__packs.reduce((a,p)=>a+p.mods.length,0);
+  const acfSubs=Object.keys(S.acf||{}).filter(k=>S.acf[k].subscribed).length;
+  $("summary").innerHTML =
+    `${Object.keys(S.disk).length} workshop items · ${nmods} mods · ${Object.keys(S.tags).length} tags · `+
+    `${Object.keys(S.configs).length} configs · `+
+    (S.subs.length ? `<b>${S.subs.length}</b> from your synced profile list`+
+        (syncIsStale()?` <span class="pill warn">synced ${when(S.subsFetched)}, older than Steam's manifest</span>`:"")
+                   : `${acfSubs} subscribed per Steam's manifest`)+
+    (S.scanned?` · last update ${esc(S.scanned)}`:" · never updated");
+  $("thImg").style.width=(imgSize()+8)+"px";
+
+  const ni=S.issues.reduce((a,i)=>a+i.items.length,0);
+  $("issueCount").textContent=ni||"";
+  $("issueCount").style.display=ni?"":"none";
+
+  // refilling a select resets it, and every edit comes back through here - so the
+  // filters have to be put back, or tagging one mod would throw away the filter you
+  // were working in, and reordering would drop you out of the tag after one move
+  const tags=S.tagOrder, wasTag=$("fTag").value, wasBulk=$("bulkTag").value;
+  $("fTag").innerHTML='<option value="">any tag</option><option value="__none">— untagged —</option>'+
+    tags.map(t=>`<option>${esc(t)}</option>`).join("");
+  $("fTag").value = (wasTag==="__none"||tags.includes(wasTag)) ? wasTag : "";
+  $("bulkTag").innerHTML=tags.map(t=>`<option>${esc(t)}</option>`).join("")
+    ||'<option value="">no tags defined</option>';
+  if(tags.includes(wasBulk)) $("bulkTag").value=wasBulk;
+
+  renderBanners(); renderMods(); renderTags(); renderConfigs();
+  renderIssues(); renderBackups(); renderSetup();
+  measureBars();
+}
+
+const dismissed=new Set();
+function dismiss(k){ dismissed.add(k); renderBanners(); }
+function renderBanners(){
+  let h="";
+  if(S.conflict){
+    h+=`<div class="banner"><b>The config file changed on disk while you had unsaved tag edits.</b>
+      pzmods will not guess. Either take what is now in the file and lose your edits, or keep your
+      edits and let the next Save overwrite the file.
+      <div class="row" style="margin-top:7px">
+        <button class="small" onclick="resolveConflict('reload')">Reload from the file</button>
+        <button class="small" onclick="resolveConflict('keep')">Keep my edits</button>
+        <a href="/api/preview-cfg" target="_blank">see what my edits would write ↗</a></div></div>`;
+  }else if(S.dirty){
+    h+=`<div class="banner acc">Tag and config edits are held in pzmods but not yet in
+      <span class="mono">pz_modlist_settings.cfg</span>.
+      <button class="small" onclick="writeCfg()">Save config file</button>
+      <a href="/api/preview-cfg" target="_blank">preview ↗</a></div>`;
+  }
+  if(S.reloadedAt && !S.conflict && !dismissed.has("reload"))
+    h+=`<div class="banner acc">Tags and configs were re-read from the config file at
+        ${esc(S.reloadedAt)} because it had changed on disk.
+        <button class="tiny" onclick="dismiss('reload')">got it</button></div>`;
+  if(S.workshopError)
+    h+=`<div class="banner">${esc(S.workshopError)}</div>`;
+  $("banners").innerHTML=h;
+}
+
+function matches(m,p){
+  const qs=$("q").value.trim().toLowerCase(), ft=$("fTag").value, fs=$("fStatus").value;
+  if(qs && !((m.modId+" "+m.name+" "+(p.title||"")+" "+(p.ws||"")).toLowerCase().includes(qs))) return false;
+  if(ft==="__none"){ if(m.tags.length) return false; }
+  else if(ft && !m.tags.includes(ft)) return false;
+  if(fs==="ok" && !(p.onDisk&&p.subscribed)) return false;
+  if(fs==="orphan" && !(p.onDisk&&!p.subscribed&&p.kind==="workshop")) return false;
+  if(fs==="missing" && p.onDisk) return false;
+  if(fs==="notag" && m.tags.length) return false;
+  if(fs==="multitag" && m.tags.length<2) return false;
+  if(fs==="pack" && p.mods.length<2) return false;
+  if(fs==="disabled" && !m.off) return false;
+  if(fs==="required" && !(m.neededBy||[]).length) return false;
+  if(fs==="noted" && !noteText(m.modId)) return false;
+  if($("hideOff").checked && m.off && fs!=="disabled") return false;
+  return true;
+}
+
+function measureBars(){
+  const h=document.querySelector("header");
+  const f=document.querySelector("#mods .filters");
+  // only record a real measurement: on another tab the mods section is hidden and
+  // reports zero, which would leave the column headings sitting under the filters
+  if(h && h.offsetHeight) document.documentElement.style.setProperty("--hdr", h.offsetHeight+"px");
+  if(f && f.offsetHeight) document.documentElement.style.setProperty("--flt", f.offsetHeight+"px");
+}
+function renderMods(){
+  const px=imgSize();
+  $("qx").classList.toggle("on", !!$("q").value);
+  // reordering is always inside one named tag; drop out of it if the filter moves on
+  if(reorderOn && !isTag($("fTag").value)) reorderOn=false;
+  const rt=reorderOn?$("fTag").value:"";
+  $("btnReorder").disabled = !rt && !isTag($("fTag").value);
+  $("btnReorder").classList.toggle("primary", !!rt);
+  $("btnReorder").textContent = rt ? "done reordering" : "reorder inside the tag";
+  $("fOrder").disabled = !!rt;
+  $("thLast").textContent = rt ? "Move" : "Status";
+  if(rt) return renderReorder(rt,px);
+  $("reorderHint").style.display="none";
+  let html="", shown=0;
+  for(const p of (window.__packs||[])){
+    const mods=p.mods.filter(m=>matches(m,p));
+    if(!mods.length) continue;
+    shown+=mods.length;
+    const [st,cls]=packStatus(p);
+    if(p.mods.length===1 && p.kind!=="ghost"){
+      const m=p.mods[0];
+      html+=`<tr class="${sel.has(m.modId)?"sel":""} ${m.off?"off":""}">
+        <td><input type="checkbox" ${sel.has(m.modId)?"checked":""} onchange="pick('${q1(m.modId)}',this.checked)"></td>
+        <td>${imgTag(p.image||m.image,px)}</td>
+        <td>${modCell(m,p)}</td>
+        <td>${tagCell(m)}</td>
+        <td>${m.off?'<span class="pill warn">disabled</span>':`<span class="pill ${cls}">${st}</span>`}</td>
+        </tr>`;
+      continue;
+    }
+    html+=`<tr class="pack">
+      <td><input type="checkbox" ${p.mods.every(m=>sel.has(m.modId))?"checked":""}
+            onchange="pickPack('${q1(p.ws||"")}',this.checked)"></td>
+      <td>${imgTag(p.image,px)}</td>
+      <td><b>${esc(p.title||p.mods[0].name)}</b>
+          <span class="pill acc">${p.mods.length} mods in this item</span>
+          ${p.kind==="workshop"?`<div class="mono">${wsLink(p.ws,null,"dim")}</div>`:""}
+          ${p.kind==="ghost"?'<div class="count">these are named somewhere but no mod.info on disk declares them</div>':""}</td>
+      <td></td>
+      <td>${st?`<span class="pill ${cls}">${st}</span>`:""}</td>
+      </tr>`;
+    mods.forEach((m,i)=>{
+      html+=`<tr class="kid ${i===mods.length-1?"last":""} ${sel.has(m.modId)?"sel":""} ${m.off?"off":""}">
+        <td><input type="checkbox" ${sel.has(m.modId)?"checked":""} onchange="pick('${q1(m.modId)}',this.checked)"></td>
+        <td></td>
+        <td>${modCell(m,p)}</td>
+        <td>${tagCell(m)}</td>
+        <td>${m.off?'<span class="pill warn">disabled</span>'
+              :m.missing?'<span class="pill bad">no mod.info</span>'
+              :m.notDownloaded?'<span class="pill bad">not downloaded</span>':""}</td>
+        </tr>`;
+    });
+  }
+  $("modRows").innerHTML = html || `<tr><td colspan="5" class="count" style="padding:16px">nothing matches</td></tr>`;
+  $("selCount").textContent = sel.size ? sel.size+" selected" : shown+" shown";
+}
+function modCell(m,p){
+  const note=noteText(m.modId);
+  const nb=m.neededBy||[];
+  return `<a href="#" onclick="openMod('${q1(m.modId)}');return false"><b>${esc(m.name)}</b></a>
+    ${nb.length?`<span class="pill req" title="${esc(nb.join(", "))}"
+        >required by ${nb.length}</span>`:""}
+    ${note?`<span class="pill note ${noteMode(m.modId)==="ok"?"ok":""}"
+        title="${esc(note)}">note</span>`:""}
+    <div class="mono" style="color:var(--muted)">${esc(m.modId)}${
+      p.mods.length===1&&p.kind==="workshop"?" · "+wsLink(p.ws,null,"dim"):""}${
+      (m.modIds||[]).length>1?' <span class="pill">also '+esc(m.modIds.filter(x=>x!==m.modId).join(", "))+"</span>":""}${
+      p.mods.length===1&&p.title&&p.title!==m.name?" · "+esc(p.title):""}</div>`;
+}
+function tagCell(m){
+  return m.tags.map(t=>`<span class="pill ${t===S.disabledTag?"warn":""}">${esc(t)}</span>`).join(" ")
+    ||'<span class="count">— untagged —</span>';
+}
+
+/* ---------- load order ----------
+   Two halves of the same thing. The order box says which config's load order the
+   list is read in; reorder mode is where the second half of that order - the order
+   of the mods inside one tag - is actually set. There is nowhere else to set it:
+   a config line is the union of its tags, so those two orders are the whole of it. */
+function orderChanged(){ window.__packs=buildPacks(); renderMods(); }
+function isTag(t){ return !!t && t!=="__none"; }
+function toggleReorder(){
+  if(!reorderOn && !isTag($("fTag").value))
+    return toast("pick a single tag first - order is set inside one tag at a time");
+  reorderOn=!reorderOn;
+  sel.clear();
+  renderMods();
+}
+function renderReorder(t,px){
+  const full=S.tags[t]||[];
+  const byId={};
+  for(const p of (window.__packs||[])) for(const m of p.mods) byId[m.modId]={m,p};
+  // Positions are the mod's real place in the tag, not its place on screen, so a
+  // search that hides half the tag still moves things where you can see they went.
+  const rows=[];
+  full.forEach((id,i)=>{ const e=byId[id]; if(e && matches(e.m,e.p)) rows.push({id,i,m:e.m,p:e.p}); });
+  const marked=full.filter(m=>sel.has(m)).length;
+  $("reorderHint").style.display="";
+  $("reorderHint").innerHTML=
+    `Setting the load order inside <b>${esc(t)}</b> — ${full.length} mods. Drag a row, or use the `+
+    `buttons on the right. ${marked>1?`The <b>${marked}</b> ticked mods move together, keeping their order.`
+      :"Tick several rows to move them together."} `+
+    `A mod enters a config at the first of its tags that config lists, so this order is its load `+
+    `order in every config that reaches it through ${esc(t)}.`;
+  let html="";
+  rows.forEach((r,k)=>{
+    const prev=k?rows[k-1].i:0, next=k<rows.length-1?rows[k+1].i:0;
+    const first=!k, last=k===rows.length-1;
+    const mv=(to,lbl,ttl,no)=>`<button class="tiny" title="${ttl}" ${no?"disabled":""}
+        onclick="moveInTag('${q1(t)}','${q1(r.id)}',${to})">${lbl}</button>`;
+    html+=`<tr class="drg ${sel.has(r.id)?"sel":""} ${r.m.off?"off":""}" draggable="true"
+        ondragstart="dragStart(event,'${q1(r.id)}',${r.i})" ondragover="dragOver(event)"
+        ondragleave="dragLeave(event)" ondragend="dragEnd()"
+        ondrop="dragDrop(event,'${q1(t)}',${r.i})">
+      <td><input type="checkbox" ${sel.has(r.id)?"checked":""} onchange="pick('${q1(r.id)}',this.checked)"></td>
+      <td>${imgTag(r.m.image||r.p.image,px)}</td>
+      <td><span class="count" style="display:inline-block;min-width:36px">${r.i+1}</span>${modCell(r.m,r.p)}</td>
+      <td>${tagCell(r.m)}</td>
+      <td style="white-space:nowrap">
+        ${mv(0,"⤒","to the top of the tag",first)}
+        ${mv(prev,"↑","one place up",first)}
+        ${mv(next+1,"↓","one place down",last)}
+        ${mv(null,"⤓","to the bottom of the tag",last)}</td></tr>`;
+  });
+  $("modRows").innerHTML = html ||
+    `<tr><td colspan="5" class="count" style="padding:16px">nothing in this tag matches the search</td></tr>`;
+  $("selCount").textContent = sel.size ? sel.size+" selected" : rows.length+" shown";
+}
+/* "before" is an index into the tag as it stands now: put the moving mods in front
+   of whatever sits there, or at the end when it is null. */
+async function moveInTag(t,id,before){
+  const full=(S.tags[t]||[]).slice();
+  const inTag=full.filter(m=>sel.has(m));
+  const mv=new Set(sel.has(id)&&inTag.length>1 ? inTag : [id]);
+  const rest=full.filter(m=>!mv.has(m)), seq=full.filter(m=>mv.has(m));
+  let at=rest.length;
+  if(before!==null)
+    for(let k=before;k<full.length;k++)              // the anchor may itself be moving
+      if(!mv.has(full[k])){ at=rest.indexOf(full[k]); break; }
+  rest.splice(at,0,...seq);
+  try{ await act("/api/tag",{action:"set-mods",name:t,mods:rest}); }catch(e){ toast(e.message); }
+}
+let dragId=null, dragFrom=-1;
+function dragStart(e,id,at){
+  dragId=id; dragFrom=at;
+  e.dataTransfer.effectAllowed="move";
+  e.dataTransfer.setData("text/plain",id);
+  e.currentTarget.classList.add("dragging");
+}
+function dragOver(e){
+  if(dragId===null) return;
+  e.preventDefault(); e.dataTransfer.dropEffect="move";
+  e.currentTarget.classList.add("over");
+}
+function dragLeave(e){ e.currentTarget.classList.remove("over"); }
+function dragEnd(){
+  dragId=null;
+  document.querySelectorAll("tr.over").forEach(x=>x.classList.remove("over"));
+  document.querySelectorAll("tr.dragging").forEach(x=>x.classList.remove("dragging"));
+}
+function dragDrop(e,t,at){
+  e.preventDefault();
+  const id=dragId, from=dragFrom;
+  dragEnd();
+  // dropping further down means "land after this row", further up means "before it"
+  if(id!==null && at!==from) moveInTag(t,id, at>from ? at+1 : at);
+}
+
+function clearSearch(){ $("q").value=""; $("q").focus(); renderMods(); }
+function pick(id,on){ on?sel.add(id):sel.delete(id); renderMods(); }
+function pickPack(ws,on){
+  const p=(window.__packs||[]).find(x=>String(x.ws)===ws); if(!p) return;
+  p.mods.forEach(m=>on?sel.add(m.modId):sel.delete(m.modId));
+  renderMods();
+}
+function toggleAll(cb){
+  (window.__packs||[]).forEach(p=>p.mods.forEach(m=>{
+    if(matches(m,p)) cb.checked?sel.add(m.modId):sel.delete(m.modId); }));
+  renderMods();
+}
+async function bulk(action){
+  if(!sel.size) return toast("nothing selected");
+  const tag=$("bulkTag").value;
+  if(action!=="clear" && !tag) return toast("define a tag first");
+  const mods=[...sel];
+  await act("/api/mod-tags",{mods,action,tag});
+  toast(action==="clear"?`${mods.length} mod(s) untagged`
+        :`${tag} ${action==="add"?"added to":"removed from"} ${mods.length} mod(s)`);
+  sel.clear(); renderMods();
+}
+
+function renderTags(){
+  const o=S.tagOrder;
+  $("tagList").innerHTML = o.map((t,i)=>{
+    const n=(S.tags[t]||[]).length;
+    return `<div class="ord">
+      <span class="num">${i+1}</span>
+      <b style="min-width:190px" ${t===S.disabledTag?'class="mono" title="built in"':""}>${esc(t)}${
+        t===S.disabledTag?' <span class="pill warn">built in</span>':""}</b>
+      <span class="bar" style="width:${Math.min(160,n*2)}px"></span>
+      <span class="count" style="min-width:56px">${n} mod${n===1?"":"s"}</span>
+      <span class="spacer"></span>
+      <button class="tiny" onclick="tagAct('move','${q1(t)}',-1)" ${i?"":"disabled"}>↑</button>
+      <button class="tiny" onclick="tagAct('move','${q1(t)}',1)" ${i===o.length-1?"disabled":""}>↓</button>
+      <button class="tiny" onclick="showTag('${q1(t)}')">show</button>
+      <button class="tiny" onclick="renameTag('${q1(t)}')">rename</button>
+      <button class="tiny" onclick="delTag('${q1(t)}')" ${n?"disabled":""}>delete</button>
+    </div>`;
+  }).join("") || `<div class="count">no tags defined yet</div>`;
+}
+function showTag(t){ $("fTag").value=t; document.querySelector('nav button[data-tab=mods]').click(); renderMods(); }
+async function addTag(){
+  const n=$("newTag").value.trim(); if(!n) return;
+  try{ await act("/api/tag",{action:"add",name:n}); $("newTag").value=""; toast("tag added"); }
+  catch(e){ toast(e.message); }
+}
+async function tagAct(action,name,delta){
+  try{ await act("/api/tag",{action,name,delta}); }catch(e){ toast(e.message); }
+}
+async function renameTag(t){
+  const n=prompt("Rename tag",t); if(!n||n===t) return;
+  try{ await act("/api/tag",{action:"rename",name:t,to:n}); }catch(e){ toast(e.message); }
+}
+async function delTag(t){
+  if(!confirm("Delete tag "+t+"?")) return;
+  try{ await act("/api/tag",{action:"delete",name:t}); }catch(e){ toast(e.message); }
+}
+
+function renderConfigs(){
+  const names=Object.keys(S.configs).sort();
+  $("configList").innerHTML = names.map(c=>{
+    const cfg=S.configs[c], picked=cfg.tags||[];
+    const union=new Set();
+    for(const t of picked) (S.tags[t]||[]).forEach(m=>union.add(m));
+    const extras=cfg.extras||[];
+    const avail=S.tagOrder.filter(t=>!picked.includes(t)&&t!==S.disabledTag);
+    const off=new Set((S.tags||{})[S.disabledTag]||[]);
+    const held=[...union].filter(m=>off.has(m)).length;
+    return `<div class="card">
+      <div class="row"><h3>${esc(c)}</h3>
+        <span class="pill acc">${union.size+extras.length-held} mods</span>
+        ${held?`<span class="pill warn">${held} held back as disabled</span>`:""}
+        <span class="spacer"></span>
+        <button class="tiny" onclick="renameConfig('${q1(c)}')">rename</button>
+        <button class="tiny" onclick="delConfig('${q1(c)}')">delete</button></div>
+      <div class="hint">Union of ${picked.length} tag${picked.length===1?"":"s"}, in this order.</div>
+      ${picked.map((t,i)=>`<div class="ord">
+          <span class="num">${i+1}</span>
+          <span style="min-width:190px">${esc(t)}</span>
+          <span class="count">${(S.tags[t]||[]).length} mods${
+            i?", "+newFrom(picked,i)+" new here":""}</span>
+          <span class="spacer"></span>
+          <button class="tiny" onclick="moveTag('${q1(c)}','${q1(t)}',-1)" ${i?"":"disabled"}>↑</button>
+          <button class="tiny" onclick="moveTag('${q1(c)}','${q1(t)}',1)" ${i===picked.length-1?"disabled":""}>↓</button>
+          <button class="tiny" onclick="dropTag('${q1(c)}','${q1(t)}')">remove</button>
+        </div>`).join("") || `<div class="count">no tags yet — this config would be empty</div>`}
+      <div class="row" style="margin-top:8px">
+        <select id="addto_${cssId(c)}">${avail.map(t=>`<option>${esc(t)}</option>`).join("")||"<option value=''>all tags already in</option>"}</select>
+        <button class="tiny" onclick="addTagToConfig('${q1(c)}')" ${avail.length?"":"disabled"}>append tag</button>
+      </div>
+      ${extras.length?`<div class="hint" style="margin-top:8px;color:var(--warn)">
+        ${extras.length} mod(s) carried from the old hand-written line and wearing no tag:
+        <span class="mono">${esc(extras.slice(0,12).join(", "))}${extras.length>12?" …":""}</span>
+        <button class="tiny" onclick="clearExtras('${q1(c)}')">drop them</button></div>`:""}
+    </div>`;
+  }).join("") + renderPassthrough();
+}
+function cssId(s){ return s.replace(/[^A-Za-z0-9]/g,"_"); }
+function newFrom(picked,i){
+  const before=new Set();
+  for(let k=0;k<i;k++) (S.tags[picked[k]]||[]).forEach(m=>before.add(m));
+  return (S.tags[picked[i]]||[]).filter(m=>!before.has(m)).length;
+}
+function renderPassthrough(){
+  const p=S.passthrough||{}, keys=Object.keys(p);
+  if(!keys.length) return "";
+  return `<div class="card"><div class="row"><h3>Other lines in the file</h3>
+    <span class="spacer"></span><span class="count">${keys.length}</span></div>
+    <div class="hint">Neither a tag (<span class="mono">01</span>…) nor a config
+      (<span class="mono">-0-</span>…) — these are markers the Mod Manager writes for itself.
+      pzmods copies them through verbatim, in their original position, and never edits them.</div>
+    ${keys.map(k=>`<div class="mono" style="margin-top:4px">${esc(k)}
+      <span class="count">${p[k].length} entr${p[k].length===1?"y":"ies"}</span></div>`).join("")}
+  </div>`;
+}
+async function addTagToConfig(c){
+  const t=$("addto_"+cssId(c)).value; if(!t) return;
+  await act("/api/config",{action:"set-tags",name:c,tags:(S.configs[c].tags||[]).concat([t])});
+}
+async function dropTag(c,t){
+  await act("/api/config",{action:"set-tags",name:c,tags:(S.configs[c].tags||[]).filter(x=>x!==t)});
+}
+async function moveTag(c,t,d){ await act("/api/config",{action:"move-tag",name:c,tag:t,delta:d}); }
+async function addConfig(){
+  const n=$("newConfig").value.trim(); if(!n) return;
+  try{ await act("/api/config",{action:"add",name:n}); $("newConfig").value=""; }
+  catch(e){ toast(e.message); }
+}
+async function renameConfig(c){
+  const n=prompt("Rename config",c); if(!n||n===c) return;
+  try{ await act("/api/config",{action:"rename",name:c,to:n}); }catch(e){ toast(e.message); }
+}
+async function delConfig(c){
+  if(!confirm("Delete config "+c+"? The line disappears from the file on the next Save.")) return;
+  await act("/api/config",{action:"delete",name:c});
+}
+async function clearExtras(c){
+  if(!confirm("Drop the untagged carried mods from "+c+"?")) return;
+  await act("/api/config",{action:"clear-extras",name:c});
+}
+function previewCfg(){ window.open("/api/preview-cfg","_blank"); }
+
+function renderIssues(){
+  if(!S.issues.length){ $("issueList").innerHTML=`<div class="card"><h3>No inconsistencies found</h3></div>`; return; }
+  $("issueList").innerHTML = S.issues.map(i=>`
+    <div class="card">
+      <div class="row"><h3>${esc(i.title)}</h3><span class="spacer"></span>
+        <span class="pill ${i.severity==="warn"?"warn":""}">${i.items.length}</span></div>
+      ${i.hint?`<div class="hint">${esc(i.hint)}</div>`:""}
+      ${i.kind==="unknown_mod"?`<div class="row" style="margin-bottom:7px">
+        <button class="small" onclick="forgetMissing()">Forget the ${i.items.length} uninstalled</button>
+        <span class="count">strikes them out of every tag and config; takes effect in the
+          file on the next Save</span></div>`:""}
+      <div class="mono" style="max-height:280px;overflow:auto">
+        ${i.items.map(x=>issueRow(x,i)).join("")}
+      </div>
+    </div>`).join("");
+}
+
+function issueRow(x,i){
+  const list=a=>(a||[]).map(m=>modLink(m)).join(", ");
+  if(x.id) return `<div>${wsLink(x.id)}${x.title?" · "+searchLink(x.title):""}${
+    x.mods&&x.mods.length?" · "+list(x.mods):""}${
+    x.note?' <span class="count">'+esc(x.note)+"</span>":""}</div>`;
+  if(x.tag && x.mods) return `<div>${esc(x.config||"")} — ${tagLink(x.tag)} would add ${list(x.mods)}</div>`;
+  if(x.tag) return `<div>${tagLink(x.tag)}</div>`;
+  if(x.set) return `<div>${tagLink(x.set)} — ${list(x.mods)}</div>`;
+  if(x.range) return `<div>${modLink(x.mod,null,"b")}
+    <span class="ver bad">${esc(x.range)}</span>
+    <span class="count">${esc(x.note||"")}</span></div>`;
+  if(x.rule) return `<div><span class="count">${esc(x.config)}</span>
+    ${modLink(x.mod,null,"b")} <span class="count">#${x.pos}</span>
+    <span class="count">${esc(x.rule)}</span>
+    ${list(x.themes)} <span class="count">#${x.otherPos}</span></div>`;
+  if(x.themes) return `<div>${modLink(x.mod)} <span class="count">${esc(i.verb||"needs")}</span> ${list(x.themes)}</div>`;
+  if(x.mod && x.config) return `<div>${modLink(x.mod,null,"b")}
+    <span class="count">${esc(x.config)}</span></div>`;
+  if(x.config) return `<div>${esc(x.config)} → ${esc(x.theme||"")}</div>`;
+  return `<div>${x.mod?modLink(x.mod):esc(JSON.stringify(x))}</div>`;
+}
+
+function renderBackups(){
+  $("backupList").innerHTML = (S.backups||[]).map(b=>
+    `<div class="row" style="padding:3px 0"><span class="mono">${esc(b)}</span>
+      <span class="spacer"></span>
+      <button class="small" onclick="restore('${q1(b)}')">restore</button></div>`).join("")
+    || `<div class="count">none yet</div>`;
+}
+
+function renderSetup(){
+  const s=S.settings||{};
+  $("setupBody").innerHTML=`
+    <div class="card">
+      <h3>What Update reads</h3>
+      <div class="hint">One button, five sources, every time. Nothing here needs to be run separately.</div>
+      <div class="mono" style="line-height:1.9">
+        <div>local &nbsp;· workshop items &nbsp;<span class="count">${esc(S.paths.workshop)}\\content\\108600</span></div>
+        <div>local &nbsp;· your own mods &nbsp;<span class="count">${esc(S.paths.localMods)}</span></div>
+        <div>local &nbsp;· Steam manifest &nbsp;<span class="count">${esc(S.paths.acf)}</span></div>
+        <div>local &nbsp;· the mod list &nbsp;&nbsp;<span class="count">${esc(S.paths.cfg)}</span></div>
+        <div>online · Workshop metadata <span class="count">public API, no sign-in</span></div>
+        <div>online · your subscriptions <span class="count">needs your browser — the only assisted step</span></div>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="primary small" onclick="update(false)">Update</button>
+        <button class="small" onclick="update(true)">Update, re-fetching all metadata</button>
+        <span class="count">last update ${esc(S.scanned||"never")}</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>The build you are running</h3>
+      <div class="hint">Decides which version folder each mod.info is read from, and whether
+        versionMin / versionMax put a mod out of range. pzmods does not ask you for it — the
+        game writes its own version into its debug log every time it starts, so a number here
+        cannot go stale after a patch. Put a version in <span class="mono">gameVersion</span>
+        in settings.json instead of <span class="mono">auto</span> to override it.</div>
+      <div class="mono" style="font-size:14px"><b>${esc(s.gameVersion||"?")}</b>
+        <span class="count">from ${esc(s.gameVersionFrom||"?")}</span></div>
+    </div>
+
+    <div class="card">
+      <h3>Options</h3>
+      <div class="row" style="margin-bottom:7px">
+        <label style="min-width:220px">Mod picture size</label>
+        <input type="number" id="setImg" min="16" max="96" value="${imgSize()}" style="width:80px">
+        <span class="count">pixels · stored in settings.json</span>
+        <button class="tiny" onclick="saveSetting('modImageSize',+$('setImg').value)">apply</button>
+      </div>
+      <div class="row" style="margin-bottom:7px">
+        <label style="min-width:220px">Update on startup</label>
+        <input type="checkbox" id="setStart" ${s.updateOnStartup?"checked":""}
+          onchange="saveSetting('updateOnStartup',this.checked)">
+      </div>
+      <div class="row">
+        <label style="min-width:220px">Fetch user comments during Update</label>
+        <input type="checkbox" id="setCmt" ${s.fetchCommentsOnUpdate?"checked":""}
+          onchange="saveSetting('fetchCommentsOnUpdate',this.checked)">
+        <span class="count">one request per mod page — minutes on the first run, then only
+          items Steam says changed. Off means comments load when you open a mod.</span>
+      </div>
+      <div class="count" style="margin-top:8px">${(S.commentsCached||[]).length} mod comment
+        thread(s) cached.</div>
+    </div>
+
+    <div class="card">
+      <h3>Subscriptions</h3>
+      ${S.subs.length
+        ? `<div class="hint">A list of <b>${S.subs.length}</b> items synced from your Steam profile on
+             <b>${when(S.subsFetched)}</b>. Steam's manifest was last written
+             ${when(S.acfMtime)}.${syncIsStale()?` <b>The snapshot is the older of the two</b>, so where
+             Steam has no record at all pzmods believes the manifest and treats the item as
+             unsubscribed. Re-sync to bring the snapshot up to date, or drop it.`
+             :" The snapshot is the newer of the two."}</div>
+           <button class="small" onclick="clearSubs()">drop the live list</button>`
+        : `<div class="hint">pzmods reads
+             <b>${Object.keys(S.acf||{}).filter(k=>S.acf[k].subscribed).length}</b> subscriptions from
+             Steam's own local manifest, which is accurate for everything Steam has downloaded.
+             It cannot see mods you subscribed to that never downloaded, nor mods delisted after you
+             subscribed. Syncing is optional and only catches those two.</div>`}
+      <button class="small" onclick="showSync()">Sync from my profile…</button>
+    </div>`;
+}
+async function saveSetting(k,v){
+  const r=await api("/api/settings",{[k]:v});
+  S.settings[k]=r.changed[k]; toast("saved to settings.json"); renderAll();
+}
+
+/* ---------- one mod ---------- */
+function findMod(modId){
+  for(const p of (window.__packs||[])) for(const m of p.mods)
+    if(m.modId===modId) return {m,p};
+  return null;
+}
+async function openMod(modId){
+  const f=findMod(modId); if(!f) return;
+  const {m,p}=f;
+  const meta=(p.ws&&p.kind==="workshop")?S.steam[p.ws]:null;
+  const n=S.notes[modId]||{};
+  // versionMin - the build you run - versionMax. Only shown when mod.info states a
+  // bound; "any - 42.20 - any" on every mod would be noise, not information.
+  const gv=(S.settings||{}).gameVersion||"";
+  const vr=(m.versionMin||m.versionMax)
+    ? `<span class="ver ${m.versionFit?"bad":""}"
+         title="versionMin - the gameVersion you run - versionMax${
+           m.versionFit?" · this mod is "+esc(m.versionFit)+" for your build":""}"
+       >${esc(m.versionMin||"any")} - ${esc(gv)} - ${esc(m.versionMax||"any")}</span>` : "";
+  $("drawer").innerHTML=`
+    <div class="row"><h2>${esc(m.name)}</h2><span class="spacer"></span>
+      ${m.path?`<button class="small" onclick="openFolder('${q1(m.path)}')">Open folder</button>`:""}
+      <button class="small" onclick="closeDrawer()">close</button></div>
+    <div class="mono" style="color:var(--muted)">${esc(modId)}${
+      p.ws&&p.kind==="workshop"?" · workshop "+wsLink(p.ws):" · local"}${
+      vr?" · "+vr:""}</div>
+    ${m.image?`<img src="${imgSrc(m.image)}" alt="" class="poster"
+        onerror="this.style.display='none'">`:""}
+    ${m.off?`<div class="banner" style="margin-top:10px">This mod is on
+      <b>${esc(S.disabledTag)}</b>. It stays installed and keeps its other tags, but it is
+      left out of every config pzmods writes, and its dependencies are not checked.</div>`:""}
+
+    <label class="f">tags — click to toggle</label>
+    <div id="tagChips">${S.tagOrder.map(t=>
+      `<span class="chip ${m.tags.includes(t)?"on":""} ${t===S.disabledTag?"off":""}"
+         onclick="toggleModTag('${q1(modId)}','${q1(t)}')">${esc(t)}</span>`
+      ).join("")||'<span class="count">no tags defined — add some on the Tags tab</span>'}</div>
+
+    ${(m.modIds||[]).length>1?`<label class="f">other ids this folder declares</label>
+      <div class="mono">${esc(m.modIds.filter(x=>x!==modId).join(", "))}
+      <div class="count">a different version folder declares each one; the game uses the id
+        from the newest folder it can run, which is ${esc(m.activeFolder||"?")}</div></div>`:""}
+    ${m.folder?`<label class="f">folder</label><div class="mono">${esc(m.folder)}${
+      (m.versionFolders||[]).filter(v=>v!=="(root)").length
+        ? " · versions: "+esc(m.versionFolders.join(", "))
+          +(m.activeFolder?" · active: "+esc(m.activeFolder):""):""}</div>`:""}
+    ${(m.neededBy||[]).length?`<label class="f">required by ${m.neededBy.length} installed,
+      enabled mod${m.neededBy.length===1?"":"s"}</label>
+      <div class="mono">${m.neededBy.map(r=>`<a href="#"
+        onclick="openMod('${q1(r)}');return false">${esc(r)}</a>`).join(", ")}
+      <div class="count">disabling this one would break them</div></div>`:""}
+    ${m.incompatible&&m.incompatible.length?`<label class="f">declared incompatible with</label>
+      <div class="mono">${m.incompatible.map(r=>{const f=findMod(r);
+        return esc(r)+(f?(f.m.off?' <span class="pill warn">installed, disabled</span>'
+                              :' <span class="pill bad">installed too</span>'):"");}).join(", ")}</div>`:""}
+    ${m.require&&m.require.length?`<label class="f">requires (from mod.info)</label>
+      <div class="mono">${m.require.map(r=>esc(r)+(findMod(r)?"":' <span class="pill bad">missing</span>')).join(", ")}</div>`:""}
+    ${m.loadAfter&&m.loadAfter.length?`<label class="f">load after</label><div class="mono">${esc(m.loadAfter.join(", "))}</div>`:""}
+
+    <div class="note ${noteText(modId)?"has":""} ${noteMode(modId)==="ok"?"ok":""}" id="noteBox">
+      <label class="f" style="margin-top:0">my notes</label>
+      <textarea id="nText" placeholder="compatibility, interactions with other mods, anything worth remembering">${esc(n.text||"")}</textarea>
+      <div class="row"><button class="primary small" onclick="saveNote('${q1(modId)}')">Save note</button>
+        <span class="count" id="nWhen">${n.updated?"last saved "+esc(n.updated):""}</span></div>
+      <div class="count">a line holding only <b>-OK-</b> marks what you have accepted:
+        everything below it is settled. The note turns green once nothing is left above it.</div>
+    </div>
+
+    <label class="f">workshop description</label>
+    <div class="desc">${meta?esc(meta.description||"(none)"):"(no metadata — press Update)"}</div>
+
+    <label class="f">comments
+      ${p.kind==="workshop"?`<button class="tiny" onclick="loadComments('${q1(p.ws)}',false)">load</button>
+      <button class="tiny" onclick="loadComments('${q1(p.ws)}',true)">refresh</button>`:""}</label>
+    <div id="cmts" class="count">not loaded</div>`;
+  $("drawer").classList.add("on"); $("scrim").classList.add("on");
+  if(p.kind==="workshop" && (S.commentsCached||[]).includes(String(p.ws))) loadComments(p.ws,false);
+}
+function closeDrawer(){ $("drawer").classList.remove("on"); $("scrim").classList.remove("on"); }
+async function openFolder(path){
+  try{ await api("/api/open-folder",{path}); toast("opened in Explorer"); }
+  catch(e){ toast("could not open: "+e.message); }
+}
+async function toggleModTag(modId,t){
+  const f=findMod(modId); if(!f) return;
+  const has=f.m.tags.includes(t);
+  await act("/api/mod-tags",{mod:modId,action:has?"remove":"add",tag:t});
+  openMod(modId);
+}
+async function saveNote(modId){
+  const note={text:$("nText").value,
+              updated:new Date().toISOString().slice(0,16).replace("T"," ")};
+  await api("/api/notes",{key:modId,note});
+  // a note emptied is a note deleted, or the badge would outlive its own text
+  if(note.text.trim()) S.notes[modId]=note; else delete S.notes[modId];
+  $("noteBox").classList.toggle("has", !!note.text.trim());
+  $("noteBox").classList.toggle("ok", noteMode(modId)==="ok");
+  $("nWhen").textContent = note.text.trim() ? "last saved "+note.updated : "";
+  toast(note.text.trim()?"note saved":"note cleared");
+  renderMods();
+}
+async function loadComments(ws,refresh){
+  if(!ws||ws==="local") return;
+  $("cmts").textContent="loading…";
+  try{
+    const d=await api("/api/comments?id="+encodeURIComponent(ws)+(refresh?"&refresh=1":""));
+    $("cmts").innerHTML=(d.comments||[]).length
+      ? d.comments.map(c=>`<div class="cmt">${esc(c)}</div>`).join("")
+      : `<span class="count">${esc(d.error||"no comments")}</span>`;
+  }catch(e){ $("cmts").textContent="failed: "+e.message; }
+}
+
+/* ---------- update ---------- */
+async function update(deep){
+  await api("/api/update",{deep:!!deep});
+  startPolling();
+}
+function startPolling(){
+  if(poll) return;
+  $("btnUpdate").disabled=true; $("prog").style.display="";
+  poll=setInterval(async()=>{
+    let j; try{ j=await (await fetch("/api/progress")).json(); }catch(e){ return; }
+    $("progBar").style.width=(j.pct||0)+"%";
+    $("btnUpdate").textContent = j.running ? (j.phase+(j.detail?" · "+j.detail:"")) : "Update";
+    if(!j.running){
+      clearInterval(poll); poll=null;
+      $("btnUpdate").disabled=false; $("btnUpdate").textContent="Update";
+      setTimeout(()=>{$("prog").style.display="none";},700);
+      S=await api("/api/state"); renderAll();
+      // an Update can change which version folder a mod loads from, and with it the
+      // options that mod declares - so the Sandbox tab has to be read again, unless
+      // you have edits there that nobody has written yet
+      if(SB.loaded && !Object.keys(SB.edits).length){ SB.tid=""; sbLoad(); }
+      toast(j.error?("update failed: "+j.error):"updated · "+(j.log||[]).length+" steps");
+      lastLog=j.log||[];
+    }
+  },500);
+}
+let lastLog=[];
+
+async function writeCfg(){
+  if(!confirm("Write pz_modlist_settings.cfg? A backup is taken first.")) return;
+  const r=await act("/api/write-cfg",{});
+  toast("written · "+r.lines+" lines · backup "+(r.backup||"none"));
+}
+async function restore(name){
+  if(!confirm("Restore "+name+"? The current file is backed up first, and tags are re-read from it.")) return;
+  await act("/api/restore",{name}); toast("restored");
+}
+async function forgetMissing(){
+  const d=await api("/api/forget-missing",{dryRun:true});
+  const list=d.would||[];
+  if(!list.length) return toast("nothing to forget");
+  if(!confirm("Strike these "+list.length+" out of every tag and config?\n\n"
+      +list.slice(0,40).join("\n")+(list.length>40?"\n… and "+(list.length-40)+" more":"")
+      +"\n\nNothing is written to the config file until you press Save.")) return;
+  const r=await act("/api/forget-missing",{});
+  toast("forgot "+(r.forgot||[]).length+" — press Save config file to write it");
+}
+async function resolveConflict(choice){
+  await act("/api/resolve-conflict",{choice});
+  toast(choice==="reload"?"reloaded from the file":"your edits kept");
+}
+
+/* ---------- subscriptions ---------- */
+async function showSync(){
+  const bm=await (await fetch("/api/bookmarklet")).text();
+  $("drawer").innerHTML=`
+    <div class="row"><h2>Sync subscriptions</h2><span class="spacer"></span>
+      <button class="small" onclick="closeDrawer()">close</button></div>
+    <p style="font-size:12.5px;color:var(--ink2)">This is the one source pzmods cannot read by
+      itself: your subscription list needs a signed-in Steam session, and pzmods deliberately has
+      none — it never sees your password, cookies or tokens. Your browser already has that session.</p>
+    <ol style="font-size:12.5px;color:var(--ink2);padding-left:18px">
+      <li>Drag <a href="${bm.replace(/"/g,"&quot;")}" onclick="return false"
+          style="font-weight:600">pzmods sync</a> to your bookmarks bar.</li>
+      <li>Open your <a target="_blank" rel="noopener"
+          href="https://steamcommunity.com/my/myworkshopfiles?appid=108600&browsefilter=mysubscriptions"
+          >Subscribed Items page</a> and click that bookmark.</li>
+    </ol>
+    <div class="card"><div class="hint">A coloured box appears on the Steam page with page-by-page
+      progress and then either <i>sent N subscriptions</i> or the exact error — it never fails
+      silently. If Chrome blocks it from reaching this local server, it says so and puts the list on
+      your clipboard. Paste it here:</div>
+      <textarea id="subsPaste" style="height:100px;font:11px ui-monospace,monospace"
+        placeholder='{"items":[…]}  — or any text with Workshop IDs or links in it'></textarea>
+      <div class="row" style="margin-top:6px"><button class="small" onclick="importSubs()">Import</button>
+        <span class="spacer"></span><span class="count" id="pasteMsg"></span></div>
+    </div>
+    <label class="f">bookmarklet source</label>
+    <code class="bm">${esc(bm)}</code>`;
+  $("drawer").classList.add("on"); $("scrim").classList.add("on");
+}
+function parseSubsText(txt){
+  txt=(txt||"").trim(); if(!txt) return [];
+  try{
+    const j=JSON.parse(txt); const arr=Array.isArray(j)?j:(j.items||[]);
+    const out=arr.map(x=>typeof x==="string"?{id:x,title:""}
+                        :{id:String(x.id||""),title:x.title||""}).filter(x=>/^\d+$/.test(x.id));
+    if(out.length) return out;
+  }catch(e){}
+  const seen=new Map();
+  (txt.match(/\d{6,}/g)||[]).forEach(id=>{ if(!seen.has(id)) seen.set(id,""); });
+  return [...seen].map(([id,title])=>({id,title}));
+}
+async function importSubs(){
+  const items=parseSubsText($("subsPaste").value);
+  if(!items.length){ $("pasteMsg").textContent="found no IDs in that text"; return; }
+  $("pasteMsg").textContent="importing "+items.length+" …";
+  await api("/api/subs",{items});
+  closeDrawer(); toast("imported "+items.length+" — updating");
+  update(false);
+}
+async function clearSubs(){
+  if(!confirm("Drop the live profile list and fall back to Steam's local manifest?")) return;
+  await api("/api/subs",{items:[],clear:true});
+  S=await api("/api/state"); renderAll(); toast("live list dropped");
+}
+
+/* ---------- sandbox ----------
+
+   Two kinds of file hold sandbox values, and this tab edits both: a preset under
+   Zomboid\Sandbox Presets, which only a NEW game reads, and the map_sand.bin inside
+   a save, which is what a game already in progress runs on. Nothing leaves the
+   browser until you press Write, and only the values you actually touched are sent -
+   the server puts them back into the file line by line and leaves the rest alone. */
+let SB={view:null, edits:{}, index:{}, shown:0, loaded:false, tid:""};
+
+async function sbInit(){
+  SB.loaded=true;
+  try{
+    const j=await api("/api/sandbox");
+    $("sbTarget").innerHTML=j.targets.map(t=>
+      `<option value="${esc(t.id)}">${t.kind==="save"?"save":"preset"} — ${esc(t.label)}</option>`
+      ).join("");
+    if(j.targets.length) return sbLoad();
+    $("sbBody").innerHTML=`<div class="card">No sandbox file to edit. pzmods looks in
+      <span class="mono">Zomboid\\Sandbox Presets\\*.cfg</span> for the presets a new game
+      starts from, and in <span class="mono">Zomboid\\Saves\\*\\*\\map_sand.bin</span> for
+      the settings each save carries.</div>`;
+  }catch(e){ $("sbBody").innerHTML=`<div class="card">${esc(e.message)}</div>`; }
+}
+async function sbLoad(){
+  const id=$("sbTarget").value;
+  if(!id || id===SB.tid) return;
+  if(Object.keys(SB.edits).length &&
+     !confirm("You have edits here that were never written. Throw them away?")){
+    $("sbTarget").value=SB.tid; return;
+  }
+  $("sbBody").innerHTML='<div class="card count">reading…</div>';
+  SB.edits={};
+  try{ SB.view=await api("/api/sandbox?target="+encodeURIComponent(id)); }
+  catch(e){ $("sbBody").innerHTML=`<div class="card">${esc(e.message)}</div>`; return; }
+  SB.tid=id; sbIndex(); sbRender();
+}
+function sbIndex(){
+  SB.index={}; let n=0;
+  for(const g of SB.view.groups) for(const o of g.options){ o.rid=++n; SB.index[o.name]=o; }
+}
+function sbValue(o){ return o.name in SB.edits ? SB.edits[o.name] : o.value; }
+function sbKeep(o,q,f){
+  if(f==="infile" && !o.inFile) return false;
+  if(f==="absent" && o.inFile) return false;
+  if(f==="edited" && !(o.name in SB.edits)) return false;
+  if(f==="nondefault" && sbValue(o)===o.default) return false;
+  return !q || o.name.toLowerCase().includes(q) || (o.label||"").toLowerCase().includes(q)
+           || (o.page||"").toLowerCase().includes(q);
+}
+function sbRender(){
+  if(!SB.view) return;
+  const q=$("sbQ").value.trim().toLowerCase(), f=$("sbFilter").value,
+        onlyMods=$("sbOnlyMods").checked, t=SB.view.target;
+  $("sbQx").classList.toggle("on", !!q);
+  let shown=0, html=t.kind==="save"
+    ? `<div class="banner">This is the save <b>${esc(t.label)}</b>. What you write here is
+        what that game runs on from the next time it loads — close Project Zomboid first,
+        because it writes this file back out of memory every time the game saves.
+        <div class="count mono" style="margin-top:4px">${esc(t.path)}</div></div>`
+    : `<div class="banner acc">This is the preset <b>${esc(t.label)}</b>. It is read when a
+        <b>new</b> game is started from it, and changes nothing in a save already running.
+        <div class="count mono" style="margin-top:4px">${esc(t.path)}</div></div>`;
+  if(SB.view.gameRunning)
+    html+=`<div class="banner">Project Zomboid is running right now. Writing is still
+      allowed, but the game holds these values in memory and will write its own back
+      over yours the next time the save saves.</div>`;
+
+  for(const g of SB.view.groups){
+    if(onlyMods && !g.mod) continue;
+    const rows=g.options.filter(o=>sbKeep(o,q,f));
+    if(!rows.length) continue;
+    shown+=rows.length;
+    const ed=rows.filter(o=>o.name in SB.edits).length;
+    html+=`<details class="card sbg"${(q||ed)?" open":""}>
+      <summary><b>${esc(g.modName)}</b>
+        <span class="count">${rows.length}${
+          rows.length!==g.options.length?" of "+g.options.length:""} option${rows.length===1?"":"s"}</span>
+        ${g.off?`<span class="pill">on ${esc(S.disabledTag)}</span>`:""}
+        ${ed?`<span class="pill acc">${ed} edited</span>`:""}</summary>
+      <table class="sb">${rows.map(sbRow).join("")}</table></details>`;
+  }
+  $("sbBody").innerHTML = html + (shown?"":`<div class="card count">nothing matches</div>`);
+  sbCount(shown);
+}
+function sbRow(o){
+  const v=sbValue(o);
+  return `<tr class="sbrow ${o.name in SB.edits?"edited":""}" id="sb_${o.rid}">
+    <td class="nm">
+      <div class="sbname"${o.tip?` title="${esc(o.tip.replace(/<br>/g,"\n"))}"`:""}
+        >${esc(o.label||o.name)}</div>
+      <div class="mono count">${esc(o.name)}${o.page?" · "+esc(o.page):""}${
+        o.inFile?"":" · not in this file yet"}</div></td>
+    <td class="v">${sbWidget(o,v)}</td>
+    <td class="d count">${o.default!==""?`default <span class="sbdefault"
+        onclick="sbSet('${q1(o.name)}','${q1(o.default)}')">${esc(o.default)}</span>`:""}
+      ${o.type?`<div>${esc(o.type)}${o.min!==""&&o.max!==""
+        ?" "+esc(o.min)+" … "+esc(o.max):""}</div>`:""}</td></tr>`;
+}
+function sbWidget(o,v){
+  const on=`data-n="${esc(o.name)}" oninput="sbSet(this.dataset.n,this.value)"`;
+  if(o.type==="boolean")
+    return `<select ${on}><option value="true"${v==="true"?" selected":""}>true</option>
+      <option value="false"${v==="true"?"":" selected"}>false</option></select>`;
+  if(o.choices&&o.choices.length){
+    // a value the mod no longer offers still has to stay visible, or opening this tab
+    // would quietly rewrite it to something else the moment you pressed Write
+    const off=!o.choices.some((c,i)=>String(i+1)===v);
+    return `<select ${on}>${o.choices.map((c,i)=>
+      `<option value="${i+1}"${String(i+1)===v?" selected":""}>${i+1} — ${esc(c)}</option>`).join("")}${
+      off?`<option value="${esc(v)}" selected>${esc(v)} — not one of its choices</option>`:""}</select>`;
+  }
+  if(o.type==="integer"||o.type==="double")
+    return `<input type="number" step="${o.type==="integer"?"1":"any"}"${
+      o.min!==""?` min="${esc(o.min)}"`:""}${o.max!==""?` max="${esc(o.max)}"`:""
+      } value="${esc(v)}" ${on}>`;
+  return `<input type="text" value="${esc(v)}" ${on}>`;
+}
+function sbSet(name,val){
+  const o=SB.index[name]; if(!o) return;
+  if(val===o.value) delete SB.edits[name]; else SB.edits[name]=val;
+  const tr=$("sb_"+o.rid);
+  if(tr){
+    tr.classList.toggle("edited", name in SB.edits);
+    const w=tr.querySelector("input,select");
+    if(w && w.value!==val) w.value=val;   // the default link moves the widget too
+  }
+  sbCount();
+}
+function sbCount(shown){
+  if(shown!==undefined) SB.shown=shown;
+  const n=Object.keys(SB.edits).length;
+  $("sbCount").innerHTML=`${SB.shown} shown · ${SB.view?SB.view.inFile:0} already in the file`+
+    (n?` · <b>${n} edited</b>`:"");
+  $("sbDirty").textContent=n||"";
+  $("sbDirty").style.display=n?"":"none";
+}
+function sbRevert(){
+  if(!Object.keys(SB.edits).length) return toast("nothing was edited");
+  SB.edits={}; sbRender(); toast("edits dropped");
+}
+async function sbSave(){
+  if(!SB.view) return;
+  const n=Object.keys(SB.edits).length;
+  if(!n) return toast("nothing was edited");
+  if(!confirm(`Write ${n} value${n===1?"":"s"} into ${SB.view.target.label}?\n\n`+
+              "A copy of the file is put in backups\\sandbox first.")) return;
+  sbPost(SB.edits, false);
+}
+async function sbPost(changes, anyway){
+  let j={}, r;
+  try{
+    r=await fetch("/api/sandbox",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({target:SB.view.target.id, changes, anyway})});
+    j=await r.json();
+  }catch(e){ return toast("could not write: "+e.message); }
+  if(r.status===409)
+    return confirm(j.error+"\n\nWrite it anyway?") ? sbPost(changes,true) : undefined;
+  if(!r.ok||j.error) return toast(j.error||("HTTP "+r.status));
+  SB.view=j.view; SB.edits={}; sbIndex(); sbRender();
+  toast(`wrote ${j.changed} value${j.changed===1?"":"s"}`+(j.added?`, ${j.added} of them new`:""));
+}
+
+/* ---------- boot ---------- */
+window.addEventListener("resize", measureBars);
+if(window.ResizeObserver){
+  const ro=new ResizeObserver(measureBars);
+  ro.observe(document.querySelector("header"));
+  ro.observe(document.querySelector("#mods .filters"));
+}
+(async()=>{
+  try{
+    S=await api("/api/state"); renderAll();
+    const j=await (await fetch("/api/progress")).json();
+    if(j.running) startPolling();
+  }catch(e){
+    document.body.innerHTML="<main><div class='card'>Could not reach the pzmods server.<br>"+esc(e.message)+"</div></main>";
+  }
+})();
+</script>
+</body>
+</html>

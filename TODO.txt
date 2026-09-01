@@ -1,0 +1,1 @@
+New 'Issue' tab check: maps overlap. There are some mods with maps. Eachs modded map takes some space in original map coordinates. The task is to check modded maps for overlap. The mod 3360392628 allready containts the implementation of overlap check that you can investigate.

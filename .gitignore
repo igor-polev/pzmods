@@ -1,0 +1,6 @@
+# Python bytecode - regenerated on every run
+__pycache__/
+*.pyc
+
+# Your global ignore file excludes this one; here it is wanted.
+!.claude/settings.local.json

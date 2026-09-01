@@ -1,0 +1,137 @@
+HANDOVER - pzmods and the rest of Igor's Project Zomboid setup
+Written 31 August 2026, at the end of the session that built pzmods.
+
+This file exists so a fresh session can pick up without the conversation. It
+covers only what is NOT already written down somewhere better.
+
+Read README.md first. It documents every design decision in pzmods and why -
+the subscription rules, version-folder resolution, the load-order guarantees,
+the tag model. pzmods.py carries the reasoning in comments at each tricky spot.
+Between those two files a new session is most of the way caught up. What follows
+is the remainder: current state, open items, and the things already settled that
+should not be relitigated.
+
+
+WHERE THINGS STAND
+------------------
+pzmods is finished and installed in C:\Users\igor\Zomboid\pzmods\. It runs with
+"python pzmods.py", updates itself on startup, and has been tested against the
+real 500+ item collection. It writes pz_modlist_settings.cfg byte for byte when
+nothing has changed.
+
+Do not trust any numbers in this file. Press Update and read the Issues tab -
+that is the live picture. The counts below are a snapshot of 31 Aug 2026 and are
+here to say what KIND of thing is outstanding, not how much of it there is.
+
+
+OPEN ITEMS, roughly in the order they matter
+--------------------------------------------
+1. KaneNPCPack is still ticked in the game's mod list.
+   Left over from the Bandits work earlier in the session. Until it is unticked
+   in-game, its 28 clans load at stock values and override the custom clan
+   scheme in Zomboid\Lua\bandits\clans.txt. This is a click in the game's own
+   mod menu, not something pzmods can do.
+
+2. The synced subscription list in pzmods is stale.
+   data/subs.json was taken before 8 mods were unsubscribed. pzmods handles this
+   correctly - it believes Steam's manifest over the snapshot - and says so under
+   "Your synced profile list has gone out of date". Either re-sync from the Setup
+   tab or drop the live list; the manifest alone is accurate for everything Steam
+   has downloaded.
+
+3. ~15 mod ids are named in the config file but not installed.
+   Leftovers from mods removed over time, plus the 8 just unsubscribed. The
+   Issues tab has a "Forget the N uninstalled" button that strikes them from
+   every tag and config in one go. Nothing reaches the file until Save. Check
+   first that nothing still needs them: JeevesPatches_Towing requires
+   BetterTowing, which is one of the leftovers.
+
+4. Two installed mods declare each other incompatible.
+   TwisTonFire - Exercises and TwisTonFire - Exercises Plus, both from workshop
+   item 3790614739, each name the other in incompatible=. Both are installed and
+   neither is disabled. Putting one on the -- Disabled tag settles it.
+
+5. ~11 mods require something that is not installed.
+   Real ones, not the parsing artefact - see the backslash note in README.md.
+   Each row on the Issues tab names what is missing.
+
+6. One mod is carried in a config wearing no tag: JeevesPatches_Spongie in
+   -6- Complete. Give it a tag and the carry clears itself.
+
+
+OFFERED, NOT ANSWERED
+---------------------
+The header name of a workshop item with several mods falls back to "the first
+mod in the list" when Steam has no metadata for that item - and the list is now
+ordered by tag, so re-tagging could change which name shows. The poster does not
+have this problem; it is picked before sorting, in folder order. Offered to pin
+the title fallback to folder order too. Igor has not said either way. It is a
+two-line change in buildPacks() in ui.html.
+
+
+SETTLED - DO NOT REOPEN
+-----------------------
+* The regrouping proposal was CANCELLED. An earlier todo list included
+  "analyse current mod grouping, propose corrections" - splitting 05 Vehicles,
+  breaking up 19 QoL - Secondary UI, filing the untagged. Igor cancelled it
+  explicitly: "cancel 'todo 4'". Do not propose it again unasked.
+
+* Mod ids on the Mods tab are deliberately plain text, not links. They were made
+  clickable once and Igor asked for it reverted as meaningless. Ids on the Issues
+  tab ARE links, and that is wanted.
+
+* Tag names do not need two leading digits. That rule was removed on request.
+
+* pzmods keeps no cache of the grouping. The config file is the only source of
+  truth. An earlier version cached it, the cache drifted, and the drift invented
+  mods that were not there. Do not reintroduce a cache.
+
+
+HOW TO TEST A CHANGE WITHOUT TOUCHING THE REAL FILES
+----------------------------------------------------
+This is worth knowing, because every change to pzmods in this session was
+verified this way rather than by guessing.
+
+Build a fixture from the real data: pzmods' own data/snapshot.json holds the
+full scan of every mod (ids, require, versionFolders), so a throwaway tree of
+mod.info files can be regenerated from it, next to a copy of the real
+pz_modlist_settings.cfg and the real appworkshop_108600.acf. Point a copy of
+settings.json at that tree, run the server on a spare port, and drive it over
+the HTTP API. The guarantees worth re-checking after any change to the writer:
+
+  * preview == the file on disk, byte for byte, when nothing has changed
+  * writing twice in a row changes nothing the second time
+  * disable a mod, save, re-enable, save - it returns to the same index in every
+    config it was in
+
+The UI was checked headlessly with Playwright (chromium is preinstalled in the
+cloud workspace at /opt/pw-browsers), taking screenshots and reading them back.
+That is how the layout and sticky-header bugs were caught.
+
+Note the container cannot reach api.steampowered.com, so the metadata and
+comment fetches can only be exercised for their failure handling. Those paths
+run on Igor's machine.
+
+
+THE REST OF THE ZOMBOID WORK IN THIS FOLDER
+-------------------------------------------
+Separate projects from the same session, all still in place:
+
+  Zomboid\mods\Mindset42\
+      Rebuild of a long-broken trait mod (workshop 3554341903) for B42.20.4.
+      Four traits registered through the B42 CharacterTrait API.
+
+  Zomboid\mods\CompanionCatPurr\
+      Add-on making cats relieve unhappiness more than other pets, via a purr
+      moodle hooked into CD.DogMoodles. Depends on CompanionCat (3791294616).
+
+  Zomboid\Lua\bandits\clans.txt
+      Custom NPC clan scheme: six eras spread over about five in-game years,
+      companions removed, spawn rates cut so roaming groups are rare. Only
+      altered fields are in the file; clans_extended.txt is the full-value
+      overview for reading, and clans_gantt.py draws the timeline. Backups of
+      earlier schemes sit beside it. See item 1 above - this scheme is not fully
+      in effect while KaneNPCPack is ticked.
+
+  Zomboid\Sandbox Presets\Custom.cfg
+      Tuned Bandits parameters that go with the above.

@@ -1,0 +1,1110 @@
+WORKSHOP DISCOVERIES - Build 42 mods published or updated since 42.20.0
+Window: 29 Jul - 1 Sep 2026 | fresh full run, supersedes the 1 Sep first run
+==========================================================================
+
+Generated 1 Sep 2026 (workshop-discovery). Game build: 42.20.4.
+12,183 mods had activity in the window: 9,357 newly published + 2,826 older mods updated.
+Already subscribed: 54 new + 223 updated (your own mods updating).
+Excluded by criteria filters: music 2,223, localization 498, server/admin/MP 689, test/junk 175.
+All 8,321 remaining titles were reviewed; 394 selected below.
+Stats in [brackets] were verified on Steam on 1 Sep; unmarked entries were
+selected on title/context - Steam rate limits capped per-mod verification.
+
+Paste any id into the pzmods search box, or open
+https://steamcommunity.com/sharedfiles/filedetails/?id=<id>
+
+1. COMPANIONS TO YOUR SUBSCRIBED MODS (fixes, patches, add-ons, successors)
+--------------------------------------------------------------------------
+2503622437  Skill Recovery Journal  [2,778,378 subs, 5*]
+    The classic death-proof skill journal (2.78M subs, 5*), updated 20 Aug for 42.20. Requires errorMagnifier and Mod Update and Alert System - both already installed.
+    goes with: errorMagnifier, Mod Update and Alert System
+    overlaps:  What Did I Just Learn? [B42]
+3774789651  Long Term Preservation [42.20]  [114,858 subs, 5*]
+    The current 42.20 version - replaces your B42.13 copy + [PATCH] pair.
+    goes with: Long Term Preservation [B42.13], [PATCH] Long Term Preservation
+3717968421  Common Sense B42.20 - Community Compatibility Fix  [61,983 subs, 5*]
+    Compat fix for subscribed Common Sense.
+    goes with: Common Sense [B42.20+]
+3597673472  Long Term Preservation Extended [42.20+]  [59,646 subs, 5*]
+    59.6k subs, 5*, updated 27 Aug. Standalone extension/overhaul of Long Term Preservation.
+    goes with: Long Term Preservation
+3781616141  [B42.20+] Vehicle Aim Roof Fix  [51,974 subs, 5*]
+    Fixes bugged aiming inside modded cars (KI5, PZK etc.). Huge uptake.
+    goes with: KI5 vehicle collection
+3780682550  Equipment UI - Paper Doll [B42.20+]  [36,755 subs, 5*]
+    Actively maintained successor of your DISCONTINUED Equipment UI (36.8k subs, 5*, updated 27 Aug). Note: the STABLE+ fork (3682936016, 98.5k subs) is a competing continuation - run exactly one.
+    goes with: Equipment UI (discontinued)
+3740300378  KI5 Mini-fixes  [18,404 subs, 4*]
+    Small KI5 fix collection; sits next to KI5 General Fixes.
+    goes with: KI5 vehicle collection
+3777752751  [B42.20] Bandits Fix Plus  [13,687 subs, 4*]
+    Bugfix/stability patch for Bandits, written against 42.20 source. Requires Bandits NPC.
+    goes with: [B42] Bandits NPC
+3774523641  Better Sorting Reborn  [9,794 subs, 4*]
+    Clean-room successor of subscribed Better Sorting.
+    goes with: Better Sorting
+3789366983  KI5 General Fixes  [6,569 subs, 4*]
+    Engine-level and per-vehicle fixes for KI5 cars. Requires damnlib (installed). Safe on existing save.
+    goes with: KI5 vehicle collection, that DAMN Library
+3774999360  Lifestyle 42.20 Compatibility Patch  [2,477 subs, 3*]
+    Temporary compat patch until Lifestyle: Hobbies updates officially. 3-star - read comments first.
+    goes with: Lifestyle: Hobbies
+3510554118  Undead Survivor Bandits Integration  [1,600 subs]
+    Bridges Undead Survivor NPCs with Bandits.
+    goes with: [B42] Bandits NPC
+3782193024  Antibodies B42.20 Community  [1,217 subs]
+    Community-updated Antibodies for 42.20 (yours is v1.97). 1.2k subs.
+    goes with: Antibodies (v1.97)
+3791560174  Bandits: Adaptive Threats  [191 subs]
+    Five-stage NPC progression, balanced encounters. New, small but promising (191 subs in 4 days).
+    goes with: [B42] Bandits NPC
+3791788069  Bandits Less Loot
+    Tames bandit loot drops.
+    goes with: [B42] Bandits NPC
+3789406323  Bandits No-Spawn Zones
+    Define zones where bandits never spawn.
+    goes with: [B42] Bandits NPC
+3789417058  Bandits Companion Guard Post
+    Station companions as guards.
+    goes with: [B42] Bandits NPC
+3788164661  Better Bandit Creator Menu Plus [B42]
+    QoL for Bandits Creator.
+    goes with: [B42] Bandits Creator
+3787615616  Bandit Gear Expansion
+    More bandit equipment variety.
+    goes with: [B42] Bandits NPC
+3790457919  CJ's Bandits Submod - Knox County Emergency Services
+    Police/fire/EMS themed clans.
+    goes with: [B42] Bandits NPC, clans.txt custom scheme
+3784848246  Snyder's Extended Bandits
+    More clan content - compare against your custom clans.txt scheme before enabling.
+    goes with: [B42] Bandits NPC
+3774747517  Sooner Denser Late-Game (for Bandits)
+    Late-game density pacing tuned for NPC runs - relevant to your six-era clan timeline.
+    goes with: [B42] Bandits NPC
+3779715656  Bandits Day One B42
+    Day-one military/emergency response events.
+    goes with: [B42] Bandits NPC
+3793995830  Realistic Zombie Perception (Zombie Buddy)
+    Perception tuning built on ZombieBuddy.
+    goes with: ZombieBuddy
+3787314935  Realistic Fence Pathing (Zombie Buddy)
+    Zombies path around fences believably.
+    goes with: ZombieBuddy
+3786732297  Antibodies B42.20 Community - Compatibility Fix
+    Companion fix for the community build.
+    goes with: Antibodies (v1.97)
+3785128703  Lifestyle + Moodle Framework Compatibility Fix (B42.20)
+    You run both - this resolves their clash.
+    goes with: Lifestyle: Hobbies, Moodle Framework
+3789490511  Moodle Framework Backward Compatibility
+    Keeps old moodle mods working.
+    goes with: Moodle Framework, MoodleFramework Safety Patch
+3776834981  Pain Sense - Unofficial Fixes (B42.20)
+    Fixes for subscribed Pain Sense.
+    goes with: Pain Sense
+3781958566  They Knew [B42] Compatibility Patch
+    Check against your existing They Knew Stable Patch - likely pick one.
+    goes with: They Knew [B42], They Knew Stable Patch
+3793085059  Proximity Inventory Selection Fix [B42.20+]
+    Selection fix for subscribed Proximity Inventory.
+    goes with: Proximity Inventory B42.20+
+3783535220  Neat Lockpicking
+    New Neat-series mod (trend #38); lockpicking in the Neat UI style.
+    goes with: NeatUI Framework, Neat Crafting, Neat Building
+3792546519  Neat Storage Networks
+    New Neat-series storage linking.
+    goes with: NeatUI Framework, Smarter Storage
+3787476199  [WYD] Gun Parts Repair
+    New WYD mod.
+    goes with: [WYD] VHS Skill Tapes
+3790225261  [WYD] Writable Cross
+    New WYD mod.
+    goes with: [WYD] VHS Skill Tapes
+3784927883  [42.20+] Extra Skin Tones for Spongie's
+    More skin tones for Spongie's Character Creation.
+    goes with: Spongie's Character Customisation
+3782014758  Gunworks Fix
+    Fix for subscribed Gunworks Framework.
+    goes with: [42.20MP] Gunworks Framework
+3773834525  [42.20MP] Vanilla Weapons PLUS - Gunworks Edition
+    Gunworks-tuned vanilla arsenal (trend-90 #78).
+    goes with: [42.20MP] Gunworks Framework, Vanilla Firearms Expansion
+3789689438  Simple Suppressors - Gunworks Patch
+    Bridges Simple Suppressors with Gunworks - relevant if you swap Improvised Silencers.
+    goes with: [42.20MP] Gunworks Framework
+    overlaps:  Improvised Silencers
+3791350747  CD: Livestock Guardians
+    Companion dogs guard livestock (trend #112).
+    goes with: Companion Dogs [ALPHA], CD: Labrador
+3787202559  CD: Pug
+    New CD breed (trend #122).
+    goes with: Companion Dogs [ALPHA]
+3770795385  CD: Doberman
+    New CD breed (trend-90 #67).
+    goes with: Companion Dogs [ALPHA]
+3775657408  Companion Dogs - Pomeranian
+    New CD breed.
+    goes with: Companion Dogs [ALPHA]
+3789829365  Companion Dogs: Dumb Cat
+    A cat for CD - sits next to your CD: Cats + CompanionCatPurr setup.
+    goes with: CD: Cats, CompanionCatPurr (local)
+3777416084  Companion Dogs - Compact Alerts
+    Smaller CD alert UI.
+    goes with: Companion Dogs [ALPHA]
+3784237003  B42.20 Companion Dogs Fix
+    Compat fix for CD on 42.20.
+    goes with: Companion Dogs [ALPHA]
+3763444466  StartWithDog for CD
+    Spawn with your dog (trend-90 #182). See also Spawn With Your Pet! (3789908519).
+    goes with: Companion Dogs [ALPHA]
+3791619698  Vanilla Vehicles Animated - Temporary Fix for 42.20.4
+    Temp fix for subscribed Vanilla Vehicles Animated on your exact build.
+    goes with: Vanilla vehicles animated
+3793287476  Autotsar Pivoting Wheel Fix
+    Fix for Autotsar trailers.
+    goes with: Autotsar Trailers B42
+3786582815  (Flak Fixes) - Autotsar Trailers Generator Fixes
+    Generator trailer fixes.
+    goes with: Autotsar Trailers B42
+3783873313  (Flak Fixes) - Autotsar Trailers B42 Patch
+    General Autotsar trailer patch.
+    goes with: Autotsar Trailers B42
+3791686779  Vehicle Fluid Logistics - KI5 Vehicles Patch
+    Hooks VFL into KI5 tanks.
+    goes with: Vehicle Fluid Logistics Library, KI5 vehicle collection
+3791686967  Vehicle Fluid Logistics - KI5 Campers Patch
+    Same, for KI5 campers.
+    goes with: Vehicle Fluid Logistics Library
+3784843566  TEH Huge Car Trunks
+    Bigger sibling of your TEH Big Car Trunks - pick one of the two.
+    goes with: TEH Big Car Trunks
+    overlaps:  TEH Big Car Trunks
+3791325943  Better Towing Next Fix
+    Continuation of BetterTowing - your JeevesPatches_Towing still requires BetterTowing (see pzmods Issues tab).
+    goes with: Jeeve's Patches
+3777264282  KI5 Spawn Control [B42]
+    Control KI5 vehicle spawn rates.
+    goes with: KI5 vehicle collection
+3782524328  Paint My KI5
+    Repaint KI5 vehicles.
+    goes with: KI5 vehicle collection
+3792457176  MAN KAT1 Suspension Fix
+    Fix for your '80 MAN KAT1.
+    goes with: '80 MAN KAT1
+3783874874  [B42.20+] Vehicle Weapon Clipping Fix
+    Weapon clipping inside vehicles (trend #21).
+    goes with: KI5 vehicle collection
+3777287433  PapaChadZoneFix
+    Spawn zone fix for Papa_Chad vehicles.
+    goes with: Papa_Chad military vehicles
+3773972040  Arcadia RV Interiors [B42.20]
+    New RV interiors system (trend-90 #350); KI5 custom interiors exist for it (3791955802, 3791447480).
+    goes with: [B42]Project RV Interior, RV Interior Expansion
+3781944805  Immersive Solar Arrays - B42 Fork
+    Maintained B42 fork of subscribed ImmersiveSolarArrays 42.16+.
+    goes with: ImmersiveSolarArrays [42.16+]
+3791307583  M65 Army Field Jacket Better Port
+    Better port of your M65 jacket mod - compare and keep one.
+    goes with: [B42] M65 Army Field Jacket
+    overlaps:  [B42] M65 Army Field Jacket
+3781074764  Nepenthe's Sound Stress Soother [B42.20]
+    Same author as your High Beams.
+    goes with: Nepenthe's High Beams
+3778709615  [B42.20.3] Simple Belt Flashlight+
+    Extended version of your Simple Belt Flashlight fix.
+    goes with: [B42] Simple Belt Flashlight!
+3775166757  Soul Filcher's Packing Time
+    Box/crate packing (trend #226).
+    overlaps:  More Packing, Hoarder's Delight
+3793054719  Infoteo's Vehicle Respawn
+    Same author as your Fruit Trees; controlled vehicle respawns.
+    goes with: Infoteo's Fruit Trees
+3786783393  Infoteo's Furniture Crafting
+    Infoteo series.
+    goes with: Infoteo's Fruit Trees
+3783956168  Infoteo's Stay in the Light
+    Infoteo series.
+    goes with: Infoteo's Fruit Trees
+3786120850  Tactical Flashlight Animation - B42
+    Strong community traction in the window.
+    goes with: [B42] Simple Belt Flashlight!
+3501302358  Vehicle Seat UI (KI5)
+    Seat overview UI for KI5 vehicles.
+    goes with: KI5 vehicle collection
+3423424077  Vanilla Vehicles Replacer (KI5)
+    Replaces vanilla cars with KI5 models for a consistent fleet.
+    goes with: KI5 vehicle collection
+3635550823  R.U. BMP-2 by Papa_Chad
+    Another Papa_Chad armor vehicle, updated in the window.
+    goes with: Papa_Chad military vehicles
+3745699559  Bandits Melee Armor Patch
+    Bandits take armor into account in melee.
+    goes with: [B42] Bandits NPC
+3739461062  Patch Bandits Bases
+    Fixes for bandit base behavior.
+    goes with: [B42] Bandits NPC
+3780196140  [MIG]BanditsExtends
+    Extension content for Bandits.
+    goes with: [B42] Bandits NPC
+3757811814  Bandit2 Gun Compatibility
+    Weapon-mod compatibility for Bandits V2.
+    goes with: [B42] Bandits NPC
+3418926649  [B42] Cannibalize Bandits
+    Grim option for bandit corpses.
+    goes with: [B42] Bandits NPC
+3737772445  TwisTonFire - DuffleBag
+    New TwisTonFire mod (you run 9 of the series).
+    goes with: TwisTonFire series
+3570250507  TwisTonFire - Faster Actions
+    TwisTonFire series.
+    goes with: TwisTonFire series
+3553771962  TwisTonFire - Training Challenge
+    TwisTonFire series.
+    goes with: TwisTonFire series
+3572564421  TwisTonFire - minimap
+    TwisTonFire series.
+    goes with: TwisTonFire series
+3579410548  TwisTonFire - Quick'n'Auto Mark
+    TwisTonFire series.
+    goes with: TwisTonFire series
+3480305133  TwisTonFire - Stats
+    TwisTonFire series.
+    goes with: TwisTonFire series
+3575778063  TwisTonFire - Improved Soundoptions
+    TwisTonFire series.
+    goes with: TwisTonFire series
+3583147716  TwisTonFire - Orderly Chaos
+    TwisTonFire series.
+    goes with: TwisTonFire series
+3687487317  Jeeve's QoL
+    Jeeve's series (you run Jeeve's Build + Patches).
+    goes with: Jeeve's Build, Jeeve's Patches
+3739941052  Jeeve's Zones
+    Jeeve's series.
+    goes with: Jeeve's Build
+3674452315  Jeeve's Journals
+    Jeeve's series.
+    goes with: Jeeve's Build
+3737412008  Jeeve's Solar Arrays
+    Jeeve's series; pairs with ImmersiveSolarArrays.
+    goes with: Jeeve's Build, ImmersiveSolarArrays
+3718412967  Icons Inventory
+    Inventory icon system; a Known And Collected compatibility patch exists (3728123654).
+    goes with: Known And Collected, Context Menu Icons
+3684807879  Moodle Descriptions Expanded - Patch B42.15+
+    Patch for subscribed Moodle Descriptions Expanded.
+    goes with: [B42] Moodle Descriptions Expanded
+3743063232  Neat Building - Safe Uninstall Support
+    Safe removal support for Neat Building.
+    goes with: Neat Building [B42]
+3044705007  [B42/41] Fix BlowTorch & PropaneTank
+    Torch/propane fix; fits your welding chain.
+    goes with: Refill Welding Torch with Propane Bottle
+3774248551  Better Towing / Harrys Tow Truck [B42.20]
+    42.20 towing update for the Harry's Tow Truck line you run.
+    goes with: Harry's Tow Truck - Zombie Buddy Ed.
+3774304190  87 Ford F700 Armored Parts Compatibility
+    Parts compat for your '87 Ford B700/F700.
+    goes with: '87 Ford B700/F700 Trucks
+3398274931  PonchosB42 - 42.20 fix
+    42.20 fix with realistic protection values for ponchos.
+    goes with: Military Ponchos [B42]
+3751857048  [42.20] TorchRefill Fix - Propane Bottle Weight
+    Weight fix in the torch-refill chain.
+    goes with: Refill Welding Torch with Propane Bottle
+3755731521  [42.20] Lethal Stealth Fix - LTSSync nil guards
+    Crash guards for subscribed Lethal Stealth.
+    goes with: Lethal Stealth
+3779211885  Tanks Have Propane - Unofficial Fixes (B42.20)
+    Fixes for subscribed Tanks Have Propane.
+    goes with: Tanks Have Propane (B42)
+3617723542  Save Skills To Watch Updated for Build 42.20
+    Alternative skill-persistence approach; compare with Skill Recovery Journal.
+    overlaps:  Skill Recovery Journal
+3520986637  PZ They Knew Addon
+    Addon for subscribed They Knew.
+    goes with: They Knew [B42]
+3399320470  Serving Plates: Make your plates useful
+    Plates matter; a dupe fix shipped this week (3792674873).
+    goes with: Project Cook [B42]
+3526968739  [B42/41] Automatic Stove Shutoff
+    No more burned kitchens.
+    goes with: The ACTUAL Cook Times
+3636956305  Contextual Keys Helper [B42.20+]
+    Key management QoL.
+    goes with: Known And Collected
+3004064681  Show Container Contents On Hover
+    Container preview on hover.
+    overlaps:  Smarter Storage
+3507997225  Foraging Tooltip Extended [B42]
+    Deeper foraging info.
+    goes with: Herbalist, Picking Meister
+3342191739  Gyde's Trait Magazines [B42.20]
+    Trait magazines to find in-world; Extended+ variant (3776852122) also updated.
+    goes with: Skill Book Expansion
+3698401476  Skully's Lowerback Dufflebags, Chest Rigs + Fannypack
+    Container rebalance gear set, 42.20.
+    goes with: Vanilla Gear Expanded
+2423266708  Hats and Glasses Don't Fall
+    The long-standing classic; the newer 'Hats And Sunglasses Don't Fall' covers the same ground - pick one.
+    overlaps:  Hats And Sunglasses Don't Fall (3793877376)
+3786875384  CompanionDogs Dog Display
+    Status display for Companion Dogs.
+    goes with: Companion Dogs [ALPHA]
+3786735663  Neat Crafting Recipe Count
+    Recipe count + substitute lookup for Neat Crafting (bilingual title, works in EN).
+    goes with: Neat Crafting [B42]
+3788498383  TV & Radio ReInvented - B42.20.3 Port
+    Broadcast overhaul port; pairs with your emergency-TV setup.
+    goes with: Dynamic Emergency TV Channel, Radio Frequency Manager
+
+2. HIGHLY INTERESTING - new features or updated classics that fit
+--------------------------------------------------------------------------
+2791656602  [B42/B41] The Motorious Zone Vehicle Pack  [632,747 subs, 5*]
+    632k subs, 5*, updated 27 Aug. Era-appropriate vanilla-styled vehicle pack - the natural complement to the KI5 fleet. Its HD-texture pack (3779019767) and Spawn Fill (3779393248) become relevant with it.
+    goes with: KI5 vehicle collection
+3409143790  Sapph's Cooking [B42+]  [276,253 subs, 5*]
+    276k subs, 5*, updated 25 Aug. Large cooking expansion.
+    overlaps:  Project Cook [B42], Craftable Vanilla Food Items
+2914075159  Evolving Traits World (ETW) + More Traits continuation  [233,120 subs, 5*]
+    233k subs, 5*, updated 1 Sep. Traits evolve with play; requires KillCount, Moodle Framework and UCWF - all installed. Same design space as SOTO/Traits As Skills: pick one philosophy.
+    goes with: KillCount, Moodle Framework, Unified Carry Weight Framework (UCWF)
+    overlaps:  SOTO, Traits As Skills
+3580276809  [B42.20] The Only Cure  [204,417 subs, 5*]
+    204k subs, 5*, updated 23 Aug. Amputation as bite treatment; its 42.20 fix (3775152804) is also in the window.
+    overlaps:  Antibodies (v1.97)
+3778511497  Skully's Zombie Collision [B42.20+]  [150,428 subs, 5*]
+    Zombies collide instead of phasing through each other. Biggest QoL/immersion hit of the window.
+3785740658  Fence Sheets  [90,465 subs, 5*]
+    Hang sheets over see-through fences and door frames, like windows. Blocks zombie line of sight.
+3739168410  Obvious Skill Tapes  [89,153 subs, 5*]
+    89k subs, 5*. Highlights useful VHS tapes - direct synergy with the WYD skill-tape collection.
+    goes with: [WYD] VHS Skill Tapes, [B41,B42] Show VHS skills in tooltip
+3784847437  Traits As Skills  [50,699 subs, 5*]
+    Traits evolve from how you play. Overhauls character progression.
+    overlaps:  SOTO, Somewhat Traits, Dynamic Fitness Boost
+3543612325  Restore Engine Quality [B42]  [46,542 subs, 5*]
+    46.5k subs, 5*, updated 21 Aug. Restore engine quality with wrench + spare parts + Mechanics 4. Note: KI5 Tire Fix (watch list) patches its 42.20.4 interaction with KI5 tires.
+    goes with: KI5 vehicle collection
+3751199292  [B42] True Companions - Experimental  [32,996 subs, 5*]
+    33k subs, 5*, updated 25 Aug. NPC companions - alternative/parallel to Bandits companions; check coexistence.
+    overlaps:  [B42] Bandits NPC
+3782929173  Project Dirtroad  [28,703 subs, 5*]
+    Traffic gradually wears persistent dirt roads and footpaths into the ground.
+3783623999  Livestock Panel Plus  [20,555 subs, 5*]
+    Livestock zone panel becomes a full herd status table (hunger, thirst, mood per animal).
+    goes with: Better Animal Care, Feed That Animal!
+3781571720  Undead Wildlife [B42 Stable]  [9,728 subs, 5*]
+    Kentucky's wildlife is infected too. Pairs with hunting/animal setup. MP experimental (irrelevant for SP).
+3759920384  Wandering Hordes: Dynamic Zombie Migration  [6,539 subs, 4*]
+    6.5k subs, 4*, updated 29 Aug. Migrating hordes system.
+3555199477  Undying Zombies (Immersive Respawn Replacement)  [3,687 subs, 5*]
+    Replaces zombie respawn with an immersive system. Updated in window.
+3781206950  Rewatchable VHS  [1,645 subs, 4*]
+    Re-watch tapes - synergy with skill-tape collection.
+    goes with: [WYD] VHS Skill Tapes, Named skill VHS tapes
+3788705258  Wandering Survivors  [76 subs]
+    Roaming NPC survivors - Bandits-adjacent; check coexistence with Bandits before enabling.
+    overlaps:  [B42] Bandits NPC
+3789551122  Wet Firewood - Rain, Snow, Wood & Fire Ignition Overhaul  [71 subs]
+    Firewood wetness and ignition realism - new, strong fit.
+3788033685  PropSort - Smart Base Sorter  [37 subs]
+    One-click base inventory automation.
+    overlaps:  Smarter Storage, Quartermaster
+3786655359  Drawbridge & Winch Mechanisms  [8 subs]
+    Buildable drawbridges - base-building depth.
+    goes with: Moats
+3778868211  Nick's Turn Off Fridges
+    Power micro-management QoL.
+3780683663  Cye's Push Doors! [SP/MP]
+    Shove doors open/closed.
+3782920935  Nick's Inventory Selection Fix
+    Fixes inventory selection behavior.
+3776182375  CH Status HUD
+    Compact character status HUD.
+    overlaps:  Mini Health Plus, Simple Moodle Indicators
+3779561845  LG Extended Plumbing
+    Deeper plumbing systems.
+    overlaps:  Water Pipes, PlumbingFixed
+3779562002  LG Extended Electricity
+    Deeper electricity systems.
+    overlaps:  ImmersiveSolarArrays
+3781818628  Dynamic Snow for Vanilla Vehicles [B42 MP]
+    Snow accumulates on vehicles.
+3784677588  3D Gun Racks
+    Visible weapon storage.
+3787909643  Muzzle Smoke
+    Firearm VFX.
+3775809123  Dash Roamer [B42.20]
+    In-vehicle dashboard companion/roaming view.
+3786155157  VHS Collector's Rack
+    Display storage for VHS tapes - fits the WYD tape collection.
+    goes with: [WYD] VHS Skill Tapes
+3780688809  Context Menu Cleanup
+    Declutters right-click menus.
+    overlaps:  Context Menu Icons, organizedCategories
+3782021029  Scenarios [B42.20]
+    'Where I was when it happened' start scenarios.
+    overlaps:  Start With... [b42], Spawn Selector
+3782670683  [B42] Wind Sway
+    Trees/vegetation sway in wind.
+3776502124  [B42.20] Zero Weight Keys
+    Keys stop weighing you down.
+3784951301  Blood Pools & Footprints [B42.20+]
+    Tracked blood, pooling, footprints.
+    overlaps:  Improved Blood Effects, Rain Cleans Blood
+3778403732  Immersive Looting B42: Search & Reveal
+    Search-based container looting.
+3789329475  Sentient Zeds [Climbing / Vaulting Zombies]
+    Zombies climb and vault obstacles. Changes base defense entirely - read before adopting.
+3782735637  Nick's Moveable Workstations
+    Relocate crafting stations.
+3780306632  Elevators
+    ; see also Nick's Rideable Elevators (3790452346).
+3787835610  Compass Direction Indicator
+    Compass on the in-game map.
+    overlaps:  Map Legend UI, Map Symbols Plus
+3790089095  [B42] Better Corpse Burning
+    Corpse disposal rework.
+    overlaps:  Mark Corpse, [B42] Drag Bodies Faster
+3786008420  Vehicle Turn Signals [Build 42]
+    Working indicators.
+    goes with: Vanilla vehicles animated
+3778884296  EXACT MINUTE CLOCK [B42]
+    Strong community traction in the window.
+    overlaps:  Lua Digital Watch Framework
+3783949266  ReBandaged [B42.20+]
+    Wound care rework.
+    overlaps:  Wounds Overhaul, Antibodies
+3786258719  Bloody Wounds
+    Visual wound feedback.
+    overlaps:  Wounds Overhaul
+3783807916  Clothing and Shoe Sizes B42.20
+    Sized clothing realism.
+    overlaps:  Real Undies, Detailed Footwear
+3783387236  Responsive Context Menus [B42]
+    Faster menus.
+3775423228  Layered Placement [B42]
+    Place items on top of furniture layers.
+    overlaps:  Place Anywhere, More on the Floor
+3773985930  O.C.D. Inventory
+    Inventory ordering control.
+    overlaps:  Better Sorting, organizedCategories
+3778284920  Propane Refuelling at Gas Pumps
+    Strong community traction in the window.
+    overlaps:  Propane Exchange Cabinets, Tanks Have Propane, Oxygen Refill
+3780027195  [B42] Machinery
+    Industrial machines for crafting chains.
+    overlaps:  Ogrim Mod's - Machine Utils, Functional Appliances 2
+3784590103  Blankets Are Warm
+    Strong community traction in the window.
+    goes with: Comfy Sleeping
+3790662607  [B42.20+] Item Merge Ultimate
+    Merge partial stacks/drainables.
+    overlaps:  Swap It, Consolidate All Fix
+3781012462  QoL Compendium
+    Bundle of small QoL tweaks - check overlap with existing QoL set before enabling.
+    overlaps:  Quality of Life Modpack, Common Sense
+3783725847  [B42] Knox County Smokes
+    Cigarettes/lighters/tobacco overhaul.
+3787420296  At Least Close The Damn Curtains
+    Zombies/NPCs and curtains behavior.
+3784993266  Diesel Fuel
+    Separate diesel fuel type for vehicles.
+    goes with: KI5 vehicles
+3779480293  Better Walkie Talkies
+    Strong community traction in the window.
+    overlaps:  Radio Frequency Manager
+3780128227  Worse Vehicle Condition
+    Harsher vehicle spawns.
+    overlaps:  Immersive Cars: Decay
+3787169788  Improvised Glass & Windows (B42 Stable)
+    Craft window glass.
+    overlaps:  [42MP] Repairable Windows
+3785340139  Railroad Crossing Signals
+    ; see also Riverside Traffic Signals (3780223693).
+3792286024  Room Occlusion B42 - Player-Built Rooms
+    Player-built rooms occlude properly.
+3777483891  Spoiling Liquids
+    Strong community traction in the window.
+    overlaps:  All Milks Are Created Equal, Calorie Fix
+3780938346  Under the Hood - Realistic Vehicle Maintenance
+    Deep mechanics realism.
+    overlaps:  Better Auto Mechanics, Car Parts Repair
+3779625821  Fruit Farming (B42)
+    Strong community traction in the window.
+    goes with: Infoteo's Fruit Trees, Farming Expansion B42
+3781785612  Containers In Inventory
+    Bags inside bags handling.
+3778597373  [B42] Craftable : Concrete Edition
+    Concrete construction.
+    overlaps:  Long-standing Metal Constructions
+3755993986  Gas Pump Indicator
+    Strong community traction in the window.
+3753700423  PZ Pulse
+    Heartbeat/health awareness HUD.
+    overlaps:  Danger Awareness, SixthSense
+3750907049  Full Dynamic Scarring System
+    Persistent scars.
+    overlaps:  Tomb's Player Body Overhaul
+3756687957  Where My Sledgies At?
+    Sledgehammer loot QoL.
+3765795716  Practice Crafting Skills
+    Strong community traction in the window.
+    overlaps:  Crafting Skills Practice Expanded
+3746263842  Wild Turkeys (B42.20+)
+    New huntable animal.
+3767037119  Universal Gunlight
+    Strong community traction in the window.
+    overlaps:  [B42] Simple Belt Flashlight!, Flashlight Indicator
+3758971325  Better Item Info
+    Strong community traction in the window.
+    overlaps:  [B42] More Item Information, Detailed Descriptions
+3766513120  Blackout Predators
+    Night becomes dangerous.
+    overlaps:  Reward Night Combat, Night Vision Framework
+3749404383  Functional Car Wash [B42]
+    Strong community traction in the window.
+3745718141  US Military Grenades [B42]
+    Strong community traction in the window.
+    overlaps:  ExtraBombs 2
+3761218629  Dismantle All at Once
+    Strong community traction in the window.
+3744455714  Functional Pager - Map-Wide Communication
+    Strong community traction in the window.
+3764655475  Plumbed Sink Mains Water Fix [B42]
+    Strong community traction in the window.
+    overlaps:  Water Pipes
+3745620322  Claimable Outposts
+    Secondary base claiming.
+3766140920  Black Powder Gunsmithing
+    Fits Gunworks/crafting depth.
+    goes with: [42.20MP] Gunworks Framework
+3752353153  Die With Style
+    Death animations/flavor.
+3739256322  Banger's Retro Car Dashboard [B42]
+    Strong community traction in the window.
+    overlaps:  Condition On Dash, Retro Dashboard Digitals (3743082626)
+3766143397  Shoot Through Barricades
+    Strong community traction in the window.
+3736555309  The Psychopath Trait [B42.20+]
+    Strong community traction in the window.
+    overlaps:  SOTO, Challenge Traits
+3751668602  Kid's Second Back Slot [B42.20]
+    Strong community traction in the window.
+    overlaps:  Dynamic Backpack Upgrades, [B42] Pack Mule
+3762749124  Ergonomic UI [B42.20]
+    Strong community traction in the window.
+    overlaps:  CleanUI, Better Vanilla Filters and UI
+3767935128  Bleeding Zombies [B42 Stable]
+    Strong community traction in the window.
+3749844752  Bring Back Real Names (B42)
+    Real brand names on items.
+3772979228  [B42.20] Plain Moodles Redone
+    Strong community traction in the window.
+    overlaps:  Simple Moodle Indicators, [B42] Medicine Moodles
+3753555791  Rocco's Tiles - Buildable
+    Buildable version of subscribed tile pack.
+    goes with: Rocco's Tiles, Neat Rocco's UI [B42]
+3765241705  Beyond Ten - Level 15 Skills
+    Raises skill cap.
+    overlaps:  Combat Mastering Skill, Efficiency Skill Mod 2
+3772269882  [B42] Knox Buildworks
+    Building expansion.
+    overlaps:  Jeeve's Build, Neat Building
+3760962710  [B42.20] Not Useless Things
+    Uses for junk items.
+    overlaps:  Unwanted Items Collection
+3773092190  Inventory Item Pinning
+    Strong community traction in the window.
+3766496742  More Books [B42.20.2]
+    Strong community traction in the window.
+    goes with: Skill Book Expansion, Easy Literature
+3765053321  Knox Weather Receiver
+    Strong community traction in the window.
+    overlaps:  [KYR] Real Weather Mod, Dynamic Emergency TV Channel
+3774243294  Sound Direction Indicator [42.20]
+    Strong community traction in the window.
+    overlaps:  [B42] Visual Sounds, Danger Awareness
+3775310237  JB's Work Orders [B42] Task Automation
+    Queue work tasks.
+3746939924  [B42.20] Looped Radio
+    Strong community traction in the window.
+    overlaps:  Radio Frequency Manager
+3748935486  Key Fobs
+    Car key fobs.
+3774055538  Down But Not Out
+    Knockdown instead of instant death.
+3747797778  [B42] Useful Flares Reborn
+    Strong community traction in the window.
+3745630569  Tools of The Trade [B42]
+    Occupation tool kits.
+    overlaps:  Military Tool Kit
+3761216758  Quartermaster - Auto-Sort & Store Loot
+    Strong community traction in the window.
+    overlaps:  Smarter Storage, Auto Loot, Tidy Up Meister
+3759277273  Survivor Quirks
+    Strong community traction in the window.
+    overlaps:  SOTO, Sandbox Traits
+3733690955  Simply Better Axes
+    Strong community traction in the window.
+    overlaps:  EBF Chainsaw, Durable Tools
+3746632343  Bundle Up! - A Packing Mod
+    Strong community traction in the window.
+    overlaps:  More Packing, Hoarder's Delight
+3747745835  Moodle Effects Explained [B42]
+    Strong community traction in the window.
+    goes with: [B42] Moodle Descriptions Expanded
+3779315249  '87 Toyota Corolla AE92
+    New period-correct car, KI5-style.
+    goes with: KI5 vehicle collection
+3787530735  '62 Daimler Ferret
+    Armored scout car.
+    goes with: KI5 vehicle collection
+3756938756  '69 Ford Mustang
+    Strong community traction in the window.
+    goes with: KI5 vehicle collection
+3770890864  '91 Lexus LS400
+    Strong community traction in the window.
+    goes with: KI5 vehicle collection
+3766571591  '70 Chevrolet Chevelle / El Camino
+    Strong community traction in the window.
+    goes with: KI5 vehicle collection
+3743371090  '73 NISSAN Skyline GT-R
+    You run the '92 R32; this is the classic.
+    goes with: KI5 vehicle collection
+3790887868  '88 Volvo 740 Sedan (744)
+    Brand new; pairs with your '89 Volvo 240.
+    goes with: KI5 vehicle collection
+3783055980  U.S. M4A1 Sherman by Papa_Chad
+    New Papa_Chad armor vehicle (trend #40).
+    goes with: Papa_Chad military vehicles
+3739363702  U.S. M60A3 by Papa_Chad
+    Another Papa_Chad tank.
+    goes with: Papa_Chad military vehicles
+3788543896  Rolling Refuge (1973 Winnebago Chieftain)
+    RV - fits the RV Interior setup.
+    goes with: RV Interior Expansion, [B42]Project RV Interior
+3716405632  Dynamic Horde Events B42
+    Event-driven hordes.
+    overlaps:  Wandering Hordes
+2983905789  Wandering Zombies
+    Classic roaming behavior mod, maintained for 42.20.
+3559783131  Woodcutting Skill - Overhaul (B42)
+    Dedicated woodcutting skill line.
+3581691478  More Blacksmithing!
+    Deeper smithing; see also Ixidior's Blacksmithing Upgrade (3679545738) and Copper and Bronze Forging (3758685960).
+3778201332  Hydrocraft Reinvented [B42]
+    The crafting mega-mod reborn for B42 - fits the deep-crafting profile; check load with existing crafting mods.
+3628922658  Printer3D: Manufacturing & Recycling System
+    Manufacturing/recycling chain.
+3577903007  Vanilla Foods Expanded
+    Food variety; a loot-neutral variant exists (3789090094).
+3757081423  PseudonymousEd's Salt-Preserved Foods
+    Salt preservation - fits the LTP line.
+    goes with: Long Term Preservation
+3747490069  Yeast Cultivation [B42]
+    Yeast keeping for baking/brewing.
+3749538717  WineVinegarBrewingB42
+    Vinegar/wine chain.
+3577995744  Make Tomato Paste & More!
+    Preserving chain addition.
+3652077421  Solar Home System
+    Solar power alternative.
+    overlaps:  ImmersiveSolarArrays
+3211693903  Traits Purchase System
+    Buy traits with XP; Extended variant (3750184467) updated too.
+    overlaps:  SOTO
+2940354599  Fitness & Workout Overhaul
+    Exercise system rework.
+    overlaps:  TwisTonFire - Exercises, Dynamic Fitness Boost
+3629857595  Sports Traits Expanded [42.20 Stable]
+    Sport-based traits.
+    overlaps:  SOTO
+2544353492  Has Been Read
+    Marks read literature.
+    overlaps:  Known And Collected
+3407754248  Read All Books
+    Batch reading QoL.
+    overlaps:  Easy Literature
+3738406924  TLDR - Too Long Didn't Read
+    Faster skill books reading QoL.
+    overlaps:  M-13's Reading Tweaks
+3543060884  Honu's Mod Info QoL
+    Mod info QoL; same author's Find That Item (3527778645) also updated.
+    overlaps:  Mod Comparer
+3737874810  Mod Manager Reforged (Client)
+    Modernized mod manager; you run Mod Manager + Load Order Sorter - compare before switching.
+    overlaps:  [B42] Mod Manager, Mod Load Order Sorter
+3639628777  Burd's Survival Journals (B41/42)
+    In-character journaling.
+2938616550  Metal Salvage
+    Salvage metal from the world.
+    overlaps:  Metal Bandsaw Log Sawing
+3647765196  Melt Down Buckles
+    Small smelting QoL.
+3698139680  City Standpipes
+    Urban water access points.
+    overlaps:  Water Pipes
+2925657627  Biofuels
+    Fuel from organics - late-game fuel independence.
+3512708849  Shotgun Trajectory
+    Shotgun spread realism.
+3457277411  Use Key From Glove Box
+    Vehicle key QoL.
+2511087277  Power Window Controls
+    Roll windows properly.
+2290459371  Vehicle Doors Hotkey
+    Door control hotkeys.
+3661430479  Towbars
+    Towing hardware.
+    overlaps:  Better Towing
+3744392248  Daisy Chain Towing
+    Multi-vehicle towing.
+3446203945  Tow Truck [B42]
+    Dedicated tow truck.
+    overlaps:  Harry's Tow Truck
+3772415251  Vehicle Maintenance Overhaul
+    Deep maintenance; community patch + ES translation exists (3788290680).
+    overlaps:  Better Auto Mechanics, TPMS
+3004207103  Operate Generators With Electrical Level 1
+    Lower generator skill gate.
+3576056135  Better Generator Info
+    Generator info QoL.
+2423906082  Bushcraft Gear - Tools [B41/B42]
+    Classic bushcraft toolset; Rare Weapons sibling (2432621382) updated too.
+3388844542  Minimal Display Bars + Nutritions + Discomfort
+    Compact status bars.
+    overlaps:  Mini Health Plus, Simple Moodle Indicators
+2012990668  Reorganized Info Screen
+    Info screen layout rework.
+3217685049  PZK VLC (Vanilla look-like car pack)
+    Vanilla-styled car pack + Community Expansion (3543325992).
+    goes with: KI5 vehicle collection
+3445948743  '76 Kamaz 5320 Soviet Bear
+    Period truck.
+    goes with: KI5 vehicle collection
+2523751880  UAZ 2206 [42.20]
+    Period van (+ Casual variant 2706775030).
+    goes with: KI5 vehicle collection
+3631989559  '69 Dodge Charger
+    Period car.
+    goes with: KI5 vehicle collection
+3677217949  1967 Chevrolet Impala
+    Period car.
+    goes with: KI5 vehicle collection
+3705042712  '69~'70 Ford Mustang Boss 429/302
+    Period car.
+    goes with: KI5 vehicle collection
+3419267262  BMW E38 750i
+    Period car (1994+; edge of era).
+    goes with: KI5 vehicle collection
+3286593534  [B42/B41] Mercedes-Benz 300SE/S320
+    Period car.
+    goes with: KI5 vehicle collection
+3646655397  [B42]1977 Lada Niva
+    Period 4x4.
+    goes with: KI5 vehicle collection
+3253385114  '81 DeLorean DMC-12
+    Period icon.
+    goes with: KI5 vehicle collection
+3649632887  Ford Transcontinental
+    Period truck; universal hitch addon exists (3785693571).
+    goes with: KI5 vehicle collection
+3783833448  '63 Chevrolet Impala
+    Period car, new in window.
+    goes with: KI5 vehicle collection
+3787723359  1995/1996 Chevrolet Caprice Classic Pack [B42]
+    Period pack, new in window.
+    goes with: KI5 vehicle collection
+3789425624  Off-Grid: Solar Power
+    New solar approach.
+    overlaps:  ImmersiveSolarArrays
+3789355284  Livestock Monitor
+    Animal status monitoring.
+    overlaps:  Livestock Panel Plus
+3789246358  Scarecrows Expanded
+    Farming defense flavor.
+3789299530  Choose Starting Items
+    Start loadout control.
+    overlaps:  Start With... [b42]
+3789516436  LootLens - LQS Loot Filter
+    Loot filtering system.
+3788705006  Smelting XP
+    XP for smelting work.
+3788533156  Big Size Spice: Bigger Salt & Pepper [42.20+]
+    Bigger spice containers - kitchen QoL.
+3788402435  Ben's Reliable Guns
+    One of Ben's firearm QoL set (Recoil Fix, Handgun Animation Fix, Trajectory & Penetration, Better Short Blades).
+3788393574  Real Vehicle VFX
+    Vehicle visual effects.
+3788458806  Enter/Exit Trunks - More Vehicles Support
+    Hide in trunks (WIP).
+3788321238  Rapid Actions [B42]
+    Faster common actions.
+    overlaps:  Turbo Actions
+3787945477  Learn & Practice
+    Skill practice system.
+    overlaps:  Practice Crafting Skills
+3787857407  Dairy Plus (Build 42)
+    Dairy chain expansion.
+    goes with: All Milks Are Created Equal, Make Cheese-type crafting
+3787690727  Building Utilities
+    Construction helpers.
+    overlaps:  Neat Building
+3787649097  Craftable Propane Tank [B42]
+    Part of a craftable-materials series (paper, pencil, welding rods/mask/torch) by one author - fits the self-sufficiency chain.
+3787607014  Zombie Butchery [B42]
+    Corpse processing depth.
+    overlaps:  Fox's Butchering
+3787149328  Craft & Build XP
+    XP flow rework for crafting/building.
+    overlaps:  Accurate XP Multipliers
+3787125307  Real Flashlights
+    Flashlight realism.
+    overlaps:  [B42] Simple Belt Flashlight!
+3787062830  Skill Book Library
+    Library-style book management.
+    overlaps:  Starlit Library
+3787014262  One Cut From Death
+    Harsher wound stakes.
+    overlaps:  Wounds Overhaul
+3786759551  Wallet and Keys
+    Wallets and key handling; This Is Your Life bridge exists (3788588924).
+3786750418  The Horde Is Coming
+    Horde pressure events.
+    overlaps:  Wandering Hordes
+3786655315  Gearbound 1.6
+    Equipment progression system.
+3786653645  First Person View [B42 - WIP]
+    Experimental first-person camera.
+3786647452  Read While Walking - Updated [B41 + B42]
+    Walk-and-read QoL.
+    overlaps:  Immersive Reading
+3786888415  Advanced Sound Options
+    Finer audio control.
+3786885231  Obsessively Crisp: Sharp Vanilla Player Textures
+    Sharper character textures.
+    goes with: 42.20 Every Texture Optimized
+3786854702  Animal Fix [B42.20] - Livestock Stability
+    Livestock stability fixes.
+    goes with: Better Animal Care
+3786852759  Composter Fix [B42]
+    Composting fix.
+    goes with: Farming Expansion B42
+3786849936  Refillable Propane Tanks [B42]
+    Propane refilling.
+    overlaps:  Propane Exchange Cabinets, PUMPS HAVE PROPANE
+3786832029  Reading Skill Books Gives XP
+    Books give XP directly.
+    overlaps:  Working Knowledge
+
+3. CAUTION - popular, but likely to clash with what you run
+--------------------------------------------------------------------------
+3768669395  True Weight  [102,357 subs, 5*]
+    102k subs, 5* - popular weight realism, but it clashes with the installed UCWF + Total Weight Rebalance; adopting it means removing those.
+    overlaps:  Unified Carry Weight Framework (UCWF), Total Weight Rebalance
+3682936016  Equipment UI - STABLE +  [98,533 subs, 5*]
+    One of two maintained Equipment UI forks (98.5k subs, 5*, updated 16 Aug). The B42.20+ fork (36.8k) is the other - run exactly one; compare recency and features.
+    overlaps:  Equipment UI - Paper Doll [B42.20+]
+3776641628  Skill Journal  [54,188 subs, 5*]
+    54k subs, 5*, updated 1 Sep. Skill retention journal - overlaps What Did I Just Learn? and LG Skill Journal; pick one journal (also see Skill Recovery Journal, the 2.78M-sub classic).
+    overlaps:  What Did I Just Learn? [B42]
+3775513231  Inventory Tetris - Grid Based Overhaul  [46,920 subs, 5*]
+    47k subs, 5 stars - but replaces the whole inventory UI; known friction with Proximity Inventory, Neat UI mods and Equipment UI. All-or-nothing decision.
+    overlaps:  Proximity Inventory B42.20+, NeatUI Framework, Equipment UI
+3726328119  Extensive Health Rework Evolved  [12,759 subs, 4*]
+    12.8k subs, 4*, updated 30 Aug. Deep medical overhaul (diseases, diagnostics, blood) - heavy overlap with the installed Antibodies + Wounds Overhaul + Pain Sense stack.
+    overlaps:  Antibodies (v1.97), Wounds Overhaul, Pain Sense
+3787035557  Extensive Power Rework (Community fork) - FIXED for 42.20  [311 subs]
+    One of three competing EPR forks (also Slapstick 3775553383, EPR Fork 3786970737) - pick exactly one, verify ISA compatibility.
+    overlaps:  ImmersiveSolarArrays
+3780301677  AbsWeight - Item Weight Control
+    Same territory as UCWF - do not stack.
+    overlaps:  Unified Carry Weight Framework (UCWF)
+3774013360  Carry Weight Multiplier
+    Same territory as UCWF.
+    overlaps:  Unified Carry Weight Framework (UCWF)
+3787001236  More Traits FIXED
+    Trait pack - overlaps SOTO/Somewhat/Challenge Traits; trait packs multiply start points unpredictably.
+    overlaps:  SOTO, Somewhat Traits, Challenge Traits
+3777663603  Even More Traits [42.20]
+    Same overlap.
+    overlaps:  SOTO, Somewhat Traits
+3788151760  PZ Performance Tuner [42.20.4]
+    You already run Zed's Better FPS + SmartZOptimizer + Multi-Cpu Enhance + Every Texture Optimized; stacking tuners backfires.
+    overlaps:  Zed's Better FPS, SmartZOptimizer, Multi-Cpu Enhance
+3793911582  Zomboid Unified Engine Tweaks (Z-UET)
+    Same reason.
+    overlaps:  Zed's Better FPS, Multi-Cpu Enhance
+3774776279  Climb Ladders [B42SP & MP]
+    You have I Can Climb Ladders Now - pick one ladder mod.
+    overlaps:  I Can Climb Ladders Now
+3782565181  Simple Suppressors | Build 42
+    Overlaps Improvised Silencers; only worth it with the Gunworks patch and after dropping the old one.
+    overlaps:  Improvised Silencers - Build 42.20
+3775553383  Extensive Power Rework - Slapstick Fork
+    Competing forks exist (EPR Fork 3786970737, B42 Continued 3790000294) - pick one, check ISA compatibility.
+    overlaps:  ImmersiveSolarArrays
+3780298456  Brita's Armor Pack B42.20 Standalone Port
+    Brita ecosystem - your arsenal is VFE + Gunworks; mixing gun frameworks causes loot/balance mess.
+    overlaps:  Vanilla Firearms Expansion, Gunworks Framework
+3776518022  [42.20 SP/MP] Rip All Clothing
+    You have Repair Any Clothes; check interaction.
+    overlaps:  Repair Any Clothes
+3785695033  [B42.20+] Vehicle Enter/Exit Fix
+    - but verify against No more wiggly vehicle + Vehicle Safety before stacking vehicle-behavior fixes.
+    overlaps:  No more wiggly vehicle, Vehicle Safety
+3592326489  Inventory Reinvented 42.20.4
+    Another inventory overhaul - same all-or-nothing territory as Inventory Tetris; clashes with Proximity Inventory/Neat UI.
+    overlaps:  Proximity Inventory B42.20+, NeatUI Framework
+1299328280  More Traits
+    The classic trait mega-pack, updated in window - known to double up with SOTO; also see More Traits FIXED/Restored forks.
+    overlaps:  SOTO, Somewhat Traits
+3674399753  AHS - Advanced Health System
+    Medical overhaul - overlaps the installed health stack.
+    overlaps:  Antibodies (v1.97), Wounds Overhaul
+3734633409  Advanced First Aid Overhaul
+    Same overlap.
+    overlaps:  Antibodies (v1.97), Wounds Overhaul
+3629659534  Realistic Disease Mod [B42 stable]
+    Illness overhaul - check against Antibodies.
+    overlaps:  Antibodies (v1.97)
+3668094025  [B42.20] Bag Upgrade Plus
+    Bag upgrading - overlaps Dynamic Backpack Upgrades (+ Realistic variant 3669286020).
+    overlaps:  Dynamic Backpack Upgrades
+3739205288  Vest Dont Hole (Finally)
+    Same ground as subscribed No Holes For Ballistic Armor - pick one.
+    overlaps:  [B42] No Holes For Ballistic Armor
+
+4. WATCH LIST - new/small but promising, or unproven
+--------------------------------------------------------------------------
+3793113977  Filibuster Rhymes' Used Cars B42 STABLE  [224 subs]
+    Unofficial stable port (224 subs, day-old); author says it may be removed at the original owner's request. Wait for legitimacy/stability.
+3790739492  Bandits B42.20.4 Compatibility Fix  [66 subs]
+    Targets dedicated-server warnings - mostly MP-side; skip unless the farming warnings bother you in SP.
+    goes with: [B42] Bandits NPC
+3793855355  KI5 Tire Fix  [5 subs]
+    Day-old, 5 subs; fixes tires w/ Restore Engine Quality on 42.20.4. Watch until proven.
+    goes with: KI5 vehicle collection
+3792558524  Neat Lockpicking Sandbox+
+    Kept from criteria: Neat series sandbox options.
+    goes with: NeatUI Framework
+3793925208  Trespass - Week One Addon [42.20.4]
+    Week One ecosystem - relevant only if you ever adopt Week One (not subscribed).
+3780868604  [42.20] Slayer's Week One AI Overhaul
+    Same - Week One only.
+3792906225  Meat Smoking (jerky) [42.20.4]
+    New; perfect fit with your preservation line (LTP, Dry That Food, jars).
+    goes with: Long Term Preservation
+3793368916  Freeze-Dried Meat Packets
+    Same theme, brand new.
+3793921774  Configurable BlowTorch & Propane Tank
+    Fits your torch/propane chain (Refill Welding Torch, Hose-Fed Welding Torch just released too: 3793520012).
+3793523410  ImprovedEngineRepair
+    New; engine repair depth.
+3793407081  B42 Remove Debris & Tree Stumps Easily
+    New QoL.
+3793458050  Saw Tree Chopping [B42]
+    New; saws fell trees.
+3793757431  Buildable Railings
+    New building piece.
+3793780295  Bark Tanning - Alternative Leather Tanning
+    New crafting chain; fits deep-crafting taste.
+3792876957  Ben's Put It Back B42
+    Return items to where they came from; new.
+3791633320  Turbo Actions - Faster Crafting/Building/Repairs
+    New speed QoL.
+3791557355  Cook With: Ingredient-First Cooking [B42]
+    New cooking flow; fits Project Cook.
+    overlaps:  Project Cook [B42]
+3791146188  Corpse Autopsy
+    New; flavor + info.
+3791163812  Small Animal Salvaging [B42]
+    New hunting/butchering depth.
+    overlaps:  Fox's Fixed & Rebalanced Butchering
+3791602637  Worm Digging
+    New fishing/bait detail.
+    goes with: TwisTonFire - Better Fishing
+3791702289  Stone Prospecting [B42]
+    New gathering depth.
+    goes with: Break Big Rocks
+3792364983  Stay in the Pen! - Livestock Escape Fix
+    New animal QoL.
+    goes with: Better Animal Care
+3791615013  Livestock Auto Care
+    New; automates feeding.
+    overlaps:  Feed That Animal!
+3791539347  Calm Livestock
+    New animal stress QoL.
+3790676586  AutoWrench - Mechanics Training Without the Clicking
+    New mechanics QoL.
+3792100733  Auto Consolidate Drainables (B42)
+    New; pairs with Item Merge choice.
+    overlaps:  Swap It
+3790060851  GrabSpecificAmounts
+    New inventory QoL.
+3793110960  Container Search
+    New search QoL.
+3793093305  Compost Fill/Dump All Sacks
+    New farming QoL.
+    goes with: Farming Expansion B42
+3790543734  Vex Rain Funnel
+    New water collection.
+    overlaps:  Useful Barrels
+3791943076  Water Pump Irrigation
+    New irrigation; compare Natural Irrigation (trend) and Plysken Irrigation Pipes.
+    overlaps:  Natural Irrigation (3763835105)
+3791925199  Usable Concrete Mixer [B42]
+    New construction depth.
+3790786157  Long Burn Fuel Briquettes
+    New fuel crafting.
+3792287651  Fuel-to-Propane Station [B42]
+    New propane logistics.
+    overlaps:  Propane Exchange Cabinets
+3790123686  Generator Hose
+    New power QoL.
+    goes with: ImmersiveSolarArrays
+3790880431  Ultimate Towing (Tow Any Car With Any Car)
+    New; overlaps Harry's Tow Truck.
+    overlaps:  Harry's Tow Truck - Zombie Buddy Ed.
+3792113124  Vehicle Repair Overhaul + Nearby Containers
+    New mechanics QoL.
+    overlaps:  Better Auto Mechanics
+3793387564  Sequential Eat
+    New eating QoL.
+3793872987  Knox Countdown (Infection/Zombification Timer)
+    Day-old; pairs with Antibodies-style play.
+3793935075  VHS Recording Fix
+    Day-old; VHS ecosystem fix.
+    goes with: [WYD] VHS Skill Tapes
+3792929213  Random Quests
+    New objective system.
+3791765528  Queued Dismantling
+    New; queue dismantle jobs.
+3790399182  Skill Book Tracker [B42]
+    New; pairs with Known And Collected.
+    overlaps:  Known And Collected
+3790968409  No Duplicate Skillbooks & VHS in the same container
+    New loot QoL; fits VHS hunting.
+    goes with: [WYD] VHS Skill Tapes
+3786043225  Vehicle Interiors V0.2 EXPERIMENTAL
+    Walkable vehicle interiors - experimental.
+    goes with: RV Interior Expansion
+3785508432  Knox Phones (Working Smartphones!) [B42]
+    Working phones - flavor vs. 1993 lore; your call.
+3785588064  GeneratorPlus - Building Power & Shared Fuel
+    Building-wide generator power.
+    overlaps:  ImmersiveSolarArrays
+3785539944  Vanilla Metalworking Expanded
+    New metalworking depth.
+3785328309  Simple Metal & Clay (B42.20+)
+    Materials chain.
+3785290771  Valeyardo's Sustainable Crop Growth
+    Farming sustainability (+ Animal Growth sibling 3785277084).
+3785342910  Cigo's Engine Repair [B42.20+]
+    Engine repair alternative.
+    overlaps:  Restore Engine Quality
+3789234614  Balaclava Slot
+    New equipment slot (see also Wallet Slot 3789235513).

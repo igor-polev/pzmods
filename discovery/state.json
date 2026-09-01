@@ -1,0 +1,6 @@
+{
+  "schema": 1,
+  "lastRunAt": "2026-09-01T23:20:00+03:00",
+  "lastWindow": { "from": "2026-07-29", "to": "2026-09-01" },
+  "note": "Fresh full run (supersedes the first run of 1 Sep). Listing: browsesort=lastupdated pages 1-185 (cutoff by date probes at 29 Jul) UNION browsesort=mostrecent for the same window - verified 1 Sep 2026: lastupdated lists ONLY mods with at least one update (never-updated new mods are absent from it), so both sorts are required for full coverage. Next incremental run: process items whose Updated/Posted date is NOT OLDER than lastRunAt (boundary-inclusive; already-reviewed dedupe absorbs re-listings); cutoff by probing detail-page dates, never by workshop id in the lastupdated sort."
+}

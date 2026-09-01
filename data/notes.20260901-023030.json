@@ -1,0 +1,1002 @@
+{
+ "SandboxSettings": {
+  "text": "B42 only. After you change an option you must leave the save and load it again, or the change does not fully apply. Mods that read SandboxVars once when they load will not see your change until that reload.",
+  "updated": "2026-08-31 23:14"
+ },
+ "sandboxpresetsaver": {
+  "text": "Made for singleplayer. If you changed Sandbox Options, leave the save and enter it again BEFORE you save a preset, otherwise the preset does not hold the new values.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Build42ConsoleFixes": {
+  "text": "Supports 42.20.x only. Author: enable ZombieBuddy before this mod, then fully restart. It only silences known false-positive and headless-server-only errors; real content errors stay visible.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ModManager": {
+  "text": "Its mod.info calls Workshop Update Checker incompatible. The Workshop Update Checker author says this is not a real conflict: both mods just ask Steam for updates, so it is redundancy, not breakage. Also requires Mod Load Order Sorter [b42], which has bad reports on 42.20.4 - see the note there.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SecondChance": {
+  "text": "Singleplayer only. Author: safe to add or remove mid-save, it does not touch the save structure. Author runs it on 42.20.2 without problems.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CheatMenuRebuild": {
+  "text": "Standalone replacement for Cheat Menu Reloaded plus the B42.20 fix pack. Never enable those two next to it (neither is installed here). Build 42.13+ only, not B41.",
+  "updated": "2026-08-31 23:14"
+ },
+ "errorMagnifier": {
+  "text": "Minimum supported game build is 42.15. On B42 the 'open console log location' button no longer works - TIS removed it. It needs Mod Update and Alert System, which is itself falling behind; see the note there.",
+  "updated": "2026-08-31 23:14"
+ },
+ "3019672735/ModComparer": {
+  "text": "Known trap: it breaks the 'convert this save to the new build' confirmation box, so the Yes button cannot be clicked. When the game offers to convert an old save, disable this mod first, convert, then enable it again. One report that loading/updating the mod list does not work on 42.20.3.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ModLoadOrderSorter_b42": {
+  "text": "Several users report it stopped working after game 42.20.4 - game or dedicated server will not start. The 42.20.4 security patch removed the Lua methods mods used to send code from the server. The author answered that he tested on 42.20.4 and that a game which will not load is not his mod's fault, but he has not published a fix. Mod Manager requires this mod, so both are affected.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ChuckleberryFinnAlertSystem": {
+  "text": "Optional on B41, required on B42. Last updated 2026-04-08, older than almost everything else here. Users report a main menu with no text after adding it, fixed by unsubscribing. It is a dependency of errorMagnifier and SwapIt.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Multi-CPU": {
+  "text": "Not a normal mod. Subscribing alone does nothing: you must edit ProjectZomboid64.json by hand and paste the Java flags from the mod description. Author's last update is 2026-03-10 and he lists 42.13-42.15, but the flags are plain Java flags, so users report they still work on 42.20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RemoveInventoryLimitsZB": {
+  "text": "Needs ZombieBuddy installed AND set up (launch options patched). Setup step people miss: in Sandbox Options uncheck 'maximum weight limit of 50', otherwise the mod looks like it does nothing. One report of a silent crash together with ZombieBuddy.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SmartZOptimizer": {
+  "text": "Needs ZombieBuddy and an OpenCL-capable GPU. Since game 42.19 several users report ZombieBuddy rejects it with 'Could not verify signature' and it never loads. Author's last update is 2026-05-13 and he confirmed a crash with NVIDIA driver 566.36. Check that it really loads on 42.20 before you trust the speed-up.",
+  "updated": "2026-08-31 23:14"
+ },
+ "WorkshopUpdateCheck": {
+  "text": "Mod Manager's mod.info declares this mod incompatible. This author answers that it is wrong: both mods only query Steam for updates, so it is redundancy, not a conflict. Client-side only, changes nothing in the game. It only watches mods enabled on the main-menu Mods screen, not the per-save mod list.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ZBLuaPerfMon": {
+  "text": "Developer tool, needs ZombieBuddy. It times every Lua call, so it costs performance while it is switched on - keep it off unless you are hunting a stutter. Author lists 42.13-42.15.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ZBBetterFPSB4220Fix": {
+  "text": "Full replacement for the original Zed's Better FPS - never run both (mod.info already refuses). Needs ZombieBuddy 2.3.2+. The author verified it only on game 42.20.2. It switches OFF ZombieBuddy's Java signature check, which is also why other ZombieBuddy mods that fail that check may start working. 'Optimize RingBuffer' needs a full game restart; sprite batching and 3D model options can fight with other rendering mods.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ZombieBuddy": {
+  "text": "Subscribing is NOT enough. One-time manual setup: run its installer, which patches the Steam launch options and drops a Java agent. Skip that and every mod requiring it silently does nothing - 10 mods here require it. Safe to add or remove on existing saves. Author lists B41 and B42.12-B42.17 and last updated 2026-05-07, so it is behind game 42.20; users report crashes and installer trouble on 42.20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ATakeABathAndShowerDepthMap": {
+  "text": "Author: this DepthMap fix must sit at the TOP of the mod list. Right now it is LAST inside 02 Firsts, so all of 01 Utils and eight other mods load before it - move it to the top of 02 Firsts if the depth map misbehaves. The pack does not work with mods that overwrite base game files or functions. Grime can be switched off in sandbox options. Users report it is safe to add mid-save.",
+  "updated": "2026-08-31 23:14"
+ },
+ "MoreItemInformation": {
+  "text": "A user reports it is completely incompatible with the Auto Cook mod, at any load order (Auto Cook is not installed here). mod.info refuses game builds below 42.13. Everything it shows can be turned off one by one in mod options.",
+  "updated": "2026-08-31 23:14"
+ },
+ "twistresting": {
+  "text": "Author: this pack is not compatible with Common Sense or with other modpacks. Common Sense [B42.20+] (VB_CommonSense) IS installed here in 16 Balance, and mod.info does not list that id, so pzmods will not warn you. A user also reports a hotbar slot conflict with Clean HotBar, which is installed too. Reports of FPS falling hard while an inventory window is open. The pack hides its own overlapping features when it detects a competing mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SPNCC": {
+  "text": "Supports 42.20 stable, tested in multiplayer. If you get a 'file doesn't exist' error, turn the Lua checksum off. If the game crashes at world creation, resubscribe; if it still crashes, start the save without the mod and add it afterwards. Turning retextures on or off needs a full game restart.",
+  "updated": "2026-08-31 23:14"
+ },
+ "twistbettercharacterinfo": {
+  "text": "Author asks for it low in the load order - 19 QoL - Secondary UI is a good place. Not compatible with Ra's Body Model (not installed here).",
+  "updated": "2026-08-31 23:14"
+ },
+ "twistbetterpause": {
+  "text": "Author: must be FIRST in the whole mod load order, before every other mod, because it patches vanilla files that later mods build on. Here it is first inside 02 Firsts, so all of 01 Utils still loads before it. Complete inventory overhauls loaded later can bring the pause restrictions back. Singleplayer only, on purpose. The mod version must match the game version (42.20.4 build of the mod for game 42.20.4) or you get errors.",
+  "updated": "2026-08-31 23:14"
+ },
+ "UnofficialMappersCommunityTilePack": {
+  "text": "Some B42 map mods ship copies of these tile packs inside themselves. Loading a tile pack twice does no harm, but the load order decides which copy of a tile you actually see. Some users report world-creation crashes on 42.20 with maps built on this pack.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NepEasyDistro": {
+  "text": "Library, last updated 2025-06-01 - the oldest item in this collection. Users report console spam on B42 (SpecialLootSpawns.OnCreateRandomColor missing) and one coop-server crash. Only 4 mods here need it, all of them Ogrim's.",
+  "updated": "2026-08-31 23:14"
+ },
+ "melos_tiles_for_miles_pack": {
+  "text": "IMPORTANT: a tester found a MASSIVE memory leak when the game option 'Texture Compression' is switched OFF. Keep Texture Compression enabled. Author confirms B42.20 stable. 4 map mods here need it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Military_Tool_Kit": {
+  "text": "Author: fully works on B42 singleplayer, only PARTIALLY works on B42 multiplayer - sync bugs are still open and turrets are B42 only. Several users report a dedicated server that will not start after adding it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "MoodleFramework": {
+  "text": "Two live problems. 1) In multiplayer it triggers 'File doesn't exist on the client' for media/lua/client/mf_config.lua because the real file is MF_Config.lua - the workaround is DoLuaChecksum=false in the server .ini; singleplayer is unaffected. 2) Users report a hard crash and error flood when it runs together with Lifestyle: Hobbies, which IS installed here (12 Mechs - Core). Also reports of moodles stacking into flickering duplicates since 42.20.4.",
+  "updated": "2026-08-31 23:14"
+ },
+ "moodlesinlua": {
+  "text": "Load order rule from the author: every moodle TEXTURE pack must be placed AFTER (under) Moodles in Lua, or the new packs never show up in the list. It replaces the whole moodle rendering system, so it fights with anything else that draws moodles.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NeatUI_Framework": {
+  "text": "Load order rule: NeatUI Framework must load BEFORE every mod that depends on it - 13 mods here do. B42 only (42.0.2 to 42.20.x). Author checked it against the 42.20.4 hotfix and says no change was needed, so the old 'Updated' date on Steam is not a sign of rot; errors after that hotfix came from the dependent mods, not from this one.",
+  "updated": "2026-08-31 23:14"
+ },
+ "PertsPartyTiles": {
+  "text": "Special step from the author: since 42.13 all custom items were removed, and to get a clean copy you must UNSUBSCRIBE, wait until Steam has really deleted the folder, then subscribe again. A known one-line bug on 42.20 spams 'require(\"Definitions/ContainerButtonsIcons\") failed' - harmless, the file name has one extra 's'. Last updated 2025-12-16.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Roccos_Tiles": {
+  "text": "Contested on 42.20: several users report duplicate-sprite errors that crash the game at world load, while others say it loads fine on 42.20.4. Author's last update is 2026-02-14 and there are many unanswered 'update for 42.20' comments. This matters here because Dawn Town, Begonia Town and Jeeve's Build require it - if worlds stop loading, test this one first.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RotatorsLib": {
+  "text": "Dead. Last updated 2022-02-20 for B41 (needs PZ 41.65+), the author's own comments say ABANDONED, and users report it goes red in the B42 mod list and cannot be enabled at all. NOTHING installed here declares it in require=. Good candidate for -- Disabled.",
+  "updated": "2026-08-31 23:14"
+ },
+ "simonMDsTiles": {
+  "text": "B41 gets no more updates; B42 is the maintained one and users confirm 42.20 stable in MP. But some users trace world-load crashes on 42.20 to this pack or to Rocco's Tiles - one user's saves all loaded again after removing it. Suspect it if worlds stop loading.",
+  "updated": "2026-08-31 23:14"
+ },
+ "StarlitLibrary": {
+  "text": "On 42.20 it spams tooltip and ModTranslations errors. The author answered that the erroring feature is not used by any mod (the base game added the same thing), so it is noise, not breakage, and he has pushed a fix - make sure Steam really updated the mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "vac_playing_utils": {
+  "text": "The author calls this one a DISCONTINUED QoL mod (the other half, Vac Mod Utils, is the live prerequisite). Its sandbox settings do not like being changed in an existing save - users traced wrong item weights back to it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "YAPZLib": {
+  "text": "Errors on the wrong-case path media/lua/shared/yapzlib/JustTables.lua, and users report heavy stuttering when it runs with KI5 cars in multiplayer - a user found OnTick handlers being added far too often and posted a patch in the discussions. 3 mods here need it (VMZNEW, SpecLoot, SpecLootPC).",
+  "updated": "2026-08-31 23:14"
+ },
+ "zdk": {
+  "text": "Users report it needs an update for 42.20.4: a getText error on 42.20.1 and one crash at launch. Author's last update is 2026-05-12. ZModUnbork and ZItemTiers depend on it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "tsarslib": {
+  "text": "On dedicated servers users hit 'File doesn't exist on the client' for player-vehicle animset xml after recent patches; the working fix is DoLuaChecksum=false in the server .ini. 14 vehicle mods here depend on it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "dawn_town": {
+  "text": "Requires Rocco's Tiles, which has open 42.20 crash reports - see the note there. Users report a crash loop when getting close to Dawn Town, and low FPS inside the town (60 instead of 165). Others say 42.20.2 MP works. Treat as risky on 42.20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "muldraughmilitarybaseas24": {
+  "text": "Special install, from the author: do NOT add it to an ongoing save. Add the map on the MAP tab and put 'muldraughmilitarybaseas24' ABOVE 'Muldraugh, KY' in the map order; add it by hand if it is not listed. It only clashes with map mods that sit on the same cells (between Rosewood and Muldraugh). Author cannot update it any more - the unofficial map tools crash on load. An error on the military base is harmless.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NellisAFB": {
+  "text": "Author: start a NEW save. To add it mid-save you must never have been near its coordinates, then make a temp save with Nellis on, copy map_ver.bin from the temp save over your real save. NOT compatible with Falcon Ridge or other maps below March Ridge (neither is installed here). VMZNEW is listed in require= but the author says it is optional.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CamdenCountyB42": {
+  "text": "Heavy performance reports on 42.20 - one server owner says it 'completely destroyed ALL of the frames', others report lag spikes. It is a large B41-era port; the standalone version is still not out. Loot in police gun lockers is wrong on 42.20 (cameras instead of guns). Author documents how to add it to an existing save.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Constown42": {
+  "text": "Open memory-leak and stutter reports on B42 stable: stuttering that gets worse the closer you are to town and continues after leaving, plus crash reports when enabled alone. It also overlaps New Hartburg, which IS installed here (04 Maps) - users complain it deletes the original New Hartburg layout, so check the two in Map Mod Manager.",
+  "updated": "2026-08-31 23:14"
+ },
+ "FoxtrotWarehouse": {
+  "text": "Users report it conflicts with the Atlanta map and possibly Falcon Ridge - same cells. Neither is installed here, so nothing to do for now; re-check with Map Mod Manager if you add a big map.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Louisville_Quarantine_Zone": {
+  "text": "The author marks it OUTDATED and warns of bugs on B42; last updated 2025-07-06. It takes B42 cells 52x15, 52x16, 53x15, 53x16, 54x15, 54x16 and will clash with any map mod on those. Users say it still loads on B42 stable with some stuttering.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Louisville_River_Marina": {
+  "text": "The author marks it OUTDATED for B42; last updated 2025-02-24. It takes B42 cells 46x3, 47x3, 47x4, 48x3, 48x4, 49x4. Users report a pile of console errors pointing at cell 47,4 and a crash when a game is started on this map's spawn points - spawning elsewhere was fine.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Louisville_Riverboat": {
+  "text": "The author marks it OUTDATED for B42, but a user tested it on B42.20 stable and it worked. Only one B42 cell (51x4), so little chance of clashing with another map. The boat was moved right in the last update because B42 cell borders differ from B41.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Maplewood": {
+  "text": "B42 only, no tile packs needed. B42 cells 31x32, 31x33, 32x32, 32x33 - a user reports these overlap Oakshire and LittleTownShip B42 (neither installed here). Crash reports around the police station on MP servers, and one 'broken 42.20' report against 'works on 42.20.1/42.20.2' from others. Author warns to back up saves.",
+  "updated": "2026-08-31 23:14"
+ },
+ "newhartburg": {
+  "text": "Author: conflicts with the town of Grapeseed and with Hartburg. On top of that, Constown (B42) is installed here and its users complain it overwrites the original New Hartburg layout - check the two of them in Map Mod Manager.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Petroville": {
+  "text": "'Lite' B42 port only - the original map files were lost, so it does not meet B42 detail standards and cannot be rebuilt. Users report the mod id in the B41 folder was renamed from Petroville to b42_petroville, which breaks existing saves, and that the update needs a hard reset (delete appworkshop_108600.acf on a server). Reports of crashes for anyone who walked near it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RabbitHashKY": {
+  "text": "Early/preliminary B42 release - the author says to expect breakage and asks for conflict reports. Known map conflict: North Peak, and a user found a cell conflict with Project Indiana (neither installed here). B42's smaller 256x256 cells grew the map's footprint, so maps that were merely adjacent in B41 can now overlap. The B42 update bricked existing B41 saves for many users.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RavenCreekB42": {
+  "text": "Community port; the author will unlist it when the original author releases his own B42 version. On 42.20 multiplayer several users report half of Raven Creek missing - forest and no access road - while singleplayer is fine. Also RAM jumping from 4 GB to 8 GB on a dedicated server when entering, and no car spawns for some. The author documents how to add it to an existing save.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Towhead-Island-FOB": {
+  "text": "It accidentally overwrites vanilla cells: with this mod on, the Ohio Mall loses its cutaway/transparency system. A user isolated that to this map, not to its tile pack dependencies. Cause is the mapping tools still using the B41 grid.",
+  "updated": "2026-08-31 23:14"
+ },
+ "damnlib": {
+  "text": "Shared note for the whole KI5 vehicle family (58 mods here require this). Author states B42.20 is fully supported in SP and MP. The recurring problem is not the library itself: on dedicated servers KI5 cars trigger 'file doesn't exist on the client' and the Lua checksum fails - the known workaround is DoLuaChecksum=false in the server .ini. Second recurring fix: when the game crashes at load or cars go invisible after a game update, unsubscribe and resubscribe both damnlib and the car mod so Steam really refreshes the files.",
+  "updated": "2026-08-31 23:14"
+ },
+ "80manKat1": {
+  "text": "Author's last update is 2025-08-28 and it shows on 42.20: hitting a zombie or any faster crash makes the truck sink into the ground and be lost, and on dedicated servers it turns invisible for everyone while the host drives, teleporting players back to the map start. A user found the cause is maxSuspensionTravelCm being 12 in the script; 20 fixes it, but only the author can change it. Armour crafting is also broken since 42.17.",
+  "updated": "2026-08-31 23:14"
+ },
+ "83amgeneralM923": {
+  "text": "Broken on 42.20 MP and still broken as of July 2026: the character walks endlessly into the driver's door instead of entering, and the error returns each time you step out.",
+  "updated": "2026-08-31 23:14"
+ },
+ "78amgeneralM35A2": {
+  "text": "On 42.20 the fuel and water tanker variants do not work, even with Tsar's Common Library installed. Users also report it cannot be added mid-save on 42.20. Loading the truck with about 700 kg stops its nose sinking into the ground.",
+  "updated": "2026-08-31 23:14"
+ },
+ "82oshkoshM911": {
+  "text": "Two rules from the author: the M967 fuel tanker only has fuel functionality with Tsar's Common Library (installed here), and its semi-trailers can only be towed by the M911 - it uses a different connection method, so it does NOT work with other semi-truck mods, though the M911 can tow normal trailers.",
+  "updated": "2026-08-31 23:14"
+ },
+ "85chevyStepVan": {
+  "text": "On 42.20, dying and making a new character in the same save leaves the vehicle's model and textures broken. The Expanded variant's extra storage is widely reported as broken, with container-distribution errors naming Specific Loot (KI5).",
+  "updated": "2026-08-31 23:14"
+ },
+ "86fordE150": {
+  "text": "On 42.20 users report the van showing only half its body, and the doors and trunk disappearing now and then - a game restart brings them back. The Chain and Dallas masks cannot be worn since the vanilla 42.16 changes. See the damnlib note for the shared KI5 problems.",
+  "updated": "2026-08-31 23:14"
+ },
+ "86oshkoshP19A": {
+  "text": "On 42.20 the doors and hood textures vanish once the owner walks away from the truck. Open bug threads for storage that will not open and a tire bug on the M1082 covered trailer. On a dedicated server you must list every variant id (86oshkoshUSMC, 86oshkoshKYFD, 86oshkoshFRTR55, TrailerM1082, TrailerM1082tarp, TrailerM1095, TrailerM1095tarp), not only 86oshkoshP19A.",
+  "updated": "2026-08-31 23:14"
+ },
+ "87fordB700": {
+  "text": "Game-breaking report on 42.20 multiplayer: while driving the truck the map chunks stop loading and go black, ping jumps over 1600 ms, and the console fills with vehicle errors. Also a 'CRITICAL GetVehicleInfo Crash avoided' log for 87fordF700swat, missing DoorFrontRight and GasTank part definitions.",
+  "updated": "2026-08-31 23:14"
+ },
+ "89defender": {
+  "text": "On 42.20 multiplayer the character stands up through the car roof when entering. Users found a workaround: switch the engine OFF before leaving the vehicle. The author has not fixed it. It does not clash with the older separate Defender mods.",
+  "updated": "2026-08-31 23:14"
+ },
+ "89volvo200": {
+  "text": "On a 42.20.4 dedicated server it logs ERROR: template \"VL200Louver\" not found twice at every startup - the louver template seems to be missing or renamed in the B42 package. Also reports that tyres cannot be inflated even with a Tire Pump.",
+  "updated": "2026-08-31 23:14"
+ },
+ "90bmwE30": {
+  "text": "Users report it causes memory leaks on 42.20 multiplayer. The hood could not be interacted with on 42.17 MP.",
+  "updated": "2026-08-31 23:14"
+ },
+ "93chevySuburban": {
+  "text": "Reported as unsupported on 42.20 dedicated multiplayer because of a memory leak. Changing parts throws errors on B42. Wrecker towing now needs a separate mod, because the mod that used to add it requires a Java patch.",
+  "updated": "2026-08-31 23:14"
+ },
+ "93fordF350": {
+  "text": "On 42.20 dedicated multiplayer users report a memory leak, plus missing templates: ERROR: template \"F3502Roofrack\" not found and \"SUB93BumpersCCSPD\" not found, which stop the vehicles working. A user traced this to damnlib's 42.17 registry missing about 86 vehicle template entries.",
+  "updated": "2026-08-31 23:14"
+ },
+ "93mustangSSP": {
+  "text": "Confirmed by a user with every other mod disabled: on 42.20.0 it throws 'attempted index: getConditionMax of non-table: null' in createPartInventoryItem_Radio, repeatedly, whenever vehicles load. The car radio part is the cause.",
+  "updated": "2026-08-31 23:14"
+ },
+ "92amgeneralM998": {
+  "text": "Contested on 42.20: several users report the Humvee does not spawn at all and shows only its rectangular shadow, while others post screenshots of finding them on 42.20.3. If it turns invisible, resubscribe damnlib and this mod (see the damnlib note).",
+  "updated": "2026-08-31 23:14"
+ },
+ "CytU1550L": {
+  "text": "Not a KI5 mod and not maintained: last updated 2025-01-29, when the description was written for 'B42 unstable'. Nothing has been said about 42.20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "97bushmaster": {
+  "text": "On 42.20 MP the armoured glass never breaks - window health stops at about 46% and regenerates, so players inside cannot be killed. Users also report getting stuck in the vehicle and storage racks that will not open. Spawns can be turned off in sandbox settings.",
+  "updated": "2026-08-31 23:14"
+ },
+ "1970WHITEFREIGHTLINERCOE": {
+  "text": "The rear hitch sits too high, so the truck pushes trailers away instead of hooking them - the W900 and Peterbilt slide under and connect fine. Works on 42.20 and can tow the W900 trailers, but the armour menu is a separate upgrade menu, not the normal Vehicle Mechanics one. If the truck does not appear in the vehicle list, swap its load order with tsarslib.",
+  "updated": "2026-08-31 23:14"
+ },
+ "BicycleMod": {
+  "text": "Author: put the Bicycle at the TOP of the mod list - that alone fixes most reported problems, and the description lists the mods it cannot live with. In multiplayer 'Allow transfer to inventory' must stay ON in MOD options (not sandbox options) or the mod breaks. Careful: Project RV Interior and TwisTonFire - Better Pause both also demand the first slot, so you have to decide between them.",
+  "updated": "2026-08-31 23:14"
+ },
+ "AquatsarYachtClubB42": {
+  "text": "Author: NOT compatible with B42.12. On 42.20 several users, including on a dedicated server, report every boat stuck underwater and unusable, while others say it works. Also a stack-trace loop from Standardized Vehicle Upgrades 3 when it looks for a boat (SVU3 is not installed here). There is a known B42 seat-switch bug that shows up most on many-seat vehicles like boats.",
+  "updated": "2026-08-31 23:14"
+ },
+ "amclub": {
+  "text": "Setup rule from the author: this mod only works with the sandbox option 'Vehicle Damage from Vehicle Impact' set to None, which is the default - change that option and the mod misbehaves. On 42.20.3 dedicated servers mounting the Harley leaves the character standing on the bike with an endless loading icon, and tyre inflation is broken server-side.",
+  "updated": "2026-08-31 23:14"
+ },
+ "autotsartrailers": {
+  "text": "Author says the trailer spawn points are wrong and obsolete since the B42 map change. On 42.20 stable some users see the mod disable itself during Lua reload, with no error shown, and unsub/resub does not help. A user has published a separate patch that stops the trailer wheels pivoting while towed.",
+  "updated": "2026-08-31 23:14"
+ },
+ "isoContainers": {
+  "text": "On 42.20 the containers became untowable - not by normal vehicles and not even by KI5 trucks - because the game changed how mass is calculated. You already have the fix installed: 'Containers! B42 Stable Mass Patch' (isoContainers_massPatch) in 21 Patches, which cuts their mass by about 6x and loads after this mod. Do not remove it. In B41 fuel storage needed Tsar's Common Library.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ForkLift": {
+  "text": "Looks dead: last updated 2025-04-05 and users say plainly it is broken - you cannot enter a forklift on B42, and in 42.14 it blocked repairs to hoods and trunks. One user traced their broken auto-mechanic errors to this mod. Consider -- Disabled until it is updated.",
+  "updated": "2026-08-31 23:14"
+ },
+ "KI5trailers": {
+  "text": "On 42.20 the cargo doors cannot be opened with E any more - only by prying or with the trailer key. The mod's newest version folder is 42.13, so it has not followed the later changes to vehicle container doors. Several users simply call it broken on 42.20+.",
+  "updated": "2026-08-31 23:14"
+ },
+ "U.S.M113_APC_by_Papa_Chad": {
+  "text": "On 42.20 the tracks and turret are visually missing and the APC cannot be entered at all; parts drift away from the hull and only come back after a game restart. On a 42.20.2 coop server the .50 cal ammunition lags the UI and regenerates when a character dies or reconnects. Last updated 2025-12-21 despite the ✅B42.20 claim in the description.",
+  "updated": "2026-08-31 23:14"
+ },
+ "U.S. M163 VADS by Papa_Chad by Papa_Chad": {
+  "text": "Users report it does NOT work in B42 multiplayer, and that the author has stopped answering here while working on other mods. Last updated 2025-12-21. Same family as the M113 - see that note.",
+  "updated": "2026-08-31 23:14"
+ },
+ "U.S. M548 Cargo Carrier by Papa_Chad": {
+  "text": "On 42.20 it spawns without wheels and cannot be entered even with the key, and right-clicking a part to repair it does nothing except add errors - repairing through a cheat menu still works. Needs the Military Tool Kit for some installs. Last updated 2025-12-21.",
+  "updated": "2026-08-31 23:14"
+ },
+ "U.S. M998 Humvee by Papa_Chad": {
+  "text": "Serious performance bug, reported by many: after repairing a part (sheet steel hood or trunk) or damaging the Humvee, the frame rate collapses to under 15 and stays there - one user describes it as a memory leak that gets worse the more you shoot it. In multiplayer it hits every player on the server and a client has to rejoin to recover. The other Papa_Chad tracked vehicles do not do this.",
+  "updated": "2026-08-31 23:14"
+ },
+ "rSemiTruck": {
+  "text": "Load order rule from the author: load W900 AFTER any mod that replaces or heavily patches the vehicle radial menu, or the trailer attach options do not appear. Multiplayer is limited on purpose - you can only load it to 2000 weight - and spawning or repairing it as admin installs both tanks, so you must uninstall one by hand. It also carries RotatorsLib inside it, so the separate RotatorsLib mod is not what makes it work. Recent breakage on dedicated servers is blamed on tsarslib, not on this mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SpecLootPC": {
+  "text": "The author has marked it [Abandoned] in the title. Last updated 2026-01-07 and users report it does not work in B42 multiplayer. Good candidate for -- Disabled.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CarPartsRepair": {
+  "text": "In multiplayer only accounts with moderator or admin rights can actually repair and raise the value - normal players cannot. Since 42.14 the cyclic repair throws an error every time, although the repair itself still happens. Reported to clash with the Modern & Historical Firearms Bundle (not installed here) and with Common Sense patches.",
+  "updated": "2026-08-31 23:14"
+ },
+ "PROJECTRVInterior42": {
+  "text": "Two hard requirements from the author: this mod must be placed FIRST in the mod load order, and on a server DoLuaChecksum must be false. It is not compatible with challenge modes, and adding it mid-save needs the author's guide. Careful: Bicycle! and TwisTonFire - Better Pause also demand the first slot, so you must choose. If an update resets your interior, the author's Project RV Tools can reassign the old one.",
+  "updated": "2026-08-31 23:14"
+ },
+ "AquatsarRVAddon": {
+  "text": "Author: needs a NEW save, and a specific load order shown as an image on the workshop page - it is not enough to have Aquatsar Yacht Club and Project RV Interior installed.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NepWreckWorkingCars": {
+  "text": "After changing its sandbox options you must quit to the main menu and restart before they take effect. Whether it works with KI5 cars is contested - one user says it does not, another lists Hilux, Defender and Humvee working on 42.20.02. Safe to add or remove on an existing save.",
+  "updated": "2026-08-31 23:14"
+ },
+ "WayMoreCars": {
+  "text": "Load order rule from the author: near the TOP, but AFTER the map mods. Also: do not run any mod that removes or replaces vanilla vehicles next to it - use this mod's own sandbox setting instead. Safe to add or remove mid-save; changes only reach chunks that are still unexplored. Climbable Vehicles does not work in multiplayer and must be switched on in sandbox settings.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NepHighBeams": {
+  "text": "B42 only - it uses functionality added in 42.9.0 and cannot work on B41. Setup step: in Options -> Display & Performance set 'Lighting Updates' higher than 15 per second, or the effect is poor. On 42.20.02 the high-beam toggle is not synced in multiplayer, so other players do not see it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RVInteriorExpansion": {
+  "text": "Not compatible with any other custom vehicle-interior mod. Real fix reported by users on 42.20 MP: if you spawn in the woods instead of inside the RV even after following the install guide, disable this expansion and Part 2 - the base Project RV Interior then works.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RVInteriorExpansionPart2": {
+  "text": "Last updated 2025-12-12 and the reports since are bad: does not work in multiplayer on 42.19, players cannot leave the RV interior on 42.18 MP, and one dedicated server saw broken zombie spawns and building cutaways traced to this mod. See the note on RV Interior Expansion - disabling both cures the 'spawned in the woods' bug.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RVmilitaryaddon": {
+  "text": "Not compatible with other custom interior mods. Users confirm the base Project RV Interior mid-save guide also works for this addon. In multiplayer it can teleport you into the woods - same family of problems as the other RV expansions.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SpecLoot": {
+  "text": "On 42.20 multiplayer it fires bursts of 'ItemPickInfo -> cannot get ID for container' whenever KI5 vehicles load. Users found the trigger is having other 'Fix' mods for KI5 enabled at the same time. Load order: put it AFTER any mod that changes vanilla vehicle loot distribution, otherwise its items are overwritten.",
+  "updated": "2026-08-31 23:14"
+ },
+ "tehbigtrunk42": {
+  "text": "Load order rule from the author: sort this mod manually to the BOTTOM of the mod list, after every car mod. If you add it to an existing save, cars that already exist keep their old capacity. Vanilla trailers are broken (stuck at 100 capacity) and the author says that needs a Java patch he cannot do. One user hit a save that would not load again until this mod was removed.",
+  "updated": "2026-08-31 23:14"
+ },
+ "VMZNEW": {
+  "text": "Setup rule: load it AFTER your vehicle mods if you want military vehicles to appear only in military zones - it removes vehicles from other zones. Safe to add or remove on an existing save, but changes only reach unexplored areas. One user could not start the game because of an error in VMZ/Road Stories/BiohazardCrash.lua.",
+  "updated": "2026-08-31 23:14"
+ },
+ "VehicleSafety": {
+  "text": "IMPORTANT setup step from the author: set the sandbox option 'Player Damage From Crash' to FALSE - this mod fully replaces the vanilla crash system and misbehaves otherwise. On a 42.20 dedicated server a user reports a client-side error from the interaction with Moodle Framework, in both load orders; mod.info already asks to load after Moodle Framework. Phantom crashes from network lag were fixed in v2.1.",
+  "updated": "2026-08-31 23:14"
+ },
+ "GRM-MyCustomFirearm": {
+  "text": "The author is behind: bugs reported since 42.17 are still open and he keeps deferring the fix to the next game version. Known bug: after you upgrade a gun, equip it and unequip it, right-clicking throws an error and it can never be upgraded again. Users also report the sandbox settings having no effect.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ExtraBombs2": {
+  "text": "The author's own line is 'Latest Compatible Version: 42.19' - you are on 42.20. It spams 'no such function SpecialLootSpawns.OnCreateRecipeMagazine' because the game renamed it to ItemCodeOnCreate.onCreateRecipeMagazine. The author removed the MP tag himself and does not recommend multiplayer, because custom recipes are broken there. Can be added mid-save, but the magazine needs loot respawn or a new area.",
+  "updated": "2026-08-31 23:14"
+ },
+ "alicesKitsunesCrossbowMod": {
+  "text": "Known and unfixed by the author: random double-shooting in multiplayer, and the muzzle flash being visible from other players' point of view. Because the original mod is old, some crafting items and attachments point at vanilla items that no longer exist in B42. The author is asking for testers - treat it as beta.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SentryTurret042": {
+  "text": "Build 42.18 and earlier are no longer supported; it targets 42.20+. Known error on 42.20.2: 'ERROR: module \"Base\" imports itself', caused by media/scripts/ST_sound.txt declaring module Base and then importing Base. Harmless but noisy until the author removes that block. Multiplayer support is beta.",
+  "updated": "2026-08-31 23:14"
+ },
+ "alicesWeaponSling": {
+  "text": "Its radial menu opens with V by default, the same key as vehicle menus and other radial-menu mods - rebind it under Options > Key Bindings if two things fight over V. Build 42 STABLE only. Safe to add mid-game, but the sling will not spawn in areas you already explored.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ammomaker": {
+  "text": "Since game 42.20.4 users report spent casings no longer ejecting to the ground. Casing lifetime and whether revolvers drop casings are sandbox options. Recipes for the reloading press need Blacksmith 5, or Blacksmith 2 with the magazine, and may need a relog before they appear.",
+  "updated": "2026-08-31 23:14"
+ },
+ "MoreGlovesB42": {
+  "text": "Unofficial B42.20 port. Known interaction: it can make the dashboard disappear together with tsarslib, and the fix users found is to unsubscribe and subscribe again so Steam pushes the fixed files.",
+  "updated": "2026-08-31 23:14"
+ },
+ "B42PackMule": {
+  "text": "Warning from the author: most features are OFF by default and have to be switched on in Sandbox Settings. Its sandbox settings are known to reset themselves after a Lua reload - set them again and they stick. Dangerous option: turning the vest-as-container feature back on mid-save DELETES every vest that already exists.",
+  "updated": "2026-08-31 23:14"
+ },
+ "AliceGear": {
+  "text": "Reported to stop a dedicated server from loading with a missing sewinganimation.xml error; users get past it by disabling the Lua checksum. Works on 42.20 MP for others, so it is a checksum/packaging problem rather than broken content.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NVFramework": {
+  "text": "Performance: switching night vision on costs about 30 FPS for most users. Only the 'single-point light' mode avoids it - change it in Options -> Mod Options -> Night Vision Framework. Packaging bug on hosted multiplayer: the mod ships a folder named NPCs while the checksum system looks for npcs, and no amount of resubscribing fixes it from the user side. Two other mods here (KATTAJ1 Military Pack, Night Vision Googles) use it for their goggles.",
+  "updated": "2026-08-31 23:14"
+ },
+ "LazoloDynamicBackpackUpgrades": {
+  "text": "Since game 42.20.3 users report the upgrades breaking: capacity stops applying, tier 1-3 backpacks go missing on dedicated servers, and one user lost everything inside a bag when upgrading its tier. Reliable trigger: if the bag moves between the back and the lower-back slot the upgrades stop working and must all be reinstalled. Weight reduction only applies while the bag is equipped.",
+  "updated": "2026-08-31 23:14"
+ },
+ "PNV": {
+  "text": "On B42 these goggles do nothing on their own - they need Beathoven's Night Vision Framework, which is installed here. When the framework updates, this mod tends to break for a while (item tags stop matching); users then wait for a framework patch. Spawn rates are in sandbox options.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SpnCloth": {
+  "text": "Issue reported: wearing the soft plaid shirt throws a conflict error with Alice's Weapon Sling, which IS installed. Dedicated servers see SyncClothing packet failures from getVisual() == null on some items.",
+  "updated": "2026-08-31 21:08"
+ },
+ "1VCESTANDARD": {
+  "text": "Load order rule from the author: if inventory icons mismatch, move this mod to the VERY bottom of the load order. It overwrites clothing variants from other clothing mods, so whichever loads last wins - it and Vanilla Outfits Expanded overwrite each other's texture variants. One user lost worn items and loot after changing its load order mid-save.",
+  "updated": "2026-08-31 23:14"
+ },
+ "VanillaGearExpanded": {
+  "text": "After a recent update several users had a save that crashes a few seconds after loading, and all the mod's items gone. The fix users found is to delete everything in the mod's folders OTHER than 42.20 - the stale older version folders are what break it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "VanillaOutfitsExpanded": {
+  "text": "Author's own compatibility notes: Spongie's Open Jackets is not supported on the new items and will overwrite this mod's vanilla variants; Vanilla Clothing Expansion is compatible but overwrites this mod's texture variants, so the load order between them decides what you see. Vanilla Clothing Expansion is installed here. Multiplayer is only 'reported working'.",
+  "updated": "2026-08-31 23:14"
+ },
+ "PickupATMNFirePlace": {
+  "text": "It force-overwrites the vanilla entity_piano.txt to work around a B42 piano bug. On a server that produces 'Missing dictionary script on client: Base.Piano' and blocks players from connecting. The author's workaround is to remove the mod from the save, load once, then add it back.",
+  "updated": "2026-08-31 23:14"
+ },
+ "nailgunsb42": {
+  "text": "Useful general fact from this page: game patch 42.20.4 broke every mod that used a single % in its sandbox options - authors must now write %%. This mod was fixed; if another mod's sandbox menu disappeared after that patch, this is why. Some users are still kicked to the main menu when firing, which the author blames on a mod conflict.",
+  "updated": "2026-08-31 23:14"
+ },
+ "walkmanmaeuledition": {
+  "text": "Users report B42 stable broke the base mod whenever a weapon is equipped in your hand. Three tape addons here depend on it (28 Days Later, Classical Collection, Flashback Pack, Pack Rock).",
+  "updated": "2026-08-31 23:14"
+ },
+ "ebfchainsaw": {
+  "text": "Built for 42.20 and standalone - it does not need Authentic Z or any other chainsaw mod. Two open bugs: a FileNotFoundException for 42.20/media/animsets/player/aim/aim.xml, and characters crouch-walking on a dedicated server while carrying it. You must read the instruction magazine before the chainsaw can be started, and trees are cut with the context action, not by swinging.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ISAMP": {
+  "text": "Minimum build 42.16+. The author folded the TargetSquareOnLoad code inside this mod, so it is no longer a dependency - and nothing else installed here requires TargetSquareOnLoad either, so that mod is now dead weight. Author re-checked this fork on 42.20.4 and found no changes needed, against one bare 'BROKEN IN B42.20' comment with no detail.",
+  "updated": "2026-08-31 23:14"
+ },
+ "TargetSquareOnLoad": {
+  "text": "Nothing installed here declares it in require= any more. Immersive Solar Arrays used to need it, but its author moved that code inside his own mod. Last updated 2024-12-28. Safe to put on -- Disabled unless you find a mod that still wants it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "UsefulBarrelsMP": {
+  "text": "The author's own line: multiplayer support is not fully implemented or tested - gas stations, vehicle interactions and map object interactions are the untested parts. If the game crashes, the FluidContainer may lose its contents. Default capacity was lowered from 800L to 400L; vanilla barrels are 600L if you want to match them. B42 only, no B41 port planned.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RepairableWindows": {
+  "text": "Startup error on 42.19.1 and 42.20: populateWindowSprites calls IsoSpriteManager:getNamedMap(), which the game no longer exposes. The author said breaking 42.19 was unintentional but he will not fix it. A user published a small compatibility patch that removes the error. Needs the Carlow Crystal Guide magazine, a crowbar and Carpentry 2.",
+  "updated": "2026-08-31 23:14"
+ },
+ "GRM-OgrimMachineUtils": {
+  "text": "Singleplayer only, as the title says. Load order rule from the author: place it ABOVE the machine mods that depend on it (Sewing Workbranch here). Removing it after machines have been placed leaves missing-item warnings.",
+  "updated": "2026-08-31 23:14"
+ },
+ "GRM-SewingWorkbranch": {
+  "text": "Singleplayer only - the author has not finished the multiplayer work and says so. Reports of it being broken: all sewing machines at 0 condition, oil not spawning, and errors when opening the machine UI. A Legacy variant exists for people still on 42.19. Needs Machine Utils and Sandbox Group Titles.",
+  "updated": "2026-08-31 23:14"
+ },
+ "GRM-MyOwnWell": {
+  "text": "Hard to remove once used - the author says so himself. Wells are entities that stay in loaded chunks, and users had to delete them by hand with the Brush Tool, or ask an admin. The intended way is to disable the main mod and enable GRM-MyOwnWell-SafeRemover, which is installed here but carries no tag, so it is in no config. Reports that SafeRemover does not load on a dedicated server at all, and that a server then fails with 'Missing dictionary script on client: Base.WaterPump'. Incompatible with BuildablePump (not installed).",
+  "updated": "2026-08-31 23:14"
+ },
+ "SpearTrapsFix": {
+  "text": "The author only tested it on 42.15.3, and a user reports it does not work at all on 42.16.3 - the option to plant spears in the ground disappears. Last updated 2026-04-06, so it has not been checked against 42.20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "FunctionalAppliances2": {
+  "text": "Rebuilt for 42.20+ and the author says not everything from B41 has been brought over yet. Its jukebox is powered by True Music, and on some hosts it writes a stray ';\\TrueMusicJukebox;\\' entry into the dedicated-server mod list. The duplicating popcorn machines are a vanilla bug, not this mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Neat_Building": {
+  "text": "CONFLICT WITH SOMETHING YOU HAVE ENABLED: its mod.info declares StairsEastSouth incompatible, and Stairs East&South is enabled here in 10 Craft. Users report duplicate BlackRailingFence dictionary entries and servers that will not boot. The item ships its own answer: the sibling module 'Neat Building - Buildables SES Compatible' (Neat_Building_Buildables_SESCompat) is the same mod WITHOUT the StairsEastSouth conflict, and it is installed but wears no tag. Swap this one for that one, or drop Stairs East&South. Jeeve's Build also does not work with Neat Building. Removal warning: it registers buildable entities, so never just unsubscribe from a save that used it - enable the matching 'Safe Uninstall Support' variant first, and do not hot-swap between the full and UI-only variants while the game or server is running.",
+  "updated": "2026-08-31 23:14"
+ },
+ "StairsEastSouth": {
+  "text": "See the note on Neat Building - the two are declared incompatible and both are enabled here. Beyond that: users report crashes to desktop after several game patches, and it broke outright on 42.15.2. Removing it mid-save is hard because it adds entries to the world dictionary. If a dedicated server refuses it, unsubscribing and resubscribing has fixed it for some.",
+  "updated": "2026-08-31 23:14"
+ },
+ "JeevesBuild": {
+  "text": "Read before enabling. It has a HARD dependency on five tile packs (mod.info require=) and the game refuses to load it if any is missing - all five are installed here. Two dangers the author states himself: removing it from a save that has garage doors in it corrupts the save, because the garage doors add dummy objects to the world dictionary; and unsubscribing one of the tile packs is even worse, because the sprites its buildings are made of go with it. Users also report it does not work with Neat Building and will stop a server from booting.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SKITTLE_LongTermPreservation": {
+  "text": "Broken on its own: last updated 2025-12-20 for 42.13, and on 42.20 stable it throws an item-tag null error and crashes the game on world load. You already have the answer installed - [PATCH] Long Term Preservation (LongTermPreservationFix) sits in 21 Patches, which loads after this, exactly as it must. That patch fixes the crash from the lard recipe's knife requirement and the broken translations. Do not remove it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SimpleOverhaulTraitsAndOccupations": {
+  "text": "The author's own warning in capitals: it does NOT work properly in B42 multiplayer and he asks people not to use it there. B42 singleplayer is fine. A known MP bug is Lark plus Excessive Sweating stopping exercise from working at all.",
+  "updated": "2026-08-31 23:14"
+ },
+ "EZRoof": {
+  "text": "Multiplayer was never tested by the author, and two server owners report the same failure. Mid-save safety is contested: the author says it is relatively safe because it only places vanilla floor tiles and leaves no mod data, but one user says adding and removing it broke their game so badly that no modded multiplayer would start. Confirmed working on 42.20 in singleplayer.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SkillTapesBlacksmith42": {
+  "text": "On 42.20 users report the Blacksmithing tapes give no XP; the same is reported for the Glassmaking set. Since game 42.17 added vanilla tapes for these skills, this set is largely redundant anyway. Note for the whole [WYD] series: game 42.15 changed how translations work, so older sets can show raw alpha-numeric codes instead of names.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SkillTapesGlass42": {
+  "text": "Reported as not working since 42.17, and still no XP on 42.20 - same problem as the Blacksmithing set. Vanilla added its own tapes for this skill in 42.17, so the set is now mostly redundant.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SkillTapesMechanic42": {
+  "text": "Useful multiplayer fix from this page: if joining a server fails with 'skilltapes_recorded_media_mechanics.lua does not exist on the client', delete C:\\Users\\<you>\\Zomboid\\mods\\default.txt. That trick applies to the whole 'file does not exist on the client' family, not just this mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "vac_mod_b42_6": {
+  "text": "A user reports a loot bug: with this mod on, the guns that should spawn in Rosewood police station were replaced by tools, and the problem went away when the mod was disabled (seen on 42.10). Also a NullPointerException when picking up a generator. Its two add-on modules are installed but untagged.",
+  "updated": "2026-08-31 23:14"
+ },
+ "BreakBigRocks": {
+  "text": "Worth knowing: the author confirms that updating the game to 42.20 overwrites the memory configuration files - so any hand-made ProjectZomboid64.json edits (see the Multi-Cpu Enhance note) are lost on a game update and must be redone. Multiplayer-safe and server-authoritative; a user reports two saves broken since 42.20 but without isolating the cause.",
+  "updated": "2026-08-31 23:14"
+ },
+ "TheyKnewB42": {
+  "text": "Unusable on its own: last updated 2024-12-19, and on B42 killing a hazmat zombie - melee, gunshot or car - crashes the game to desktop, while hosting a world crashes at start. You already have the answer installed: They Knew [B42] Stable Patch sits right after it in the load order, which is exactly where it must be. Do not remove the patch, and never add the older '42.13 compatibility patch' alongside it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "LifestyleHobbies": {
+  "text": "Two live problems. 1) Game update 42.20.4 broke it: many users report an error flood and a UI that will not open. 2) It crashes hard together with Moodle Framework, which is installed here - see that note. The description says adding mid-save is fine, but a user lost all recorded kills, survival time and skill boosts by doing exactly that, so back up first. Take A Bath And Shower ships its own patch that overrides the Lifestyle hygiene part.",
+  "updated": "2026-08-31 23:14"
+ },
+ "lgd_antibodies": {
+  "text": "Users report it stopped working on game 42.20.4, and that on 42.20.2+ multiplayer other players get extremely slow antibody progression. Also lag spikes when right-clicking a wound, and the Knox Infection tab sometimes not appearing on 42.20 stable. The author's last update is 2026-03-14.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Bandits2": {
+  "text": "Multiplayer setup is fussy: the mod must be enabled in THREE places - the server's mod selection page, the Mods tab and the Steam Workshop tab - or it silently does nothing. Its mod.info declares BetterFPS_B42 incompatible; you run the ZombieBuddy fork (ZBBetterFPSB4220Fix) which uses a different id, so pzmods will not warn you, but it is the same mod underneath. Known bug on 42.20.3: killed bandits are naked and carry nothing; a user published a 'Naked Bandits Fix'. Safe to add and remove on existing saves.",
+  "updated": "2026-08-31 23:14"
+ },
+ "BanditsCreator": {
+  "text": "Bandits you build here lose their gear if you later disable the mods that supplied the clothing or weapons. Your edits to the shipped clans are overwritten every time the author updates the mod on Steam. On dedicated servers several users cannot open the Creator menu even as admin in debug.",
+  "updated": "2026-08-31 23:14"
+ },
+ "OCsChallengeTraits": {
+  "text": "The author says it is not compatible with mods like Spawn Selector if you want a fully random spawn point - Spawn Selector IS installed here (12 Mechs - Core). Some trait combinations kill the character within seconds of loading in. The fires from CDDA/House Fire/Flaming Wreck can be switched off with a sandbox option. The vanilla DisabledInMultiplayer flag for traits is still broken, so nothing stops these traits in MP.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SpawnSelector": {
+  "text": "See the Challenge Traits note - the two fight over where your character starts. For multiplayer, every map mod must also be installed and configured on the server or the map view is wrong.",
+  "updated": "2026-08-31 23:14"
+ },
+ "efficiencySkillMod2": {
+  "text": "Its Legacy module (installed here, untagged - good) has versionMax=42.12 and cannot load on 42.20 at all. Even v2 has a real bug: lua/server/EfficiencyXP.lua grabs ISTimedActionQueue, a client-only class, so it is reported broken on dedicated servers and XP is removed the instant you gain it in multiplayer. When adding to an existing save, set the sandbox options at once or you stay on the level-1 x2 time multiplier.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SixthSenseMoodle": {
+  "text": "Needs Moodle Framework, which has its own open problems here - see that note. Users report it does not work on B42 stable multiplayer, and errors spam when NPCs (Bandits) are nearby. In B42 it also alerts on your own animals; turn off the sandbox option 'SixthSenseWorksOnHumans' to stop that. The trait cost cannot be changed - the Balance Traits mod it points at does not exist for B42.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CombatMasteringSkill": {
+  "text": "Treat with care: users report it crashing the game at launch after a B42 hotfix, and making the main-menu UI disappear on 42.15, with an endless error loop. Reported incompatible with the Week One mod (not installed here). Its Old module is installed but untagged, which is correct - do not enable both.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SkillBookExpansionB42": {
+  "text": "A user reports it breaks opening boxes and cartons of nails on 42.14.1 multiplayer. Since game 42.15 changed the translation format, book names can show as raw ids like SkillBookExpansionB42.BookSkill1. Minimum build 42.15+.",
+  "updated": "2026-08-31 23:14"
+ },
+ "B4213DrivingSkill": {
+  "text": "Singleplayer only - the author says he does not play multiplayer and cannot support it, and users confirm no driving XP is gained on a dedicated server. Updated to 42.20.2. The VHS Skill Tapes: Driving set here requires this mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CompanionDogs": {
+  "text": "Alpha, but built for multiplayer from the start and safe to add to an existing save. Important: do NOT simply unsubscribe from a save that has dogs or cats living in it - remove the animals first. Three add-on breeds here depend on it, and each needs a minimum base version (Cats 0.7.1+, Labrador 0.6.6+, Rottweiler 0.6.3+), so update the base mod first.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CompanionCat": {
+  "text": "Needs Companion Dogs 0.7.1 or newer. The author warns: do not just unsubscribe from a save that has cats in it. Cats have their own spawn multiplier in sandbox options, separate from the stray-dog one.",
+  "updated": "2026-08-31 23:14"
+ },
+ "StartWith": {
+  "text": "Last updated 2024-12-30. Works on 42.20 singleplayer, but in multiplayer the items it gives you are broken - you cannot use them and can only throw them away. Some default item ids no longer exist in B42 (for example Base.Cigarettes), so the log fills with 'ItemContainer.AddItem: can't find'.",
+  "updated": "2026-08-31 23:14"
+ },
+ "LMWildSpawnMaps": {
+  "text": "Works on 42.20, but since the 42.15 translation change the spawn locations are listed by their raw directory names instead of readable titles. Its sibling LMWildSpawnRandom is on -- Disabled, which is right: the author made the two deliberately incompatible, so only one may ever be enabled. If a location is missing from the list, unsubscribing and resubscribing has fixed it for users.",
+  "updated": "2026-08-31 23:14"
+ },
+ "TheyKnewB42Patch": {
+  "text": "This is the fix for the They Knew hazmat-zombie crash, and your load order is already right - They Knew first, this straight after it. What it repairs: the satchel was registered through the B41 body-location API, which throws on 42.13+, and the hazmat medication drop only ran when isServer() was true, so singleplayer got nothing. Tested by the author on 42.20.03. The older '42.13 compatibility patch' must NOT be used with it. On a server you may still need DoLuaChecksum=false.",
+  "updated": "2026-08-31 23:14"
+ },
+ "twistoutsidefreezer": {
+  "text": "This workshop item is GONE from Steam - the API answers result 9 (not found), the title and description are empty, and the page cannot be opened. The mod still works because the folder is still on your disk, but it will never update, and if Steam ever cleans the folder up you cannot get it back. Copy it into your own Zomboid\\mods folder if you want to keep it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ZItemTiers": {
+  "text": "The author's own answer to 'which builds?' is 42.13 - 42.16, and there are unanswered requests for a 42.20 update. It needs zdk, which itself is reported to need a 42.20.4 fix. Load order matters: mod.info asks for it after CleanUI and Starlit Library, and a user found that the zdk file names make its own scripts load in the wrong order, so zdk functions look missing without throwing an error. Users also report stuttering after installing it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "BathTowelsOverhaul": {
+  "text": "Author's warning for 42.20: do NOT add it to an existing save. If you do it anyway, make sure no towels are in your inventory or on your character first, because existing bath towels and dish cloths are removed from the world and then throw an error every time the map loads. Incompatible with anything else that overrides Base.BathTowels or Base.DishCloth. A user traced a conflict to Nature's Call. Tooltips for absorbency need Starlit Library.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Horse": {
+  "text": "Its mod.info declares Run and Reload incompatible, and Run and Reload is installed here - pzmods will flag it; you have to pick one. Common server problem: 'File doesn't exist on the client: media/scripts/horsemod/models.txt' stops the game loading, and the fix is DoLuaChecksum=false. The author explains that since 42.20 the game checks every mod for animset folders and complains when they are missing, even for mods with no animations, so that error is noise. A saddle is not required to ride, but riding without one hurts.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Run and Reload": {
+  "text": "See the Horse note - Horse Mod declares this mod incompatible and both are installed. Users also report you cannot sprint-reload while crouching in multiplayer, and that the mod replaces several vanilla reload actions with its own copies, which is what makes it collide with other combat mods.",
+  "updated": "2026-08-31 23:14"
+ },
+ "InjuredZombiesStumble": {
+  "text": "Real bug on B42: it throws a Java UnknownFormatConversionException (Conversion = ')') that breaks the whole Sandbox Settings UI and the multiplayer loading screen. This is the same class of problem as the single-% sandbox text that game 42.20.4 outlawed. One tester calls it 'working on 42.19 MP but highly unstable'. Last updated 2026-01-20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ThumpingAttractsZombies": {
+  "text": "Works on 42.20 MP by user reports, but the 42.15 translation change was never followed, so its sandbox options show raw ids instead of names and have no tooltips. Same author as Injured Zombies Stumble - see that note for the more serious problem.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RiskyUnarmed": {
+  "text": "The author's own words on the page: 'Temp fix for b42.20 - traits have no effect in the mod with b42.20'. So part of it simply does not work on your build. He has not tested it in multiplayer or against other mods, and users report it stopped working in 42.14 and in 42.13 MP.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RewardingNightCombatB42": {
+  "text": "Last updated 2025-09-27 for game 42.12.0 - the oldest combat mod here. A user reports an error every time a zombie is hit during the night buff. The author says the Build 41 version must never be used with it, and that the server options template was never updated for B42 MP.",
+  "updated": "2026-08-31 23:14"
+ },
+ "LethalHeadHit": {
+  "text": "Last updated 2025-12-21. A user reports the game freezing permanently when aiming on 42.17, with ballistic-target errors in the log. The author says multiplayer is very hard because of desync and has not solved it. There is no way to turn off the 'bad luck!' floating text.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RET_LethalStealth": {
+  "text": "Prone is reported permanently broken on dedicated servers - the character rotates instead of crawling - and it gets worse with many zombies on screen. Aiming pose animations stop working when Tsar's Common Library and Standardized Vehicle Upgrades 3 are also loaded (tsarslib IS installed here). The prone speed multiplier in sandbox settings is reported to have no effect.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Buttstroke": {
+  "text": "Its sibling module 'Buttstroke 42.12.3' is installed but untagged, which is right - do not enable both. Users report it stopped working for some after game 42.20.4, and that resubscribing plus relaunching is the author's own suggested fix. Reported to no longer work with Guns of Marz.",
+  "updated": "2026-08-31 23:14"
+ },
+ "waterpipes": {
+  "text": "Like most B42 buildable mods, removing it from an existing save can trigger a WorldDictionary load error - the author says so himself. Pipe wear can be tuned or switched off in sandbox options; over-pressure bursts drips, which are repaired with duct tape.",
+  "updated": "2026-08-31 23:14"
+ },
+ "HorseUtilityMountedFirearms": {
+  "text": "Singleplayer only in this release - the author states multiplayer is not supported yet. Needs both Horse Mod and Horse Utility Add-on enabled, and mod.info asks to load it after both.",
+  "updated": "2026-08-31 23:14"
+ },
+ "VB_CommonSense": {
+  "text": "Load order: the author asks for this mod at the END of the load order. Right now it is the FIRST mod in 16 Balance, so it loads before ~40 other balance mods - move it to the bottom of the tag if anything misbehaves. The author's own verdict is 'flawless in B42.20 singleplayer, mostly works in multiplayer'. Known conflict: Inventory Tetris and its forks break its washing menu, which can be turned off in sandbox settings. Also see the Quality of Life Modpack note - that author says his pack is not compatible with Common Sense.",
+  "updated": "2026-08-31 23:14"
+ },
+ "FasterHoodOpening": {
+  "text": "Users report it no longer works with modded cars, KI5 in particular, at any load order - and this collection is mostly KI5 cars. On a 42.17 dedicated server it removed the right-click panel for hood parts, and on 42.14 it broke the item pickup system. The author's own line is 'Last Tested On: B42.15.2'. If you keep it, load other mechanics mods AFTER it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RainCleansBlood": {
+  "text": "Singleplayer works on 42.20. Multiplayer does not: several users on 42.20.2 dedicated servers report blood simply staying on the ground through rain, plus a stack-trace error from /RainCleansBlood/media/actiongroups. Animal droppings are not cleaned even where the rest works.",
+  "updated": "2026-08-31 23:14"
+ },
+ "StarvingZombies": {
+  "text": "On 42.20.4 multiplayer it throws 'GameClient.receiveEatBody > ReceiveEatBody: zombie NNNNN not found'. More serious: several users report the frame rate falling to 10, or to 3 when hitting a large group, in singleplayer, local host and dedicated alike - it clashes with anything else that changes zombie behaviour (Dark Seekers was named). Its WIP module is installed and untagged, which is right; the two are mutually incompatible.",
+  "updated": "2026-08-31 23:14"
+ },
+ "TentInterior": {
+  "text": "The author's only line on the page is a warning: do NOT add this mod to an existing save before reading the pinned discussion thread about it. Published 2026-08-31, so it is brand new and barely tested.",
+  "updated": "2026-08-31 23:14"
+ },
+ "FunctionalGutters": {
+  "text": "Removing it from a multiplayer save needs extra steps, and 42.13.1 made that worse. The mod ships its own answer: the placeholder module 'FunctionalGuttersRemoved' (installed here, untagged) keeps the WorldDictionary references alive so the save still loads after you drop the real mod. Do not remove the real mod without enabling that one. It needs game 42.4+ and will never work on B41; a pipe wrench is required unless you turn that off in mod settings.",
+  "updated": "2026-08-31 23:14"
+ },
+ "LanternFix": {
+  "text": "On 42.20 users report errors in multiplayer and an item duplication bug. Load order rule from the author: if you use Bodily Functions 0.12.3, load it AFTER Lantern Fix. Reported to conflict with the 'Attachable flashlight and lantern' mod, which stops the hurricane lantern giving light. Flashlights are off by default in its sandbox settings.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CalorieFix": {
+  "text": "Setup step people miss: to make it work on an EXISTING save you must enable it from the Load Game screen, not from the main-menu mod list. Incompatible with Chuckleberry's 'Rebalanced Calorie Burning' and with any other mod that changes calorie burn - and if you had one before, clear the cache or it keeps conflicting. Last updated 2024-12-23, but users confirm it still does its job on 42.20.2.",
+  "updated": "2026-08-31 23:14"
+ },
+ "BetterJawStabs": {
+  "text": "Needs ZombieBuddy and is built for 42.20.4. If ZombieBuddy refuses it with 'invalid signature', the author's fix is to delete ...\\3508590486\\mods\\Better Jaw Stabs\\42\\media\\java\\BetterJawStabs.jar.zbs. A user reports it clashing with [B42] Mod Manager, which is installed here. Its settings live in Mod Options, not sandbox options, so in multiplayer the server's copy is what counts.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ArmoredVestsPatch": {
+  "text": "This is the patch for Vanilla Gear Expanded's bulletproof vests and the author says it must load AFTER Vanilla Gear Expanded. Your tag order already does that (08 Gears before 16 Balance), but note that its mod.info declares no require= or loadAfter=, so no automatic sorter will keep it that way - if you reorder tags, check this one.",
+  "updated": "2026-08-31 23:14"
+ },
+ "GRM-CleanRagsOnClothingWasher": {
+  "text": "Reported as not working in multiplayer on 42.20.02. Server setup step: a dedicated server needs BOTH entries in servertest.ini - the mod id GRM-CleanRagsOnClothingWasher and the workshop id 3535139736 - or it is silently ignored. Since 42.15 its menu entries and sandbox options show raw code names with underscores.",
+  "updated": "2026-08-31 23:14"
+ },
+ "FixedLightOnBeltAF": {
+  "text": "If flashlights cannot be attached, the author's fix is to put this mod at the BOTTOM of the load order. Works on 42.20 SP and MP by user reports, including on existing saves.",
+  "updated": "2026-08-31 23:14"
+ },
+ "DBFaster50": {
+  "text": "Its four sibling speed modules are installed but untagged, which is correct - the five are mutually incompatible and only one may be enabled. Two isolated reports worth knowing: pushing a zombie kicking the player back to the main menu, and removing the mod mid-save making every zombie on the map disappear. Most users have no trouble on 42.20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "pz_durable_tools": {
+  "text": "A user on 42.18 reports the durability multipliers having no visible effect - the pipe wrench still breaks fast even with every value at 10 - and another says an update produced a load of errors. Small mod, last updated 2026-05-14; test it before relying on it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "DecayedCorpses": {
+  "text": "Read this before turning on ragdolls. The author warns that from 42.12 through 42.20.1 STABLE, if 'Use Physics Hit Reactions' is enabled the game can FREEZE when a ragdoll corpse decays into a skeleton. It is a vanilla ragdoll bug, not the retexture, but this mod is where you will meet it. Safe to add or remove mid-save otherwise.",
+  "updated": "2026-08-31 23:14"
+ },
+ "LongStandingMetalConstructions": {
+  "text": "Last updated 2025-03-25 and in bad shape: users report 'does not work 42.17', garage doors not working since 42.14, and an error flood from LSMC.Client.lua OnZombieUpdate that reached 20,000 errors for one player. A B41 player also traced broken zombie pathfinding during fast-forward to this mod alone. Check its sandbox thresholds against the vanilla fence health B42 introduced, or disable it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ImmersiveReading": {
+  "text": "Declared incompatible with Literature Reworked. It replaces reading with its OWN timed action, so anything that tweaks vanilla reading - 'read while walking', Trait Magazines granting a trait at the end - stops working while it is on. You also run M-13's Reading Tweaks, which changes the same thing; decide which one owns reading rather than running both blind.",
+  "updated": "2026-08-31 23:14"
+ },
+ "M13ReadingTweaks": {
+  "text": "Its mod.info carried versionMax=42.19.99, which blocks it on 42.20 - the author says he has since allowed 42.20 without changing the code, so make sure Steam really pushed the update. Known crash chain: Lifestyle: Hobbies breaks first, then this mod calls Lifestyle's getDuration without checking for nil and takes the game down with it. Both are installed here. Multiplayer only works from 42.15 onwards.",
+  "updated": "2026-08-31 23:14"
+ },
+ "MoreVarietyLoot25%": {
+  "text": "The author's newer code does not work in multiplayer - on 42.20 players could not pick up items from zombie corpses - and he has rolled the workshop copy back to the older code because of it. If you hit that bug, his advice is to use the 19 February version. Its three sibling percentages are installed and untagged, which is right; only one may be enabled.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RebalancedPropMoving": {
+  "text": "The description still says 'compatible with 42.0 - 42.16' although the author posted a 42.20 update. A user reports that adding it mid-save on 42.20 does nothing - moving still needs skill and tools - while a new save works. Not compatible with Safer Prop Moving.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RTWPB": {
+  "text": "Two bugs make it unreliable: in multiplayer the propane bottle refills the torch forever without ever going down, and after being used to refill a torch the bottle weighs 1500 encumbrance and gets stuck in your inventory. Users also point out the underlying vanilla problem was fixed back in 42.1.0, so the mod may no longer be needed at all.",
+  "updated": "2026-08-31 23:14"
+ },
+ "TanksHavePropane42": {
+  "text": "Last updated 2026-03-10 and users are starting to call it abandoned. B42 stable added new propane tank tiles it does not know about: on 42.20 several users only get the option at gas pumps, and the sandbox option for the small industrial tanks no longer appears. The large tanks also give unlimited propane, with no option to limit them.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NepMultiAnimal": {
+  "text": "Reported broken: 'As of 42.19 it is not working - errors when picking up animals and game crashes - even with just this mod installed'. Last updated 2025-12-31 and the author has not answered. Worth testing alone before trusting it on 42.20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "WorkingRunModifier": {
+  "text": "A user traced a conflict here to Detailed Footwear, which is installed in this collection - the two together misbehave with no error shown, and the user built a private patch for it. The author knows of no other incompatibilities.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ETO_B": {
+  "text": "Load order rule from the author: put it at the TOP of the load order so other mods can overwrite its textures. Its Performance sibling ETO_P is installed and untagged, which is right - the two are mutually incompatible, and one user found that enabling it on a server silently gave everyone the Maximum Performance set. Several users report crashes and missing textures after the 42.20.4 hotfix.",
+  "updated": "2026-08-31 23:14"
+ },
+ "HereGoesTheSun": {
+  "text": "Author: preferably load it last. A user narrowed heavy frame-rate loss down to this mod on its own. Other reports: weather effects reaching inside buildings, lighting going fully black until a reload, and storm effects staying for days after the storm ends. It can be turned off in sandbox options, and no new world is needed.",
+  "updated": "2026-08-31 23:14"
+ },
+ "newclothesmodels": {
+  "text": "It overwrites clothing models, and Vanilla Clothing Expansion (installed here) overwrites the same items - whichever loads LATER wins, so decide the order deliberately. Its shoes module is installed twice under the same id, and a user reported an xml error at line 9 of newclothesmodelsshoes/42.13/media/clothing/clothingItems/Shoes_Black.xml. Also a server-side error about buttonedshirts_bodylocationtweak.txt after an update.",
+  "updated": "2026-08-31 23:14"
+ },
+ "HideInCarB42": {
+  "text": "Half working. The author says himself that hiding in the rear seats (seats 3/4) of larger vehicles does not function, and that B42's new zombie sight rules fight the whole idea - zombies detect you at close range no matter what, unless you drop the detection radius to 1 tile in sandbox options. Several users report errors and no hide moodle at all.",
+  "updated": "2026-08-31 23:14"
+ },
+ "twistonfirebetterfishing": {
+  "text": "The usual failure here is not the mod: every time it updates, a server whose copy is older kicks clients with a Lua checksum mismatch on betterfishing.lua or ModOptions.lua. Either keep server and clients on the same version or set DoLuaChecksum=false. Important design point: with its sandbox settings untouched, fishing stays 100% vanilla - you must change them yourself before anything happens.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ImmersiveOverlaysRetexture": {
+  "text": "On dedicated servers it spams errors every time a player dies, reported by more than one server owner. B42-only now (versionMin=42.0); the author removed the B41 version and cannot restore it. Its 'less intrusive' sibling is installed and untagged.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Improved_Blood_Ffects": {
+  "text": "Last updated 2024-12-26. It throws an error on the main menu every time - long-standing and, by the author's account, harmless. Users confirm it still works on 42.20 stable. Note that it wants texture compression enabled, like several other texture mods here.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SPNCCFaces": {
+  "text": "This is the mod behind the incompatibility pzmods reports against Tomb's body mods: SPNCCFaces declares TombBodyCustom and TombBodyTexNUDE incompatible, and both are enabled here. Tomb's author explains why - his body meshes warp Spongie's faces badly, so Spongie blocked the pair on looks, not on function. His words: 'you can remove the line from the mod.info if you want to make them work together, functionally there is no issue'. So it is your taste, not a crash: keep both and accept warped faces, or drop one.",
+  "updated": "2026-08-31 23:14"
+ },
+ "TombBody": {
+  "text": "Performance and setup, both worth knowing. It replaces EVERY zombie's body too, not just yours, and the meshes have more polygons than vanilla - the author measured about 1 FPS lost with 1000 zombies on screen, but users with big lists report worse. Multiplayer: each player must have the body mod active in their OWN game BEFORE joining, and only a full game restart turns a body mod on or off. When several body mods are loaded, the one LOWEST in the load order wins.",
+  "updated": "2026-08-31 23:14"
+ },
+ "TombBodyCompat": {
+  "text": "Load order rule from the author: drop this at the VERY BOTTOM of the load order - lower means loaded last, which means it wins. If you later enable a clothing mod that touches the same files, you must restart the game again for these models to take priority. Safe to add to existing saves, but it must be enabled both on the main-menu mod screen AND inside the save.",
+  "updated": "2026-08-31 23:14"
+ },
+ "VanillaVehiclesAnimated": {
+  "text": "Costs real frames - a user measured 120 down to 70 FPS in cities; the optional VVA_cullseats module (installed, untagged) turns off passenger rendering and gets some back. On a 42.20.4 dedicated server it logs 36 missing-template errors and 44 'attempted to modify vehicle' warnings at every start, which can leave StepVan and police variants without their animated parts. For multiplayer the author says you also need his separate server-signal patch mod (id 3685499657), or part states never update for other players. Safe to add or remove on existing saves.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ProximityInventory": {
+  "text": "Direct finding from users: removing CleanUI is what makes this work in 42.19+ multiplayer - CleanUI is installed here, and one user also traced stuttering and FPS loss to that pair. There is also a case-sensitivity trap: the client ships lua/client/ProximityInventory/... in capitals while the server side is lowercase, giving 'File doesn't match the one on the server'.",
+  "updated": "2026-08-31 23:14"
+ },
+ "twistonfireblacklist": {
+  "text": "Its sibling twistonfireinventory is installed but untagged, which is the right call - that one declares ProximityInventory incompatible and you have ProximityInventory enabled. The author's rule is blunt: use only ONE inventory mod, never several together. If the 'Add to blacklist' context entry disappears, another mod is eating it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "AutoLoot": {
+  "text": "Two concrete things. It stops working entirely when BetterSorting is active, because it cannot find BetterSorting_Core. And for a B42 server the mod id needs a leading backslash - 'Mods:\\Autoloot', not the old 'Mods:Autoloot'. Users also report all loot going to the main inventory instead of the backpack after a recent update.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CleanHotBar": {
+  "text": "Load order: the author says near the BOTTOM of the list. Conflicts are most likely with anything that redraws the hotbar, attachment slots, drag-and-drop, tooltips or the hand-equipped UI. If you use QoL Compendium, turn off its 'Change quick access bar order'. Game 42.20.4 removed loadstring and broke it briefly; the author has shipped a safer config parser, so make sure Steam really updated it.",
+  "updated": "2026-08-31 23:14"
+ },
+ "CleanUI": {
+  "text": "NeatUI Framework must load BEFORE it - your tag order already does that. Known conflicts from the author: Better Containers and Proximity Inventory cannot be used together, and other inventory overhauls, Bigger Inventory Container Icon and JB Max Capacity Override may fight it. See also the Proximity Inventory note - users fixed MP problems by removing CleanUI. If big containers drop your FPS, turn off 'Optimize Large Stacks' and the optional Weight column.",
+  "updated": "2026-08-31 23:14"
+ },
+ "organizedCategories_core": {
+  "text": "Load order rule, stated twice by the author: ALWAYS put this at the very BOTTOM of the mod list, because its whole job is to override what other mods did. Updated for 42.20.4.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Neat_Crafting": {
+  "text": "NeatUI Framework must load before it. Declared incompatible with WhatCanICraft and its addon. Important for removal: Neat Crafting registers B42 recipes and WorldDictionary data, so do not simply unsubscribe from a save that used it - the author ships a separate 'Neat Crafting - Safe Uninstall Support' mod for that, exactly like Neat Building.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Project_Cook": {
+  "text": "Needs NeatUI Framework. Known performance bug on B42 stable: opening the Project Cook panel near a refrigerator can drop the frame rate to zero, and any update while the panel is open near a fridge does it again. The author has reviewed it for 42.20.4 and says no code change was needed there, so other UI mods are the more likely culprit if something else breaks.",
+  "updated": "2026-08-31 23:14"
+ },
+ "TheShortcut": {
+  "text": "Game 42.20.4 removed loadstring() and broke this mod; the author has fixed it and moved the config to ShortcutConfig.txt. Several users had a broken inventory until Steam actually pushed that update - if it still misbehaves, verify game files or unsubscribe and resubscribe with the game closed. Needs NeatUI Framework.",
+  "updated": "2026-08-31 23:14"
+ },
+ "StatZContinued": {
+  "text": "Game 42.20.4 removed the functions it used to load and save its configuration; the author has rewritten that, but users still report one error remaining, and one server owner had the whole UI (inventory, menus) fail to load for players. Make sure it is on the newest version.",
+  "updated": "2026-08-31 23:14"
+ },
+ "InjuryIndicator": {
+  "text": "You also run PainSense, which does the same job - two injury indicators drawing at once is the usual cause of 'addTextWithArrow' errors people report here. Pick one. A user found the indicators only worked after making its Lua variables local, because other mods were overwriting the global 'player' variable. Fixed by the author for 42.20.4.",
+  "updated": "2026-08-31 23:14"
+ },
+ "PainSense": {
+  "text": "Same job as Injury Indicator, which is also installed - running both is asking for trouble. Users confirm the pain phrases are still bugged on B42 stable, and that the mod needs Starlit Library present; reinstalling Starlit cleared the error for one user.",
+  "updated": "2026-08-31 23:14"
+ },
+ "DetailedDescriptionsForOccupationsAndTraits": {
+  "text": "A user reports it currently conflicts with Lifestyle: Hobbies in a way that stops the game working - both are installed here, and Lifestyle: Hobbies is already broken by 42.20.4 on its own (see its note). Otherwise the author keeps it current with the patch notes. Note that 42.20.2 fixed the vanilla '%%' display bug this mod used to work around.",
+  "updated": "2026-08-31 23:14"
+ },
+ "VHSSkillNameInTooltip": {
+  "text": "Two users independently traced its tooltip errors (SVSIT_main.lua:60) to a conflict with Starlit Library, which is installed here. Load order rule from the author: load this AFTER the WYD VHS Skill Tapes mods - and you have the whole WYD series.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SimpleShowXP": {
+  "text": "Errors when using foraging on B42 stable, and on 42.17 the XP display frequency setting was ignored so gains showed constantly. Last updated 2026-05-07 with open bug threads for 42.20.",
+  "updated": "2026-08-31 23:14"
+ },
+ "B42MoodleDescriptionsExpanded": {
+  "text": "Crash reports on 42.20.2 that turn out to be a language problem: since 42.20.1 the game reads a single % in a translation string as a format specifier, so authors must escape it as %%. Users whose game language was Korean or Portuguese crashed on startup; switching the game to English stopped it. If it crashes for you, check the language before blaming the mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SeedSeasonIndicator": {
+  "text": "Compatibility line from the author: it does NOT work with inventory UI overhauls that fully redefine the ISInventoryPane class - CleanUI is exactly that, and it is installed here, so expect the markers and the category column to do nothing. It also needs the sandbox option 'Plant Growing Seasons' switched ON, and on a server it must be in the server's own mod list, not only subscribed by players. Confirmed by the author on 42.20.4.",
+  "updated": "2026-08-31 23:14"
+ },
+ "RiskyInspectWeapon": {
+  "text": "Two open bugs on 42.20: the error counter climbs continuously while simply walking (risky_inspect_core.lua:513, 'attempted index: 0.0 of non-table: null'), and in multiplayer Inspect throws an error and does nothing for clients while working for the host. Attachments also show blacked out. A user notes the repair part may be a vanilla 42 bug (FixingManager), not the mod. The author has promised a proper patch.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Neat_Rocco": {
+  "text": "Its mod.info carried versionMax=42.19, so on 42.20 the game may refuse to enable it at all - a user fixed it by editing that line by hand. Its mod.info declares the separate Neat_Livestock / Neat_ButcherHook / Neat_Hutch / Neat_Generator / NeatBake windows incompatible, because this mod already contains them. Author tested singleplayer only. Each window can be turned off one by one in Mod Options if one of them fights another mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "LootGoblin2000": {
+  "text": "Load order rule from the author: place it BELOW every mod that adds new items, because it builds its item cache at startup - with all the KI5 and clothing mods here that matters. Needs NeatUI Framework. Tested only up to 42.16.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NestedHealthInfo": {
+  "text": "Load order rule from the author: load this BEFORE any other mod that adds something to the health panel. You have several that do - Mini Health Plus, Injury Indicator and PainSense - so its position decides whether it works. First Aid 3 is required by default, changeable in sandbox settings.",
+  "updated": "2026-08-31 23:14"
+ },
+ "bettervanillafiltersanduiID": {
+  "text": "A user reports a flood of errors when this runs with ALICE Gear, which is installed here - the trigger is equipping the M40 Gas Mask Carrier. The author's own compatibility line stops at Build 42.16.x / 42.17, so 42.20 is untested. Filter drain is also frame-rate dependent, which is a vanilla quirk, not this mod.",
+  "updated": "2026-08-31 23:14"
+ },
+ "EURY_ANIMALCARE": {
+  "text": "A user reports the frame rate halving (120 down to 60) with stuttering while standing in a highlighted animal zone with 14 rabbits. The author's answer to conflicts is that Livestock Zones Expanded overrides it completely and no load order helps (that mod is not installed here).",
+  "updated": "2026-08-31 23:14"
+ },
+ "KnownAndCollected": {
+  "text": "Its 'Hide Vanilla Read Icon' sub-mod does NOT declare the main mod as a dependency even though it needs it - both are enabled here, which is the right combination, just do not enable the sub-mod alone. Users report 5 errors on plain 42.20 with the newest update, and the author supports only the current stable build.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ConditionOnDash": {
+  "text": "Last updated 2024-12-21. Mixed reports: several users confirm it works on 42.20 MP, but one had it crash the game at launch and another calls it broken on 42.17. It also does not work with Realistic Dashboard & Gauges, which replaces the same dashboard interface.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NamedSkillVHSTapes": {
+  "text": "Load order rule: it must load AFTER any mod it supports, and you run the whole WYD VHS Skill Tapes series - check that this sits after them. The author reworked it to support only 42.20+ and notes not all tapes are covered yet; a user on 42.20.3 saw no labels on an existing save.",
+  "updated": "2026-08-31 23:14"
+ },
+ "better-auto-mechanics": {
+  "text": "A user reports it conflicts with Nepenthe's High Beams and BrighterHeadlights - Nepenthe's High Beams IS installed here. Several users also think 42.20.4 broke it, and the 'auto mechanic' option not appearing is the usual symptom. On a server with the Lua checksum on, the mod must be installed server-side too, not only by the client.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ReloadAllMagazines": {
+  "text": "It rewrites ISInventoryPaneContextMenu.doMagazineMenu, so it is incompatible with anything else that touches that function - which is why it must sit at the BOTTOM of the load order to survive next to gun mods. Several users report it simply not working on 42.20.3 and 42.20.4; others say 42.20 singleplayer is fine. If magazines stop loading, its position in the order is the first thing to check.",
+  "updated": "2026-08-31 23:14"
+ },
+ "cleanashes": {
+  "text": "Multiplayer bug confirmed by the author on 42.18: the collected ashes and charcoal get stuck in your inventory and cannot be dropped, put in a container, or placed - reconnecting clears the ghost items. It was also reported broken on 42.20.2 and working again on 42.20.3, so keep it updated. Singleplayer has been fine throughout.",
+  "updated": "2026-08-31 23:14"
+ },
+ "twistmapimprovements": {
+  "text": "Needs game 42.19 or newer. Its mod.info declares the Map Symbol Size Slider family incompatible. Reports are split on 42.20: the author says he tested every feature and it all works, while users report resizing doing nothing and text not appearing - his answer is to disable other map mods and test this one alone. Its icon module is installed and untagged.",
+  "updated": "2026-08-31 23:14"
+ },
+ "AutoSmashAndClimb": {
+  "text": "The author built it for Build 42 SINGLE PLAYER only and says his mods are not designed for multiplayer; a user confirms it does not work on a 42.13.1 dedicated server. Its MP module is installed but untagged. Reported symptom when something conflicts: each button press does only one step (smash, then clear, then climb) instead of the whole chain.",
+  "updated": "2026-08-31 23:14"
+ },
+ "LAWLYPOPS_TPMSINDICATOR": {
+  "text": "Small annoyance worth knowing: the gauge only reads its sandbox thresholds once at game start, so changing them mid-session does nothing until you reload. It also draws on top of Realistic Dashboard & Gauges if you ever add that. Author fixed it for 42.19; 42.20 is not confirmed on the page.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SmarterStorageExtraPresets": {
+  "text": "Needs Smarter Storage, which is installed - keep the base mod above it in the order.",
+  "updated": "2026-08-31 23:14"
+ },
+ "P4TidyUpMeister": {
+  "text": "The busiest conflict in this list. Users report: it stops you riding the Bicycle! mod (both installed - disabling Tidy Up Meister lets the bike work); Better Auto Mechanics needs Tidy Up Meister switched OFF to work (also installed); and it is incompatible with Inventory Tetris. On a 42.20 MP server, right-clicking a weapon on the ground, in a container or on a corpse to put it on your belt or back is undone by this mod, which sends the weapon back where it came from. V2 was completely redesigned for 42.20 to watch the Timed Action queue instead of patching each action, which is why it now touches so much. Re-equipping can be turned off from the character context menu - that is the quickest test when something odd happens.",
+  "updated": "2026-08-31 23:14"
+ },
+ "SwapIt": {
+  "text": "On B42 the two dependencies are genuinely REQUIRED, not optional as on B41: errorMagnifier and Mod Update and Alert System - both are installed, and both have notes of their own. The author says load order should not matter. Open bug threads for 42.20: an error and no action when pressing a number key to equip, and a report of the character freezing in place.",
+  "updated": "2026-08-31 23:14"
+ },
+ "PeekAView": {
+  "text": "Needs ZombieBuddy, so it inherits ZombieBuddy's setup problem - see that note. Declared incompatible with ClearCanopy. Useful multiplayer fix from a user: if it works in singleplayer but not on a server, the server-side workshop folder 3710281407\\mods is often empty; delete that folder and restart the server so PZ downloads it again. Client-side only, safe to add or remove mid-save, last tested by the author against 42.20.4.",
+  "updated": "2026-08-31 23:14"
+ },
+ "JeevesPatches_DAMN": {
+  "text": "Rule for this whole item: enable EITHER the all-in-one patch OR the individual patches, never both. You have the individual route (DAMN and Tanker), which is correct. The author now says the DAMN patch is mostly redundant because damnlib fixed most of what it patched - what remains is a recipe category fix and breaking vanilla tires down into KI5 materials.",
+  "updated": "2026-08-31 23:14"
+ },
+ "JeevesPatches_Tanker": {
+  "text": "Removal warning from the author: this patch installs a 300L tank as a REAL vehicle part on the M49A2C, so removing the patch takes that part off the truck and any fuel inside it with it. Take the fuel out first. Everything else in Jeeve's Patches is safe to add and remove mid-save.",
+  "updated": "2026-08-31 23:14"
+ },
+ "ZModUnbork": {
+  "text": "Needs zdk, which has its own open 42.20.4 problems. Users report it as outdated and broken on recent builds, and that its fixes are not replicated to other players on a server - characters revived by it look normal in singleplayer and wrong in multiplayer. If it stutters, turn off 'log stats' in its mod options. Only useful while you actually run one of the old mods it revives.",
+  "updated": "2026-08-31 23:14"
+ },
+ "NicksSledgehammerFix": {
+  "text": "It replaces ISDestroyStuffAction:complete(), so it will fight any other mod that replaces the same function. Safe to add and remove otherwise, SP and MP.",
+  "updated": "2026-08-31 23:14"
+ },
+ "MoodleFramework_SafetyPatch": {
+  "text": "This is the multiplayer patch for Moodle Framework, and it is installed but wears NO tag, so it is in no config and never loads. Moodle Framework is enabled and has open multiplayer problems (see its note) - if you play multiplayer, tag this and put it IMMEDIATELY after Moodle Framework, with every other moodle mod after it. In singleplayer it is not needed. The author tested it only on 42.13.x.",
+  "updated": "2026-08-31 23:14"
+ },
+ "Erikas_Tiles": {
+  "text": "Broken, and correctly untagged. Game 42.20 introduced a limit of 512 textures per texture sheet, which this pack exceeds - users report it breaking map loads and the debug item spawner. Tikitown dropped it as a dependency for that reason. Nothing installed here requires it, so leave it off.",
+  "updated": "2026-08-31 23:14"
+ },
+ "KillCount": {
+  "text": "Untagged, so it is not loading - which is just as well. Users report it does not work on 42.20.3 multiplayer, crashes when killing zombies with pipe bombs, and crashes in combination with the Bandits mod, which you do run. Open bug threads for an isLocalPlayer runtime error on every zombie death in 42.20.2.",
+  "updated": "2026-08-31 23:14"
+ },
+ "UnifiedCarryWeightFramework": {
+  "text": "Untagged, so not loading. If you ever enable it: on 42.20.2 multiplayer it fails the Lua checksum with 'File doesn't exist on the client: media/lua/shared/unifiedcarryweightframework.lua' because the mod still ships a 42.19 folder - the only known workaround is DoLuaChecksum=false.",
+  "updated": "2026-08-31 23:14"
+ },
+ "w_betterwringing": {
+  "text": "In multiplayer the 'wring out all' action stops after the first item, confirmed by several users; singleplayer is fine. A user suspects it fights mods with re-equip logic such as Tidy Up Meister, which is installed here. Safe to add or remove mid-save.",
+  "updated": "2026-08-31 23:14"
+ }
+}

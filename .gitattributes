@@ -1,0 +1,3 @@
+# No line-ending conversion anywhere. The cfg backups and the sandbox files are
+# kept byte for byte on purpose, and git must not rewrite CRLF for them.
+* -text

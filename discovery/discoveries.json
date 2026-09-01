@@ -1,0 +1,5850 @@
+{
+ "schema": 1,
+ "tool": "workshop-discovery",
+ "generatedAt": "2026-09-01T23:59:00+03:00",
+ "gameBuild": "42.20.4",
+ "window": {
+  "from": "2026-07-29",
+  "to": "2026-09-01",
+  "note": "Fresh full run per Igor's request: everything PUBLISHED OR UPDATED since Build 42.20.0 stable (29 Jul 2026). Supersedes the 1 Sep first run."
+ },
+ "sources": [
+  "workshop browse: lastupdated, tag Build 42, pages 1-185; window cutoff at 29 Jul found by date probes (stream covers only mods with at least one update)",
+  "workshop browse: mostrecent, tag Build 42, full window (covers never-updated new mods, which lastupdated omits)",
+  "detail pages fetched for top candidates (subs/stars/updated verified 1 Sep 2026)"
+ ],
+ "stats": {
+  "modsWithActivityInWindow": 12183,
+  "newSinceRelease": 9357,
+  "olderModsUpdated": 2826,
+  "alreadySubscribed": {
+   "new": 54,
+   "updated": 223
+  },
+  "excludedByFilters": {
+   "music": 2223,
+   "localization": 498,
+   "serverAdminMp": 689,
+   "testJunk": 175
+  },
+  "titlesReviewed": 8321,
+  "selected": 394,
+  "note": "All kept titles were reviewed; descriptions/stats verified for top candidates only - Steam rate-limiting capped detail fetches this run."
+ },
+ "classes": {
+  "high": "highly interesting - new features with strong traction and fit",
+  "companion": "accompanies a mod you are subscribed to (fix/patch/add-on/successor)",
+  "caution": "popular but likely conflicts with the installed set - decide deliberately",
+  "watch": "new or small; promising fit but unproven, or blocked on a base mod you lack"
+ },
+ "items": [
+  {
+   "id": "3778511497",
+   "title": "Skully's Zombie Collision [B42.20+]",
+   "class": "high",
+   "note": "Zombies collide instead of phasing through each other. Biggest QoL/immersion hit of the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": 150428,
+   "stars": 5,
+   "ratings": 1376,
+   "updated": "2026-08-12",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3778511497"
+  },
+  {
+   "id": "3785740658",
+   "title": "Fence Sheets",
+   "class": "high",
+   "note": "Hang sheets over see-through fences and door frames, like windows. Blocks zombie line of sight.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": 90465,
+   "stars": 5,
+   "ratings": 732,
+   "updated": "2026-09-01",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785740658"
+  },
+  {
+   "id": "3784847437",
+   "title": "Traits As Skills",
+   "class": "high",
+   "note": "Traits evolve from how you play. Overhauls character progression.",
+   "companionOf": [],
+   "overlapsWith": [
+    "SOTO",
+    "Somewhat Traits",
+    "Dynamic Fitness Boost"
+   ],
+   "subs": 50699,
+   "stars": 5,
+   "ratings": 716,
+   "updated": "2026-08-31",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784847437"
+  },
+  {
+   "id": "3782929173",
+   "title": "Project Dirtroad",
+   "class": "high",
+   "note": "Traffic gradually wears persistent dirt roads and footpaths into the ground.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": 28703,
+   "stars": 5,
+   "ratings": 344,
+   "updated": "2026-08-26",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782929173"
+  },
+  {
+   "id": "3783623999",
+   "title": "Livestock Panel Plus",
+   "class": "high",
+   "note": "Livestock zone panel becomes a full herd status table (hunger, thirst, mood per animal).",
+   "companionOf": [
+    "Better Animal Care",
+    "Feed That Animal!"
+   ],
+   "overlapsWith": [],
+   "subs": 20555,
+   "stars": 5,
+   "ratings": 192,
+   "updated": "2026-08-31",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783623999"
+  },
+  {
+   "id": "3781571720",
+   "title": "Undead Wildlife [B42 Stable]",
+   "class": "high",
+   "note": "Kentucky's wildlife is infected too. Pairs with hunting/animal setup. MP experimental (irrelevant for SP).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": 9728,
+   "stars": 5,
+   "ratings": 280,
+   "updated": "2026-08-16",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781571720"
+  },
+  {
+   "id": "3778868211",
+   "title": "Nick's Turn Off Fridges",
+   "class": "high",
+   "note": "Power micro-management QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3778868211"
+  },
+  {
+   "id": "3780683663",
+   "title": "Cye's Push Doors! [SP/MP]",
+   "class": "high",
+   "note": "Shove doors open/closed.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780683663"
+  },
+  {
+   "id": "3782920935",
+   "title": "Nick's Inventory Selection Fix",
+   "class": "high",
+   "note": "Fixes inventory selection behavior.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782920935"
+  },
+  {
+   "id": "3776182375",
+   "title": "CH Status HUD",
+   "class": "high",
+   "note": "Compact character status HUD.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Mini Health Plus",
+    "Simple Moodle Indicators"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3776182375"
+  },
+  {
+   "id": "3779561845",
+   "title": "LG Extended Plumbing",
+   "class": "high",
+   "note": "Deeper plumbing systems.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Water Pipes",
+    "PlumbingFixed"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779561845"
+  },
+  {
+   "id": "3779562002",
+   "title": "LG Extended Electricity",
+   "class": "high",
+   "note": "Deeper electricity systems.",
+   "companionOf": [],
+   "overlapsWith": [
+    "ImmersiveSolarArrays"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779562002"
+  },
+  {
+   "id": "3781818628",
+   "title": "Dynamic Snow for Vanilla Vehicles [B42 MP]",
+   "class": "high",
+   "note": "Snow accumulates on vehicles.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781818628"
+  },
+  {
+   "id": "3784677588",
+   "title": "3D Gun Racks",
+   "class": "high",
+   "note": "Visible weapon storage.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784677588"
+  },
+  {
+   "id": "3787909643",
+   "title": "Muzzle Smoke",
+   "class": "high",
+   "note": "Firearm VFX.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787909643"
+  },
+  {
+   "id": "3775809123",
+   "title": "Dash Roamer [B42.20]",
+   "class": "high",
+   "note": "In-vehicle dashboard companion/roaming view.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3775809123"
+  },
+  {
+   "id": "3786155157",
+   "title": "VHS Collector's Rack",
+   "class": "high",
+   "note": "Display storage for VHS tapes - fits the WYD tape collection.",
+   "companionOf": [
+    "[WYD] VHS Skill Tapes"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786155157"
+  },
+  {
+   "id": "3780688809",
+   "title": "Context Menu Cleanup",
+   "class": "high",
+   "note": "Declutters right-click menus.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Context Menu Icons",
+    "organizedCategories"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780688809"
+  },
+  {
+   "id": "3782021029",
+   "title": "Scenarios [B42.20]",
+   "class": "high",
+   "note": "'Where I was when it happened' start scenarios.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Start With... [b42]",
+    "Spawn Selector"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782021029"
+  },
+  {
+   "id": "3782670683",
+   "title": "[B42] Wind Sway",
+   "class": "high",
+   "note": "Trees/vegetation sway in wind.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782670683"
+  },
+  {
+   "id": "3776502124",
+   "title": "[B42.20] Zero Weight Keys",
+   "class": "high",
+   "note": "Keys stop weighing you down.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3776502124"
+  },
+  {
+   "id": "3784951301",
+   "title": "Blood Pools & Footprints [B42.20+]",
+   "class": "high",
+   "note": "Tracked blood, pooling, footprints.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Improved Blood Effects",
+    "Rain Cleans Blood"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784951301"
+  },
+  {
+   "id": "3778403732",
+   "title": "Immersive Looting B42: Search & Reveal",
+   "class": "high",
+   "note": "Search-based container looting.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3778403732"
+  },
+  {
+   "id": "3789329475",
+   "title": "Sentient Zeds [Climbing / Vaulting Zombies]",
+   "class": "high",
+   "note": "Zombies climb and vault obstacles. Changes base defense entirely - read before adopting.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789329475"
+  },
+  {
+   "id": "3782735637",
+   "title": "Nick's Moveable Workstations",
+   "class": "high",
+   "note": "Relocate crafting stations.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782735637"
+  },
+  {
+   "id": "3780306632",
+   "title": "Elevators",
+   "class": "high",
+   "note": "; see also Nick's Rideable Elevators (3790452346).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780306632"
+  },
+  {
+   "id": "3787835610",
+   "title": "Compass Direction Indicator",
+   "class": "high",
+   "note": "Compass on the in-game map.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Map Legend UI",
+    "Map Symbols Plus"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787835610"
+  },
+  {
+   "id": "3790089095",
+   "title": "[B42] Better Corpse Burning",
+   "class": "high",
+   "note": "Corpse disposal rework.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Mark Corpse",
+    "[B42] Drag Bodies Faster"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790089095"
+  },
+  {
+   "id": "3786008420",
+   "title": "Vehicle Turn Signals [Build 42]",
+   "class": "high",
+   "note": "Working indicators.",
+   "companionOf": [
+    "Vanilla vehicles animated"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786008420"
+  },
+  {
+   "id": "3778884296",
+   "title": "EXACT MINUTE CLOCK [B42]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Lua Digital Watch Framework"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3778884296"
+  },
+  {
+   "id": "3783949266",
+   "title": "ReBandaged [B42.20+]",
+   "class": "high",
+   "note": "Wound care rework.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Wounds Overhaul",
+    "Antibodies"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783949266"
+  },
+  {
+   "id": "3786258719",
+   "title": "Bloody Wounds",
+   "class": "high",
+   "note": "Visual wound feedback.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Wounds Overhaul"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786258719"
+  },
+  {
+   "id": "3783807916",
+   "title": "Clothing and Shoe Sizes B42.20",
+   "class": "high",
+   "note": "Sized clothing realism.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Real Undies",
+    "Detailed Footwear"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783807916"
+  },
+  {
+   "id": "3783387236",
+   "title": "Responsive Context Menus [B42]",
+   "class": "high",
+   "note": "Faster menus.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783387236"
+  },
+  {
+   "id": "3775423228",
+   "title": "Layered Placement [B42]",
+   "class": "high",
+   "note": "Place items on top of furniture layers.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Place Anywhere",
+    "More on the Floor"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3775423228"
+  },
+  {
+   "id": "3773985930",
+   "title": "O.C.D. Inventory",
+   "class": "high",
+   "note": "Inventory ordering control.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Better Sorting",
+    "organizedCategories"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3773985930"
+  },
+  {
+   "id": "3778284920",
+   "title": "Propane Refuelling at Gas Pumps",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Propane Exchange Cabinets",
+    "Tanks Have Propane",
+    "Oxygen Refill"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3778284920"
+  },
+  {
+   "id": "3780027195",
+   "title": "[B42] Machinery",
+   "class": "high",
+   "note": "Industrial machines for crafting chains.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Ogrim Mod's - Machine Utils",
+    "Functional Appliances 2"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780027195"
+  },
+  {
+   "id": "3784590103",
+   "title": "Blankets Are Warm",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [
+    "Comfy Sleeping"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784590103"
+  },
+  {
+   "id": "3790662607",
+   "title": "[B42.20+] Item Merge Ultimate",
+   "class": "high",
+   "note": "Merge partial stacks/drainables.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Swap It",
+    "Consolidate All Fix"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790662607"
+  },
+  {
+   "id": "3781012462",
+   "title": "QoL Compendium",
+   "class": "high",
+   "note": "Bundle of small QoL tweaks - check overlap with existing QoL set before enabling.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Quality of Life Modpack",
+    "Common Sense"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781012462"
+  },
+  {
+   "id": "3783725847",
+   "title": "[B42] Knox County Smokes",
+   "class": "high",
+   "note": "Cigarettes/lighters/tobacco overhaul.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783725847"
+  },
+  {
+   "id": "3787420296",
+   "title": "At Least Close The Damn Curtains",
+   "class": "high",
+   "note": "Zombies/NPCs and curtains behavior.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787420296"
+  },
+  {
+   "id": "3784993266",
+   "title": "Diesel Fuel",
+   "class": "high",
+   "note": "Separate diesel fuel type for vehicles.",
+   "companionOf": [
+    "KI5 vehicles"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784993266"
+  },
+  {
+   "id": "3781206950",
+   "title": "Rewatchable VHS",
+   "class": "high",
+   "note": "Re-watch tapes - synergy with skill-tape collection.",
+   "companionOf": [
+    "[WYD] VHS Skill Tapes",
+    "Named skill VHS tapes"
+   ],
+   "overlapsWith": [],
+   "subs": 1645,
+   "stars": 4,
+   "ratings": 28,
+   "updated": "2026-08-10",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781206950"
+  },
+  {
+   "id": "3779480293",
+   "title": "Better Walkie Talkies",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Radio Frequency Manager"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779480293"
+  },
+  {
+   "id": "3780128227",
+   "title": "Worse Vehicle Condition",
+   "class": "high",
+   "note": "Harsher vehicle spawns.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Immersive Cars: Decay"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780128227"
+  },
+  {
+   "id": "3787169788",
+   "title": "Improvised Glass & Windows (B42 Stable)",
+   "class": "high",
+   "note": "Craft window glass.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[42MP] Repairable Windows"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787169788"
+  },
+  {
+   "id": "3785340139",
+   "title": "Railroad Crossing Signals",
+   "class": "high",
+   "note": "; see also Riverside Traffic Signals (3780223693).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785340139"
+  },
+  {
+   "id": "3792286024",
+   "title": "Room Occlusion B42 - Player-Built Rooms",
+   "class": "high",
+   "note": "Player-built rooms occlude properly.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792286024"
+  },
+  {
+   "id": "3777483891",
+   "title": "Spoiling Liquids",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "All Milks Are Created Equal",
+    "Calorie Fix"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3777483891"
+  },
+  {
+   "id": "3780938346",
+   "title": "Under the Hood - Realistic Vehicle Maintenance",
+   "class": "high",
+   "note": "Deep mechanics realism.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Better Auto Mechanics",
+    "Car Parts Repair"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780938346"
+  },
+  {
+   "id": "3779625821",
+   "title": "Fruit Farming (B42)",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [
+    "Infoteo's Fruit Trees",
+    "Farming Expansion B42"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779625821"
+  },
+  {
+   "id": "3781785612",
+   "title": "Containers In Inventory",
+   "class": "high",
+   "note": "Bags inside bags handling.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781785612"
+  },
+  {
+   "id": "3778597373",
+   "title": "[B42] Craftable : Concrete Edition",
+   "class": "high",
+   "note": "Concrete construction.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Long-standing Metal Constructions"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3778597373"
+  },
+  {
+   "id": "3755993986",
+   "title": "Gas Pump Indicator",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3755993986"
+  },
+  {
+   "id": "3753700423",
+   "title": "PZ Pulse",
+   "class": "high",
+   "note": "Heartbeat/health awareness HUD.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Danger Awareness",
+    "SixthSense"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3753700423"
+  },
+  {
+   "id": "3750907049",
+   "title": "Full Dynamic Scarring System",
+   "class": "high",
+   "note": "Persistent scars.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Tomb's Player Body Overhaul"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3750907049"
+  },
+  {
+   "id": "3756687957",
+   "title": "Where My Sledgies At?",
+   "class": "high",
+   "note": "Sledgehammer loot QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3756687957"
+  },
+  {
+   "id": "3739168410",
+   "title": "Obvious Skill Tapes",
+   "class": "high",
+   "note": "89k subs, 5*. Highlights useful VHS tapes - direct synergy with the WYD skill-tape collection.",
+   "companionOf": [
+    "[WYD] VHS Skill Tapes",
+    "[B41,B42] Show VHS skills in tooltip"
+   ],
+   "overlapsWith": [],
+   "subs": 89153,
+   "stars": 5,
+   "ratings": 443,
+   "updated": "2026-08-05",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3739168410"
+  },
+  {
+   "id": "3765795716",
+   "title": "Practice Crafting Skills",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Crafting Skills Practice Expanded"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765795716"
+  },
+  {
+   "id": "3746263842",
+   "title": "Wild Turkeys (B42.20+)",
+   "class": "high",
+   "note": "New huntable animal.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3746263842"
+  },
+  {
+   "id": "3767037119",
+   "title": "Universal Gunlight",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[B42] Simple Belt Flashlight!",
+    "Flashlight Indicator"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3767037119"
+  },
+  {
+   "id": "3758971325",
+   "title": "Better Item Info",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[B42] More Item Information",
+    "Detailed Descriptions"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3758971325"
+  },
+  {
+   "id": "3766513120",
+   "title": "Blackout Predators",
+   "class": "high",
+   "note": "Night becomes dangerous.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Reward Night Combat",
+    "Night Vision Framework"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3766513120"
+  },
+  {
+   "id": "3749404383",
+   "title": "Functional Car Wash [B42]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3749404383"
+  },
+  {
+   "id": "3745718141",
+   "title": "US Military Grenades [B42]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "ExtraBombs 2"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3745718141"
+  },
+  {
+   "id": "3761218629",
+   "title": "Dismantle All at Once",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3761218629"
+  },
+  {
+   "id": "3744455714",
+   "title": "Functional Pager - Map-Wide Communication",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3744455714"
+  },
+  {
+   "id": "3764655475",
+   "title": "Plumbed Sink Mains Water Fix [B42]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Water Pipes"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3764655475"
+  },
+  {
+   "id": "3745620322",
+   "title": "Claimable Outposts",
+   "class": "high",
+   "note": "Secondary base claiming.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3745620322"
+  },
+  {
+   "id": "3766140920",
+   "title": "Black Powder Gunsmithing",
+   "class": "high",
+   "note": "Fits Gunworks/crafting depth.",
+   "companionOf": [
+    "[42.20MP] Gunworks Framework"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3766140920"
+  },
+  {
+   "id": "3752353153",
+   "title": "Die With Style",
+   "class": "high",
+   "note": "Death animations/flavor.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3752353153"
+  },
+  {
+   "id": "3739256322",
+   "title": "Banger's Retro Car Dashboard [B42]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Condition On Dash",
+    "Retro Dashboard Digitals (3743082626)"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3739256322"
+  },
+  {
+   "id": "3751199292",
+   "title": "[B42] True Companions - Experimental",
+   "class": "high",
+   "note": "33k subs, 5*, updated 25 Aug. NPC companions - alternative/parallel to Bandits companions; check coexistence.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[B42] Bandits NPC"
+   ],
+   "subs": 32996,
+   "stars": 5,
+   "ratings": 608,
+   "updated": "2026-08-25",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3751199292"
+  },
+  {
+   "id": "3766143397",
+   "title": "Shoot Through Barricades",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3766143397"
+  },
+  {
+   "id": "3736555309",
+   "title": "The Psychopath Trait [B42.20+]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "SOTO",
+    "Challenge Traits"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3736555309"
+  },
+  {
+   "id": "3751668602",
+   "title": "Kid's Second Back Slot [B42.20]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Dynamic Backpack Upgrades",
+    "[B42] Pack Mule"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3751668602"
+  },
+  {
+   "id": "3762749124",
+   "title": "Ergonomic UI [B42.20]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "CleanUI",
+    "Better Vanilla Filters and UI"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3762749124"
+  },
+  {
+   "id": "3767935128",
+   "title": "Bleeding Zombies [B42 Stable]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3767935128"
+  },
+  {
+   "id": "3749844752",
+   "title": "Bring Back Real Names (B42)",
+   "class": "high",
+   "note": "Real brand names on items.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3749844752"
+  },
+  {
+   "id": "3772979228",
+   "title": "[B42.20] Plain Moodles Redone",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Simple Moodle Indicators",
+    "[B42] Medicine Moodles"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3772979228"
+  },
+  {
+   "id": "3753555791",
+   "title": "Rocco's Tiles - Buildable",
+   "class": "high",
+   "note": "Buildable version of subscribed tile pack.",
+   "companionOf": [
+    "Rocco's Tiles",
+    "Neat Rocco's UI [B42]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3753555791"
+  },
+  {
+   "id": "3765241705",
+   "title": "Beyond Ten - Level 15 Skills",
+   "class": "high",
+   "note": "Raises skill cap.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Combat Mastering Skill",
+    "Efficiency Skill Mod 2"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765241705"
+  },
+  {
+   "id": "3772269882",
+   "title": "[B42] Knox Buildworks",
+   "class": "high",
+   "note": "Building expansion.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Jeeve's Build",
+    "Neat Building"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3772269882"
+  },
+  {
+   "id": "3760962710",
+   "title": "[B42.20] Not Useless Things",
+   "class": "high",
+   "note": "Uses for junk items.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Unwanted Items Collection"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3760962710"
+  },
+  {
+   "id": "3773092190",
+   "title": "Inventory Item Pinning",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3773092190"
+  },
+  {
+   "id": "3766496742",
+   "title": "More Books [B42.20.2]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [
+    "Skill Book Expansion",
+    "Easy Literature"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3766496742"
+  },
+  {
+   "id": "3765053321",
+   "title": "Knox Weather Receiver",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[KYR] Real Weather Mod",
+    "Dynamic Emergency TV Channel"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3765053321"
+  },
+  {
+   "id": "3774243294",
+   "title": "Sound Direction Indicator [42.20]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[B42] Visual Sounds",
+    "Danger Awareness"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774243294"
+  },
+  {
+   "id": "3775310237",
+   "title": "JB's Work Orders [B42] Task Automation",
+   "class": "high",
+   "note": "Queue work tasks.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3775310237"
+  },
+  {
+   "id": "3746939924",
+   "title": "[B42.20] Looped Radio",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Radio Frequency Manager"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3746939924"
+  },
+  {
+   "id": "3748935486",
+   "title": "Key Fobs",
+   "class": "high",
+   "note": "Car key fobs.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3748935486"
+  },
+  {
+   "id": "3774055538",
+   "title": "Down But Not Out",
+   "class": "high",
+   "note": "Knockdown instead of instant death.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774055538"
+  },
+  {
+   "id": "3747797778",
+   "title": "[B42] Useful Flares Reborn",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3747797778"
+  },
+  {
+   "id": "3745630569",
+   "title": "Tools of The Trade [B42]",
+   "class": "high",
+   "note": "Occupation tool kits.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Military Tool Kit"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3745630569"
+  },
+  {
+   "id": "3761216758",
+   "title": "Quartermaster - Auto-Sort & Store Loot",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Smarter Storage",
+    "Auto Loot",
+    "Tidy Up Meister"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3761216758"
+  },
+  {
+   "id": "3759277273",
+   "title": "Survivor Quirks",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "SOTO",
+    "Sandbox Traits"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3759277273"
+  },
+  {
+   "id": "3733690955",
+   "title": "Simply Better Axes",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "EBF Chainsaw",
+    "Durable Tools"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3733690955"
+  },
+  {
+   "id": "3746632343",
+   "title": "Bundle Up! - A Packing Mod",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "More Packing",
+    "Hoarder's Delight"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3746632343"
+  },
+  {
+   "id": "3747745835",
+   "title": "Moodle Effects Explained [B42]",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [
+    "[B42] Moodle Descriptions Expanded"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3747745835"
+  },
+  {
+   "id": "3779315249",
+   "title": "'87 Toyota Corolla AE92",
+   "class": "high",
+   "note": "New period-correct car, KI5-style.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779315249"
+  },
+  {
+   "id": "3787530735",
+   "title": "'62 Daimler Ferret",
+   "class": "high",
+   "note": "Armored scout car.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787530735"
+  },
+  {
+   "id": "3756938756",
+   "title": "'69 Ford Mustang",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3756938756"
+  },
+  {
+   "id": "3770890864",
+   "title": "'91 Lexus LS400",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3770890864"
+  },
+  {
+   "id": "3766571591",
+   "title": "'70 Chevrolet Chevelle / El Camino",
+   "class": "high",
+   "note": "Strong community traction in the window.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3766571591"
+  },
+  {
+   "id": "3743371090",
+   "title": "'73 NISSAN Skyline GT-R",
+   "class": "high",
+   "note": "You run the '92 R32; this is the classic.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3743371090"
+  },
+  {
+   "id": "3790887868",
+   "title": "'88 Volvo 740 Sedan (744)",
+   "class": "high",
+   "note": "Brand new; pairs with your '89 Volvo 240.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790887868"
+  },
+  {
+   "id": "3783055980",
+   "title": "U.S. M4A1 Sherman by Papa_Chad",
+   "class": "high",
+   "note": "New Papa_Chad armor vehicle (trend #40).",
+   "companionOf": [
+    "Papa_Chad military vehicles"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783055980"
+  },
+  {
+   "id": "3739363702",
+   "title": "U.S. M60A3 by Papa_Chad",
+   "class": "high",
+   "note": "Another Papa_Chad tank.",
+   "companionOf": [
+    "Papa_Chad military vehicles"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3739363702"
+  },
+  {
+   "id": "3788543896",
+   "title": "Rolling Refuge (1973 Winnebago Chieftain)",
+   "class": "high",
+   "note": "RV - fits the RV Interior setup.",
+   "companionOf": [
+    "RV Interior Expansion",
+    "[B42]Project RV Interior"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788543896"
+  },
+  {
+   "id": "3781616141",
+   "title": "[B42.20+] Vehicle Aim Roof Fix",
+   "class": "companion",
+   "note": "Fixes bugged aiming inside modded cars (KI5, PZK etc.). Huge uptake.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": 51974,
+   "stars": 5,
+   "ratings": 367,
+   "updated": "2026-08-20",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781616141"
+  },
+  {
+   "id": "3789366983",
+   "title": "KI5 General Fixes",
+   "class": "companion",
+   "note": "Engine-level and per-vehicle fixes for KI5 cars. Requires damnlib (installed). Safe on existing save.",
+   "companionOf": [
+    "KI5 vehicle collection",
+    "that DAMN Library"
+   ],
+   "overlapsWith": [],
+   "subs": 6569,
+   "stars": 4,
+   "ratings": 74,
+   "updated": "2026-09-01",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789366983"
+  },
+  {
+   "id": "3780682550",
+   "title": "Equipment UI - Paper Doll [B42.20+]",
+   "class": "companion",
+   "note": "Actively maintained successor of your DISCONTINUED Equipment UI (36.8k subs, 5*, updated 27 Aug). Note: the STABLE+ fork (3682936016, 98.5k subs) is a competing continuation - run exactly one.",
+   "companionOf": [
+    "Equipment UI (discontinued)"
+   ],
+   "overlapsWith": [],
+   "subs": 36755,
+   "stars": 5,
+   "ratings": 301,
+   "updated": "2026-08-27",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780682550"
+  },
+  {
+   "id": "3774789651",
+   "title": "Long Term Preservation [42.20]",
+   "class": "companion",
+   "note": "The current 42.20 version - replaces your B42.13 copy + [PATCH] pair.",
+   "companionOf": [
+    "Long Term Preservation [B42.13]",
+    "[PATCH] Long Term Preservation"
+   ],
+   "overlapsWith": [],
+   "subs": 114858,
+   "stars": 5,
+   "ratings": 505,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774789651"
+  },
+  {
+   "id": "3774523641",
+   "title": "Better Sorting Reborn",
+   "class": "companion",
+   "note": "Clean-room successor of subscribed Better Sorting.",
+   "companionOf": [
+    "Better Sorting"
+   ],
+   "overlapsWith": [],
+   "subs": 9794,
+   "stars": 4,
+   "ratings": 83,
+   "updated": "2026-08-01",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774523641"
+  },
+  {
+   "id": "3777752751",
+   "title": "[B42.20] Bandits Fix Plus",
+   "class": "companion",
+   "note": "Bugfix/stability patch for Bandits, written against 42.20 source. Requires Bandits NPC.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": 13687,
+   "stars": 4,
+   "ratings": 128,
+   "updated": "2026-08-15",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3777752751"
+  },
+  {
+   "id": "3791560174",
+   "title": "Bandits: Adaptive Threats",
+   "class": "companion",
+   "note": "Five-stage NPC progression, balanced encounters. New, small but promising (191 subs in 4 days).",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": 191,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-29",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791560174"
+  },
+  {
+   "id": "3791788069",
+   "title": "Bandits Less Loot",
+   "class": "companion",
+   "note": "Tames bandit loot drops.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791788069"
+  },
+  {
+   "id": "3789406323",
+   "title": "Bandits No-Spawn Zones",
+   "class": "companion",
+   "note": "Define zones where bandits never spawn.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789406323"
+  },
+  {
+   "id": "3789417058",
+   "title": "Bandits Companion Guard Post",
+   "class": "companion",
+   "note": "Station companions as guards.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789417058"
+  },
+  {
+   "id": "3788164661",
+   "title": "Better Bandit Creator Menu Plus [B42]",
+   "class": "companion",
+   "note": "QoL for Bandits Creator.",
+   "companionOf": [
+    "[B42] Bandits Creator"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788164661"
+  },
+  {
+   "id": "3787615616",
+   "title": "Bandit Gear Expansion",
+   "class": "companion",
+   "note": "More bandit equipment variety.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787615616"
+  },
+  {
+   "id": "3790457919",
+   "title": "CJ's Bandits Submod - Knox County Emergency Services",
+   "class": "companion",
+   "note": "Police/fire/EMS themed clans.",
+   "companionOf": [
+    "[B42] Bandits NPC",
+    "clans.txt custom scheme"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790457919"
+  },
+  {
+   "id": "3784848246",
+   "title": "Snyder's Extended Bandits",
+   "class": "companion",
+   "note": "More clan content - compare against your custom clans.txt scheme before enabling.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784848246"
+  },
+  {
+   "id": "3774747517",
+   "title": "Sooner Denser Late-Game (for Bandits)",
+   "class": "companion",
+   "note": "Late-game density pacing tuned for NPC runs - relevant to your six-era clan timeline.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774747517"
+  },
+  {
+   "id": "3779715656",
+   "title": "Bandits Day One B42",
+   "class": "companion",
+   "note": "Day-one military/emergency response events.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779715656"
+  },
+  {
+   "id": "3793995830",
+   "title": "Realistic Zombie Perception (Zombie Buddy)",
+   "class": "companion",
+   "note": "Perception tuning built on ZombieBuddy.",
+   "companionOf": [
+    "ZombieBuddy"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793995830"
+  },
+  {
+   "id": "3787314935",
+   "title": "Realistic Fence Pathing (Zombie Buddy)",
+   "class": "companion",
+   "note": "Zombies path around fences believably.",
+   "companionOf": [
+    "ZombieBuddy"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787314935"
+  },
+  {
+   "id": "3782193024",
+   "title": "Antibodies B42.20 Community",
+   "class": "companion",
+   "note": "Community-updated Antibodies for 42.20 (yours is v1.97). 1.2k subs.",
+   "companionOf": [
+    "Antibodies (v1.97)"
+   ],
+   "overlapsWith": [],
+   "subs": 1217,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-26",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782193024"
+  },
+  {
+   "id": "3786732297",
+   "title": "Antibodies B42.20 Community - Compatibility Fix",
+   "class": "companion",
+   "note": "Companion fix for the community build.",
+   "companionOf": [
+    "Antibodies (v1.97)"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786732297"
+  },
+  {
+   "id": "3774999360",
+   "title": "Lifestyle 42.20 Compatibility Patch",
+   "class": "companion",
+   "note": "Temporary compat patch until Lifestyle: Hobbies updates officially. 3-star - read comments first.",
+   "companionOf": [
+    "Lifestyle: Hobbies"
+   ],
+   "overlapsWith": [],
+   "subs": 2477,
+   "stars": 3,
+   "ratings": 36,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774999360"
+  },
+  {
+   "id": "3785128703",
+   "title": "Lifestyle + Moodle Framework Compatibility Fix (B42.20)",
+   "class": "companion",
+   "note": "You run both - this resolves their clash.",
+   "companionOf": [
+    "Lifestyle: Hobbies",
+    "Moodle Framework"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785128703"
+  },
+  {
+   "id": "3789490511",
+   "title": "Moodle Framework Backward Compatibility",
+   "class": "companion",
+   "note": "Keeps old moodle mods working.",
+   "companionOf": [
+    "Moodle Framework",
+    "MoodleFramework Safety Patch"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789490511"
+  },
+  {
+   "id": "3776834981",
+   "title": "Pain Sense - Unofficial Fixes (B42.20)",
+   "class": "companion",
+   "note": "Fixes for subscribed Pain Sense.",
+   "companionOf": [
+    "Pain Sense"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3776834981"
+  },
+  {
+   "id": "3781958566",
+   "title": "They Knew [B42] Compatibility Patch",
+   "class": "companion",
+   "note": "Check against your existing They Knew Stable Patch - likely pick one.",
+   "companionOf": [
+    "They Knew [B42]",
+    "They Knew Stable Patch"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781958566"
+  },
+  {
+   "id": "3793085059",
+   "title": "Proximity Inventory Selection Fix [B42.20+]",
+   "class": "companion",
+   "note": "Selection fix for subscribed Proximity Inventory.",
+   "companionOf": [
+    "Proximity Inventory B42.20+"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793085059"
+  },
+  {
+   "id": "3783535220",
+   "title": "Neat Lockpicking",
+   "class": "companion",
+   "note": "New Neat-series mod (trend #38); lockpicking in the Neat UI style.",
+   "companionOf": [
+    "NeatUI Framework",
+    "Neat Crafting",
+    "Neat Building"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783535220"
+  },
+  {
+   "id": "3792558524",
+   "title": "Neat Lockpicking Sandbox+",
+   "class": "watch",
+   "note": "Kept from criteria: Neat series sandbox options.",
+   "companionOf": [
+    "NeatUI Framework"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792558524"
+  },
+  {
+   "id": "3792546519",
+   "title": "Neat Storage Networks",
+   "class": "companion",
+   "note": "New Neat-series storage linking.",
+   "companionOf": [
+    "NeatUI Framework",
+    "Smarter Storage"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792546519"
+  },
+  {
+   "id": "3787476199",
+   "title": "[WYD] Gun Parts Repair",
+   "class": "companion",
+   "note": "New WYD mod.",
+   "companionOf": [
+    "[WYD] VHS Skill Tapes"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787476199"
+  },
+  {
+   "id": "3790225261",
+   "title": "[WYD] Writable Cross",
+   "class": "companion",
+   "note": "New WYD mod.",
+   "companionOf": [
+    "[WYD] VHS Skill Tapes"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790225261"
+  },
+  {
+   "id": "3784927883",
+   "title": "[42.20+] Extra Skin Tones for Spongie's",
+   "class": "companion",
+   "note": "More skin tones for Spongie's Character Creation.",
+   "companionOf": [
+    "Spongie's Character Customisation"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784927883"
+  },
+  {
+   "id": "3782014758",
+   "title": "Gunworks Fix",
+   "class": "companion",
+   "note": "Fix for subscribed Gunworks Framework.",
+   "companionOf": [
+    "[42.20MP] Gunworks Framework"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782014758"
+  },
+  {
+   "id": "3773834525",
+   "title": "[42.20MP] Vanilla Weapons PLUS - Gunworks Edition",
+   "class": "companion",
+   "note": "Gunworks-tuned vanilla arsenal (trend-90 #78).",
+   "companionOf": [
+    "[42.20MP] Gunworks Framework",
+    "Vanilla Firearms Expansion"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3773834525"
+  },
+  {
+   "id": "3789689438",
+   "title": "Simple Suppressors - Gunworks Patch",
+   "class": "companion",
+   "note": "Bridges Simple Suppressors with Gunworks - relevant if you swap Improvised Silencers.",
+   "companionOf": [
+    "[42.20MP] Gunworks Framework"
+   ],
+   "overlapsWith": [
+    "Improvised Silencers"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789689438"
+  },
+  {
+   "id": "3791350747",
+   "title": "CD: Livestock Guardians",
+   "class": "companion",
+   "note": "Companion dogs guard livestock (trend #112).",
+   "companionOf": [
+    "Companion Dogs [ALPHA]",
+    "CD: Labrador"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791350747"
+  },
+  {
+   "id": "3787202559",
+   "title": "CD: Pug",
+   "class": "companion",
+   "note": "New CD breed (trend #122).",
+   "companionOf": [
+    "Companion Dogs [ALPHA]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787202559"
+  },
+  {
+   "id": "3770795385",
+   "title": "CD: Doberman",
+   "class": "companion",
+   "note": "New CD breed (trend-90 #67).",
+   "companionOf": [
+    "Companion Dogs [ALPHA]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3770795385"
+  },
+  {
+   "id": "3775657408",
+   "title": "Companion Dogs - Pomeranian",
+   "class": "companion",
+   "note": "New CD breed.",
+   "companionOf": [
+    "Companion Dogs [ALPHA]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3775657408"
+  },
+  {
+   "id": "3789829365",
+   "title": "Companion Dogs: Dumb Cat",
+   "class": "companion",
+   "note": "A cat for CD - sits next to your CD: Cats + CompanionCatPurr setup.",
+   "companionOf": [
+    "CD: Cats",
+    "CompanionCatPurr (local)"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789829365"
+  },
+  {
+   "id": "3777416084",
+   "title": "Companion Dogs - Compact Alerts",
+   "class": "companion",
+   "note": "Smaller CD alert UI.",
+   "companionOf": [
+    "Companion Dogs [ALPHA]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3777416084"
+  },
+  {
+   "id": "3784237003",
+   "title": "B42.20 Companion Dogs Fix",
+   "class": "companion",
+   "note": "Compat fix for CD on 42.20.",
+   "companionOf": [
+    "Companion Dogs [ALPHA]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784237003"
+  },
+  {
+   "id": "3763444466",
+   "title": "StartWithDog for CD",
+   "class": "companion",
+   "note": "Spawn with your dog (trend-90 #182). See also Spawn With Your Pet! (3789908519).",
+   "companionOf": [
+    "Companion Dogs [ALPHA]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3763444466"
+  },
+  {
+   "id": "3791619698",
+   "title": "Vanilla Vehicles Animated - Temporary Fix for 42.20.4",
+   "class": "companion",
+   "note": "Temp fix for subscribed Vanilla Vehicles Animated on your exact build.",
+   "companionOf": [
+    "Vanilla vehicles animated"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791619698"
+  },
+  {
+   "id": "3793287476",
+   "title": "Autotsar Pivoting Wheel Fix",
+   "class": "companion",
+   "note": "Fix for Autotsar trailers.",
+   "companionOf": [
+    "Autotsar Trailers B42"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793287476"
+  },
+  {
+   "id": "3786582815",
+   "title": "(Flak Fixes) - Autotsar Trailers Generator Fixes",
+   "class": "companion",
+   "note": "Generator trailer fixes.",
+   "companionOf": [
+    "Autotsar Trailers B42"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786582815"
+  },
+  {
+   "id": "3783873313",
+   "title": "(Flak Fixes) - Autotsar Trailers B42 Patch",
+   "class": "companion",
+   "note": "General Autotsar trailer patch.",
+   "companionOf": [
+    "Autotsar Trailers B42"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783873313"
+  },
+  {
+   "id": "3791686779",
+   "title": "Vehicle Fluid Logistics - KI5 Vehicles Patch",
+   "class": "companion",
+   "note": "Hooks VFL into KI5 tanks.",
+   "companionOf": [
+    "Vehicle Fluid Logistics Library",
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791686779"
+  },
+  {
+   "id": "3791686967",
+   "title": "Vehicle Fluid Logistics - KI5 Campers Patch",
+   "class": "companion",
+   "note": "Same, for KI5 campers.",
+   "companionOf": [
+    "Vehicle Fluid Logistics Library"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791686967"
+  },
+  {
+   "id": "3784843566",
+   "title": "TEH Huge Car Trunks",
+   "class": "companion",
+   "note": "Bigger sibling of your TEH Big Car Trunks - pick one of the two.",
+   "companionOf": [
+    "TEH Big Car Trunks"
+   ],
+   "overlapsWith": [
+    "TEH Big Car Trunks"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3784843566"
+  },
+  {
+   "id": "3791325943",
+   "title": "Better Towing Next Fix",
+   "class": "companion",
+   "note": "Continuation of BetterTowing - your JeevesPatches_Towing still requires BetterTowing (see pzmods Issues tab).",
+   "companionOf": [
+    "Jeeve's Patches"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791325943"
+  },
+  {
+   "id": "3777264282",
+   "title": "KI5 Spawn Control [B42]",
+   "class": "companion",
+   "note": "Control KI5 vehicle spawn rates.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3777264282"
+  },
+  {
+   "id": "3782524328",
+   "title": "Paint My KI5",
+   "class": "companion",
+   "note": "Repaint KI5 vehicles.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782524328"
+  },
+  {
+   "id": "3792457176",
+   "title": "MAN KAT1 Suspension Fix",
+   "class": "companion",
+   "note": "Fix for your '80 MAN KAT1.",
+   "companionOf": [
+    "'80 MAN KAT1"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792457176"
+  },
+  {
+   "id": "3783874874",
+   "title": "[B42.20+] Vehicle Weapon Clipping Fix",
+   "class": "companion",
+   "note": "Weapon clipping inside vehicles (trend #21).",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783874874"
+  },
+  {
+   "id": "3777287433",
+   "title": "PapaChadZoneFix",
+   "class": "companion",
+   "note": "Spawn zone fix for Papa_Chad vehicles.",
+   "companionOf": [
+    "Papa_Chad military vehicles"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3777287433"
+  },
+  {
+   "id": "3773972040",
+   "title": "Arcadia RV Interiors [B42.20]",
+   "class": "companion",
+   "note": "New RV interiors system (trend-90 #350); KI5 custom interiors exist for it (3791955802, 3791447480).",
+   "companionOf": [
+    "[B42]Project RV Interior",
+    "RV Interior Expansion"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3773972040"
+  },
+  {
+   "id": "3781944805",
+   "title": "Immersive Solar Arrays - B42 Fork",
+   "class": "companion",
+   "note": "Maintained B42 fork of subscribed ImmersiveSolarArrays 42.16+.",
+   "companionOf": [
+    "ImmersiveSolarArrays [42.16+]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781944805"
+  },
+  {
+   "id": "3791307583",
+   "title": "M65 Army Field Jacket Better Port",
+   "class": "companion",
+   "note": "Better port of your M65 jacket mod - compare and keep one.",
+   "companionOf": [
+    "[B42] M65 Army Field Jacket"
+   ],
+   "overlapsWith": [
+    "[B42] M65 Army Field Jacket"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791307583"
+  },
+  {
+   "id": "3781074764",
+   "title": "Nepenthe's Sound Stress Soother [B42.20]",
+   "class": "companion",
+   "note": "Same author as your High Beams.",
+   "companionOf": [
+    "Nepenthe's High Beams"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3781074764"
+  },
+  {
+   "id": "3778709615",
+   "title": "[B42.20.3] Simple Belt Flashlight+",
+   "class": "companion",
+   "note": "Extended version of your Simple Belt Flashlight fix.",
+   "companionOf": [
+    "[B42] Simple Belt Flashlight!"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3778709615"
+  },
+  {
+   "id": "3775166757",
+   "title": "Soul Filcher's Packing Time",
+   "class": "companion",
+   "note": "Box/crate packing (trend #226).",
+   "companionOf": [],
+   "overlapsWith": [
+    "More Packing",
+    "Hoarder's Delight"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3775166757"
+  },
+  {
+   "id": "3793054719",
+   "title": "Infoteo's Vehicle Respawn",
+   "class": "companion",
+   "note": "Same author as your Fruit Trees; controlled vehicle respawns.",
+   "companionOf": [
+    "Infoteo's Fruit Trees"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793054719"
+  },
+  {
+   "id": "3786783393",
+   "title": "Infoteo's Furniture Crafting",
+   "class": "companion",
+   "note": "Infoteo series.",
+   "companionOf": [
+    "Infoteo's Fruit Trees"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786783393"
+  },
+  {
+   "id": "3783956168",
+   "title": "Infoteo's Stay in the Light",
+   "class": "companion",
+   "note": "Infoteo series.",
+   "companionOf": [
+    "Infoteo's Fruit Trees"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783956168"
+  },
+  {
+   "id": "3786120850",
+   "title": "Tactical Flashlight Animation - B42",
+   "class": "companion",
+   "note": "Strong community traction in the window.",
+   "companionOf": [
+    "[B42] Simple Belt Flashlight!"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786120850"
+  },
+  {
+   "id": "3775513231",
+   "title": "Inventory Tetris - Grid Based Overhaul",
+   "class": "caution",
+   "note": "47k subs, 5 stars - but replaces the whole inventory UI; known friction with Proximity Inventory, Neat UI mods and Equipment UI. All-or-nothing decision.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Proximity Inventory B42.20+",
+    "NeatUI Framework",
+    "Equipment UI"
+   ],
+   "subs": 46920,
+   "stars": 5,
+   "ratings": 500,
+   "updated": "2026-08-20",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3775513231"
+  },
+  {
+   "id": "3768669395",
+   "title": "True Weight",
+   "class": "caution",
+   "note": "102k subs, 5* - popular weight realism, but it clashes with the installed UCWF + Total Weight Rebalance; adopting it means removing those.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Unified Carry Weight Framework (UCWF)",
+    "Total Weight Rebalance"
+   ],
+   "subs": 102357,
+   "stars": 5,
+   "ratings": 451,
+   "updated": "2026-08-02",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3768669395"
+  },
+  {
+   "id": "3780301677",
+   "title": "AbsWeight - Item Weight Control",
+   "class": "caution",
+   "note": "Same territory as UCWF - do not stack.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Unified Carry Weight Framework (UCWF)"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780301677"
+  },
+  {
+   "id": "3774013360",
+   "title": "Carry Weight Multiplier",
+   "class": "caution",
+   "note": "Same territory as UCWF.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Unified Carry Weight Framework (UCWF)"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774013360"
+  },
+  {
+   "id": "3787001236",
+   "title": "More Traits FIXED",
+   "class": "caution",
+   "note": "Trait pack - overlaps SOTO/Somewhat/Challenge Traits; trait packs multiply start points unpredictably.",
+   "companionOf": [],
+   "overlapsWith": [
+    "SOTO",
+    "Somewhat Traits",
+    "Challenge Traits"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787001236"
+  },
+  {
+   "id": "3777663603",
+   "title": "Even More Traits [42.20]",
+   "class": "caution",
+   "note": "Same overlap.",
+   "companionOf": [],
+   "overlapsWith": [
+    "SOTO",
+    "Somewhat Traits"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3777663603"
+  },
+  {
+   "id": "3788151760",
+   "title": "PZ Performance Tuner [42.20.4]",
+   "class": "caution",
+   "note": "You already run Zed's Better FPS + SmartZOptimizer + Multi-Cpu Enhance + Every Texture Optimized; stacking tuners backfires.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Zed's Better FPS",
+    "SmartZOptimizer",
+    "Multi-Cpu Enhance"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788151760"
+  },
+  {
+   "id": "3793911582",
+   "title": "Zomboid Unified Engine Tweaks (Z-UET)",
+   "class": "caution",
+   "note": "Same reason.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Zed's Better FPS",
+    "Multi-Cpu Enhance"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793911582"
+  },
+  {
+   "id": "3774776279",
+   "title": "Climb Ladders [B42SP & MP]",
+   "class": "caution",
+   "note": "You have I Can Climb Ladders Now - pick one ladder mod.",
+   "companionOf": [],
+   "overlapsWith": [
+    "I Can Climb Ladders Now"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774776279"
+  },
+  {
+   "id": "3782565181",
+   "title": "Simple Suppressors | Build 42",
+   "class": "caution",
+   "note": "Overlaps Improvised Silencers; only worth it with the Gunworks patch and after dropping the old one.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Improvised Silencers - Build 42.20"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3782565181"
+  },
+  {
+   "id": "3775553383",
+   "title": "Extensive Power Rework - Slapstick Fork",
+   "class": "caution",
+   "note": "Competing forks exist (EPR Fork 3786970737, B42 Continued 3790000294) - pick one, check ISA compatibility.",
+   "companionOf": [],
+   "overlapsWith": [
+    "ImmersiveSolarArrays"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3775553383"
+  },
+  {
+   "id": "3780298456",
+   "title": "Brita's Armor Pack B42.20 Standalone Port",
+   "class": "caution",
+   "note": "Brita ecosystem - your arsenal is VFE + Gunworks; mixing gun frameworks causes loot/balance mess.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Vanilla Firearms Expansion",
+    "Gunworks Framework"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780298456"
+  },
+  {
+   "id": "3776641628",
+   "title": "Skill Journal",
+   "class": "caution",
+   "note": "54k subs, 5*, updated 1 Sep. Skill retention journal - overlaps What Did I Just Learn? and LG Skill Journal; pick one journal (also see Skill Recovery Journal, the 2.78M-sub classic).",
+   "companionOf": [],
+   "overlapsWith": [
+    "What Did I Just Learn? [B42]"
+   ],
+   "subs": 54188,
+   "stars": 5,
+   "ratings": 269,
+   "updated": "2026-09-01",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3776641628"
+  },
+  {
+   "id": "3776518022",
+   "title": "[42.20 SP/MP] Rip All Clothing",
+   "class": "caution",
+   "note": "You have Repair Any Clothes; check interaction.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Repair Any Clothes"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3776518022"
+  },
+  {
+   "id": "3785695033",
+   "title": "[B42.20+] Vehicle Enter/Exit Fix",
+   "class": "caution",
+   "note": "- but verify against No more wiggly vehicle + Vehicle Safety before stacking vehicle-behavior fixes.",
+   "companionOf": [],
+   "overlapsWith": [
+    "No more wiggly vehicle",
+    "Vehicle Safety"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785695033"
+  },
+  {
+   "id": "3793113977",
+   "title": "Filibuster Rhymes' Used Cars B42 STABLE",
+   "class": "watch",
+   "note": "Unofficial stable port (224 subs, day-old); author says it may be removed at the original owner's request. Wait for legitimacy/stability.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": 224,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-31",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793113977"
+  },
+  {
+   "id": "3793855355",
+   "title": "KI5 Tire Fix",
+   "class": "watch",
+   "note": "Day-old, 5 subs; fixes tires w/ Restore Engine Quality on 42.20.4. Watch until proven.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": 5,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793855355"
+  },
+  {
+   "id": "3790739492",
+   "title": "Bandits B42.20.4 Compatibility Fix",
+   "class": "watch",
+   "note": "Targets dedicated-server warnings - mostly MP-side; skip unless the farming warnings bother you in SP.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": 66,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790739492"
+  },
+  {
+   "id": "3793925208",
+   "title": "Trespass - Week One Addon [42.20.4]",
+   "class": "watch",
+   "note": "Week One ecosystem - relevant only if you ever adopt Week One (not subscribed).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793925208"
+  },
+  {
+   "id": "3780868604",
+   "title": "[42.20] Slayer's Week One AI Overhaul",
+   "class": "watch",
+   "note": "Same - Week One only.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780868604"
+  },
+  {
+   "id": "3792906225",
+   "title": "Meat Smoking (jerky) [42.20.4]",
+   "class": "watch",
+   "note": "New; perfect fit with your preservation line (LTP, Dry That Food, jars).",
+   "companionOf": [
+    "Long Term Preservation"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792906225"
+  },
+  {
+   "id": "3793368916",
+   "title": "Freeze-Dried Meat Packets",
+   "class": "watch",
+   "note": "Same theme, brand new.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793368916"
+  },
+  {
+   "id": "3793921774",
+   "title": "Configurable BlowTorch & Propane Tank",
+   "class": "watch",
+   "note": "Fits your torch/propane chain (Refill Welding Torch, Hose-Fed Welding Torch just released too: 3793520012).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793921774"
+  },
+  {
+   "id": "3793523410",
+   "title": "ImprovedEngineRepair",
+   "class": "watch",
+   "note": "New; engine repair depth.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793523410"
+  },
+  {
+   "id": "3793407081",
+   "title": "B42 Remove Debris & Tree Stumps Easily",
+   "class": "watch",
+   "note": "New QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793407081"
+  },
+  {
+   "id": "3793458050",
+   "title": "Saw Tree Chopping [B42]",
+   "class": "watch",
+   "note": "New; saws fell trees.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793458050"
+  },
+  {
+   "id": "3793757431",
+   "title": "Buildable Railings",
+   "class": "watch",
+   "note": "New building piece.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793757431"
+  },
+  {
+   "id": "3793780295",
+   "title": "Bark Tanning - Alternative Leather Tanning",
+   "class": "watch",
+   "note": "New crafting chain; fits deep-crafting taste.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793780295"
+  },
+  {
+   "id": "3792876957",
+   "title": "Ben's Put It Back B42",
+   "class": "watch",
+   "note": "Return items to where they came from; new.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792876957"
+  },
+  {
+   "id": "3791633320",
+   "title": "Turbo Actions - Faster Crafting/Building/Repairs",
+   "class": "watch",
+   "note": "New speed QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791633320"
+  },
+  {
+   "id": "3791557355",
+   "title": "Cook With: Ingredient-First Cooking [B42]",
+   "class": "watch",
+   "note": "New cooking flow; fits Project Cook.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Project Cook [B42]"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791557355"
+  },
+  {
+   "id": "3791146188",
+   "title": "Corpse Autopsy",
+   "class": "watch",
+   "note": "New; flavor + info.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791146188"
+  },
+  {
+   "id": "3791163812",
+   "title": "Small Animal Salvaging [B42]",
+   "class": "watch",
+   "note": "New hunting/butchering depth.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Fox's Fixed & Rebalanced Butchering"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791163812"
+  },
+  {
+   "id": "3791602637",
+   "title": "Worm Digging",
+   "class": "watch",
+   "note": "New fishing/bait detail.",
+   "companionOf": [
+    "TwisTonFire - Better Fishing"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791602637"
+  },
+  {
+   "id": "3791702289",
+   "title": "Stone Prospecting [B42]",
+   "class": "watch",
+   "note": "New gathering depth.",
+   "companionOf": [
+    "Break Big Rocks"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791702289"
+  },
+  {
+   "id": "3792364983",
+   "title": "Stay in the Pen! - Livestock Escape Fix",
+   "class": "watch",
+   "note": "New animal QoL.",
+   "companionOf": [
+    "Better Animal Care"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792364983"
+  },
+  {
+   "id": "3791615013",
+   "title": "Livestock Auto Care",
+   "class": "watch",
+   "note": "New; automates feeding.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Feed That Animal!"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791615013"
+  },
+  {
+   "id": "3791539347",
+   "title": "Calm Livestock",
+   "class": "watch",
+   "note": "New animal stress QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791539347"
+  },
+  {
+   "id": "3790676586",
+   "title": "AutoWrench - Mechanics Training Without the Clicking",
+   "class": "watch",
+   "note": "New mechanics QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790676586"
+  },
+  {
+   "id": "3792100733",
+   "title": "Auto Consolidate Drainables (B42)",
+   "class": "watch",
+   "note": "New; pairs with Item Merge choice.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Swap It"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792100733"
+  },
+  {
+   "id": "3790060851",
+   "title": "GrabSpecificAmounts",
+   "class": "watch",
+   "note": "New inventory QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790060851"
+  },
+  {
+   "id": "3793110960",
+   "title": "Container Search",
+   "class": "watch",
+   "note": "New search QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793110960"
+  },
+  {
+   "id": "3793093305",
+   "title": "Compost Fill/Dump All Sacks",
+   "class": "watch",
+   "note": "New farming QoL.",
+   "companionOf": [
+    "Farming Expansion B42"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793093305"
+  },
+  {
+   "id": "3790543734",
+   "title": "Vex Rain Funnel",
+   "class": "watch",
+   "note": "New water collection.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Useful Barrels"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790543734"
+  },
+  {
+   "id": "3791943076",
+   "title": "Water Pump Irrigation",
+   "class": "watch",
+   "note": "New irrigation; compare Natural Irrigation (trend) and Plysken Irrigation Pipes.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Natural Irrigation (3763835105)"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791943076"
+  },
+  {
+   "id": "3791925199",
+   "title": "Usable Concrete Mixer [B42]",
+   "class": "watch",
+   "note": "New construction depth.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791925199"
+  },
+  {
+   "id": "3790786157",
+   "title": "Long Burn Fuel Briquettes",
+   "class": "watch",
+   "note": "New fuel crafting.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790786157"
+  },
+  {
+   "id": "3792287651",
+   "title": "Fuel-to-Propane Station [B42]",
+   "class": "watch",
+   "note": "New propane logistics.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Propane Exchange Cabinets"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792287651"
+  },
+  {
+   "id": "3790123686",
+   "title": "Generator Hose",
+   "class": "watch",
+   "note": "New power QoL.",
+   "companionOf": [
+    "ImmersiveSolarArrays"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790123686"
+  },
+  {
+   "id": "3790880431",
+   "title": "Ultimate Towing (Tow Any Car With Any Car)",
+   "class": "watch",
+   "note": "New; overlaps Harry's Tow Truck.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Harry's Tow Truck - Zombie Buddy Ed."
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790880431"
+  },
+  {
+   "id": "3792113124",
+   "title": "Vehicle Repair Overhaul + Nearby Containers",
+   "class": "watch",
+   "note": "New mechanics QoL.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Better Auto Mechanics"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792113124"
+  },
+  {
+   "id": "3793387564",
+   "title": "Sequential Eat",
+   "class": "watch",
+   "note": "New eating QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793387564"
+  },
+  {
+   "id": "3793872987",
+   "title": "Knox Countdown (Infection/Zombification Timer)",
+   "class": "watch",
+   "note": "Day-old; pairs with Antibodies-style play.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793872987"
+  },
+  {
+   "id": "3793935075",
+   "title": "VHS Recording Fix",
+   "class": "watch",
+   "note": "Day-old; VHS ecosystem fix.",
+   "companionOf": [
+    "[WYD] VHS Skill Tapes"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3793935075"
+  },
+  {
+   "id": "3792929213",
+   "title": "Random Quests",
+   "class": "watch",
+   "note": "New objective system.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3792929213"
+  },
+  {
+   "id": "3791765528",
+   "title": "Queued Dismantling",
+   "class": "watch",
+   "note": "New; queue dismantle jobs.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3791765528"
+  },
+  {
+   "id": "3790399182",
+   "title": "Skill Book Tracker [B42]",
+   "class": "watch",
+   "note": "New; pairs with Known And Collected.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Known And Collected"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790399182"
+  },
+  {
+   "id": "3790968409",
+   "title": "No Duplicate Skillbooks & VHS in the same container",
+   "class": "watch",
+   "note": "New loot QoL; fits VHS hunting.",
+   "companionOf": [
+    "[WYD] VHS Skill Tapes"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3790968409"
+  },
+  {
+   "id": "2503622437",
+   "title": "Skill Recovery Journal",
+   "class": "companion",
+   "note": "The classic death-proof skill journal (2.78M subs, 5*), updated 20 Aug for 42.20. Requires errorMagnifier and Mod Update and Alert System - both already installed.",
+   "companionOf": [
+    "errorMagnifier",
+    "Mod Update and Alert System"
+   ],
+   "overlapsWith": [
+    "What Did I Just Learn? [B42]"
+   ],
+   "subs": 2778378,
+   "stars": 5,
+   "ratings": null,
+   "updated": "2026-08-20",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2503622437"
+  },
+  {
+   "id": "2791656602",
+   "title": "[B42/B41] The Motorious Zone Vehicle Pack",
+   "class": "high",
+   "note": "632k subs, 5*, updated 27 Aug. Era-appropriate vanilla-styled vehicle pack - the natural complement to the KI5 fleet. Its HD-texture pack (3779019767) and Spawn Fill (3779393248) become relevant with it.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": 632747,
+   "stars": 5,
+   "ratings": null,
+   "updated": "2026-08-27",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2791656602"
+  },
+  {
+   "id": "3409143790",
+   "title": "Sapph's Cooking [B42+]",
+   "class": "high",
+   "note": "276k subs, 5*, updated 25 Aug. Large cooking expansion.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Project Cook [B42]",
+    "Craftable Vanilla Food Items"
+   ],
+   "subs": 276253,
+   "stars": 5,
+   "ratings": null,
+   "updated": "2026-08-25",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3409143790"
+  },
+  {
+   "id": "2914075159",
+   "title": "Evolving Traits World (ETW) + More Traits continuation",
+   "class": "high",
+   "note": "233k subs, 5*, updated 1 Sep. Traits evolve with play; requires KillCount, Moodle Framework and UCWF - all installed. Same design space as SOTO/Traits As Skills: pick one philosophy.",
+   "companionOf": [
+    "KillCount",
+    "Moodle Framework",
+    "Unified Carry Weight Framework (UCWF)"
+   ],
+   "overlapsWith": [
+    "SOTO",
+    "Traits As Skills"
+   ],
+   "subs": 233120,
+   "stars": 5,
+   "ratings": null,
+   "updated": "2026-09-01",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2914075159"
+  },
+  {
+   "id": "3597673472",
+   "title": "Long Term Preservation Extended [42.20+]",
+   "class": "companion",
+   "note": "59.6k subs, 5*, updated 27 Aug. Standalone extension/overhaul of Long Term Preservation.",
+   "companionOf": [
+    "Long Term Preservation"
+   ],
+   "overlapsWith": [],
+   "subs": 59646,
+   "stars": 5,
+   "ratings": null,
+   "updated": "2026-08-27",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3597673472"
+  },
+  {
+   "id": "3543612325",
+   "title": "Restore Engine Quality [B42]",
+   "class": "high",
+   "note": "46.5k subs, 5*, updated 21 Aug. Restore engine quality with wrench + spare parts + Mechanics 4. Note: KI5 Tire Fix (watch list) patches its 42.20.4 interaction with KI5 tires.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": 46542,
+   "stars": 5,
+   "ratings": null,
+   "updated": "2026-08-21",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3543612325"
+  },
+  {
+   "id": "3726328119",
+   "title": "Extensive Health Rework Evolved",
+   "class": "caution",
+   "note": "12.8k subs, 4*, updated 30 Aug. Deep medical overhaul (diseases, diagnostics, blood) - heavy overlap with the installed Antibodies + Wounds Overhaul + Pain Sense stack.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Antibodies (v1.97)",
+    "Wounds Overhaul",
+    "Pain Sense"
+   ],
+   "subs": 12759,
+   "stars": 4,
+   "ratings": null,
+   "updated": "2026-08-30",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3726328119"
+  },
+  {
+   "id": "3759920384",
+   "title": "Wandering Hordes: Dynamic Zombie Migration",
+   "class": "high",
+   "note": "6.5k subs, 4*, updated 29 Aug. Migrating hordes system.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": 6539,
+   "stars": 4,
+   "ratings": null,
+   "updated": "2026-08-29",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3759920384"
+  },
+  {
+   "id": "3740300378",
+   "title": "KI5 Mini-fixes",
+   "class": "companion",
+   "note": "Small KI5 fix collection; sits next to KI5 General Fixes.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": 18404,
+   "stars": 4,
+   "ratings": 67,
+   "updated": "2026-08-22",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3740300378"
+  },
+  {
+   "id": "3501302358",
+   "title": "Vehicle Seat UI (KI5)",
+   "class": "companion",
+   "note": "Seat overview UI for KI5 vehicles.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3501302358"
+  },
+  {
+   "id": "3423424077",
+   "title": "Vanilla Vehicles Replacer (KI5)",
+   "class": "companion",
+   "note": "Replaces vanilla cars with KI5 models for a consistent fleet.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3423424077"
+  },
+  {
+   "id": "3635550823",
+   "title": "R.U. BMP-2 by Papa_Chad",
+   "class": "companion",
+   "note": "Another Papa_Chad armor vehicle, updated in the window.",
+   "companionOf": [
+    "Papa_Chad military vehicles"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3635550823"
+  },
+  {
+   "id": "3510554118",
+   "title": "Undead Survivor Bandits Integration",
+   "class": "companion",
+   "note": "Bridges Undead Survivor NPCs with Bandits.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": 1600,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-21",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3510554118"
+  },
+  {
+   "id": "3745699559",
+   "title": "Bandits Melee Armor Patch",
+   "class": "companion",
+   "note": "Bandits take armor into account in melee.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3745699559"
+  },
+  {
+   "id": "3739461062",
+   "title": "Patch Bandits Bases",
+   "class": "companion",
+   "note": "Fixes for bandit base behavior.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3739461062"
+  },
+  {
+   "id": "3780196140",
+   "title": "[MIG]BanditsExtends",
+   "class": "companion",
+   "note": "Extension content for Bandits.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3780196140"
+  },
+  {
+   "id": "3757811814",
+   "title": "Bandit2 Gun Compatibility",
+   "class": "companion",
+   "note": "Weapon-mod compatibility for Bandits V2.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3757811814"
+  },
+  {
+   "id": "3418926649",
+   "title": "[B42] Cannibalize Bandits",
+   "class": "companion",
+   "note": "Grim option for bandit corpses.",
+   "companionOf": [
+    "[B42] Bandits NPC"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3418926649"
+  },
+  {
+   "id": "3737772445",
+   "title": "TwisTonFire - DuffleBag",
+   "class": "companion",
+   "note": "New TwisTonFire mod (you run 9 of the series).",
+   "companionOf": [
+    "TwisTonFire series"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3737772445"
+  },
+  {
+   "id": "3570250507",
+   "title": "TwisTonFire - Faster Actions",
+   "class": "companion",
+   "note": "TwisTonFire series.",
+   "companionOf": [
+    "TwisTonFire series"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3570250507"
+  },
+  {
+   "id": "3553771962",
+   "title": "TwisTonFire - Training Challenge",
+   "class": "companion",
+   "note": "TwisTonFire series.",
+   "companionOf": [
+    "TwisTonFire series"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3553771962"
+  },
+  {
+   "id": "3572564421",
+   "title": "TwisTonFire - minimap",
+   "class": "companion",
+   "note": "TwisTonFire series.",
+   "companionOf": [
+    "TwisTonFire series"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3572564421"
+  },
+  {
+   "id": "3579410548",
+   "title": "TwisTonFire - Quick'n'Auto Mark",
+   "class": "companion",
+   "note": "TwisTonFire series.",
+   "companionOf": [
+    "TwisTonFire series"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3579410548"
+  },
+  {
+   "id": "3480305133",
+   "title": "TwisTonFire - Stats",
+   "class": "companion",
+   "note": "TwisTonFire series.",
+   "companionOf": [
+    "TwisTonFire series"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3480305133"
+  },
+  {
+   "id": "3575778063",
+   "title": "TwisTonFire - Improved Soundoptions",
+   "class": "companion",
+   "note": "TwisTonFire series.",
+   "companionOf": [
+    "TwisTonFire series"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3575778063"
+  },
+  {
+   "id": "3583147716",
+   "title": "TwisTonFire - Orderly Chaos",
+   "class": "companion",
+   "note": "TwisTonFire series.",
+   "companionOf": [
+    "TwisTonFire series"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3583147716"
+  },
+  {
+   "id": "3687487317",
+   "title": "Jeeve's QoL",
+   "class": "companion",
+   "note": "Jeeve's series (you run Jeeve's Build + Patches).",
+   "companionOf": [
+    "Jeeve's Build",
+    "Jeeve's Patches"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3687487317"
+  },
+  {
+   "id": "3739941052",
+   "title": "Jeeve's Zones",
+   "class": "companion",
+   "note": "Jeeve's series.",
+   "companionOf": [
+    "Jeeve's Build"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3739941052"
+  },
+  {
+   "id": "3674452315",
+   "title": "Jeeve's Journals",
+   "class": "companion",
+   "note": "Jeeve's series.",
+   "companionOf": [
+    "Jeeve's Build"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3674452315"
+  },
+  {
+   "id": "3737412008",
+   "title": "Jeeve's Solar Arrays",
+   "class": "companion",
+   "note": "Jeeve's series; pairs with ImmersiveSolarArrays.",
+   "companionOf": [
+    "Jeeve's Build",
+    "ImmersiveSolarArrays"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3737412008"
+  },
+  {
+   "id": "3717968421",
+   "title": "Common Sense B42.20 - Community Compatibility Fix",
+   "class": "companion",
+   "note": "Compat fix for subscribed Common Sense.",
+   "companionOf": [
+    "Common Sense [B42.20+]"
+   ],
+   "overlapsWith": [],
+   "subs": 61983,
+   "stars": 5,
+   "ratings": 314,
+   "updated": "2026-08-09",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3717968421"
+  },
+  {
+   "id": "3718412967",
+   "title": "Icons Inventory",
+   "class": "companion",
+   "note": "Inventory icon system; a Known And Collected compatibility patch exists (3728123654).",
+   "companionOf": [
+    "Known And Collected",
+    "Context Menu Icons"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3718412967"
+  },
+  {
+   "id": "3684807879",
+   "title": "Moodle Descriptions Expanded - Patch B42.15+",
+   "class": "companion",
+   "note": "Patch for subscribed Moodle Descriptions Expanded.",
+   "companionOf": [
+    "[B42] Moodle Descriptions Expanded"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3684807879"
+  },
+  {
+   "id": "3743063232",
+   "title": "Neat Building - Safe Uninstall Support",
+   "class": "companion",
+   "note": "Safe removal support for Neat Building.",
+   "companionOf": [
+    "Neat Building [B42]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3743063232"
+  },
+  {
+   "id": "3044705007",
+   "title": "[B42/41] Fix BlowTorch & PropaneTank",
+   "class": "companion",
+   "note": "Torch/propane fix; fits your welding chain.",
+   "companionOf": [
+    "Refill Welding Torch with Propane Bottle"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3044705007"
+  },
+  {
+   "id": "3774248551",
+   "title": "Better Towing / Harrys Tow Truck [B42.20]",
+   "class": "companion",
+   "note": "42.20 towing update for the Harry's Tow Truck line you run.",
+   "companionOf": [
+    "Harry's Tow Truck - Zombie Buddy Ed."
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774248551"
+  },
+  {
+   "id": "3774304190",
+   "title": "87 Ford F700 Armored Parts Compatibility",
+   "class": "companion",
+   "note": "Parts compat for your '87 Ford B700/F700.",
+   "companionOf": [
+    "'87 Ford B700/F700 Trucks"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3774304190"
+  },
+  {
+   "id": "3398274931",
+   "title": "PonchosB42 - 42.20 fix",
+   "class": "companion",
+   "note": "42.20 fix with realistic protection values for ponchos.",
+   "companionOf": [
+    "Military Ponchos [B42]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3398274931"
+  },
+  {
+   "id": "3751857048",
+   "title": "[42.20] TorchRefill Fix - Propane Bottle Weight",
+   "class": "companion",
+   "note": "Weight fix in the torch-refill chain.",
+   "companionOf": [
+    "Refill Welding Torch with Propane Bottle"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3751857048"
+  },
+  {
+   "id": "3755731521",
+   "title": "[42.20] Lethal Stealth Fix - LTSSync nil guards",
+   "class": "companion",
+   "note": "Crash guards for subscribed Lethal Stealth.",
+   "companionOf": [
+    "Lethal Stealth"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3755731521"
+  },
+  {
+   "id": "3779211885",
+   "title": "Tanks Have Propane - Unofficial Fixes (B42.20)",
+   "class": "companion",
+   "note": "Fixes for subscribed Tanks Have Propane.",
+   "companionOf": [
+    "Tanks Have Propane (B42)"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779211885"
+  },
+  {
+   "id": "3617723542",
+   "title": "Save Skills To Watch Updated for Build 42.20",
+   "class": "companion",
+   "note": "Alternative skill-persistence approach; compare with Skill Recovery Journal.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Skill Recovery Journal"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3617723542"
+  },
+  {
+   "id": "3520986637",
+   "title": "PZ They Knew Addon",
+   "class": "companion",
+   "note": "Addon for subscribed They Knew.",
+   "companionOf": [
+    "They Knew [B42]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3520986637"
+  },
+  {
+   "id": "3399320470",
+   "title": "Serving Plates: Make your plates useful",
+   "class": "companion",
+   "note": "Plates matter; a dupe fix shipped this week (3792674873).",
+   "companionOf": [
+    "Project Cook [B42]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3399320470"
+  },
+  {
+   "id": "3526968739",
+   "title": "[B42/41] Automatic Stove Shutoff",
+   "class": "companion",
+   "note": "No more burned kitchens.",
+   "companionOf": [
+    "The ACTUAL Cook Times"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3526968739"
+  },
+  {
+   "id": "3636956305",
+   "title": "Contextual Keys Helper [B42.20+]",
+   "class": "companion",
+   "note": "Key management QoL.",
+   "companionOf": [
+    "Known And Collected"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3636956305"
+  },
+  {
+   "id": "3004064681",
+   "title": "Show Container Contents On Hover",
+   "class": "companion",
+   "note": "Container preview on hover.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Smarter Storage"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3004064681"
+  },
+  {
+   "id": "3507997225",
+   "title": "Foraging Tooltip Extended [B42]",
+   "class": "companion",
+   "note": "Deeper foraging info.",
+   "companionOf": [
+    "Herbalist",
+    "Picking Meister"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3507997225"
+  },
+  {
+   "id": "3342191739",
+   "title": "Gyde's Trait Magazines [B42.20]",
+   "class": "companion",
+   "note": "Trait magazines to find in-world; Extended+ variant (3776852122) also updated.",
+   "companionOf": [
+    "Skill Book Expansion"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3342191739"
+  },
+  {
+   "id": "3698401476",
+   "title": "Skully's Lowerback Dufflebags, Chest Rigs + Fannypack",
+   "class": "companion",
+   "note": "Container rebalance gear set, 42.20.",
+   "companionOf": [
+    "Vanilla Gear Expanded"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3698401476"
+  },
+  {
+   "id": "2423266708",
+   "title": "Hats and Glasses Don't Fall",
+   "class": "companion",
+   "note": "The long-standing classic; the newer 'Hats And Sunglasses Don't Fall' covers the same ground - pick one.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Hats And Sunglasses Don't Fall (3793877376)"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2423266708"
+  },
+  {
+   "id": "3786875384",
+   "title": "CompanionDogs Dog Display",
+   "class": "companion",
+   "note": "Status display for Companion Dogs.",
+   "companionOf": [
+    "Companion Dogs [ALPHA]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786875384"
+  },
+  {
+   "id": "3786735663",
+   "title": "Neat Crafting Recipe Count",
+   "class": "companion",
+   "note": "Recipe count + substitute lookup for Neat Crafting (bilingual title, works in EN).",
+   "companionOf": [
+    "Neat Crafting [B42]"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786735663"
+  },
+  {
+   "id": "3788498383",
+   "title": "TV & Radio ReInvented - B42.20.3 Port",
+   "class": "companion",
+   "note": "Broadcast overhaul port; pairs with your emergency-TV setup.",
+   "companionOf": [
+    "Dynamic Emergency TV Channel",
+    "Radio Frequency Manager"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788498383"
+  },
+  {
+   "id": "3555199477",
+   "title": "Undying Zombies (Immersive Respawn Replacement)",
+   "class": "high",
+   "note": "Replaces zombie respawn with an immersive system. Updated in window.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": 3687,
+   "stars": 5,
+   "ratings": 239,
+   "updated": "2026-08-26",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3555199477"
+  },
+  {
+   "id": "3716405632",
+   "title": "Dynamic Horde Events B42",
+   "class": "high",
+   "note": "Event-driven hordes.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Wandering Hordes"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3716405632"
+  },
+  {
+   "id": "2983905789",
+   "title": "Wandering Zombies",
+   "class": "high",
+   "note": "Classic roaming behavior mod, maintained for 42.20.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2983905789"
+  },
+  {
+   "id": "3580276809",
+   "title": "[B42.20] The Only Cure",
+   "class": "high",
+   "note": "204k subs, 5*, updated 23 Aug. Amputation as bite treatment; its 42.20 fix (3775152804) is also in the window.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Antibodies (v1.97)"
+   ],
+   "subs": 204417,
+   "stars": 5,
+   "ratings": 1160,
+   "updated": "2026-08-23",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3580276809"
+  },
+  {
+   "id": "3559783131",
+   "title": "Woodcutting Skill - Overhaul (B42)",
+   "class": "high",
+   "note": "Dedicated woodcutting skill line.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3559783131"
+  },
+  {
+   "id": "3581691478",
+   "title": "More Blacksmithing!",
+   "class": "high",
+   "note": "Deeper smithing; see also Ixidior's Blacksmithing Upgrade (3679545738) and Copper and Bronze Forging (3758685960).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3581691478"
+  },
+  {
+   "id": "3778201332",
+   "title": "Hydrocraft Reinvented [B42]",
+   "class": "high",
+   "note": "The crafting mega-mod reborn for B42 - fits the deep-crafting profile; check load with existing crafting mods.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3778201332"
+  },
+  {
+   "id": "3628922658",
+   "title": "Printer3D: Manufacturing & Recycling System",
+   "class": "high",
+   "note": "Manufacturing/recycling chain.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3628922658"
+  },
+  {
+   "id": "3577903007",
+   "title": "Vanilla Foods Expanded",
+   "class": "high",
+   "note": "Food variety; a loot-neutral variant exists (3789090094).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3577903007"
+  },
+  {
+   "id": "3757081423",
+   "title": "PseudonymousEd's Salt-Preserved Foods",
+   "class": "high",
+   "note": "Salt preservation - fits the LTP line.",
+   "companionOf": [
+    "Long Term Preservation"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3757081423"
+  },
+  {
+   "id": "3747490069",
+   "title": "Yeast Cultivation [B42]",
+   "class": "high",
+   "note": "Yeast keeping for baking/brewing.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3747490069"
+  },
+  {
+   "id": "3749538717",
+   "title": "WineVinegarBrewingB42",
+   "class": "high",
+   "note": "Vinegar/wine chain.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3749538717"
+  },
+  {
+   "id": "3577995744",
+   "title": "Make Tomato Paste & More!",
+   "class": "high",
+   "note": "Preserving chain addition.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3577995744"
+  },
+  {
+   "id": "3652077421",
+   "title": "Solar Home System",
+   "class": "high",
+   "note": "Solar power alternative.",
+   "companionOf": [],
+   "overlapsWith": [
+    "ImmersiveSolarArrays"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3652077421"
+  },
+  {
+   "id": "3211693903",
+   "title": "Traits Purchase System",
+   "class": "high",
+   "note": "Buy traits with XP; Extended variant (3750184467) updated too.",
+   "companionOf": [],
+   "overlapsWith": [
+    "SOTO"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3211693903"
+  },
+  {
+   "id": "2940354599",
+   "title": "Fitness & Workout Overhaul",
+   "class": "high",
+   "note": "Exercise system rework.",
+   "companionOf": [],
+   "overlapsWith": [
+    "TwisTonFire - Exercises",
+    "Dynamic Fitness Boost"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2940354599"
+  },
+  {
+   "id": "3629857595",
+   "title": "Sports Traits Expanded [42.20 Stable]",
+   "class": "high",
+   "note": "Sport-based traits.",
+   "companionOf": [],
+   "overlapsWith": [
+    "SOTO"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3629857595"
+  },
+  {
+   "id": "2544353492",
+   "title": "Has Been Read",
+   "class": "high",
+   "note": "Marks read literature.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Known And Collected"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2544353492"
+  },
+  {
+   "id": "3407754248",
+   "title": "Read All Books",
+   "class": "high",
+   "note": "Batch reading QoL.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Easy Literature"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3407754248"
+  },
+  {
+   "id": "3738406924",
+   "title": "TLDR - Too Long Didn't Read",
+   "class": "high",
+   "note": "Faster skill books reading QoL.",
+   "companionOf": [],
+   "overlapsWith": [
+    "M-13's Reading Tweaks"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3738406924"
+  },
+  {
+   "id": "3543060884",
+   "title": "Honu's Mod Info QoL",
+   "class": "high",
+   "note": "Mod info QoL; same author's Find That Item (3527778645) also updated.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Mod Comparer"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3543060884"
+  },
+  {
+   "id": "3737874810",
+   "title": "Mod Manager Reforged (Client)",
+   "class": "high",
+   "note": "Modernized mod manager; you run Mod Manager + Load Order Sorter - compare before switching.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[B42] Mod Manager",
+    "Mod Load Order Sorter"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3737874810"
+  },
+  {
+   "id": "3639628777",
+   "title": "Burd's Survival Journals (B41/42)",
+   "class": "high",
+   "note": "In-character journaling.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3639628777"
+  },
+  {
+   "id": "2938616550",
+   "title": "Metal Salvage",
+   "class": "high",
+   "note": "Salvage metal from the world.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Metal Bandsaw Log Sawing"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2938616550"
+  },
+  {
+   "id": "3647765196",
+   "title": "Melt Down Buckles",
+   "class": "high",
+   "note": "Small smelting QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3647765196"
+  },
+  {
+   "id": "3698139680",
+   "title": "City Standpipes",
+   "class": "high",
+   "note": "Urban water access points.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Water Pipes"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3698139680"
+  },
+  {
+   "id": "2925657627",
+   "title": "Biofuels",
+   "class": "high",
+   "note": "Fuel from organics - late-game fuel independence.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2925657627"
+  },
+  {
+   "id": "3512708849",
+   "title": "Shotgun Trajectory",
+   "class": "high",
+   "note": "Shotgun spread realism.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3512708849"
+  },
+  {
+   "id": "3457277411",
+   "title": "Use Key From Glove Box",
+   "class": "high",
+   "note": "Vehicle key QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3457277411"
+  },
+  {
+   "id": "2511087277",
+   "title": "Power Window Controls",
+   "class": "high",
+   "note": "Roll windows properly.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2511087277"
+  },
+  {
+   "id": "2290459371",
+   "title": "Vehicle Doors Hotkey",
+   "class": "high",
+   "note": "Door control hotkeys.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2290459371"
+  },
+  {
+   "id": "3661430479",
+   "title": "Towbars",
+   "class": "high",
+   "note": "Towing hardware.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Better Towing"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3661430479"
+  },
+  {
+   "id": "3744392248",
+   "title": "Daisy Chain Towing",
+   "class": "high",
+   "note": "Multi-vehicle towing.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3744392248"
+  },
+  {
+   "id": "3446203945",
+   "title": "Tow Truck [B42]",
+   "class": "high",
+   "note": "Dedicated tow truck.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Harry's Tow Truck"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3446203945"
+  },
+  {
+   "id": "3772415251",
+   "title": "Vehicle Maintenance Overhaul",
+   "class": "high",
+   "note": "Deep maintenance; community patch + ES translation exists (3788290680).",
+   "companionOf": [],
+   "overlapsWith": [
+    "Better Auto Mechanics",
+    "TPMS"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3772415251"
+  },
+  {
+   "id": "3004207103",
+   "title": "Operate Generators With Electrical Level 1",
+   "class": "high",
+   "note": "Lower generator skill gate.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3004207103"
+  },
+  {
+   "id": "3576056135",
+   "title": "Better Generator Info",
+   "class": "high",
+   "note": "Generator info QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3576056135"
+  },
+  {
+   "id": "2423906082",
+   "title": "Bushcraft Gear - Tools [B41/B42]",
+   "class": "high",
+   "note": "Classic bushcraft toolset; Rare Weapons sibling (2432621382) updated too.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2423906082"
+  },
+  {
+   "id": "3388844542",
+   "title": "Minimal Display Bars + Nutritions + Discomfort",
+   "class": "high",
+   "note": "Compact status bars.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Mini Health Plus",
+    "Simple Moodle Indicators"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3388844542"
+  },
+  {
+   "id": "2012990668",
+   "title": "Reorganized Info Screen",
+   "class": "high",
+   "note": "Info screen layout rework.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2012990668"
+  },
+  {
+   "id": "3217685049",
+   "title": "PZK VLC (Vanilla look-like car pack)",
+   "class": "high",
+   "note": "Vanilla-styled car pack + Community Expansion (3543325992).",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3217685049"
+  },
+  {
+   "id": "3445948743",
+   "title": "'76 Kamaz 5320 Soviet Bear",
+   "class": "high",
+   "note": "Period truck.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3445948743"
+  },
+  {
+   "id": "2523751880",
+   "title": "UAZ 2206 [42.20]",
+   "class": "high",
+   "note": "Period van (+ Casual variant 2706775030).",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2523751880"
+  },
+  {
+   "id": "3631989559",
+   "title": "'69 Dodge Charger",
+   "class": "high",
+   "note": "Period car.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3631989559"
+  },
+  {
+   "id": "3677217949",
+   "title": "1967 Chevrolet Impala",
+   "class": "high",
+   "note": "Period car.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3677217949"
+  },
+  {
+   "id": "3705042712",
+   "title": "'69~'70 Ford Mustang Boss 429/302",
+   "class": "high",
+   "note": "Period car.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3705042712"
+  },
+  {
+   "id": "3419267262",
+   "title": "BMW E38 750i",
+   "class": "high",
+   "note": "Period car (1994+; edge of era).",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3419267262"
+  },
+  {
+   "id": "3286593534",
+   "title": "[B42/B41] Mercedes-Benz 300SE/S320",
+   "class": "high",
+   "note": "Period car.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3286593534"
+  },
+  {
+   "id": "3646655397",
+   "title": "[B42]1977 Lada Niva",
+   "class": "high",
+   "note": "Period 4x4.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3646655397"
+  },
+  {
+   "id": "3253385114",
+   "title": "'81 DeLorean DMC-12",
+   "class": "high",
+   "note": "Period icon.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3253385114"
+  },
+  {
+   "id": "3649632887",
+   "title": "Ford Transcontinental",
+   "class": "high",
+   "note": "Period truck; universal hitch addon exists (3785693571).",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3649632887"
+  },
+  {
+   "id": "3783833448",
+   "title": "'63 Chevrolet Impala",
+   "class": "high",
+   "note": "Period car, new in window.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3783833448"
+  },
+  {
+   "id": "3787723359",
+   "title": "1995/1996 Chevrolet Caprice Classic Pack [B42]",
+   "class": "high",
+   "note": "Period pack, new in window.",
+   "companionOf": [
+    "KI5 vehicle collection"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787723359"
+  },
+  {
+   "id": "3789551122",
+   "title": "Wet Firewood - Rain, Snow, Wood & Fire Ignition Overhaul",
+   "class": "high",
+   "note": "Firewood wetness and ignition realism - new, strong fit.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": 71,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-28",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789551122"
+  },
+  {
+   "id": "3789425624",
+   "title": "Off-Grid: Solar Power",
+   "class": "high",
+   "note": "New solar approach.",
+   "companionOf": [],
+   "overlapsWith": [
+    "ImmersiveSolarArrays"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789425624"
+  },
+  {
+   "id": "3789355284",
+   "title": "Livestock Monitor",
+   "class": "high",
+   "note": "Animal status monitoring.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Livestock Panel Plus"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789355284"
+  },
+  {
+   "id": "3789246358",
+   "title": "Scarecrows Expanded",
+   "class": "high",
+   "note": "Farming defense flavor.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789246358"
+  },
+  {
+   "id": "3789299530",
+   "title": "Choose Starting Items",
+   "class": "high",
+   "note": "Start loadout control.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Start With... [b42]"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789299530"
+  },
+  {
+   "id": "3789516436",
+   "title": "LootLens - LQS Loot Filter",
+   "class": "high",
+   "note": "Loot filtering system.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789516436"
+  },
+  {
+   "id": "3788705258",
+   "title": "Wandering Survivors",
+   "class": "high",
+   "note": "Roaming NPC survivors - Bandits-adjacent; check coexistence with Bandits before enabling.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[B42] Bandits NPC"
+   ],
+   "subs": 76,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-26",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788705258"
+  },
+  {
+   "id": "3788705006",
+   "title": "Smelting XP",
+   "class": "high",
+   "note": "XP for smelting work.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788705006"
+  },
+  {
+   "id": "3788533156",
+   "title": "Big Size Spice: Bigger Salt & Pepper [42.20+]",
+   "class": "high",
+   "note": "Bigger spice containers - kitchen QoL.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788533156"
+  },
+  {
+   "id": "3788402435",
+   "title": "Ben's Reliable Guns",
+   "class": "high",
+   "note": "One of Ben's firearm QoL set (Recoil Fix, Handgun Animation Fix, Trajectory & Penetration, Better Short Blades).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788402435"
+  },
+  {
+   "id": "3788393574",
+   "title": "Real Vehicle VFX",
+   "class": "high",
+   "note": "Vehicle visual effects.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788393574"
+  },
+  {
+   "id": "3788458806",
+   "title": "Enter/Exit Trunks - More Vehicles Support",
+   "class": "high",
+   "note": "Hide in trunks (WIP).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788458806"
+  },
+  {
+   "id": "3788321238",
+   "title": "Rapid Actions [B42]",
+   "class": "high",
+   "note": "Faster common actions.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Turbo Actions"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788321238"
+  },
+  {
+   "id": "3788033685",
+   "title": "PropSort - Smart Base Sorter",
+   "class": "high",
+   "note": "One-click base inventory automation.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Smarter Storage",
+    "Quartermaster"
+   ],
+   "subs": 37,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-23",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3788033685"
+  },
+  {
+   "id": "3787945477",
+   "title": "Learn & Practice",
+   "class": "high",
+   "note": "Skill practice system.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Practice Crafting Skills"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787945477"
+  },
+  {
+   "id": "3787857407",
+   "title": "Dairy Plus (Build 42)",
+   "class": "high",
+   "note": "Dairy chain expansion.",
+   "companionOf": [
+    "All Milks Are Created Equal",
+    "Make Cheese-type crafting"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787857407"
+  },
+  {
+   "id": "3787690727",
+   "title": "Building Utilities",
+   "class": "high",
+   "note": "Construction helpers.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Neat Building"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787690727"
+  },
+  {
+   "id": "3787649097",
+   "title": "Craftable Propane Tank [B42]",
+   "class": "high",
+   "note": "Part of a craftable-materials series (paper, pencil, welding rods/mask/torch) by one author - fits the self-sufficiency chain.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787649097"
+  },
+  {
+   "id": "3787607014",
+   "title": "Zombie Butchery [B42]",
+   "class": "high",
+   "note": "Corpse processing depth.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Fox's Butchering"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787607014"
+  },
+  {
+   "id": "3787149328",
+   "title": "Craft & Build XP",
+   "class": "high",
+   "note": "XP flow rework for crafting/building.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Accurate XP Multipliers"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787149328"
+  },
+  {
+   "id": "3787125307",
+   "title": "Real Flashlights",
+   "class": "high",
+   "note": "Flashlight realism.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[B42] Simple Belt Flashlight!"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787125307"
+  },
+  {
+   "id": "3787062830",
+   "title": "Skill Book Library",
+   "class": "high",
+   "note": "Library-style book management.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Starlit Library"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787062830"
+  },
+  {
+   "id": "3787014262",
+   "title": "One Cut From Death",
+   "class": "high",
+   "note": "Harsher wound stakes.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Wounds Overhaul"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787014262"
+  },
+  {
+   "id": "3786759551",
+   "title": "Wallet and Keys",
+   "class": "high",
+   "note": "Wallets and key handling; This Is Your Life bridge exists (3788588924).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786759551"
+  },
+  {
+   "id": "3786750418",
+   "title": "The Horde Is Coming",
+   "class": "high",
+   "note": "Horde pressure events.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Wandering Hordes"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786750418"
+  },
+  {
+   "id": "3786655359",
+   "title": "Drawbridge & Winch Mechanisms",
+   "class": "high",
+   "note": "Buildable drawbridges - base-building depth.",
+   "companionOf": [
+    "Moats"
+   ],
+   "overlapsWith": [],
+   "subs": 8,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-20",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786655359"
+  },
+  {
+   "id": "3786655315",
+   "title": "Gearbound 1.6",
+   "class": "high",
+   "note": "Equipment progression system.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786655315"
+  },
+  {
+   "id": "3786653645",
+   "title": "First Person View [B42 - WIP]",
+   "class": "high",
+   "note": "Experimental first-person camera.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786653645"
+  },
+  {
+   "id": "3786647452",
+   "title": "Read While Walking - Updated [B41 + B42]",
+   "class": "high",
+   "note": "Walk-and-read QoL.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Immersive Reading"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786647452"
+  },
+  {
+   "id": "3786888415",
+   "title": "Advanced Sound Options",
+   "class": "high",
+   "note": "Finer audio control.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786888415"
+  },
+  {
+   "id": "3786885231",
+   "title": "Obsessively Crisp: Sharp Vanilla Player Textures",
+   "class": "high",
+   "note": "Sharper character textures.",
+   "companionOf": [
+    "42.20 Every Texture Optimized"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786885231"
+  },
+  {
+   "id": "3786854702",
+   "title": "Animal Fix [B42.20] - Livestock Stability",
+   "class": "high",
+   "note": "Livestock stability fixes.",
+   "companionOf": [
+    "Better Animal Care"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786854702"
+  },
+  {
+   "id": "3786852759",
+   "title": "Composter Fix [B42]",
+   "class": "high",
+   "note": "Composting fix.",
+   "companionOf": [
+    "Farming Expansion B42"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786852759"
+  },
+  {
+   "id": "3786849936",
+   "title": "Refillable Propane Tanks [B42]",
+   "class": "high",
+   "note": "Propane refilling.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Propane Exchange Cabinets",
+    "PUMPS HAVE PROPANE"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786849936"
+  },
+  {
+   "id": "3786832029",
+   "title": "Reading Skill Books Gives XP",
+   "class": "high",
+   "note": "Books give XP directly.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Working Knowledge"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786832029"
+  },
+  {
+   "id": "3592326489",
+   "title": "Inventory Reinvented 42.20.4",
+   "class": "caution",
+   "note": "Another inventory overhaul - same all-or-nothing territory as Inventory Tetris; clashes with Proximity Inventory/Neat UI.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Proximity Inventory B42.20+",
+    "NeatUI Framework"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3592326489"
+  },
+  {
+   "id": "1299328280",
+   "title": "More Traits",
+   "class": "caution",
+   "note": "The classic trait mega-pack, updated in window - known to double up with SOTO; also see More Traits FIXED/Restored forks.",
+   "companionOf": [],
+   "overlapsWith": [
+    "SOTO",
+    "Somewhat Traits"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1299328280"
+  },
+  {
+   "id": "3674399753",
+   "title": "AHS - Advanced Health System",
+   "class": "caution",
+   "note": "Medical overhaul - overlaps the installed health stack.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Antibodies (v1.97)",
+    "Wounds Overhaul"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3674399753"
+  },
+  {
+   "id": "3734633409",
+   "title": "Advanced First Aid Overhaul",
+   "class": "caution",
+   "note": "Same overlap.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Antibodies (v1.97)",
+    "Wounds Overhaul"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3734633409"
+  },
+  {
+   "id": "3629659534",
+   "title": "Realistic Disease Mod [B42 stable]",
+   "class": "caution",
+   "note": "Illness overhaul - check against Antibodies.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Antibodies (v1.97)"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3629659534"
+  },
+  {
+   "id": "3668094025",
+   "title": "[B42.20] Bag Upgrade Plus",
+   "class": "caution",
+   "note": "Bag upgrading - overlaps Dynamic Backpack Upgrades (+ Realistic variant 3669286020).",
+   "companionOf": [],
+   "overlapsWith": [
+    "Dynamic Backpack Upgrades"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3668094025"
+  },
+  {
+   "id": "3739205288",
+   "title": "Vest Dont Hole (Finally)",
+   "class": "caution",
+   "note": "Same ground as subscribed No Holes For Ballistic Armor - pick one.",
+   "companionOf": [],
+   "overlapsWith": [
+    "[B42] No Holes For Ballistic Armor"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3739205288"
+  },
+  {
+   "id": "3682936016",
+   "title": "Equipment UI - STABLE +",
+   "class": "caution",
+   "note": "One of two maintained Equipment UI forks (98.5k subs, 5*, updated 16 Aug). The B42.20+ fork (36.8k) is the other - run exactly one; compare recency and features.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Equipment UI - Paper Doll [B42.20+]"
+   ],
+   "subs": 98533,
+   "stars": 5,
+   "ratings": 564,
+   "updated": "2026-08-16",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3682936016"
+  },
+  {
+   "id": "3787035557",
+   "title": "Extensive Power Rework (Community fork) - FIXED for 42.20",
+   "class": "caution",
+   "note": "One of three competing EPR forks (also Slapstick 3775553383, EPR Fork 3786970737) - pick exactly one, verify ISA compatibility.",
+   "companionOf": [],
+   "overlapsWith": [
+    "ImmersiveSolarArrays"
+   ],
+   "subs": 311,
+   "stars": null,
+   "ratings": null,
+   "updated": "2026-08-22",
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3787035557"
+  },
+  {
+   "id": "3786043225",
+   "title": "Vehicle Interiors V0.2 EXPERIMENTAL",
+   "class": "watch",
+   "note": "Walkable vehicle interiors - experimental.",
+   "companionOf": [
+    "RV Interior Expansion"
+   ],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3786043225"
+  },
+  {
+   "id": "3785508432",
+   "title": "Knox Phones (Working Smartphones!) [B42]",
+   "class": "watch",
+   "note": "Working phones - flavor vs. 1993 lore; your call.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785508432"
+  },
+  {
+   "id": "3785588064",
+   "title": "GeneratorPlus - Building Power & Shared Fuel",
+   "class": "watch",
+   "note": "Building-wide generator power.",
+   "companionOf": [],
+   "overlapsWith": [
+    "ImmersiveSolarArrays"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785588064"
+  },
+  {
+   "id": "3785539944",
+   "title": "Vanilla Metalworking Expanded",
+   "class": "watch",
+   "note": "New metalworking depth.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785539944"
+  },
+  {
+   "id": "3785328309",
+   "title": "Simple Metal & Clay (B42.20+)",
+   "class": "watch",
+   "note": "Materials chain.",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785328309"
+  },
+  {
+   "id": "3785290771",
+   "title": "Valeyardo's Sustainable Crop Growth",
+   "class": "watch",
+   "note": "Farming sustainability (+ Animal Growth sibling 3785277084).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785290771"
+  },
+  {
+   "id": "3785342910",
+   "title": "Cigo's Engine Repair [B42.20+]",
+   "class": "watch",
+   "note": "Engine repair alternative.",
+   "companionOf": [],
+   "overlapsWith": [
+    "Restore Engine Quality"
+   ],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3785342910"
+  },
+  {
+   "id": "3789234614",
+   "title": "Balaclava Slot",
+   "class": "watch",
+   "note": "New equipment slot (see also Wallet Slot 3789235513).",
+   "companionOf": [],
+   "overlapsWith": [],
+   "subs": null,
+   "stars": null,
+   "ratings": null,
+   "updated": null,
+   "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3789234614"
+  }
+ ]
+}
