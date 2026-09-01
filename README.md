@@ -572,3 +572,57 @@ quickest way to find variants you never tagged.
 Outside this folder it touches `pz_modlist_settings.cfg` when you press Save, and
 one sandbox preset or one save's `map_sand.bin` when you press Write on the Sandbox
 tab. Nothing else, and neither of them without asking you first.
+
+## Settled — do not reopen
+
+These were decided once, on purpose. Each one was tried the other way first.
+
+- **The regrouping proposal was cancelled.** An earlier todo list included
+  "analyse current mod grouping, propose corrections" — splitting 05 Vehicles,
+  breaking up 19 QoL - Secondary UI, filing the untagged. It was cancelled
+  explicitly. Do not propose it again unasked.
+- **Mod ids on the Mods tab are plain text, not links.** They were made
+  clickable once and that was reverted as meaningless. Ids on the Issues tab
+  ARE links, and that is wanted.
+- **Tag names do not need two leading digits.** That rule was removed on
+  request.
+- **pzmods keeps no cache of the grouping.** The config file is the only source
+  of truth. An earlier version cached it, the cache drifted, and the drift
+  invented mods that were not there. Do not reintroduce a cache.
+
+## How to test a change without touching the real files
+
+Every change to pzmods was verified this way rather than by guessing.
+
+Build a fixture from the real data: `data/snapshot.json` holds the full scan of
+every mod (ids, `require`, version folders), so a throwaway tree of `mod.info`
+files can be regenerated from it, next to a copy of the real
+`pz_modlist_settings.cfg` and the real `appworkshop_108600.acf`. Point a copy of
+`settings.json` at that tree, run the server on a spare port, and drive it over
+the HTTP API.
+
+The guarantees worth re-checking after any change to the writer:
+
+- preview == the file on disk, byte for byte, when nothing has changed
+- writing twice in a row changes nothing the second time
+- disable a mod, save, re-enable, save — it returns to the same index in every
+  config it was in
+
+The UI was checked headlessly with Playwright (chromium is preinstalled in the
+cloud workspace at `/opt/pw-browsers`), taking screenshots and reading them back.
+That is how the layout and sticky-header bugs were caught.
+
+A container cannot reach `api.steampowered.com`, so the metadata and comment
+fetches can only be exercised for their failure handling. Those paths run on the
+real machine.
+
+## The rest of the Zomboid work in this folder
+
+Separate projects, all still in place, listed here so they are not lost:
+
+| where | what it is |
+|---|---|
+| `Zomboid\mods\Mindset42\` | rebuild of a long-broken trait mod (workshop 3554341903) for B42.20.4. Four traits registered through the B42 CharacterTrait API |
+| `Zomboid\mods\CompanionCatPurr\` | add-on making cats relieve unhappiness more than other pets, via a purr moodle hooked into `CD.DogMoodles`. Depends on CompanionCat (3791294616) |
+| `Zomboid\Lua\bandits\clans.txt` | custom NPC clan scheme: six eras spread over about five in-game years, companions removed, spawn rates cut so roaming groups are rare. Only altered fields are in the file; `clans_extended.txt` is the full-value overview for reading, and `clans_gantt.py` draws the timeline. Backups of earlier schemes sit beside it |
+| `Zomboid\Sandbox Presets\Custom.cfg` | tuned Bandits parameters that go with the above |

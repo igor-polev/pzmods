@@ -1,1 +1,13 @@
 New 'Issue' tab check: maps overlap. There are some mods with maps. Eachs modded map takes some space in original map coordinates. The task is to check modded maps for overlap. The mod 3360392628 allready containts the implementation of overlap check that you can investigate.
+
+KaneNPCPack is still ticked in the game's mod list (as of 31 Aug 2026). Until it
+is unticked in-game, its 28 clans load at stock values and override the custom
+clan scheme in Zomboid\Lua\bandits\clans.txt. This is a click in the game's own
+mod menu, not something pzmods can do.
+
+Offered, not answered: the header name of a workshop item with several mods
+falls back to "the first mod in the list" when Steam has no metadata for that
+item - and the list is ordered by tag, so re-tagging could change which name
+shows. The poster does not have this problem; it is picked before sorting, in
+folder order. Pinning the title fallback to folder order too is a two-line
+change in buildPacks() in ui.html. Not decided.

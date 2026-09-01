@@ -1,8 +1,8 @@
 # pzmods rework: the Discoveries tab
 
 Input context for a Claude Code session working on pzmods
-(`C:\Users\igor\Zomboid\pzmods\`). Read `README.md` and `HANDOVER.txt`
-first - they carry the design doctrine and the settled decisions. This file
+(`C:\Users\igor\Zomboid\pzmods\`). Read `README.md`
+first - it carries the design doctrine and the settled decisions. This file
 adds one feature on top: surfacing the results of the periodic
 **workshop-discovery** skill runs inside the pzmods web interface.
 
@@ -86,7 +86,7 @@ render from there, do not hardcode descriptions.
   Discoveries tab the linked thing is the *workshop* id/title, which is
   wanted, same as the Issues tab.
 - Keep it one python file + one html file, stdlib only.
-- Test the way HANDOVER describes: fixture folder from `data/snapshot.json`,
+- Test the way README describes: fixture folder from `data/snapshot.json`,
   spare port, drive over the HTTP API; UI checks headless via Playwright
   (chromium is preinstalled in the cloud workspace at /opt/pw-browsers).
   Add a fixture `discoveries.json` with all four classes, a null-stats item,
