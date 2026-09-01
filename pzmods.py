@@ -198,6 +198,11 @@ IMAGE_NAMES = ("poster.png", "icon.png", "thumbnail.png", "preview.png",
                "poster.jpg", "icon.jpg")
 IMAGE_GLOBS = ("icon_*.png", "poster_*.png", "icon_*.jpg")
 
+# A map ships one of these per 300x300 world cell it covers, and x and y are
+# positions in the vanilla map's own grid - which is the whole reason two mods can
+# be compared at all.
+LOTPACK_RE = re.compile(r"^world_(\d+)_(\d+)\.lotpack$", re.I)
+
 
 def parse_mod_info(path):
     out = {}
@@ -344,6 +349,21 @@ def read_mod_dir(mdir, rel_to=None, build=None):
     # page. It is what the author made to be recognised by, and it is declared far
     # more often than icon=; icon= only stands in when there is no usable poster.
     img = declared("poster") or declared("icon") or find_image(mdir)
+
+    # The ground the mod's maps occupy, read from the cell files themselves rather
+    # than from anything declared. Only the folders Build 42 loads are looked at -
+    # common/ plus the one version folder chosen above - so a Build 41 map still
+    # sitting in the mod root is not counted: the game never reads it. Petroville
+    # ships exactly that, an old Petroville/ next to the real Petroville42/.
+    cells = {}
+    for base in (mdir / "common", mdir if active_folder == "(root)" else mdir / active_folder):
+        mroot = base / "media" / "maps"
+        for d in sorted(mroot.iterdir()) if mroot.is_dir() else []:
+            for p in d.iterdir() if d.is_dir() else []:
+                m = LOTPACK_RE.match(p.name)
+                if m:
+                    cells.setdefault(d.name, set()).add((int(m.group(1)), int(m.group(2))))
+
     lo, hi = vnum(best.get("versionMin", "")), vnum(best.get("versionMax", ""))
     rec = {
         "modId": best["id"],
@@ -356,6 +376,7 @@ def read_mod_dir(mdir, rel_to=None, build=None):
         "loadAfter": dep_list(best.get("loadModAfter", "")),
         "loadBefore": dep_list(best.get("loadModBefore", "")),
         "incompatible": dep_list(best.get("incompatible", "")),
+        "maps": [{"name": n, "cells": sorted(cells[n])} for n in sorted(cells)],
         "requireRaw": (best.get("require", "") or "").strip(),
         "versionMin": best.get("versionMin", ""),
         "versionMax": best.get("versionMax", ""),
@@ -1163,6 +1184,55 @@ def compute_issues(state):
         "Read from mod.info incompatible=. Both are installed and neither is "
         "disabled, so any config holding both is asking for trouble. Putting one on "
         "the %s tag settles it." % DISABLED, verb="excludes")
+
+    # Two maps that ship the same world cell are both trying to BE that cell, and
+    # only one of them can: the game hands the cell to whichever mod the config line
+    # names last, and the other map loses that piece of itself. Overlap with the
+    # vanilla map is deliberately not reported - a mod that rebuilds a corner of
+    # Louisville overlaps it on purpose, and saying so about nearly every map mod
+    # would bury the case that actually needs a decision.
+    owners = {}
+    for m in live_mods + [x for x in state["localMods"] if x["modId"] not in off]:
+        for mp in m.get("maps") or []:
+            for cell in mp["cells"]:
+                owners.setdefault(tuple(cell), []).append((m["modId"], mp["name"]))
+    shared = {}
+    for cell, who in owners.items():
+        who = sorted(set(who))
+        for i, a in enumerate(who):
+            for b in who[i + 1:]:
+                shared.setdefault((a, b), []).append(cell)
+
+    overlaps = []
+    for (a, b), cs in sorted(shared.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        # Which of the two the game would keep, decided the same way everything else
+        # about load order is: by the config line. Different configs can order the
+        # two tags differently, so the answer is only worth stating when it is the
+        # same everywhere.
+        last = {a[0] if mods.index(a[0]) > mods.index(b[0]) else b[0]
+                for mods in state["configOrder"].values()
+                if a[0] in mods and b[0] in mods}
+        if len(last) == 1:
+            note = "%s is loaded last, so it takes them" % last.pop()
+        elif last:
+            note = "which one takes them depends on the config"
+        else:
+            note = "no config loads both, so nothing is lost yet"
+        cs.sort()
+        overlaps.append({"mod": a[0], "map": a[1], "other": b[0], "otherMap": b[1],
+                         "cells": len(cs), "note": note,
+                         "at": " ".join("%d,%d" % c for c in cs[:8])
+                               + (" ..." if len(cs) > 8 else "")})
+    add("map_overlap", "warn", "Two modded maps cover the same ground", overlaps,
+        "Read from the world_<x>_<y>.lotpack files each map ships, one per 300x300 "
+        "world cell, numbered in the vanilla map's own grid - so this is where the "
+        "maps really are, not where anyone said they were. A cell belongs to exactly "
+        "one mod: the game gives it to whichever of the two the config line names "
+        "last, and that much of the other map is simply not there. Move the tag on "
+        "the Configs tab, or the mod inside its tag on the Mods tab, to choose which "
+        "one wins; put one on the %s tag to settle it outright. Overlap with the "
+        "vanilla map is not listed - a mod that rebuilds part of Louisville is "
+        "supposed to sit on top of it." % DISABLED)
 
     build = GAME["version"]
     add("version_conflict", "warn", "Built for a different game version",

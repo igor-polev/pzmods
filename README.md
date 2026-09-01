@@ -388,6 +388,28 @@ Read from `mod.info` `incompatible=`, which pzmods now parses. Both mods are
 installed and neither is disabled, so any config holding both is asking for
 trouble. Putting one on `-- Disabled` settles it.
 
+**Two modded maps cover the same ground**
+A map is a set of 300x300 world cells, and it ships one `world_<x>_<y>.lotpack`
+per cell it covers. The numbers are positions in the vanilla map's own grid,
+which is what makes two mods comparable at all — so pzmods reads the cell files
+themselves and needs nothing declared and no list to keep up to date.
+
+A cell belongs to exactly one mod. When two maps claim the same one the game
+gives it to whichever the config line names last, and that much of the other map
+is simply not there. Each row names both mods, both map folders, how many cells
+they share, the first few of them, and which of the two currently wins — worked
+out from the config line, the same way every other load-order question here is.
+When no config holds both, the row says so: nothing is lost yet.
+
+Only the folders Build 42 actually loads are read, `common/` plus the one
+version folder, so a Build 41 map still sitting in a mod root does not count.
+Petroville ships exactly that, an old `Petroville/` next to the real
+`Petroville42/`, and only the second one is on the map.
+
+Overlap with the vanilla map is deliberately not reported. A mod that rebuilds a
+corner of Louisville is meant to sit on top of it, and saying so about nearly
+every map mod would bury the case that needs a decision.
+
 **Disabled, but an enabled mod requires it**
 You switched a dependency off and left something that needs it on. That
 something will not load.

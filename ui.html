@@ -979,6 +979,12 @@ function issueRow(x,i){
     ${modLink(x.mod,null,"b")} <span class="count">#${x.pos}</span>
     <span class="count">${esc(x.rule)}</span>
     ${list(x.themes)} <span class="count">#${x.otherPos}</span></div>`;
+  if(x.otherMap) return `<div style="padding:2px 0">
+    ${modLink(x.mod,null,"b")} <span class="count">${esc(x.map)}</span>
+    <span class="count">overlaps</span>
+    ${modLink(x.other,null,"b")} <span class="count">${esc(x.otherMap)}</span>
+    <span class="ver bad">${x.cells} cell${x.cells===1?"":"s"}</span>
+    <div class="count">${esc(x.at)} — ${esc(x.note)}</div></div>`;
   if(x.themes) return `<div>${modLink(x.mod)} <span class="count">${esc(i.verb||"needs")}</span> ${list(x.themes)}</div>`;
   if(x.mod && x.config) return `<div>${modLink(x.mod,null,"b")}
     <span class="count">${esc(x.config)}</span></div>`;

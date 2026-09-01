@@ -203,16 +203,19 @@
    "ProperVehicleInjuriesMP"
   ],
   "07 Weapons": [
-   "Nihonto",
-   "alicesKitsunesCrossbowMod",
-   "VFExpansion1",
+   "HBVCEFb42",
+   "SWMG",
+   "GunsOfMarz",
+   "GoM_Durability_Patch",
+   "BobrMinigun",
    "ImprovisedSilencers",
-   "SentryTurret042",
-   "ExtraBombs2",
-   "ammomaker",
    "GRM-MyCustomFirearm",
-   "ISUA",
-   "Mad Crafter"
+   "SentryTurret042",
+   "ammomaker",
+   "alicesKitsunesCrossbowMod",
+   "Nihonto",
+   "Mad Crafter",
+   "ExtraBombs2"
   ],
   "08 Gears": [
    "VanillaGearExpanded",
@@ -301,8 +304,7 @@
    "ChevalDeFriseFix",
    "FE_RTS",
    "RepairAnyClothes",
-   "CustomLightSwitch",
-   "DryThatFood"
+   "CustomLightSwitch"
   ],
   "11 Traits & Skills": [
    "SimpleOverhaulTraitsAndOccupations",
@@ -371,7 +373,8 @@
    "HorseUtilityMountedFirearms",
    "WoundsOverhaul",
    "TakeABathAndShowerNew",
-   "ATakeABathAndShowerDepthMap"
+   "ATakeABathAndShowerDepthMap",
+   "EchoesOfKnox"
   ],
   "14 Mechs - Combat": [
    "LethalHeadHit",
@@ -449,7 +452,6 @@
    "ETO_B",
    "DetailedFootwear",
    "CVI",
-   "VFEResprite",
    "VanillaVehiclesAnimated",
    "DecayedCorpses",
    "Improved_Blood_Ffects",
@@ -497,7 +499,6 @@
    "ShowAttackDistanceB42",
    "ModernZombieHealthBar",
    "PainSense",
-   "organizedCategories_core",
    "VisualSoundsB42",
    "MoreItemInformation",
    "twistresting",
@@ -523,10 +524,8 @@
    "EURY_DST",
    "HasResearch",
    "HideDebugMenu",
-   "KnownAndCollected",
    "MapLegendUI",
    "twistmapimprovements",
-   "hideVanillaReadIcon",
    "MapSymbolsPlusDeonHand",
    "WikiThat",
    "B42MoodleDescriptionsExpanded",
@@ -600,7 +599,9 @@
    "noIntro",
    "JeevesPatches_SOTO",
    "ZModUnbork",
-   "EasyLaundryB4220Fixed"
+   "EasyLaundryB4220Fixed",
+   "FoodesGOMLethalStealthCompatibility",
+   "LethalStealthB4219Fix"
   ],
   "-- Disabled": [
    "twistqolrr",
@@ -644,11 +645,6 @@
    "FunctionalGuttersRemoved",
    "RealisticCookingTimesVFE",
    "ETO_P",
-   "UPVFE93Resprite",
-   "VFE93Resprite",
-   "UPVFEResprite",
-   "UPVFESResprite",
-   "VFESResprite",
    "VVA_slowdoors",
    "VVA_cullseats",
    "VVA_PikamyDelight",
@@ -684,7 +680,8 @@
    "ZBLuaPerfMon",
    "exampleMod",
    "TheyKnewB42Fix",
-   "DryThatFoodMP"
+   "MarzGuns",
+   "HBTacReload"
   ]
  },
  "tagOrder": [
@@ -841,8 +838,8 @@
  "passthrough": {
   "!fav!": []
  },
- "cfgFingerprint": "f7795286bb12080a0c7432290a3b244a63b42ac5",
- "dirty": true,
+ "cfgFingerprint": "6d1c4595bbd7246e1692d7cb0f0eb6f2781aa6bb",
+ "dirty": false,
  "conflict": null,
  "lastSeed": "2026-08-31 02:59:20",
  "trailingSep": ";",
