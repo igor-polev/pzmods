@@ -21,11 +21,13 @@ did. There is now one, and it reads every source in a single pass:
 | local | your own mods folder | `...\Zomboid\mods` |
 | local | Steam's own manifest | `appworkshop_108600.acf` |
 | local | the mod list config | `...\Zomboid\Lua\pz_modlist_settings.cfg` |
+| local | the discovery skill's last run | `discovery\discoveries.json` |
 | online | the public Workshop API | titles, descriptions, tags |
 | online | your subscription list | the only source that needs you signed in |
 
 Update runs automatically when pzmods starts, and every tab — Mods, Tags,
-Configs, Issues, Sandbox — is rebuilt from the same snapshot when it finishes.
+Configs, Issues, Discoveries, Sandbox — is rebuilt from the same snapshot when it
+finishes.
 There is no way to be looking at a half-refreshed picture. The one exception is
 deliberate: sandbox edits you have not written yet hold their tab where it is,
 because an Update is no reason to throw your work away.
@@ -459,6 +461,49 @@ styles, so the backslash is punctuation the game ignores, not part of the id.
 pzmods strips it before comparing. Taking it literally turned 11 real missing
 dependencies into 245 false ones.
 
+## The Discoveries tab
+
+pzmods does not search the Workshop. A Claude skill, `pz-workshop-discovery`, does
+that on its own schedule, against the criteria in `discovery/criteria.md`, and
+writes what it found into `discovery/discoveries.json`. This tab is the reader for
+that file and nothing more: it fetches nothing from Steam, and it cannot change a
+tag, a config or `pz_modlist_settings.cfg`.
+
+The file is read fresh on every Update, like every other source, so there is no
+copy of it that can drift. When it is not there the tab says so and names the
+skill, rather than showing an error.
+
+Items are grouped by the class the skill gave them — companion, high, caution,
+watch — and each group carries the skill's own words for what that class means,
+read out of the file. So a run that renames a class, or invents one, explains
+itself; pzmods hardcodes none of it.
+
+A row is the workshop title linking to its Steam page, the id beside it, the one
+line saying why it is on the list, and `goes with:` / `overlaps:` when the skill
+named other mods. Those names are workshop titles, not ids, so one becomes a link
+into the Mods tab search only when that search would really land on a row — the
+same rule the Issues tab follows.
+
+An item you have subscribed to since the run gets a "subscribed" badge and drops
+to the bottom of its group: it is answered, not interesting. Above it the biggest
+subscriber count comes first, and the items with no numbers come last. Most rows
+have no numbers, because a run only verifies subscribers and rating for its top
+candidates.
+
+### Your verdict
+
+Two buttons per row, `interested` and `dismissed`. Press the one already on to
+take it back. Dismissed rows fold away into a "dismissed" section at the bottom
+of the tab.
+
+Verdicts are kept in `discovery/verdicts.json`, keyed by workshop id, which is why
+they survive the next run: the skill rewrites `discoveries.json` and never touches
+this file. It may read it, to stop offering you what you have already turned down.
+This is the only thing the tab writes.
+
+The number on the tab header is what is left to decide — not verdicted, and not
+subscribed.
+
 ## Where a mod's picture comes from
 
 `mod.info` names its own pictures, so pzmods asks it before guessing, and it asks
@@ -587,6 +632,7 @@ quickest way to find variants you never tagged.
 | `data/steam.json` | the Workshop metadata snapshot |
 | `data/subs.json` | the synced subscription list and when it was taken |
 | `data/notes.json` | your notes — the only file that is purely yours |
+| `discovery/verdicts.json` | your verdict on each discovered item. The rest of `discovery/` is written by the skill and only read here |
 | `data/comments/` | cached comment threads, one file per workshop id |
 | `backups/` | timestamped copies of `pz_modlist_settings.cfg` |
 | `backups/sandbox/` | the same, for every sandbox file the Sandbox tab writes |

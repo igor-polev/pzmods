@@ -134,6 +134,9 @@ code.bm{display:block;word-break:break-all;background:var(--surface2);padding:8p
 .banner.acc{border-color:var(--accent);background:color-mix(in oklab,var(--accent) 10%,transparent)}
 .ord{display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px dashed var(--line)}
 .ord:last-child{border-bottom:none}
+.drow{padding:6px 0;border-bottom:1px dashed var(--line)}
+.drow:last-child{border-bottom:none}
+.drow .chip{font-size:11px;padding:1px 8px}
 .num{width:20px;color:var(--muted);font-size:11px;text-align:right}
 .filters{position:sticky;top:var(--hdr);z-index:15;background:var(--bg);
   padding:8px 0;border-bottom:1px solid var(--line)}
@@ -188,6 +191,7 @@ tr.sbrow.absent .nm{color:var(--muted)}
     <button data-tab="configs">Configs</button>
     <button data-tab="sandbox">Sandbox <span id="sbDirty" class="pill warn"></span></button>
     <button data-tab="issues">Issues <span id="issueCount" class="pill warn"></span></button>
+    <button data-tab="disc">Discoveries <span id="discCount" class="pill acc"></span></button>
     <button data-tab="backups">Backups</button>
     <button data-tab="setup">Setup</button>
   </nav>
@@ -274,6 +278,18 @@ tr.sbrow.absent .nm{color:var(--muted)}
   </section>
 
   <section id="issues"><div id="issueList"></div></section>
+
+  <section id="disc">
+    <div id="discHead"></div>
+    <div class="row filters" id="discFilters">
+      <span class="srch"><input type="search" id="dq" placeholder="search title, reason, workshop id"
+          oninput="renderDisc()"><button id="dqx" type="button" title="clear the search"
+          onclick="$('dq').value='';renderDisc()">&times;</button></span>
+      <span class="spacer"></span>
+      <span class="count" id="discCounts"></span>
+    </div>
+    <div id="discBody"></div>
+  </section>
 
   <section id="backups">
     <div class="card">
@@ -415,6 +431,9 @@ function buildPacks(){
   const live=S.subs.length>0; S.subsLive=live;
   const subs=new Set(live?S.subs.map(s=>s.id)
                          :Object.keys(S.acf||{}).filter(k=>S.acf[k].subscribed));
+  // the Discoveries tab asks the same question about a workshop id, and there must
+  // be one answer to it, not two
+  window.__subs=subs;
   const mt=S.modTags||{};
   const OFF=new Set((S.tags||{})[S.disabledTag]||[]);
   const REQ=S.requiredBy||{};
@@ -551,6 +570,11 @@ function renderAll(){
   window.__packs = buildPacks();
   ROWIDS = new Set();
   for(const p of window.__packs) for(const m of p.mods) ROWIDS.add(m.modId);
+  // exactly what the Mods tab search reads, one string per row - so a name on the
+  // Discoveries tab is only made a link when that search would really find a row
+  DHAY = window.__packs.flatMap(p=>p.mods.map(
+    m=>(m.modId+" "+m.name+" "+(p.title||"")+" "+(p.ws||"")).toLowerCase()));
+  DNAME.clear();
   const nmods = window.__packs.reduce((a,p)=>a+p.mods.length,0);
   const acfSubs=Object.keys(S.acf||{}).filter(k=>S.acf[k].subscribed).length;
   $("summary").innerHTML =
@@ -578,7 +602,7 @@ function renderAll(){
   if(tags.includes(wasBulk)) $("bulkTag").value=wasBulk;
 
   renderBanners(); renderMods(); renderTags(); renderConfigs();
-  renderIssues(); renderBackups(); renderSetup();
+  renderIssues(); renderDisc(); renderBackups(); renderSetup();
   measureBars();
 }
 
@@ -990,6 +1014,133 @@ function issueRow(x,i){
     <span class="count">${esc(x.config)}</span></div>`;
   if(x.config) return `<div>${esc(x.config)} → ${esc(x.theme||"")}</div>`;
   return `<div>${x.mod?modLink(x.mod):esc(JSON.stringify(x))}</div>`;
+}
+
+/* ---------- discoveries ---------- */
+/* discovery/discoveries.json is written by the workshop-discovery skill and read
+   here as it stands. The wording of each class comes out of the file, so a run
+   that renames a class or invents one explains itself instead of showing a bare
+   heading. The only thing this tab writes is your verdict, and it writes it into
+   its own file - nothing here touches a tag, a config or the cfg. */
+const DORDER=["companion","high","caution","watch"];
+let DHAY=[], DNAME=new Map();
+
+/* A name the skill wrote is a workshop title, not an id, so it is made a link
+   only when the Mods tab search would really land on a row. */
+function discName(name){
+  const q=String(name||"").trim().toLowerCase();
+  if(!q) return "";
+  if(!DNAME.has(q)) DNAME.set(q, DHAY.some(h=>h.includes(q)));
+  return DNAME.get(q) ? searchLink(name) : esc(name);
+}
+/* subscribed items are resolved, not interesting, so they sink to the bottom of
+   their group; above them the biggest audience first, unverified counts last */
+function discSort(a,b){
+  return (a.subscribed-b.subscribed)
+      || ((b.subs==null?-1:b.subs)-(a.subs==null?-1:a.subs))
+      || String(a.title||"").localeCompare(String(b.title||""));
+}
+function discRow(x){
+  const co=x.companionOf||[], ov=x.overlapsWith||[];
+  return `<div class="drow">
+    <div class="row" style="gap:7px">
+      <a class="b" target="_blank" rel="noopener" title="open on Steam"
+        href="${esc(x.url||"https://steamcommunity.com/sharedfiles/filedetails/?id="+x.id)}"
+        >${esc(x.title||x.id)}</a>
+      ${wsLink(x.id,null,"count")}
+      ${x.subs!=null?`<span class="pill">${Number(x.subs).toLocaleString()} subs</span>`:""}
+      ${x.stars!=null?`<span class="pill">★ ${esc(x.stars)}${
+        x.ratings!=null?" · "+esc(x.ratings):""}</span>`:""}
+      ${x.updated?`<span class="count">updated ${esc(x.updated)}</span>`:""}
+      ${x.subscribed?`<span class="pill ok">subscribed</span>`:""}
+      <span class="spacer"></span>
+      <span class="chip${x.verdict==="interested"?" on":""}"
+        onclick="setVerdict('${q1(x.id)}','interested')">interested</span>
+      <span class="chip${x.verdict==="dismissed"?" on":""}"
+        onclick="setVerdict('${q1(x.id)}','dismissed')">dismissed</span>
+    </div>
+    ${x.note?`<div class="count">${esc(x.note)}</div>`:""}
+    ${co.length?`<div class="count">goes with: ${co.map(n=>discName(n)).join(", ")}</div>`:""}
+    ${ov.length?`<div class="count">overlaps: ${ov.map(n=>discName(n)).join(", ")}</div>`:""}
+  </div>`;
+}
+
+function renderDisc(){
+  const d=S.discoveries;
+  $("dqx").classList.toggle("on", !!$("dq").value);
+  if(!d||!Array.isArray(d.items)){
+    $("discCount").style.display="none";
+    $("discHead").innerHTML=""; $("discCounts").textContent="";
+    $("discFilters").style.display="none";
+    $("discBody").innerHTML=`<div class="card"><h3>No discovery run has been read</h3>
+      <div class="hint">This tab shows <span class="mono">discovery/discoveries.json</span>,
+      which the <b>pz-workshop-discovery</b> skill writes when it scans the Workshop for new
+      Build 42 mods. No such file is next to pzmods, so there is nothing to show yet. Run the
+      skill and the next Update reads it — pzmods fetches nothing from Steam for this tab.
+      What the skill looks for is yours to edit, in
+      <span class="mono">discovery/criteria.md</span>.</div></div>`;
+    return;
+  }
+  $("discFilters").style.display="";
+
+  const subs=window.__subs||new Set(), verd=S.verdicts||{};
+  const items=d.items.map(it=>{
+    const id=String(it.id||"");
+    return Object.assign({}, it, {id,
+      subscribed: subs.has(id) || !!S.disk[id],
+      verdict: (verd[id]||{}).verdict||""});
+  });
+  const fresh=items.filter(x=>!x.verdict && !x.subscribed).length;
+  $("discCount").textContent=fresh||"";
+  $("discCount").style.display=fresh?"":"none";
+
+  const st=d.stats||{}, w=d.window||{}, classes=d.classes||{};
+  const excluded=Object.values(st.excludedByFilters||{}).reduce((a,b)=>a+(Number(b)||0),0);
+  $("discHead").innerHTML=`<div class="card">
+    <div class="row"><h3>What the last Workshop scan turned up</h3><span class="spacer"></span>
+      <span class="count">${d.generatedAt?"run "+esc(String(d.generatedAt).replace("T"," ").slice(0,16))
+        :"run on an unknown date"}${d.gameBuild?" · build "+esc(d.gameBuild):""}</span></div>
+    <div class="hint">${w.from?`Published or updated between <b>${esc(w.from)}</b> and
+      <b>${esc(w.to||"")}</b>. `:""}${esc(w.note||"")}</div>
+    <div class="mono">${[
+      st.modsWithActivityInWindow!=null?"scanned "+Number(st.modsWithActivityInWindow).toLocaleString():"",
+      excluded?"excluded by the filters "+excluded.toLocaleString():"",
+      "selected "+(st.selected!=null?st.selected:d.items.length),
+      fresh+" still undecided"].filter(Boolean).join(" · ")}</div>
+    ${st.note?`<div class="hint" style="margin:6px 0 0">${esc(st.note)}</div>`:""}</div>`;
+
+  const q=$("dq").value.trim().toLowerCase();
+  const shown=items.filter(x=> !q || (x.id+" "+(x.title||"")+" "+(x.note||"")+" "+
+    (x.companionOf||[]).join(" ")+" "+(x.overlapsWith||[]).join(" ")).toLowerCase().includes(q));
+  const gone=shown.filter(x=>x.verdict==="dismissed").sort(discSort);
+  const order=DORDER.concat([...new Set(items.map(x=>x.class))]
+    .filter(c=>!DORDER.includes(c)).sort());
+
+  let html="";
+  for(const c of order){
+    const rows=shown.filter(x=>x.class===c && x.verdict!=="dismissed").sort(discSort);
+    if(!rows.length) continue;
+    html+=`<div class="card">
+      <div class="row"><h3>${esc(c.charAt(0).toUpperCase()+c.slice(1))}</h3>
+        <span class="spacer"></span><span class="pill">${rows.length}</span></div>
+      ${classes[c]?`<div class="hint">${esc(classes[c])}</div>`:""}
+      ${rows.map(discRow).join("")}</div>`;
+  }
+  if(!html) html=`<div class="card count">nothing matches</div>`;
+  if(gone.length) html+=`<details class="card sbg"><summary><b>dismissed</b>
+    <span class="count">${gone.length}</span></summary>
+    <div style="margin-top:6px">${gone.map(discRow).join("")}</div></details>`;
+  $("discBody").innerHTML=html;
+  $("discCounts").textContent=(q?shown.length+" of "+items.length+" shown · ":"")
+    +items.length+" found · "+fresh+" undecided";
+}
+
+async function setVerdict(id,v){
+  const cur=((S.verdicts||{})[id]||{}).verdict||"";
+  const r=await api("/api/verdict",{id, verdict: cur===v?"":v});
+  S.verdicts=r.verdicts||{};
+  renderDisc();
+  toast(cur===v?"verdict cleared":(v==="interested"?"marked interested":"dismissed"));
 }
 
 function renderBackups(){

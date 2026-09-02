@@ -5364,7 +5364,7 @@
   "views": 0,
   "tags": [],
   "banned": 0,
-  "fetched": 1788300136
+  "fetched": 1788301745
  },
  "3566766862": {
   "result": 1,
@@ -9827,10 +9827,10 @@
   "title": "TwisTonFire - Exercises",
   "description": "[quote]\r\n[h1]TwisTonFire - Exercises[/h1]\r\n\r\n[b]TwisTonFire - Exercises[/b] significantly improves Project Zomboid's vanilla Exercise Window with a cleaner, more informative and customizable interface.\r\n\r\nThe goal is simple: make vanilla exercising easier to understand and more comfortable to use without changing how training actually works.\r\n\r\n[h2]100% vanilla - UI ONLY[/h2]\r\n[/quote]\r\n[img]https://imgur.com/RQYClYI.png[/img]\r\n\r\n[quote]\r\n[h2]TwisTonFire - Exercises Plus[/h2]\r\n\r\n[b]Exercises Plus[/b] is included as an additional version for players who want to stay close to vanilla while adding a little more immersion.\r\n\r\nIt includes usable [b]Bench Presses[/b] and [b]Treadmills[/b] with appropriate animations and direct world context-menu interaction.\r\n\r\n[b]No exercise balancing has been changed.[/b]\r\n\r\nThe Treadmill follows vanilla running progression. Whether you run normally, run against a wall or use a Treadmill does not provide a special XP advantage.\r\n\r\nBench Press is a 1 to 1 copy of barbell curls. \r\nThere is no advantage of using the bench press - immersion only.\r\n\r\n[b]Exercises Plus adds new ways to perform familiar training — not faster ways to level.[/b]\r\n[h2]99% vanilla - UI + 2 new workouts for immersion purposes[/h2]\r\n[img]https://imgur.com/eOEfxx1.png[/img]\r\n[/quote]\r\n\r\n[h1]Vanilla Gameplay[/h1]\r\n\r\nThe mod does not rebalance:\r\n[list]\r\n[*]Exercise XP\r\n[*]Regularity\r\n[*]Fatigue or Exertion\r\n[*]Muscle Strain\r\n[*]Strength or Fitness progression\r\n[/list]\r\n\r\nAll displayed training information is based on the vanilla exercise system.\r\n\r\n[h1]Compatibility[/h1]\r\n\r\nSupported integrations include:\r\n[list]\r\n[*]Exercise With Gear Again\r\n[*]Easy Exercise / AutoExercisePlus\r\n[/list]\r\nCompatibility features only activate when the related mod is installed.\r\n\r\n[quote]\r\n[h1]Incompatibilities[/h1]\r\nEvery mod that overhauls or alters the vanilla exercise system.\r\nThis mod tries to keep everything 100% vanilla.\r\n[/quote]\r\n\r\n[h1]Translations[/h1]\r\n\r\nTraditional Chinese, Simplified Chinese, German, Spanish, French, Japanese, Korean, Polish, Portuguese (Brazil), Russian, Turkish and Ukrainian.\r\n\r\n[quote]\r\n[b]Designed for Project Zomboid Build 42.20+[/b]\r\n[/quote]\r\n\r\n[img]https://imgur.com/RQYClYI.png[/img]\r\n\r\n[url=https://streamlabs.com/twistonfire/tip][img]https://imgur.com/Vqt9lif.png[/img][/url]\r\nYour support helps me keep going — thank you very much in advance!\r\n\r\nWorkshop ID: 3790614739\r\nMod ID: TwisTonFireExercises\r\nMod ID: twistexercisesplus",
   "creator": "76561197960296580",
-  "time_updated": 1788211827,
-  "subscriptions": 3746,
-  "favorited": 319,
-  "views": 10644,
+  "time_updated": 1788300147,
+  "subscriptions": 4482,
+  "favorited": 363,
+  "views": 12147,
   "tags": [
    "Build 42",
    "Interface",
@@ -9838,7 +9838,7 @@
    "QOL"
   ],
   "banned": 0,
-  "fetched": 1788215274
+  "fetched": 1788301745
  },
  "3790656296": {
   "result": 1,

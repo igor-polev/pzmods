@@ -92,6 +92,9 @@ for d in (DATA, BACKUPS, SAND_BACKUPS, DATA / "comments"):
 
 TAGS_FILE = DATA / "tags.json"
 SNAP_FILE = DATA / "snapshot.json"
+# written by the workshop-discovery skill, not by pzmods. The one file in there
+# pzmods owns is verdicts.json, which the skill never writes.
+DISCOVERY = HERE / "discovery"
 
 
 def jread(path, default):
@@ -1362,6 +1365,10 @@ def load_state():
         "acfMtime": int(ACF.stat().st_mtime) if ACF.exists() else 0,
         "steam": steam,
         "notes": jread(DATA / "notes.json", {}),
+        # read fresh like every other source, never cached. None means the
+        # discovery skill has never run against this folder
+        "discoveries": jread(DISCOVERY / "discoveries.json", None),
+        "verdicts": jread(DISCOVERY / "verdicts.json", {}),
         "tags": st["tagMods"],
         "tagOrder": st.get("tagOrder") or sorted(st["tagMods"]),
         "modTags": mod_tags(st),
@@ -1815,6 +1822,26 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 notes.pop(mid, None)
             jwrite(DATA / "notes.json", notes)
             return self._send({"ok": True})
+
+        # your verdict on one discovered item. Keyed by workshop id so it outlives
+        # the run that found the item, and the next run can skip what you dismissed
+        if u.path == "/api/verdict":
+            wid = str(payload.get("id") or "")
+            verdict = (payload.get("verdict") or "").strip()
+            if not wid:
+                return self._send({"error": "id required"}, 400)
+            if verdict not in ("", "interested", "dismissed"):
+                return self._send({"error": "unknown verdict %r" % verdict}, 400)
+            v = jread(DISCOVERY / "verdicts.json", {})
+            if not isinstance(v, dict):
+                v = {}
+            if verdict:
+                v[wid] = {"verdict": verdict, "at": now()}
+            else:
+                v.pop(wid, None)
+            DISCOVERY.mkdir(parents=True, exist_ok=True)
+            jwrite(DISCOVERY / "verdicts.json", v)
+            return self._send({"ok": True, "verdicts": v})
 
         # ---- tag vocabulary: add / rename / delete, on the Tags tab only
         if u.path == "/api/tag":
