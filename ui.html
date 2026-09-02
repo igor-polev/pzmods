@@ -162,6 +162,13 @@ details.sbg>summary:before{content:"\25B8";color:var(--muted);font-size:11px}
 details.sbg[open]>summary:before{content:"\25BE"}
 details.sbg{padding:9px 12px}
 details.sbg[open]{border-color:color-mix(in oklab,var(--accent) 35%,var(--line))}
+/* discoveries: the same marker, but the card keeps its normal padding and no
+   accent border - these groups are open by default, so an open one is not news */
+details.dsec>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px}
+details.dsec>summary::-webkit-details-marker{display:none}
+details.dsec>summary:before{content:"\25B8";color:var(--muted);font-size:11px}
+details.dsec[open]>summary:before{content:"\25BE"}
+details.dsec>summary h3{margin:0}
 table.sb{width:100%;border-collapse:collapse;margin-top:8px}
 table.sb td{padding:5px 6px;border-top:1px solid var(--line);vertical-align:top}
 table.sb td.v{width:190px}
@@ -286,6 +293,7 @@ tr.sbrow.absent .nm{color:var(--muted)}
           oninput="renderDisc()"><button id="dqx" type="button" title="clear the search"
           onclick="$('dq').value='';renderDisc()">&times;</button></span>
       <span class="spacer"></span>
+      <button class="tiny" id="dUndo" style="display:none" onclick="undoDismiss()"></button>
       <span class="count" id="discCounts"></span>
     </div>
     <div id="discBody"></div>
@@ -384,12 +392,18 @@ function goTag(t){
 }
 function toast(m){const t=$("toast");t.textContent=m;t.classList.add("on");setTimeout(()=>t.classList.remove("on"),2400);}
 
+/* the whole window scrolls and only one section is displayed at a time, so the
+   scroll position of the tab we leave is lost as soon as its content goes away -
+   keep it here and put it back when the tab comes up again */
+const tabScroll={};
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
+  tabScroll[tab]=window.scrollY;
   tab=b.dataset.tab;
   document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x===b));
   document.querySelectorAll("main section").forEach(s=>s.classList.toggle("on",s.id===tab));
   if(tab==="sandbox" && !SB.loaded) sbInit();
   measureBars();
+  window.scrollTo(0,tabScroll[tab]||0);
 });
 
 async function api(path,body){
@@ -1024,6 +1038,18 @@ function issueRow(x,i){
    its own file - nothing here touches a tag, a config or the cfg. */
 const DORDER=["companion","high","caution","watch"];
 let DHAY=[], DNAME=new Map();
+/* which groups you shut. renderDisc runs again on every verdict and on every
+   Update, so the state cannot live in the DOM it rebuilds. */
+const DSHUT=new Set();
+function discToggle(el){
+  if(el.open) DSHUT.delete(el.dataset.dclass); else DSHUT.add(el.dataset.dclass);
+}
+/* what each group holds right now, so the group button dismisses exactly the rows
+   you can see - a search narrows the group, and it must narrow the button too */
+let DGROUP=new Map();
+/* one step back from a group dismiss. Without it a mis-click buries a few hundred
+   rows and the only way back is one chip at a time. */
+let DUNDO=null;
 
 /* A name the skill wrote is a workshop title, not an id, so it is made a link
    only when the Mods tab search would really land on a row. */
@@ -1117,14 +1143,20 @@ function renderDisc(){
     .filter(c=>!DORDER.includes(c)).sort());
 
   let html="";
+  DGROUP=new Map();
   for(const c of order){
     const rows=shown.filter(x=>x.class===c && x.verdict!=="dismissed").sort(discSort);
     if(!rows.length) continue;
-    html+=`<div class="card">
-      <div class="row"><h3>${esc(c.charAt(0).toUpperCase()+c.slice(1))}</h3>
-        <span class="spacer"></span><span class="pill">${rows.length}</span></div>
-      ${classes[c]?`<div class="hint">${esc(classes[c])}</div>`:""}
-      ${rows.map(discRow).join("")}</div>`;
+    DGROUP.set(c, rows.map(x=>x.id));
+    /* a search must not leave its own matches hidden inside a shut group */
+    html+=`<details class="card dsec" data-dclass="${esc(c)}" ontoggle="discToggle(this)"${
+        DSHUT.has(c)&&!q?"":" open"}>
+      <summary><h3>${esc(c.charAt(0).toUpperCase()+c.slice(1))}</h3>
+        <span class="spacer"></span><span class="pill">${rows.length}</span>
+        <button class="tiny" title="dismiss every row shown in this group"
+          onclick="event.stopPropagation();dismissGroup('${q1(c)}')">dismiss all</button></summary>
+      ${classes[c]?`<div class="hint" style="margin-top:6px">${esc(classes[c])}</div>`:""}
+      ${rows.map(discRow).join("")}</details>`;
   }
   if(!html) html=`<div class="card count">nothing matches</div>`;
   if(gone.length) html+=`<details class="card sbg"><summary><b>dismissed</b>
@@ -1133,14 +1165,47 @@ function renderDisc(){
   $("discBody").innerHTML=html;
   $("discCounts").textContent=(q?shown.length+" of "+items.length+" shown · ":"")
     +items.length+" found · "+fresh+" undecided";
+  $("dUndo").style.display=DUNDO?"":"none";
+  if(DUNDO) $("dUndo").textContent=`undo: put back ${DUNDO.n} in ${DUNDO.c}`;
 }
 
 async function setVerdict(id,v){
   const cur=((S.verdicts||{})[id]||{}).verdict||"";
   const r=await api("/api/verdict",{id, verdict: cur===v?"":v});
   S.verdicts=r.verdicts||{};
+  DUNDO=null;
   renderDisc();
   toast(cur===v?"verdict cleared":(v==="interested"?"marked interested":"dismissed"));
+}
+
+async function dismissGroup(c){
+  const ids=DGROUP.get(c)||[];
+  if(!ids.length) return;
+  if(!confirm(`Dismiss all ${ids.length} row${ids.length===1?"":"s"} shown in "${c}"?\n\n`
+    +"They fold into the dismissed section at the bottom. One undo is offered at the "
+    +"top of the tab, until you set another verdict.")) return;
+  /* a row in a group is never already dismissed - those sit in their own section -
+     so the only verdict a dismiss can bury is an "interested" you want back */
+  const was=S.verdicts||{};
+  const undo={c, n:ids.length,
+    clear: ids.filter(id=>!(was[id]||{}).verdict),
+    interested: ids.filter(id=>(was[id]||{}).verdict==="interested")};
+  const r=await api("/api/verdict",{ids, verdict:"dismissed"});
+  S.verdicts=r.verdicts||{};
+  DUNDO=undo;
+  renderDisc();
+  toast(`${ids.length} dismissed`);
+}
+async function undoDismiss(){
+  const u=DUNDO;
+  if(!u) return;
+  DUNDO=null;
+  let r=null;
+  if(u.clear.length) r=await api("/api/verdict",{ids:u.clear, verdict:""});
+  if(u.interested.length) r=await api("/api/verdict",{ids:u.interested, verdict:"interested"});
+  if(r) S.verdicts=r.verdicts||{};
+  renderDisc();
+  toast(`${u.n} put back in ${u.c}`);
 }
 
 function renderBackups(){
@@ -1501,7 +1566,7 @@ function sbKeep(o,q,f){
 function sbRender(){
   if(!SB.view) return;
   const q=$("sbQ").value.trim().toLowerCase(), f=$("sbFilter").value,
-        onlyMods=$("sbOnlyMods").checked, t=SB.view.target;
+        onlyMods=$("sbOnlyMods").checked, t=SB.view.target, px=imgSize();
   $("sbQx").classList.toggle("on", !!q);
   let shown=0, html=t.kind==="save"
     ? `<div class="banner">This is the save <b>${esc(t.label)}</b>. What you write here is
@@ -1522,8 +1587,11 @@ function sbRender(){
     if(!rows.length) continue;
     shown+=rows.length;
     const ed=rows.filter(o=>o.name in SB.edits).length;
+    /* the same picture the Mods tab shows, at the same size you set there. The
+       group that owns no mod keeps the empty box, so the names stay in one column */
+    const fm=g.mod?findMod(g.mod):null;
     html+=`<details class="card sbg"${(q||ed)?" open":""}>
-      <summary><b>${esc(g.modName)}</b>
+      <summary>${imgTag(fm?(fm.m.image||fm.p.image):null,px)}<b>${esc(g.modName)}</b>
         <span class="count">${rows.length}${
           rows.length!==g.options.length?" of "+g.options.length:""} option${rows.length===1?"":"s"}</span>
         ${g.off?`<span class="pill">on ${esc(S.disabledTag)}</span>`:""}

@@ -18,7 +18,8 @@
    "SmartZOptimizer",
    "RemoveInventoryLimitsZB",
    "SecondChance",
-   "CheatMenuRebuild"
+   "CheatMenuRebuild",
+   "ZUET"
   ],
   "03 Frameworks": [
    "zdk",
@@ -45,7 +46,11 @@
    "UnofficialMappersCommunityTilePack",
    "LiuDing_Tiles",
    "Military_Tool_Kit",
-   "VMZNEW"
+   "VMZNEW",
+   "tikitown_tiles",
+   "Erikas_Tiles",
+   "ThermoNewburbs",
+   "TryhonestyTiles"
   ],
   "02 Firsts": [
    "twistbetterpause",
@@ -65,7 +70,6 @@
    "BlackstoneMapMod",
    "dawn_town",
    "FoxtrotWarehouse",
-   "Greenleaf B42 version",
    "Louisville_Quarantine_Zone",
    "Louisville_River_Marina",
    "Louisville_Riverboat",
@@ -73,8 +77,6 @@
    "muldraughmilitarybaseas24",
    "RavenCreekB42",
    "Towhead-Island-FOB",
-   "newhartburg",
-   "Asakusa lake town",
    "Begonia_Town",
    "HavenFall",
    "Constown42",
@@ -82,9 +84,33 @@
    "SilentPines",
    "CamdenCountyB42",
    "NellisAFB",
-   "Crossroads-Checkpoint",
    "RabbitHashKY",
-   "Petroville"
+   "Petroville",
+   "tikitown",
+   "TikitownPower",
+   "SecretZ_Operations_B42",
+   "Secretz42",
+   "SZ_Checkpoint6",
+   "TheWarehouse",
+   "Xixi's Serene Cottage",
+   "CoryerdonB42",
+   "Daisy County B42 version",
+   "Daisy County B42 version(items part)",
+   "flahertymap",
+   "FortBenningB42",
+   "Fort Waterfront B42",
+   "Grapeseed4220",
+   "kardinal_ravencreek_B42",
+   "MistyMountainHideaway",
+   "MooresMechanicPlus",
+   "Muldraugh-Checkpoint",
+   "PIE42",
+   "RiversideMansionMod42",
+   "RiversideMansionMod42Empty",
+   "RiversideMansionMod42NoLoot",
+   "St. John's Dairy Farm",
+   "Taylorsville",
+   "WestPoint"
   ],
   "05 Vehicles - Items": [
    "rSemiTruck",
@@ -175,7 +201,10 @@
    "[B42] Tatrapan",
    "STowTruck_B42_ZB",
    "82oshkoshM911",
-   "84gageV300"
+   "84gageV300",
+   "69fordMustang",
+   "69fordMustangExtra",
+   "RVTrailerTypeB42"
   ],
   "06 Vehicles - Mechs": [
    "AquatsarRVAddon",
@@ -200,7 +229,10 @@
    "AMGeneralTankerFunctionality",
    "drivestraight",
    "VehicleClimateControlB42",
-   "ProperVehicleInjuriesMP"
+   "ProperVehicleInjuriesMP",
+   "Ivmakk_RestoreEngineQuality",
+   "hrsys_towbars",
+   "RealisticVehicleMechanics"
   ],
   "07 Weapons": [
    "HBVCEFb42",
@@ -215,7 +247,10 @@
    "alicesKitsunesCrossbowMod",
    "Nihonto",
    "Mad Crafter",
-   "ExtraBombs2"
+   "ExtraBombs2",
+   "HBAC",
+   "BCGTools",
+   "Explosives"
   ],
   "08 Gears": [
    "VanillaGearExpanded",
@@ -242,7 +277,8 @@
    "alicesWeaponSling",
    "BBB",
    "BagBottomWeaponAttach",
-   "MilPonchoB42"
+   "MilPonchoB42",
+   "ClothingSizes"
   ],
   "09 Stuff": [
    "PickupATMNFirePlace",
@@ -269,7 +305,9 @@
    "Vanilla_MRE_42",
    "MNWheelbarrow",
    "jbCivilDefenseSirens",
-   "MoreMapsB42Fixed"
+   "MoreMapsB42Fixed",
+   "DieselFuel",
+   "GeneratorHose"
   ],
   "10 Craft": [
    "JeevesBuild",
@@ -290,7 +328,6 @@
    "B42MakeSugar",
    "Mushroomjar",
    "B42Eggjar",
-   "SKITTLE_LongTermPreservation",
    "BreakBigRocks",
    "GRM-MyOwnWell",
    "Ivmakk_BoilingEggs",
@@ -304,7 +341,9 @@
    "ChevalDeFriseFix",
    "FE_RTS",
    "RepairAnyClothes",
-   "CustomLightSwitch"
+   "CustomLightSwitch",
+   "HydrocraftReinvented",
+   "SKITTLE_LongTermPreservation4220"
   ],
   "11 Traits & Skills": [
    "SimpleOverhaulTraitsAndOccupations",
@@ -340,7 +379,9 @@
    "SkillTapesDriver42",
    "SkillTapesCarver42",
    "SkillTapesButcher42",
-   "SkillTapesBlacksmith42"
+   "SkillTapesBlacksmith42",
+   "SurvivorQuirks",
+   "EvenMoreTraits4220"
   ],
   "12 Mechs - Core": [
    "SpawnSelector",
@@ -350,7 +391,6 @@
    "Bandits2",
    "BanditsCreator",
    "AgeInfoMod",
-   "lgd_antibodies",
    "LifestyleHobbies",
    "CompanionDogs",
    "CompanionDogsRottweiler",
@@ -359,7 +399,10 @@
    "CompanionCatPurr",
    "StartWith",
    "LMWildSpawnMaps",
-   "GuitarMusicAddon"
+   "GuitarMusicAddon",
+   "AntibodiesB4220Community",
+   "HumanRemains",
+   "CompanionDogsLivestockGuardians"
   ],
   "13 Mechs - Expansions": [
    "Kane_the_Merchant",
@@ -374,7 +417,8 @@
    "WoundsOverhaul",
    "TakeABathAndShowerNew",
    "ATakeABathAndShowerDepthMap",
-   "EchoesOfKnox"
+   "EchoesOfKnox",
+   "PlayableArcade"
   ],
   "14 Mechs - Combat": [
    "LethalHeadHit",
@@ -390,7 +434,8 @@
    "donotpushplease",
    "WatchYourStep",
    "FancyHandworkB42_19",
-   "BrutalHandwork"
+   "BrutalHandwork",
+   "SkullysZombieCollision"
   ],
   "15 Mechs - Environment": [
    "TentInterior",
@@ -400,7 +445,8 @@
    "InjuredZombiesStumble",
    "ThumpingAttractsZombies",
    "KYRRealWeatherMod",
-   "twistoutsidefreezer"
+   "twistoutsidefreezer",
+   "Worm Digging"
   ],
   "16 Balance": [
    "VB_CommonSense",
@@ -446,7 +492,10 @@
    "TotalWeightRebalance",
    "HideInCarB42",
    "WaterGoesBad",
-   "allmilksarecreatedequal"
+   "allmilksarecreatedequal",
+   "uncheatRealFlashlights",
+   "SpoilingLiquids",
+   "SawTreeChopping"
   ],
   "17 AV": [
    "ETO_B",
@@ -503,7 +552,9 @@
    "MoreItemInformation",
    "twistresting",
    "BetterSortCC",
-   "EasyLiterature"
+   "EasyLiterature",
+   "CHStatusHUD",
+   "LayeredPlacement"
   ],
   "19 QoL - Secondary UI": [
    "ComeBackLater",
@@ -548,7 +599,13 @@
    "twistbetterpause_cleanui_compat",
    "twistbettercharacterinfo",
    "twistmapimprovementsIcons",
-   "VFluidLibNeatUI"
+   "VFluidLibNeatUI",
+   "GasPumpIndicator",
+   "InventoryItemPins",
+   "NeatLockpicking",
+   "SkillBookLibrary",
+   "twistorderlychaos",
+   "VehicleDoorsHotkey"
   ],
   "20 QoL - Actions": [
    "twisttool",
@@ -585,7 +642,11 @@
    "ReloadAllMagazines",
    "PlaceAnywhereMod",
    "twistbetterpause",
-   "2925034918/EasyLaundry"
+   "2925034918/EasyLaundry",
+   "CyesPushDoors",
+   "DismantleAllAtOnce",
+   "JB_WorkOrders",
+   "NicksMoveableWorkstations"
   ],
   "21 Patches": [
    "JeevesPatches_Tanker",
@@ -593,7 +654,6 @@
    "PeekAView",
    "FixNaNStats",
    "isoContainers_massPatch",
-   "LongTermPreservationFix",
    "ZBPopFix",
    "NicksSledgehammerFix",
    "noIntro",
@@ -601,7 +661,16 @@
    "ZModUnbork",
    "EasyLaundryB4220Fixed",
    "FoodesGOMLethalStealthCompatibility",
-   "LethalStealthB4219Fix"
+   "LethalStealthB4219Fix",
+   "autotsartrailersb42fix",
+   "autotsartrailersb42fixgen",
+   "BanditsFixPlus",
+   "BanditsMeleeDamagePatch",
+   "GunworksFix",
+   "KI5GeneralFixes",
+   "KI5minifixes",
+   "LifestyleMoodleFrameworkCompat",
+   "TanksHavePropaneFix"
   ],
   "-- Disabled": [
    "twistqolrr",
@@ -645,12 +714,6 @@
    "FunctionalGuttersRemoved",
    "RealisticCookingTimesVFE",
    "ETO_P",
-   "VVA_slowdoors",
-   "VVA_cullseats",
-   "VVA_PikamyDelight",
-   "VVA_snapDoors",
-   "VVA_transparentWindows",
-   "VanillaVehiclesAnimated_SVU",
    "TombBodyTex",
    "TombBodyTexDOLL",
    "TombBodyCompatBootsExp",
@@ -681,7 +744,8 @@
    "exampleMod",
    "TheyKnewB42Fix",
    "MarzGuns",
-   "HBTacReload"
+   "HBTacReload",
+   "twistorderlychaosmp"
   ]
  },
  "tagOrder": [
@@ -839,7 +903,7 @@
   "!fav!": []
  },
  "cfgFingerprint": "6d1c4595bbd7246e1692d7cb0f0eb6f2781aa6bb",
- "dirty": false,
+ "dirty": true,
  "conflict": null,
  "lastSeed": "2026-08-31 02:59:20",
  "trailingSep": ";",

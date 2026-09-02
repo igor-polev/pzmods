@@ -292,11 +292,21 @@ def vkey(name):
     return (1,) + tuple(int(x or 0) for x in m.groups())
 
 
-def vnum(value):
-    """The same key, but None when the value is not a version at all - one mod
-    writes versionMin=42.16.+, and a bound nobody can read is not a bound."""
-    k = vkey((value or "").strip())
-    return k if k[0] else None
+def vbound(value, build):
+    """A versionMin/versionMax from mod.info, as a key, together with the build cut
+    to the same precision. (None, None) when the value is not a version at all -
+    one mod writes versionMin=42.16.+, and a bound nobody can read is not a bound.
+
+    A bound is only as precise as it is written: versionMax=42.20 names the whole
+    42.20 family, not 42.20.0, so the build must be compared at the bound's own
+    depth. Comparing the full keys reads 42.20.4 as newer than 42.20 and flags
+    every such mod as out of range."""
+    txt = (value or "").strip()
+    k = vkey(txt)
+    if not k[0]:
+        return None, None
+    depth = len(txt.split("."))
+    return k, build[:1 + depth] + (0,) * (3 - depth)
 
 
 def read_mod_dir(mdir, rel_to=None, build=None):
@@ -367,7 +377,8 @@ def read_mod_dir(mdir, rel_to=None, build=None):
                 if m:
                     cells.setdefault(d.name, set()).add((int(m.group(1)), int(m.group(2))))
 
-    lo, hi = vnum(best.get("versionMin", "")), vnum(best.get("versionMax", ""))
+    lo, blo = vbound(best.get("versionMin", ""), build)
+    hi, bhi = vbound(best.get("versionMax", ""), build)
     rec = {
         "modId": best["id"],
         "modIds": ids,                    # every id this folder declares anywhere
@@ -385,8 +396,8 @@ def read_mod_dir(mdir, rel_to=None, build=None):
         "versionMax": best.get("versionMax", ""),
         # settled here, against the same build that chose the folder above, so the
         # drawer and the Issues tab cannot end up disagreeing about the same mod
-        "versionFit": ("too new" if lo and build[0] and lo > build else
-                       "too old" if hi and build[0] and hi < build else ""),
+        "versionFit": ("too new" if lo and build[0] and lo > blo else
+                       "too old" if hi and build[0] and hi < bhi else ""),
         "pzversion": best.get("pzversion", ""),
         "modversion": best.get("modversion", ""),
         "author": best.get("author", ""),
@@ -1823,22 +1834,28 @@ class Handler(http.server.BaseHTTPRequestHandler):
             jwrite(DATA / "notes.json", notes)
             return self._send({"ok": True})
 
-        # your verdict on one discovered item. Keyed by workshop id so it outlives
-        # the run that found the item, and the next run can skip what you dismissed
+        # your verdict on discovered items. Keyed by workshop id so it outlives
+        # the run that found the item, and the next run can skip what you dismissed.
+        # Takes "id" for one row or "ids" for a whole group - one read-modify-write
+        # either way, so a group of 300 cannot half-succeed
         if u.path == "/api/verdict":
-            wid = str(payload.get("id") or "")
+            raw = payload.get("ids") if isinstance(payload.get("ids"), list) \
+                else [payload.get("id")]
+            ids = [str(x) for x in raw if str(x or "")]
             verdict = (payload.get("verdict") or "").strip()
-            if not wid:
+            if not ids:
                 return self._send({"error": "id required"}, 400)
             if verdict not in ("", "interested", "dismissed"):
                 return self._send({"error": "unknown verdict %r" % verdict}, 400)
             v = jread(DISCOVERY / "verdicts.json", {})
             if not isinstance(v, dict):
                 v = {}
-            if verdict:
-                v[wid] = {"verdict": verdict, "at": now()}
-            else:
-                v.pop(wid, None)
+            stamp = now()
+            for wid in ids:
+                if verdict:
+                    v[wid] = {"verdict": verdict, "at": stamp}
+                else:
+                    v.pop(wid, None)
             DISCOVERY.mkdir(parents=True, exist_ok=True)
             jwrite(DISCOVERY / "verdicts.json", v)
             return self._send({"ok": True, "verdicts": v})
