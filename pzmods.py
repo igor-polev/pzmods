@@ -41,15 +41,43 @@ APPID = "108600"
 # settings
 # --------------------------------------------------------------------------
 
+# Flatpak Steam sandboxes $HOME, so both the workshop and the Zomboid save
+# folder live under its own app-private home instead of the real one.
+_FLATPAK_HOME = Path.home() / ".var/app/com.valvesoftware.Steam"
+
+
+def _default_workshop():
+    if sys.platform.startswith("win"):
+        return r"C:\Program Files (x86)\Steam\steamapps\workshop"
+    for p in (Path.home() / ".local/share/Steam/steamapps/workshop",
+              Path.home() / ".steam/steam/steamapps/workshop",
+              _FLATPAK_HOME / ".local/share/Steam/steamapps/workshop"):
+        if p.exists():
+            return str(p)
+    return str(Path.home() / ".local/share/Steam/steamapps/workshop")
+
+
+def _default_zomboid():
+    if not sys.platform.startswith("win") and (_FLATPAK_HOME / "Zomboid").exists():
+        return str(_FLATPAK_HOME / "Zomboid")
+    return str(Path.home() / "Zomboid")
+
+
 DEFAULTS = {
-    "workshop": r"C:\Program Files (x86)\Steam\steamapps\workshop",
-    "zomboid": str(Path.home() / "Zomboid"),
+    "workshop": _default_workshop(),
+    "zomboid": _default_zomboid(),
     "port": 8765,
     "modImageSize": 40,
     "fetchCommentsOnUpdate": False,
     "updateOnStartup": True,
     "gameVersion": "auto",
 }
+
+
+def _foreign_path(p):
+    """A path written on the other OS: a drive letter here, or a POSIX root on Windows."""
+    is_windows_path = re.match(r"^[A-Za-z]:[\\/]", p) is not None
+    return is_windows_path != sys.platform.startswith("win")
 
 
 def load_settings():
@@ -60,6 +88,10 @@ def load_settings():
             s.update(json.loads(f.read_text(encoding="utf-8")))
         except Exception as e:
             print("  settings.json unreadable (%s), using defaults" % e)
+    if _foreign_path(s["workshop"]):
+        s["workshop"] = DEFAULTS["workshop"]
+    if _foreign_path(s["zomboid"]):
+        s["zomboid"] = DEFAULTS["zomboid"]
     s["workshop"] = os.environ.get("PZMODS_WORKSHOP", s["workshop"])
     s["zomboid"] = os.environ.get("PZMODS_ZOMBOID", s["zomboid"])
     s["port"] = int(os.environ.get("PZMODS_PORT", s["port"]))
@@ -1591,10 +1623,14 @@ def game_running():
     """A save rewrites map_sand.bin from memory when it saves, so an edit made while
     the game is up is an edit thrown away without a word."""
     try:
-        out = subprocess.run(["tasklist", "/fi", "imagename eq ProjectZomboid*"],
-                             capture_output=True, timeout=10,
-                             creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
-        return b"ProjectZomboid" in out.stdout
+        if sys.platform.startswith("win"):
+            out = subprocess.run(["tasklist", "/fi", "imagename eq ProjectZomboid*"],
+                                 capture_output=True, timeout=10,
+                                 creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+            return b"ProjectZomboid" in out.stdout
+        out = subprocess.run(["pgrep", "-f", "ProjectZomboid"],
+                             capture_output=True, timeout=10)
+        return out.returncode == 0
     except Exception:
         return False
 
