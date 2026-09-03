@@ -46,11 +46,10 @@
    "UnofficialMappersCommunityTilePack",
    "LiuDing_Tiles",
    "Military_Tool_Kit",
-   "VMZNEW",
    "tikitown_tiles",
    "Erikas_Tiles",
    "ThermoNewburbs",
-   "TryhonestyTiles"
+   "VMZNEW"
   ],
   "02 Firsts": [
    "twistbetterpause",
@@ -67,50 +66,53 @@
    "ZModUnbork"
   ],
   "04 Maps": [
+   "PIE42",
    "BlackstoneMapMod",
    "dawn_town",
    "FoxtrotWarehouse",
    "Louisville_Quarantine_Zone",
-   "Louisville_River_Marina",
    "Louisville_Riverboat",
-   "Macon",
    "muldraughmilitarybaseas24",
    "RavenCreekB42",
-   "Towhead-Island-FOB",
    "Begonia_Town",
-   "HavenFall",
-   "Constown42",
    "Maplewood",
    "SilentPines",
    "CamdenCountyB42",
    "NellisAFB",
-   "RabbitHashKY",
-   "Petroville",
    "tikitown",
    "TikitownPower",
-   "SecretZ_Operations_B42",
-   "Secretz42",
-   "SZ_Checkpoint6",
    "TheWarehouse",
    "Xixi's Serene Cottage",
-   "CoryerdonB42",
-   "Daisy County B42 version",
-   "Daisy County B42 version(items part)",
    "flahertymap",
    "FortBenningB42",
    "Fort Waterfront B42",
-   "Grapeseed4220",
-   "kardinal_ravencreek_B42",
-   "MistyMountainHideaway",
    "MooresMechanicPlus",
-   "Muldraugh-Checkpoint",
-   "PIE42",
    "RiversideMansionMod42",
    "RiversideMansionMod42Empty",
    "RiversideMansionMod42NoLoot",
    "St. John's Dairy Farm",
    "Taylorsville",
-   "WestPoint"
+   "WestPoint",
+   "Grapeseed4220",
+   "SecretZ_Operations_B42",
+   "Secretz42_Core",
+   "SZ_Checkpoint8",
+   "SZ_Checkpoint6",
+   "SZ_Bunker_3",
+   "SZ_Checkpoint1",
+   "SZ_Checkpoint5",
+   "SZ_DeerheadLake_Base",
+   "SZ_ExtraSpawnPoints",
+   "SZ_Louisville_Military_Complex",
+   "SZ_MarchRidge_ResearchFacility",
+   "SZ_MuldraughCrossroads_Checkpoint",
+   "SZ_Muldraugh_Traindepot_EVAC",
+   "SZ_North_Checkpoint",
+   "SZ_Riverside_Checkpoint_1",
+   "SZ_Riverside_Checkpoint_2",
+   "SZ_SouthEast_LV_Checkpoint",
+   "SZ_The_Mall",
+   "SZ_Westpoint_Bridge_Checkpoint"
   ],
   "05 Vehicles - Items": [
    "rSemiTruck",
@@ -232,7 +234,8 @@
    "ProperVehicleInjuriesMP",
    "Ivmakk_RestoreEngineQuality",
    "hrsys_towbars",
-   "RealisticVehicleMechanics"
+   "RealisticVehicleMechanics",
+   "VMZNEW"
   ],
   "07 Weapons": [
    "HBVCEFb42",
@@ -446,7 +449,8 @@
    "ThumpingAttractsZombies",
    "KYRRealWeatherMod",
    "twistoutsidefreezer",
-   "Worm Digging"
+   "Worm Digging",
+   "TentInteriorMoved"
   ],
   "16 Balance": [
    "VB_CommonSense",
@@ -745,7 +749,13 @@
    "TheyKnewB42Fix",
    "MarzGuns",
    "HBTacReload",
-   "twistorderlychaosmp"
+   "twistorderlychaosmp",
+   "RiversideMansionMod42Empty",
+   "RiversideMansionMod42NoLoot",
+   "TikitownPower",
+   "SZ_Checkpoint6",
+   "SZ_Checkpoint8",
+   "SZ_Riverside_Checkpoint_1"
   ]
  },
  "tagOrder": [
@@ -902,7 +912,7 @@
  "passthrough": {
   "!fav!": []
  },
- "cfgFingerprint": "6d1c4595bbd7246e1692d7cb0f0eb6f2781aa6bb",
+ "cfgFingerprint": "f06df1bc1534b35486c50f51ed3eedeb1338866b",
  "dirty": true,
  "conflict": null,
  "lastSeed": "2026-08-31 02:59:20",

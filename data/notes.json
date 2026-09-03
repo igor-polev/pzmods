@@ -998,5 +998,13 @@
  "w_betterwringing": {
   "text": "-AI-\nIn multiplayer the 'wring out all' action stops after the first item, confirmed by several users; singleplayer is fine. A user suspects it fights mods with re-equip logic such as Tidy Up Meister, which is installed here. Safe to add or remove mid-save.",
   "updated": "2026-08-31 23:14"
+ },
+ "BBB": {
+  "text": "-AI-\nBetter Backpack Bottoms - containers in the bag bottom (toolbox, first aid kit, lunchbox, tacklebox, gas/jerry can, bottles).\n\nLoad order matters here: Better Backpack Bottoms FIRST, then Bag Bottom Weapon Attach.\nBoth mods rewrite the attachments offered by the same three bag-bottom slots (BedrollBottom, BedrollBottomBig, BedrollBottomALICE). Wherever they both reach the same backpack, whichever loads LAST supplies that slot's list - so with BBB first, the weapon categories are the ones that land.",
+  "updated": "2026-09-03 00:00"
+ },
+ "BagBottomWeaponAttach": {
+  "text": "-AI-\nBag Bottom Weapon Attach - rifles and large back-slot weapons in the bag bottom.\n\nLoad order matters here: Better Backpack Bottoms FIRST, then Bag Bottom Weapon Attach.\nBoth mods rewrite the attachments offered by the same three bag-bottom slots (BedrollBottom, BedrollBottomBig, BedrollBottomALICE). Wherever they both reach the same backpack, whichever loads LAST supplies that slot's list - so with BBB first, the weapon categories are the ones that land.",
+  "updated": "2026-09-03 00:00"
  }
 }

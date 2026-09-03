@@ -692,5 +692,6 @@ Separate projects, all still in place, listed here so they are not lost:
 |---|---|
 | `Zomboid\mods\Mindset42\` | rebuild of a long-broken trait mod (workshop 3554341903) for B42.20.4. Four traits registered through the B42 CharacterTrait API |
 | `Zomboid\mods\CompanionCatPurr\` | add-on making cats relieve unhappiness more than other pets, via a purr moodle hooked into `CD.DogMoodles`. Depends on CompanionCat (3791294616) |
+| `Zomboid\mods\TentInteriorMoved\` | copy of Tent Interior (workshop 3790598654) with its private interior map moved from cells 0_0..1_1 — which PIE42 (3507117617) also ships — to the empty 60_80..61_81. Eight map files renamed, and the hard-coded world coordinates in three Lua files pulled into `shared/TentWorldOrigin.lua`. Keep the workshop `TentInterior` on `-- Disabled` |
 | `Zomboid\Lua\bandits\clans.txt` | custom NPC clan scheme: six eras spread over about five in-game years, companions removed, spawn rates cut so roaming groups are rare. Only altered fields are in the file; `clans_extended.txt` is the full-value overview for reading, and `clans_gantt.py` draws the timeline. Backups of earlier schemes sit beside it |
 | `Zomboid\Sandbox Presets\Custom.cfg` | tuned Bandits parameters that go with the above |

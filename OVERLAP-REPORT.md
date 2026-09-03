@@ -1,454 +1,500 @@
-# Feature overlap cross-check — 514 subscribed Workshop items
+# Feature overlap cross-check — run 2
 
-Generated 2026-09-01 · game build 42.20.4 · source: `pzmods\data\steam.json` (Workshop
-descriptions), `snapshot.json` (`mod.info`), `tags.json` (what is on `-- Disabled`).
-Online lookups: none needed.
+563 subscribed Workshop items · game build 42.20.4 · 3 Sep 2026
+Sources: `pzmods\data\steam.json`, `snapshot.json`, `tags.json` (descriptions and `mod.info`)
+**plus** a file-path census read off the installed mod folders and the game's own `media\lua`.
+Online lookups: none.
 
-## How to read this
+---
 
-Every item was placed in a feature domain and compared against everything else in that
-domain. A finding only appears here if **both sides are currently enabled** — mods you
-have already switched off with `-- Disabled` are in §4, as confirmation, not as work.
+## 0. What changed since run 1
 
-| tier | meaning |
+**You acted on nine findings.** These nine mods are no longer on disk — every one of them was
+a "drop this" recommendation from the first report:
+
+| gone | was |
 |---|---|
-| **A — duplicate** | two mods do the same job. One is redundant, and in a few cases they fight |
-| **B — rivals** | same system, different opinion. Works, but one is deciding the outcome and it may not be the one you meant |
-| **C — stacking** | nothing conflicts, the effects just add up. Listed so the total is visible |
+| Injury Indicator | A1, duplicate of Pain Sense |
+| Simple Show XP | A4, duplicate of Neat XP Drop |
+| Load All Magazines | A8, the declared function collision |
+| Trap Manager | A10, duplicate trapping helper |
+| Vehicle Safety | A11, the rival crash system |
+| TwisTonFire – Better Character Info | A12, the Character Info contest |
+| TwisTonFire – Exercises | A12, the fitness-window half of it |
+| Nested Health Info | B5, the health-panel ordering problem |
+| Loot Goblin 2000 | B8, covered by Proximity Inventory |
 
-Note on your setup: only **1** of 514 items is fully disabled (ZBLuaPerfMon). The
-`-- Disabled` tag is doing variant-selection work almost everywhere else — 42 items have
-some sub-mods off and one on. That is why several mods you may think of as "off" are
-counted as live below.
+⚠️ **All nine are still named in `pz_modlist_settings.cfg`**, across six tags — and
+`twistbettercharacterinfo` is named twice, in `02 Firsts` and `19 QoL - Secondary UI`. pzmods
+will show them on the Issues tab under *"Named in the config file, but not installed"* — press
+**Forget the N uninstalled**, then Save, and the config is clean.
+
+(Seven of the nine went after this morning's 02:53 scan, so pzmods will not know until you press
+Update.)
+
+**Four clean version swaps**, all correct:
+
+- Antibodies (2392676812) → **Antibodies B42.20 Community** (3782193024)
+- Long Term Preservation + its patch → **Long Term Preservation [42.20]** (3774789651), one mod instead of two
+- Simple Belt Flashlight → **Simple Belt Flashlight+** (3778709615), same mod id, the black-screen bug named on the new page belongs to the old item
+- Vanilla Vehicles Animated → **the 42.20.4 temporary fix** (3791619698), mod id preserved
+
+**65 new items, 16 removed** (including ten maps). Net: 514 → 563.
 
 ---
 
 ## 1. Tier A — duplicates, both live
 
-### A1. Two injury pop-ups over the character's head
-`Injury Indicator [B42]` (3565698092) · `Pain Sense` (3599368309) — both in **18 QoL - Core UI**
+Nine of the thirteen Tier-A findings from run 1 are closed. What is left, plus what arrived with
+the 65 new mods.
 
-Identical concept: text above the head naming the hurt body part, plus a heal
-notification. PainSense loads later (index 24 vs 10), so you see both fire.
-PainSense is the superset — it also announces when a bandage can come off and when
-stitches can be pulled.
-**Keep PainSense, drop Injury Indicator.**
+### A-new-1. Towbars and Harry's Tow Truck declare each other incompatible
+`Towbars` (3661430479, 06 Vehicles - Mechs) · `Harry's Tow Truck - Zombie Buddy Ed.` (3776518013, 05 Vehicles - Items)
 
-### A2. The resting mod, installed twice, by the same author
-`TwisTonFire - Restingmod` → `twistrestingmodonly` (3480790670, in 20 QoL - Actions)
-`Quality of Life Modpack` → `twistresting` (3480305875, in 02 Firsts)
+Towbars' own page: *"New feature supporting KI5 Tow Trucks / Wreckers towing without a java mod!
+**Incompatible with Harrys Tow Truck!**"* Both are subscribed and enabled. The incompatibility is
+not declared in `mod.info`, so nothing in pzmods can catch it — it is only in the prose.
+**This is the clearest single action in the report.**
 
-Both are live. The modpack page says it plainly: *"Please do not use other mods that
-overlap with features already included here. Most error reports I receive are caused by
-duplicate or overlapping mods being used alongside this pack."* Both carry the resting
-status feedback, the post-rest game-speed reset and a status HUD.
-**Pick one.** The standalone has the newer configurable HUD; the modpack version loads
-first and carries the rest of the pack's tweaks.
+### A-new-2. Z-UET and Zed's Better FPS patch the same Java methods
+`Zomboid Unified Engine Tweaks` (3793911582, 01 Utils, last in the tag) ·
+`Zed's Better FPS - B42.20.2 Fix` (3782613536, 01 Utils) · `SmartZOptimizer[Legacy]` (3707376688)
 
-### A3. Two wardrobe / outfit-set systems
-`Quick Fits` (3684691347) · `NeatUI Equipment` (3790656296) — adjacent in 18 QoL - Core UI
+Z-UET's page: *"Do not use with other mods that patch `MovingObjectUpdateScheduler` /
+`IsoCell.getGridSquare` at the same time (**e.g. ZBBetterFPS's optimizeIsoMovingObject**)."*
+It names your mod. Both are enabled, plus a third ZombieBuddy optimiser whose own title says
+Legacy. Three Java-level patches reaching into the same scheduler is where hard-to-trace
+stutter and crashes come from.
 
-Both: save an outfit, wear it back later, pull the missing pieces out of nearby
-containers, strip everything in one press. NeatUI Equipment also gives you the 3D doll
-panel and matches the rest of your NeatUI stack.
-**NeatUI Equipment covers Quick Fits entirely.**
+### A-new-3. Two mods declare a trait called Second Wind
+`Even More Traits [42.20]` (3777663603) — lists *Second Wind* among its 30+
+`Survivor Quirks` (3759277273) — *"Second Wind: Once per day, recovers a burst of endurance"*
 
-### A4. Two on-screen XP gain readouts
-`Neat XP Drop (Fixed)` (3775242298) · `[B42MP] Simple Show XP` (2891170430) — indices 20 and 21
+Traits are registered by id. Two registrations of the same name is a collision, not an addition.
+The same page also gives Survivor Quirks a **Sixth Sense** trait — and you run the
+`SixthSense` mod (2863908612), whose whole content is a trait of that name.
 
-Same job, two widgets on screen at once. Neat XP Drop matches your NeatUI theme; Simple
-Show XP sums all perks into one line.
+This takes your trait-mod count from four to **six**: SOTO, Somewhat Traits, Sandbox Traits,
+Challenge Traits, Even More Traits, Survivor Quirks — plus trait-bearing skill mods (Toughness,
+Combat Mastering, Efficiency, SixthSense, Break Into Tears, B42 Driving). SOTO and Somewhat
+Traits both rewrite *vanilla* traits on top of that.
 
-### A5. Two structure-health readouts
-`[B41&B42] Show Wall Health` (3002666175, in 10 Craft) · `Door, Fence & Furniture Health
-Display` (3788067801, in 19 QoL - Secondary UI)
+### A-new-4. CH Status HUD takes the key Inspect Weapon uses
+`CH Status HUD` (3776182375, 18 QoL - Core UI) · `Inspect Weapon` (2948824747, 19 QoL - Secondary UI)
 
-Same information, different delivery: Kamer's is a right-click "Check Status" menu, the
-other is live bars over damaged structures within a radius. The newer one covers doors,
-gates, barricades, fences and furniture — a superset of what "anything you built"
-reaches.
+CH Status HUD: *"Press **;** (semicolon) to show or hide the panel."*
+Inspect Weapon: *"Pressing **;** button to inspect current weapon."*
+One key, two mods. Rebind one under Options → Key Bindings.
 
-### A6. Two mods rewriting the same bag-bottom slots — order decides the winner
-`Better Backpack Bottoms` (3789055972) · `Bag Bottom Weapon Attach` (3688814370)
+Separately, CH Status HUD is your **third** live status panel (with Mini Health Plus and the
+Restingmod HUD, StatZ having no Lua of its own), and its *"Hide vanilla moodles"* option
+switches off the icons that `Moodles in lua` and `Simple Moodle Indicators` exist to restyle.
 
-Both patch the attachments provided by `BedrollBottom`, `BedrollBottomBig` and
-`BedrollBottomALICE`. BBB puts toolboxes, first-aid kits, gas cans and bottles there;
-BagBottomWeaponAttach puts rifles and big blades there. In **08 Gears** your order is
-`… BBB, BagBottomWeaponAttach` — the weapon one is last, so where they both touch the
-same bag it is the one that lands. If you have noticed BBB's containers refusing to
-attach on some packs, this is why.
-**Try swapping their order inside the tag before dropping either.**
+### A-new-5. Layered Placement and Place Anywhere
+`Layered Placement` (3775423228) · `Place Anywhere` (3613917826)
 
-### A7. Flashlight-on-belt, from four directions
-`[B42] Simple Belt Flashlight` (3625933422, 16 Balance) · `ExpandedAttachements`
-(3774158741, 08 Gears — "Hand Torch", "Large Flashlight for belts only") ·
-`Common Sense` (3750253491, feature 4: *"Attach hand Flashlights to the toolbelt"*) ·
-`[B42] Pack Mule` (3540903327, "Attach: Lantern", "Attach: Welding Torch")
+Place Anywhere *"removes all tile placement restrictions and allows you to place tiles anywhere
+regardless of what tiles are already in the square."* Layered Placement does the same thing with
+rules and per-feature sandbox switches. The blunt one makes the careful one's rules moot.
 
-Four mods offering the same belt slot. ExpandedAttachements and Pack Mule also overlap
-on the propane/welding torch. Simple Belt Flashlight is the narrowest of the four and is
-a self-described "reupload of a reupload" — it is the obvious one to test without.
+### A-new-6. JB's Work Orders duplicates four mods at once
+`JB's Work Orders` (3775310237) automates gathering, area clearing, **farming**, moving corpses
+and **auto-resting**. Against: `Batch Floor Action` (area clearing), `Batch Farming` (area
+farming), `TwisTonFire - Restingmod` (rest + game-speed control), `Drag Bodies Faster`.
+Its auto-rest and Restingmod's rest handling are the pair most likely to fight.
 
-### A8. Reload-all-magazines, declared incompatible
-`[B41 / B42] Load All Magazines` (2920899878) · `Common Sense` (3750253491, feature 3:
-*"(new) Reload all selected magazines at once"*)
+### A-new-7. Neat Lockpicking and Common Sense both pry with a crowbar
+`Neat Lockpicking` (3783535220) — *"Crowbar — skill-check on doors, garages, windows, and car doors"*, and it **replaces vanilla hotwire**
+`Common Sense` (3750253491) — feature 1, *"Pry open Doors, Windows and Vehicles with Crowbars"*
 
-Load All Magazines states: *"Modifies `ISInventoryPaneContextMenu.doMagazineMenu`, so
-will be incompatible with any other mods that change this function."* Common Sense added
-exactly this feature in its revival. **This is the highest-risk pair in the collection** —
-it is a named function collision, not a taste question. Common Sense also asks to be put
-at the end of the load order, which would put it after Load All Magazines.
+Two crowbar systems on the same objects. `dustinguished bolt cutters` is a third route through
+the same locked doors, though by a different tool.
 
-### A9. Two bulk-packing economies
-`Hoarder's Delight` (3626823538, 300+ crafted boxes, −1/6 encumbrance) ·
-`More Packing` (3478922403 / `vac_mod_b42_6`, generic parcels, −90% weight, up to 300 kg)
+### A-new-8. Two ammo-crafting economies
+`Hot Brass — Ammo Craft` (3637364024) · `Ammo Maker` (2788256295, 59 calibres, gunpowder from nitre)
 
-More Packing works on any item from any mod at a far better ratio and needs no recipes,
-which makes Hoarder's Delight's crafted cartons pointless in practice. Running both also
-means two parallel weight-reduction paths on the same items.
+### A-new-9. Two KI5 fix packs with overlapping scope
+`KI5 General Fixes` (3789366983) · `KI5 Mini-fixes` (3740300378)
 
-### A10. Two trapping helper windows
-`Trap Manager` (3566766862) · `TwisTonFire - Better Vanilla Trapping`
-(3573232324 → `twisttrappingvanilla`, the variant you left enabled)
+Both patch KI5 vehicles; both name the same cars. General Fixes claims *"Stutter as a vehicle
+loads in… Affects every KI5 vehicle"*, Mini-fixes lists per-vehicle repairs. The census below
+shows Mini-fixes also writes a file into damnlib's own folder — see §4.
 
-Both are read-only helpers over vanilla trapping: which animal, which bait, which zone,
-what odds. Trap Manager adds the sortable trap table and catch-chance simulator; Better
-Vanilla Trapping adds the in-game wiki plus small QoL. Neither changes mechanics, so
-this is pure duplication of screen and menu space.
+### A-new-10. Three ledgers of which skill books you have
+`Skill Book Library` (3787062830) — 120 vanilla skill books, 24 skills × 5 volumes, missing ones shown as gaps
+`Unwanted Items Collection` (3725196303) — *"a matrix of 24 skills × Vol.1–5"*
+`Easy Literature` (2914650723) — found / not-found literature tracker
 
-### A11. Two vehicle crash-injury systems
-`Vehicle Safety - Seatbelt, Crash & Ejection` (3685035630) ·
-`Proper Vehicle Injuries for MP` (3007922923) — both in 06 Vehicles - Mechs
+The first two are the same feature written twice.
 
-Vehicle Safety says: *"Set 'Player Damage From Crash' to FALSE in sandbox options — this
-mod fully replaces the vanilla crash system."* PVI's whole design is to make the vanilla
-crash damage consistent and configurable, and it carries its own seatbelt integration.
-Turning vanilla crash damage off to satisfy Vehicle Safety takes PVI's foundation away;
-leaving it on means two crash systems firing on the same impact.
-**These two cannot both be right. Choose.**
+### A-new-11. Two grenade/explosive packs
+`US Military Grenades` (3745718141, craftable Mk2/M26/M67, mines, flares) ·
+`ExtraBombs 2` (3652008781, remote triggers, four tiers)
 
-### A12. Three mods over the Character Info screen
-`Neat Rocco's UI` (3723726293) replaces the *character info window (stats, health, skills,
-clothing)* **and** the *fitness training window*
-`TwisTonFire - Better Character Info` (3488600400, in 02 Firsts) overhauls the Character
-Info screen
-`TwisTonFire - Exercises` (3790614739) reworks the vanilla Exercise window
+### Still open from run 1
 
-Better Character Info loads in 02 Firsts, Neat Rocco's in 18 QoL - Core UI — so Rocco's
-replacement lands last and is very likely painting over the avatar system you installed
-Better Character Info for. Same story for Exercises vs Rocco's fitness window.
-Rocco's has a per-mod toggle (Options → Mod Options → Neat Rocco's UI → *Use Neat
-Rocco's UI*) — but it is all-or-nothing, so the fix is deciding which of the three owns
-the screen.
-
-*While you are there:* Rocco's also replaces the **Learning window (books, recipes,
-media)** — which is exactly where `Unwanted Items Collection` (3725196303) adds its four
-tabs — and the **Animal info / livestock zone panels**, where `Better Animal Care`
-(3582024827) adds its context menu. Worth a look in-game.
-
-### A13. Two Humvees spawning side by side
-`'92 AM General M998 + M101A3 Cargo trailer` (KI5, 2642541073) ·
-`U.S. M998 Humvee by Papa_Chad` (3554424111)
-
-Same real vehicle, two independent models, two spawn entries, two parts trees. Not a
-bug — but with `Vehicle Military Zones` and both `Specific Loot` mods live, military
-spawns are rolling from two Humvee pools.
+- **A2 — the resting mod, twice.** `twistrestingmodonly` (20 QoL - Actions) and `twistresting`
+  from the QoL Modpack (02 Firsts, index 6 of 12) are both live. The modpack page asks you not
+  to. The census confirms they are separate code: 156 files vs 45, no shared paths.
+- **A3 — two wardrobes.** NeatUI Equipment (85 files) and Quick Fits (23 files), adjacent in
+  18 QoL - Core UI. NeatUI Equipment is the superset.
+- **A5 — two structure-health readouts.** Show Wall Health (33 files) and Door, Fence &
+  Furniture Health Display (24 files). Same information, one on demand, one always on.
+- **A6 — bag-bottom slots.** Unchanged, and now documented: both mods carry a note stating
+  Better Backpack Bottoms loads first (which is the current order, 23 then 24 in 08 Gears).
+- **A7 — belt flashlight**, now three-way rather than four: Simple Belt Flashlight+,
+  ExpandedAttachements, Common Sense, Pack Mule.
+- **A9 — two bulk-packing economies.** More Packing (−90%, any item) still makes Hoarder's
+  Delight's crafted cartons redundant.
+- **A13 — two Humvees**, KI5 and Papa_Chad.
+- **A12 — the Character Info screen** is now settled in Neat Rocco's UI's favour, because both
+  challengers are gone. Note Rocco's still replaces the **Learning window**, where Unwanted
+  Items Collection and Skill Book Library both want to live.
 
 ---
 
 ## 2. Tier B — same system, different opinion
 
-### B1. Reading speed, pulled both ways
-`M-13's Reading Tweaks` (2776874515) makes reading faster and possible while walking.
-`Immersive Reading` (3606009875) makes reading *slower* and spreads the mood payoff
-across the duration. Both in 16 Balance, Immersive Reading first. Whichever hooks the
-timer last sets the speed; the other's sandbox sliders will read as having no effect.
+### B-new-1. Under the Hood lands on four existing vehicle mods
+`Under the Hood [B42] [BETA]` (3780938346) is a full vehicle-maintenance overhaul — engine oil
+and viscosity, filters, coolant, radiator hoses, head gaskets, brakes, ignition — and it is the
+largest new mod by code volume in this pass (**114 Lua files**). It arrives on top of:
 
-### B2. Ballistic vests: buffed, then replaced
-`Armored Vests` (1962761540) raises bite/scratch protection on the three bulletproof
-vests (plus a VGE patch for the modded ones).
-`No Holes For Ballistic Armor` (3683430283) *"replaces the vanilla bullet-proof armor
-items with nearly identical copies"* that cannot get holes.
-A copy made from the vanilla item does not inherit Armored Vests' edits. Expect the
-no-holes vests to be the plain vanilla stat line.
+- `Restore Engine Quality` (3543612325, also new) — restores the vanilla engine-quality stat
+- `Car Parts Repair` (3281301960) — repair without resources
+- `Better Auto Mechanics` (3635856965) — one-click training
+- `Immersive Cars: Decay` (3495105059) — simulated condition decay
+- `More Car Features` (3520758551, 44 files) — vehicle quality rebalance
 
-### B3. Vanilla clothing textures — an overwrite chain the author documented
-`Vanilla Outfits Expanded` (3783094058) says on its own page:
-*"Vanilla Clothing Expansion: compatible, but will overwrite this mod's texture
-variants"* and *"Spongie's Open Jackets: currently not supported on new textures/items,
-will overwrite vanilla variants from this mod when rolling/opening."*
-All three are live: VOE (08 Gears, index 20), `Vanilla Clothing Expansion` (3421271152,
-index 6), `Spongie's Open Jackets` (2812326159, indices 12–13).
-VCE asks to be *"at the VERY bottom of the load order"* to fix icon mismatches — but VCE
-currently loads **before** VOE, i.e. VOE's variants win. If you moved VCE to the bottom
-as its page asks, VOE's new textures would start losing. Decide which mod you want to be
-the last word and order 08 Gears accordingly.
+Six mods now write to vehicle condition. Under the Hood is BETA and the most opinionated; it is
+the one to decide about first.
 
-### B4. Four trait mods, one point economy
-`SOTO` (2840805724 — 40+ traits, 26 occupations, *"making vanilla occupations and traits
-viable"*) · `Somewhat Traits` (3498347699 — 16 positive, 16 negative, **expands 14 vanilla
-traits**) · `Sandbox Traits` (3777244656 — 9 positive, 3 negative) ·
-`Challenge Traits` (3634630898 — 15 starting-injury traits)
+### B-new-2. Bandits: Adaptive Threats overrides your own clan scheme
+`Bandits: Adaptive Threats` (3791560174, mod id `HumanRemains`) — *"Five-stage NPC progression…
+Balanced encounters, camps, bases, and roadblocks."*
 
-SOTO and Somewhat Traits both rewrite *vanilla* traits — that is a head-on collision, not
-an addition. On top of those, traits also arrive from `Toughness Skill`, `Combat
-Mastering Skill`, `Efficiency Skill Mod 2`, `SixthSense`, `Break Into Tears` and `B42
-Driving Skill` (which retunes the Cab Driver occupation). `SixthSense`'s own page carries
-a "BROKEN (balance trait mod…)" note. You do have `JeevesPatches_SOTO` enabled, which is
-the right instinct.
+Your `Lua\bandits\clans.txt` is a hand-tuned six-era scheme spread over about five in-game years,
+with companions removed and spawn rates cut so roaming groups stay rare. A mod whose stated job
+is to supply progression and encounter balance for Bandits V2 is competing with exactly that
+file. Also live: `Bandits Fix Plus` (3777752751, includes a companions fix) and
+`Bandits Melee Armor Patch` (3745699559, load after Bandits — it is, in 21 Patches).
 
-### B5. Five things drawing on the health panel
-`Wounds Overhaul` (3775026731) — replaces the Health tab outright and states
-*"Not with other health or blood overhauls"*; declares Antibodies compatible
-`Nested Health Info` (3779405481) — *"Load this mod before any other mod that adds
-something to the health panel"*
-`Mini Health Plus` (3710913197) · `StatZContinued` (3637486686) · Restingmod's status HUD
-The two hard ones are Wounds Overhaul × Nested Health Info (both rewrite what the panel
-shows under a bandage — Wounds Overhaul already has "a bandage hides the wound" as a
-designed behaviour, which is what Nested Health Info exists to undo) and Wounds Overhaul
-× Mini Health Plus. Nested Health Info is currently in 19, i.e. **after** Wounds Overhaul
-in 13 — the opposite of what its page asks for.
-The three HUDs (Mini Health Plus / StatZ / Restingmod HUD) are not conflicts, just three
-overlapping panels of the same numbers.
+### B-new-3. Hydrocraft Reinvented lands on the whole crafting stack
+`Hydrocraft Reinvented` (3778201332) — **5,196 items, 3,620 recipes, 121 fixing schemes.**
+Its stated philosophy is *"complement, don't duplicate"* and it deliberately steps aside on
+smithing, pottery, masonry, glassmaking and butchering. It does not step aside on food, drink,
+chemistry, mining, beekeeping or weaving — where you already run Long Term Preservation, the six
+`[B42.2*]` jar/dry mods, Craftable Vanilla Food Items, Boiling Eggs, Herbalist and Break Big Rocks.
 
-### B6. Three answers to "am I infected"
-`Antibodies` (2392676812, recovery curve) · `They Knew` (3387110070, Zomboxivir cure and
-Zomboxycycline prophylaxis) · `Knox Detection Kit` (3688879406, blood test) ·
-`Wounds Overhaul` (Knox stage readout, transfusions carry Knox).
-Wounds Overhaul names Antibodies as supported. Nothing declares anything about They Knew,
-and its pills reset or purge infection outright — which short-circuits the antibodies
-curve Antibodies exists to make you play.
+Five thousand new items also land on `Zed's Item Tiers` (rarity rolls on almost any item),
+`Better Sorting` (categorises them) and `Total Weight Rebalance` (1600 hand-tuned weights).
 
-### B7. Three mods reshaping the evolved-recipe list
-`Project Cook` (3490188370) replaces the cooking interface for evolved recipes ·
-`Neat Ingredients List` (3490768151) groups duplicate ingredients in that list ·
-`Don't Open New One` (3696528833) changes which container the evolved recipe menu picks.
-Project Cook is a full replacement, so the other two may be patching a list that is no
-longer on screen.
+### B-new-4. Cye's Push Doors joins the knockdown cluster — and meets EasyDoors
+`Cye's Push Doors` (3780683663) makes opening a door damage, stagger or knock down whatever is
+behind it. Alongside `BackOff!`, `Risky Unarmed`, `Do not push! PLEASE!!` that is a fourth mod on
+zombie knockdown. More concretely: `EasyDoors` (3621001191) opens doors **automatically** when
+you run into them — which now means running through a doorway can swing a weaponised door.
 
-### B8. Four overlapping ways to reach nearby loot
-`Proximity Inventory` (2847184718 — every nearby container on one page) ·
-`Loot Goblin 2000` (3694894350 — search nearby containers for one item) ·
-`Auto Loot` (3392699932 — auto-loot plus "Store All" spreading) ·
-`Picking Meister` (3422220305 — grab contents, unpack, retrieve ammo)
-Loot Goblin's core question ("which box has the screwdriver") is already answered by
-Proximity Inventory's single page. Auto Loot and Picking Meister are distinct enough.
+### B-new-5. Clothing and Shoe Sizes meets 400+ added garments
+`Clothing and Shoe Sizes` (3783807916) assigns you a size and blocks anything two sizes off, with
+a movement penalty for near-misses. You run Vanilla Clothing Expansion (240+ variants), Vanilla
+Outfits Expanded, Spongie's Clothing, KATTAJ1 Military, ALICE Gear and more — every one of those
+items now needs a size. `Working Run Modifier` is a second movement penalty from clothing.
 
-### B9. Vehicle condition, decided twice
-`Immersive Cars: Decay` (3495105059) simulates decay on world vehicles ·
-`More Car Features` (3520758551) rebalances vehicle qualities and controls the chance to
-spawn burnt or damaged. Both write to the condition of the same spawned cars.
-`TEH Big Car Trunks` (3502122415) is also live and rebalances capacity that More Car
-Features touches; TEH asks to be sorted to the very bottom.
+### B-new-6. Real Flashlights vs the other light mods
+`Real Flashlights` (3787125307) multiplies **all vanilla light sources** by 0.6 and is tuned
+against `[B42MP] Lantern Fix` (which it names). It is not tuned against
+`Nepenthe's High Beams` (3438126404), which exists to make headlights reach much further.
 
-### B10. Vehicle part repair, twice
-`Car Parts Repair` (3281301960 — repair without resources, poorly) ·
-`Better Auto Mechanics` (3635856965 — one-click mechanic training). Different aims, same
-part-repair path, and both interact with `Neat Rocco's UI` replacing the vehicle
-mechanics panel.
+### B-new-7. Fuel gets a second type and a second status display
+`Diesel Fuel` (3784993266) splits vehicles into petrol and diesel and adds diesel to pumps.
+`Gas Pump Indicator` (3755993986) paints pump state onto the LED slit.
+Both sit on top of `More Car Features`, which already reworks *"refueling vehicles from pumps at
+gas stations… fuel station status"*. Also in that system: Vehicle Fluid Logistics, Water Trailer,
+the KI5 tanker add-on and Car to Car Siphon.
 
-### B11. Dashboard condition — possibly already vanilla
-`Condition On Dash` (3306168142). Common Sense lists *"Highlight vehicle's engine, battery
-and fuel condition in the dashboard"* under **"Features already in vanilla"** as of
-42.20. Worth checking whether this mod is still adding anything.
+### B-new-8. Fifth-Wheel RV vs RV Interior Expansion
+`Fifth-Wheel RV Trailer` (3775310562) ships its own built-in interior and declares itself fine
+alongside `[B42]Project RV Interior`. It says nothing about `RV Interior Expansion` (3618427553),
+whose page says *"Not compatible with other custom interior mods."*
 
-### B12. Two ways to refill a torch
-`Tanks Have Propane` (3676347667 — refill tanks and blowtorches at Fossoil/Gas2Go storage
-tanks, plus optional gas pumps and small tanks) · `Refill Welding Torch with Propane
-Bottle` (3429836096 — 4 uses from a propane bottle). The second is a small subset of the
-first's remit.
+### Still open from run 1
 
-### B13. Two orchard systems
-`Farming Expansion B42` (3444499190 — apple and grape, perennial, survive winter) ·
-`Infoteo's Fruit Trees` (3783566179 — apple, banana, cherry, lemon, orange, peach,
-pineapple). Both add a plantable apple tree with its own growth cycle and seed source.
-
-### B14. Water plumbing, two designs
-`PlumbingFixed` (3626008449) makes a plumbed sink draw from *all* barrels ·
-`Water Pipes` (3739612285) lays a real pipe network that moves water between floors.
-Both reroute where a plumbed fixture gets its water. Around them: `Functional Gutters`
-(3439305933) and `My Own Well` (3549290115) as sources, `Water Goes Bad` (2849467715)
-spoiling the stored side, and `Vehicle Fluid Logistics Library` (3791686284) +
-`Water Trailer` (3776875714) + `Water Bidon` (3628782804) + `Useful Barrels` (3436499337)
-as portable storage. The pair worth testing is PlumbingFixed × Water Pipes.
-
-### B15. Weather and night colour, three hands
-`[KYR] Real Weather Mod` (3051276857 — a full weather overhaul) ·
-`Here Goes the Sun` (3618557184 — sunrise/sunset palettes by season and weather) ·
-`Blue Moon` (3616381828 — blue night tint).
-Here Goes the Sun explicitly declares Blue Moon compatible and warns about *"climate
-mods that change night colours"* — which is exactly what a full weather overhaul does.
-KYR is the undeclared one in this trio.
-
-### B16. Three window-traversal mods
-`Auto Smash, Clear & Jump through windows` (3495788089 — one-click smash, clear, climb) ·
-`Sprint Through Windows` (3791228868 — dive through while sprinting) ·
-`[B42] Hand Bag Window Climb` (3389093252 — keep held bags when climbing).
-Different triggers, one animation path. Note the Auto Smash page itself advertises a
-successor to Better Sorting — which you also run (`Better Sorting`, 2313387159).
-
-### B17. Three mods on the shove
-`[B42] BackOff!` (3647810515 — shoves knock down multiple zombies even without multi-hit) ·
-`Risky Unarmed` (3434796669 — shoving and stomping can be counterattacked) ·
-`Do not push! PLEASE!!` (3511400502 — pushed zombies tumble others down stairs).
-Individually reasonable; together the shove is being modified by three mods that do not
-know about each other, and two of them move in opposite directions on how safe it is.
-
-### B18. Buildables, from two catalogues
-`Jeeve's Build` (3705530591) generates ~5000 buildable entries from your five tile packs —
-including **functional wall light switches** and garage doors.
-`Custom Light Switch` (3779343349) adds a buildable functional wall light switch.
-`Neat Building` (3536052310, full variant) adds its own extra buildables and reorganises
-the menu they all appear in.
-Two light-switch implementations is the concrete duplicate here.
-⚠️ Separately: Jeeve's Build is **not safe to remove** once garage doors are placed, and it
-hard-requires all five tile packs. Treat it as a one-way door on any save.
-
-### B19. Two spawn-point pickers
-`Spawn Selector` (3772052709 — full world map, pick any tile) ·
-`[LM] Wilderness Spawn Locations` (3513206060 → `LMWildSpawnMaps`, adds wilderness entries
-to the starting-location menu). Spawn Selector supersedes the second entirely.
-
-### B20. Ground clearing, four ways
-`Batch Floor Action` (3654929003 — area select: fell trees, clear weeds, remove shrubs,
-pick stones) · `Lawn Care: Scythe & Rake` (3475536311 — mow grass, sow grass) ·
-`Clean Ashes` (2816646537 — manual ash sweeping) · `Rain Cleans Blood` (2956146279 —
-removes ash, blood and dung automatically when it rains).
-Rain Cleans Blood makes Clean Ashes largely idle; Batch Floor Action and Lawn Care both
-answer "get rid of this grass".
-
-### B21. Five mods tracking what you've read and learned
-`Easy Literature` (2914650723 — found/not-found literature tracker) ·
-`Unwanted Items Collection` (3725196303 — skill-book matrix, magazines, recorded media
-tabs) · `What Did I Just Learn?` (3777737368 — recipe discovery history) ·
-`Named skill VHS tapes` (2732294885 — renames tapes to show the skill) ·
-`Show VHS skills in tooltip` (3716522633 — shows the skill in the tooltip).
-The last two answer the identical question in two places. The first two both maintain a
-book/media ledger.
-
-### B22. Map symbols, twice over
-`Map Symbols Plus (Hand-drawn)` (3399645148) adds symbols and recommends pairing with a
-"Map Symbol Size Slider".
-`TwisTonFire - Map Improvements` (3627539752) already ships a symbol size slider, a
-reworked symbol interface, extra colours and drawing.
-`Map Legend UI` (2710167561) adds the legend — that one is genuinely separate.
-
-### B23. Bathing and drying
-`[B42:SP/MP] Take A Bath And Shower` (3592172476, in 02 Firsts) ·
-`Bath Towels Overhaul` (3416208765, changes towels and rewrites "Dry Self").
-Both own the get-clean/get-dry loop and both touch the towel item.
-
-### B24. Three layers of error handling
-`errorMagnifier` (2896041179) surfaces errors · `[B42.20] Console Fixes` (3778165486)
-suppresses known false-positive error families via ZombieBuddy ·
-`Zed's Universal Mod Unbork` (3677147974) shims renamed game APIs so old mods keep
-working. Not a conflict, but Console Fixes can quiet the very message that would tell you
-Unbork has stopped covering something.
-
-### B25. Three performance mods
-`Multi-Cpu Enhance` (3459875383, JVM args) · `SmartZOptimizer[Legacy]` (3707376688 —
-the author's own title says Legacy) · `Zed's Better FPS B42.20.2 Fix` (3782613536).
-The last two are both ZombieBuddy Java patches touching zombie/render load. SmartZ being
-self-labelled Legacy makes it the candidate to retire.
-
-### B26. Author-abandoned companion
-`[Abandoned] Specific Loot (Papa_Chad)` (3459111044) — the title is the author's.
-Its sibling `Specific Loot (KI5)` (3457132019) is maintained. Keep the pair only as long
-as you keep the Papa_Chad vehicles.
-
-### B27. Three re-equip layers
-`Tidy Up Meister` (2769706949 — V2 watches the whole timed-action queue and restores
-equipment after *any* action) · `Reequip Secondary` (2821614305 — restores your bag or
-flashlight after a two-handed swap) · `Wesch's Better Wringing` (3408740647 — re-equips
-clothing after wringing).
-Tidy Up Meister V2's queue-observer design already covers the other two by construction,
-and its page warns that mods with unusual queue behaviour are where it misfires.
-
-### B28. Overlapping trailer and hauling fleets
-`Autotsar Trailers` (3402493701) + `Hauler` (3412003257) · `Trailers!` (KI5, 3330403100) ·
-`Containers!` (2625625421) + its mass patch. Four trailer catalogues, no conflict, just a
-lot of the same role in the spawn tables.
+B1 reading speed (M-13's vs Immersive Reading) · B2 ballistic vests (Armored Vests vs No Holes —
+and the census confirms No Holes ships **no Lua at all**, so it is pure item-script replacement,
+which is exactly why the Armored Vests buff will not follow) · B3 the clothing texture overwrite
+chain · B4 the trait economy, now six mods · B6 infection (the Antibodies fork's mod id changed
+from `lgd_antibodies` to `AntibodiesB4220Community`, so any mod checking for the old id — Wounds
+Overhaul names Antibodies as supported — will no longer see it, and your existing sandbox values
+for the old option keys are orphaned) · B7 evolved-recipe menus · B9–B28 as before.
 
 ---
 
-## 3. Tier C — stacking, not conflicting
+## 3. Tier C — stacking
 
-Nothing here is broken. It is listed because the *sum* is easy to lose sight of.
+Unchanged in kind, larger in degree. Skill XP faucets now include `Skill Book Library`;
+mood relief gains `Playable Arcade`; encumbrance relief is unchanged; the trait stack is at six
+mods. `Spoiling Liquids` and `Worm Digging` are additive and conflict with nothing.
 
-**Skill XP faucets, on top of vanilla books:** `Skill Book Expansion` (3557111695) ·
-`Working Knowledge` (3717099183 — 372 lootable documents) · `Listen & Learn` (3785054147 —
-audiobooks and skill CDs, 35 skills, multitask learning) · `Dynamic Emergency TV Channel`
-(3409272479) · the `[WYD] VHS Skill Tapes` series (**18 separate items**) · plus
-`Reward Night Combat`, `Nimble XP Rebalance`, `Dynamic Fitness Boost`, `Efficiency`,
-`Combat Mastering`, `Toughness`, `B42 Driving`. Six independent ways to gain a level
-without doing the activity.
-
-**Zed's Item Tiers (3707251461) is a multiplier over everything else in 16 Balance.**
-It re-rolls weight, durability and protection on almost any item as it spawns — sitting on
-top of `Total Weight Rebalance` (1600+ hand-tuned weights), `Durable Tools`,
-`Armored Vests`, `No Holes`, and `Working Run Modifier`. Each of those was balanced
-against vanilla, not against a rarity roll.
-
-**Mood relief:** `Sleep On It`, `Wilderness Calm`, `Break Into Tears`, the Walkman
-ecosystem (music reduces boredom and sadness), `Lifestyle: Hobbies`, plus your own
-`CompanionCatPurr`. Six sources of unhappiness reduction.
-
-**Encumbrance relief:** `More Packing` (−90%), `Hoarder's Delight` (−1/6),
-`Dynamic Backpack Upgrades`, `Pack Mule` vest capacity, `Remove Inventory Limits ZB`,
-`Total Weight Rebalance`, `Wheelbarrow`, `SaucedCarts`, `Zed's Item Tiers` (lighter bags).
-
-**Map ground overlap** is deliberately not covered here — pzmods already computes it from
-the `.lotpack` cells on the Issues tab, which is more reliable than any description.
+Map ground overlap is still pzmods' own job — but you added twelve maps and removed ten this
+week, so the Issues tab's cell check is worth a look before your next new save.
 
 ---
 
-## 4. Already resolved — your `-- Disabled` picks, confirmed correct
+## 4. The file-path census
 
-Worth recording, because these are the traps you have already walked around:
+This is the pass descriptions cannot do. Method: for every mod in the 16 script-bearing tags,
+list every file under the version folders the game actually loads, and compare against the
+game's own `media\lua` tree read from the install.
 
-- `twistonfireinventory` off, `ProximityInventory` on — the two declare each other
-  incompatible in `mod.info`. Correct call; the Blacklist half stays on and is unique.
-- `SPNCCFaces` off while Tomb's Body textures run — declared incompatible pair, resolved.
-- `MarzGuns` (folder `GunsOfMarzPreviousVersion`, "Guns of Marz (Old Version)") off,
-  `GunsOfMarz` on. Your GoM patches point at a live base.
-- `twisttrapping` off / `twisttrappingvanilla` on — you chose vanilla bait tables.
-- Single variants selected on: Drag Bodies Faster (50%), More Variety Loot (25%),
-  Every Texture Optimized (`ETO_B`), Harry's Ammo Icons (42.14), Vanilla MRE (42),
-  Neat Building (full), EasyDoors, Functional Gutters, Alice's Weapon Sling,
-  Hot Brass, LM Wilderness (Maps), and all the Ogrim `-LEGACY` variants.
-- `Jeeve's Patches`: only DAMN, SOTO and Tanker enabled — sensible, since the rest target
-  a server modpack you do not run.
-
----
-
-## 5. Housekeeping found along the way
-
-| item | what |
+| | |
 |---|---|
-| `TwisTonFire - Outside Freezer` (3566244478) | **Gone from the Workshop** (API result 9) — no title, no description returned. Still installed, still tagged into 15 Mechs - Environment, and its newest version folder is **42.13** while you run 42.20.4. It will keep loading until you untag it. |
-| `[B42] Medicine Moodles` (3778856579) | Looks **inverted**: the base `MedicineMoodlesB42` (which is what requires MoodleFramework) is on `-- Disabled`, and only the `MedicineMoodlesSkillRequirementsB42` add-on is enabled. An add-on with nothing to modify. |
-| `Easy Laundry` (2925034918) | Wears no tag, so never loads — correct, since `Easy Laundry [B42.20 Fixed]` (3782237215) is a standalone folder with its own 42.20 build, not a patch. Candidate to unsubscribe. |
-| `Mod Comparer` (3019672735) | Also untagged, so not in any config. It used to be in `01 Utils` per `groups.json`. Intentional? |
-| `Nested Health Info` (3779405481) | Its page asks to load **before** anything else that adds to the health panel. It is currently in 19, after Wounds Overhaul in 13. |
-| `Vanilla Clothing Expansion` (3421271152) | Its page asks to be at the **very bottom** of the load order. It is at index 6 of 25 in 08 Gears. |
-| `TwisTonFire - Better Pause` (3696291148) | Its page says "FIRST IN MOD LOAD ORDER". It is first inside `02 Firsts`, but every config puts `01 Utils` ahead of `02 Firsts`, so 17 mods load before it. |
+| mods examined | 401 |
+| of those, shipping Lua | 382 |
+| distinct mod Lua files seen | 8,310 |
+| vanilla Lua paths on disk | 2,707 |
+| **mods that replace a vanilla Lua file** | **9** |
+| **distinct vanilla files replaced** | **47** |
+| **paths shipped by two or more mods** | **7** |
+| of those, a vanilla file | **1** |
+
+**The headline is reassuring.** 373 of 382 mods stay entirely inside their own namespace — they
+hook and patch at runtime rather than shipping copies of the game's files. The risk is
+concentrated in nine mods, and only one vanilla file is contested.
+
+### 4.1 The one contested vanilla file
+
+```
+client/ISUI/ISInventoryPaneContextMenu.lua
+    CleanUI            [02 Firsts, index 10 of 12]
+    twistbetterpause   [02 Firsts, index 1 of 12]
+```
+
+Both ship a complete replacement of the same vanilla file. Only one can load: **the later one
+wins, and CleanUI is later.** TwisTonFire – Better Pause's copy of that file never runs.
+
+This is worth sitting with, because it inverts the mod's own instruction. Better Pause's page
+says **"FIRST IN MOD LOAD ORDER"** — and being first is precisely what makes it lose a
+whole-file replacement. The author knows, and ships a `twistbetterpause_cleanui_compat` module
+*"loaded after Clean UI"*, with the recommended order
+
+```
+1. TwisTonFire - Better Pause
+2. Clean UI
+3. Better Pause Clean UI Compatibility
+```
+
+**Your setup already satisfies this**, though not obviously: Better Pause is first in
+`02 Firsts`, CleanUI is tenth in the same tag, and the compat module is tagged into
+`19 QoL - Secondary UI` — a later tag, so it loads third. Nothing to change. Recorded because
+the census made it look broken until the compat module turned up two tags later, and because it
+is the exact pattern to check for whenever a mod says "load me first" and then ships a whole
+vanilla file.
+
+### 4.2 The nine mods that replace vanilla files
+
+| mod | tag | vanilla files replaced |
+|---|---|---|
+| **CleanUI** | 02 Firsts | **33** |
+| **TwisTonFire – Better Pause** | 02 Firsts | 6 |
+| TwisTonFire – QoL Modpack (`twistresting`) | 02 Firsts | 3 |
+| Faster Hood Opening | 16 Balance | 1 |
+| Consolidate All Fix | 20 QoL - Actions | 1 |
+| Better Vanilla Trapping | 19 QoL - Secondary | 1 |
+| Fox's Butchering Fix | 16 Balance | 1 |
+| Rebalanced Prop Moving | 16 Balance | 1 |
+| Simon MD's Tiles | 03 Frameworks | 1 |
+
+**CleanUI is the centre of gravity of your whole setup.** It replaces the inventory pane, the
+inventory page, the context menu, the loot window controls and 28 of the small
+`LootWindow/Handlers/*.lua` files — plus two that have nothing to do with inventory:
+`shared/TimedActions/ISFixAction.lua` and `ISFixVehiclePartAction.lua`, the vanilla repair
+actions. Anything that patches vehicle-part repair is patching CleanUI's copy, not the game's.
+
+Two more things its folder shows: it ships `ISInventoryPane.luabkp` and
+`ISInventoryPaneContextMenu_VanillaB42.16.1.luabkp` — the vanilla originals it forked, labelled
+**42.16.1**, while you run 42.20.4. That is normal practice for this kind of mod, but it means
+any vanilla context-menu change between 42.16.1 and 42.20.4 is absent from your game.
+
+**Better Pause's other five** are worth knowing because each is a whole vanilla screen:
+`ISWorldObjectContextMenu.lua`, `ISMenuContextWorld.lua`, `ISHotbar.lua`,
+`ISVehicleMechanics.lua`, `ISHealthPanel.lua`. So Better Pause — not Mini Health Plus, not
+Wounds Overhaul — owns the base copy of the vanilla health panel; and it owns the vehicle
+mechanics panel that Neat Rocco's UI, Better Auto Mechanics and Under the Hood all reach into.
+
+**Simon MD's Tiles replaces `client/Foraging/ISZoneDisplay.lua`** — a tile pack quietly owning a
+vanilla foraging file. It sits in 03 Frameworks, so it loads early and anything later wins; worth
+knowing it is there at all.
+
+### 4.3 The six mod-file collisions
+
+```
+client/Hooks/DAMN_SemiAttachmentHelper.lua
+    damnlib        [03 Frameworks]     the framework's own file
+    KI5minifixes   [21 Patches]        overwrites it
+```
+Deliberate, and the order is right (patches load after frameworks) — but it means KI5 Mini-fixes
+is silently replacing a file inside damnlib, the library **58 other mods depend on**. If a KI5
+vehicle misbehaves in a way General Fixes claims to fix, this is the first place to look.
+
+```
+client/ISUI/ISUI_EasyLaundry.lua
+    EasyLaundry             [20 QoL - Actions]   ← installed but untagged, never loads
+    EasyLaundryB4220Fixed   [21 Patches]
+```
+Confirms the earlier read: the "Fixed" version is a whole-file replacement, not an additive
+patch. Because the original wears no tag, nothing collides today — but enabling both would be a
+straight conflict. Unsubscribing the original is safe.
+
+```
+client/TheyKnew_InfectionMeds.lua
+server/Items/TheyKnew_OnDeathDistribution.Lua
+shared/NPCs/TheyKnew_BodyLocations.lua
+shared/NPCs/TheyKnew_ZombieDefinition.lua
+    TheyKnewB42        [12 Mechs - Core, index 3]
+    TheyKnewB42Patch   [12 Mechs - Core, index 4]
+```
+Four files replaced by the patch — which is how the patch works, and your order is correct
+(base at 3, patch at 4). No action; recorded because it is the pattern to recognise elsewhere.
+
+### 4.4 What the census settled about earlier findings
+
+- **A6 stands.** Both bag-bottom mods live in `08 Gears`, outside this census's tag scope, but
+  neither ships a vanilla file — they collide in the attachment tables at runtime, which is what
+  the note now records.
+- **A8 is closed by removal**, but the census shows why it mattered: CleanUI owns the whole
+  `ISInventoryPaneContextMenu.lua` file. Common Sense's 90 files are all in its own namespace
+  (`BB_CS_*`, `VB_CS_*`), so it patches CleanUI's copy at runtime. Anything else touching the
+  magazine menu is a third layer on the same object.
+- **B2 sharpened.** `No Holes For Ballistic Armor` ships **no Lua at all** — it is item scripts
+  only, i.e. new item definitions copied from the vanilla vests. Armored Vests' Lua-side buff
+  cannot reach copies made that way. This is now confirmed rather than suspected.
+- **A5 confirmed independent.** Show Wall Health (33 files) and Door/Fence Health (24 files)
+  share no paths — two complete implementations running side by side.
+- **False alarm retracted.** Pain Sense ships a file called `client/InjuryIndicator.lua`, which
+  looked like a collision with the Injury Indicator mod. It is not a vanilla path and Injury
+  Indicator is gone; the name is a coincidence of naming, not a conflict.
+
+### 4.5 Translation files — noise, not signal
+
+299 paths are shared by two or more mods, and 293 of them are translation files:
+`shared/Translate/EN/Sandbox.json` is shipped by **109** mods, `UI.json` by 94, `IG_UI.json` by 81.
+The game merges translation tables rather than replacing them, so this is normal and expected.
+It is listed only so the number does not alarm you if you run the census yourself.
+
+### 4.6 What the census still cannot see
+
+Two of the three blind spots from run 1 remain, because both need file **contents**, not names:
+
+- **Item-script collisions** — two mods defining the same `Base.Item`. This is where
+  Hydrocraft's 5,196 items, Zed's Item Tiers, Total Weight Rebalance and the clothing packs
+  would show up.
+- **Sandbox option key collisions.** I tried to read these directly and could not: staging is
+  all-or-nothing over the bridge, and a batch containing one non-existent path fails whole.
+
+Both are covered by **`census.py`**, now sitting in your pzmods folder. It does everything above
+plus those two, on the full 563 items rather than the 401 I could reach, in one pass:
+
+```
+cd C:\Users\igor\Zomboid\pzmods
+python census.py
+```
+
+Standard library only, reads only, writes `census\census.json` and `census\census.txt`. It reads
+your build from the game's log the same way pzmods does, and picks the same active version folder.
+Worth re-running after any big Workshop update — this class of conflict appears silently.
 
 ---
 
-## 6. What this pass could not see
+## 5. Housekeeping
 
-The base dataset was Workshop descriptions plus `mod.info`. That catches feature intent
-and every declared rule, and it caught the two named-function collisions above (A8, A6),
-but it cannot see:
+| item | state |
+|---|---|
+| Nine unsubscribed mods still named in the config | Issues tab → **Forget the N uninstalled** → Save |
+| `TwisTonFire - Outside Freezer` (3566244478) | **Still delisted, still installed, still tagged** into 15 Mechs - Environment. Newest version folder 42.13; you run 42.20.4 |
+| `[B42] Medicine Moodles` (3778856579) | **Still inverted** — the base `MedicineMoodlesB42` is on `-- Disabled`, only the `…SkillRequirements…` add-on is enabled |
+| `Easy Laundry` (2925034918) | Still untagged, never loads; census confirms the Fixed version fully replaces it. Safe to unsubscribe |
+| `Mod Comparer` (3019672735) | **Resolved** — now tagged into 01 Utils |
+| Better Pause CleanUI compat module | Enabled and correctly ordered (in 19 QoL - Secondary UI, so it lands after CleanUI). No action — see §4.1 |
+| `Vanilla Clothing Expansion` | Still 7th of 26 in 08 Gears, still asking to be last; see B3 |
+| Notes added | `BBB` and `BagBottomWeaponAttach` now carry the load-order note, marked `-AI-` so they show red until you clear them |
 
-- **Which vanilla Lua files each mod actually overwrites.** Two mods shipping the same
-  `media/lua/client/ISUI/…` path is a hard, silent conflict that no description mentions.
-  A file-path census across the 1262 `mod.info` folders would turn most of the "rivals"
-  section from suspicion into fact — that is the natural next step, and it runs entirely
-  off files you already have on disk.
-- **Sandbox option key collisions** between mods declaring the same option names.
-- **Item script overrides** — two mods redefining the same `Base.Item`.
+---
 
-Descriptions also lie by omission: a mod that quietly added a feature in an update
-usually does not rewrite its page. Common Sense (A8) is the example — the "(new)" markers
-in its list are the only reason that collision was visible at all.
+## 6. How deep could a Lua-level review go?
+
+You asked me to assess this rather than do it. Here is the honest shape of it.
+
+### What it would actually buy you
+
+The census answers *"do two mods ship the same file"*. It cannot answer the question that
+matters more in Build 42, because almost every modern PZ mod works by **monkey-patching at
+runtime**: it keeps a reference to a vanilla function and replaces it with its own.
+
+```lua
+local old_doMagazineMenu = ISInventoryPaneContextMenu.doMagazineMenu
+function ISInventoryPaneContextMenu.doMagazineMenu(player, context, items)
+    old_doMagazineMenu(player, context, items)   -- polite: chains
+    ...                                          -- rude: doesn't
+end
+```
+
+A Lua review would extract, for every mod, the set of **global functions it overwrites** — and
+then two mods overwriting the same function is a real finding, whether or not they share a file.
+That is the thing your collection has a lot of and I currently cannot see. Concretely, it would
+have found the Common Sense × Load All Magazines collision from the code rather than from a
+sentence in a description — and it would find every one of that class that nobody wrote down.
+
+It would also catch:
+- **Chain-breaking**: a mod that replaces a function without calling the previous version. Two
+  polite mods coexist; one rude mod silently kills everything loaded before it. This is the single
+  highest-value thing a code pass produces, and it is invisible from every other angle.
+- Event-handler pile-ups on `OnPlayerUpdate` / `OnTick` — a performance map, not just a conflict map.
+- Keybind registrations, which would have found the `;` collision automatically.
+- Sandbox keys and item ids, though `census.py` gets those far more cheaply.
+
+### What it would cost
+
+The corpus is roughly **8,300 Lua files** across 382 mods in scope, and closer to 12,000 across
+all 563 items. Very rough sizing from what I saw: 30–60 MB of source, tens of millions of tokens
+if read naively. That is not the way to do it.
+
+The tractable shape is **two stages, and only the second one needs a language model**:
+
+**Stage 1 — a parser, not a reader.** Perhaps 300 lines of Python on top of `census.py`. Regex
+and bracket-matching over each file for:
+- `function <Global>.<name>(` and `<Global>.<name> = function` — declarations
+- `local old = <Global>.<name>` followed by reassignment — the monkey-patch signature
+- whether the saved reference is called inside the new body — the chain test
+- `Events.<Name>.Add(` — event registrations
+- `getCore():addKeyBinding` / `ISModOptions` — keybinds and options
+
+Output: a table of *(mod, global function, patches-or-declares, chains-or-not)*. Then the same
+group-by that produced §4. This runs in seconds on your machine, costs nothing per run, and
+produces the 80% finding: **every function two or more mods overwrite, flagged red where one of
+them does not chain.** I would estimate a few hours of my work to write and test it, and it
+would be re-runnable forever.
+
+**Stage 2 — reading the actual code**, and only for what stage 1 flags. If stage 1 finds, say,
+40 contested functions, reading both sides of each is maybe 80 files — a few hundred KB, entirely
+affordable, and that is where you learn *which* mod should win and whether the loser is merely
+shadowed or actively broken.
+
+### My honest opinion
+
+**Stage 1 is clearly worth doing and I would recommend it.** It is a bounded piece of
+engineering with a permanent payoff, it needs no AI at runtime, and it targets the exact failure
+mode your collection is most exposed to — 373 mods all monkey-patching the same vanilla surface.
+It is the natural next tool after `census.py`, and it is the same kind of tool.
+
+**Stage 2 is worth doing only on stage 1's output**, never as a sweep. A blind read of 8,000 Lua
+files would be expensive, slow, and would mostly rediscover that mods are written normally.
+
+And a caveat I would rather say than have you discover: even a perfect static pass has a ceiling.
+Load order is decided by your config, some patches are applied conditionally at runtime, and the
+game itself reloads Lua in ways a static reader cannot model. It will tell you where to look with
+high precision. It will not tell you the game works — only playing does that.
+
+The cheapest thing on this whole list, by a wide margin, remains what you already have: run
+`census.py`, act on the nine tagged-but-uninstalled entries, enable the Better Pause compat
+module, and pick one of Towbars / Harry's Tow Truck.
