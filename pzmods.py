@@ -341,8 +341,13 @@ def vbound(value, build):
     return k, build[:1 + depth] + (0,) * (3 - depth)
 
 
-def read_mod_dir(mdir, rel_to=None, build=None):
+def read_mod_dir(mdir, root, build=None):
     """One folder under <workshop item>/mods/ or Zomboid/mods/ -> one mod record.
+
+    root is CONTENT for a workshop mod, LOCAL_MODS for one of yours. "path" and the
+    poster image are stored relative to it, forward-slashed, so the cache in
+    data/snapshot.json does not bake in a Windows-vs-Linux Steam/Zomboid location -
+    only load_state() and sandbox_folders() expand them back to real paths.
 
     A Build 42 mod keeps a mod.info per version folder, and the game reads the
     newest one that is not above the build it is running. Those files do not have
@@ -433,13 +438,11 @@ def read_mod_dir(mdir, rel_to=None, build=None):
         "pzversion": best.get("pzversion", ""),
         "modversion": best.get("modversion", ""),
         "author": best.get("author", ""),
-        "path": str(mdir),
+        "path": str(mdir.relative_to(root)).replace("\\", "/"),
     }
     if img:
-        if rel_to:
-            rec["image"] = str(img.relative_to(rel_to)).replace("\\", "/")
-        else:
-            rec["localImage"] = str(img)
+        key = "image" if root == CONTENT else "localImage"
+        rec[key] = str(img.relative_to(root)).replace("\\", "/")
     return rec
 
 
@@ -456,7 +459,7 @@ def scan_workshop():
         if mroot.is_dir():
             for mdir in sorted(mroot.iterdir()):
                 if mdir.is_dir():
-                    rec = read_mod_dir(mdir, rel_to=CONTENT)
+                    rec = read_mod_dir(mdir, root=CONTENT)
                     if rec:
                         mods.append(rec)
         result[folder.name] = {"mods": mods}
@@ -469,7 +472,7 @@ def scan_local_mods():
         return out
     for mdir in sorted(LOCAL_MODS.iterdir()):
         if mdir.is_dir():
-            rec = read_mod_dir(mdir)
+            rec = read_mod_dir(mdir, root=LOCAL_MODS)
             if rec:
                 out.append(rec)
     return out
@@ -1383,8 +1386,24 @@ def required_by(disk, local, off):
     return {k: sorted(v) for k, v in out.items()}
 
 
-def load_state():
+def load_snapshot():
+    """The cached scan, with each mod's "path" (and a local mod's "localImage")
+    turned from the root-relative form on disk back into a real, absolute path."""
     snap = jread(SNAP_FILE, {"disk": {}, "localMods": [], "acf": {}, "scanned": ""})
+    for rec in snap.get("disk", {}).values():
+        for m in rec.get("mods", []):
+            if m.get("path"):
+                m["path"] = str(CONTENT / m["path"])
+    for m in snap.get("localMods", []):
+        if m.get("path"):
+            m["path"] = str(LOCAL_MODS / m["path"])
+        if m.get("localImage"):
+            m["localImage"] = str(LOCAL_MODS / m["localImage"])
+    return snap
+
+
+def load_state():
+    snap = load_snapshot()
     st = load_tags()
     steam = jread(DATA / "steam.json", {})
     state = {
@@ -1642,7 +1661,7 @@ def sandbox_view(tid):
     t = next((x for x in sandbox_targets() if x["id"] == tid), None)
     if not t:
         return None
-    snap = jread(SNAP_FILE, {"disk": {}, "localMods": []})
+    snap = load_snapshot()
     defs = read_option_defs(snap.get("disk", {}), snap.get("localMods", []))
     vals = dict(read_target(t))
     off = set(load_tags()["tagMods"].get(DISABLED, []))

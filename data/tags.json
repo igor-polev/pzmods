@@ -884,7 +884,10 @@
  },
  "cfgFingerprint": "f06df1bc1534b35486c50f51ed3eedeb1338866b",
  "dirty": true,
- "conflict": null,
+ "conflict": {
+  "when": "2026-09-04 17:19:43",
+  "fingerprint": "0bb0a99af4599faa45a91a600162f78ce00e185a"
+ },
  "lastSeed": "2026-08-31 02:59:20",
  "trailingSep": ";",
  "reloadedAt": "",
