@@ -1,63 +1,5 @@
 {
  "disk": {
-  "1962761540": {
-   "mods": [
-    {
-     "modId": "ArmoredVestsPatch",
-     "modIds": [
-      "ArmoredVestsPatch"
-     ],
-     "name": "Armored Vests VGE Patch",
-     "folder": "ArmoredVestsPATCH",
-     "versionFolders": [
-      "(root)",
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\1962761540\\mods\\ArmoredVestsPATCH",
-     "image": "1962761540/mods/ArmoredVestsPATCH/42/poster.png"
-    },
-    {
-     "modId": "ArmoredVests",
-     "modIds": [
-      "ArmoredVests"
-     ],
-     "name": "Armored Vests",
-     "folder": "ArmoredVestsWORKSHOP",
-     "versionFolders": [
-      "(root)",
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\1962761540\\mods\\ArmoredVestsWORKSHOP",
-     "image": "1962761540/mods/ArmoredVestsWORKSHOP/42/poster.png"
-    }
-   ]
-  },
   "2142622992": {
    "mods": [
     {
@@ -507,68 +449,6 @@
     }
    ]
   },
-  "2642541073": {
-   "mods": [
-    {
-     "modId": "92amgeneralM998",
-     "modIds": [
-      "92amgeneralM998"
-     ],
-     "name": "'92 AM General M998 + M101A3 Trailer",
-     "folder": "92amgeneralM998",
-     "versionFolders": [
-      "(root)",
-      "42.0",
-      "42.13"
-     ],
-     "activeFolder": "42.13",
-     "require": [
-      "damnlib"
-     ],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "\\damnlib",
-     "versionMin": "42.13.0",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "KI5",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2642541073\\mods\\92amgeneralM998",
-     "image": "2642541073/mods/92amgeneralM998/42.13/preview.png"
-    },
-    {
-     "modId": "92amgeneralM998extra",
-     "modIds": [
-      "92amgeneralM998extra"
-     ],
-     "name": "'92 AM General M998 + M101A3 Trailer Extra Textures",
-     "folder": "92amgeneralM998extra",
-     "versionFolders": [
-      "42.0"
-     ],
-     "activeFolder": "42.0",
-     "require": [
-      "92amgeneralM998"
-     ],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "\\92amgeneralM998",
-     "versionMin": "42.0.0",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "KI5",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2642541073\\mods\\92amgeneralM998extra",
-     "image": "2642541073/mods/92amgeneralM998extra/42.0/preview.png"
-    }
-   ]
-  },
   "2648152698": {
    "mods": [
     {
@@ -598,38 +478,6 @@
      "author": "",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2648152698\\mods\\Improved Blood Effects",
      "image": "2648152698/mods/Improved Blood Effects/42.0/poster.png"
-    }
-   ]
-  },
-  "2684285534": {
-   "mods": [
-    {
-     "modId": "SpnCloth",
-     "modIds": [
-      "SpnCloth"
-     ],
-     "name": "Spongie's Clothing",
-     "folder": "Spongie Clothing",
-     "versionFolders": [
-      "42.18"
-     ],
-     "activeFolder": "42.18",
-     "require": [
-      "SpnOpenClothBase"
-     ],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "SpnOpenClothBase",
-     "versionMin": "",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "21",
-     "author": "Spongie",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2684285534\\mods\\Spongie Clothing",
-     "image": "2684285534/mods/Spongie Clothing/common/poster.png"
     }
    ]
   },
@@ -767,37 +615,6 @@
     }
    ]
   },
-  "2732294885": {
-   "mods": [
-    {
-     "modId": "NamedSkillVHSTapes",
-     "modIds": [
-      "NamedSkillVHSTapes"
-     ],
-     "name": "Named Skill VHS Tapes",
-     "folder": "Named skill VHS tapes",
-     "versionFolders": [
-      "(root)",
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.20.0",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "18.0.1",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2732294885\\mods\\Named skill VHS tapes",
-     "image": "2732294885/mods/Named skill VHS tapes/42/poster.png"
-    }
-   ]
-  },
   "2732594572": {
    "mods": [
     {
@@ -921,38 +738,6 @@
      "author": "PePePePePeil",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2769706949\\mods\\P4TidyUpMeister",
      "image": "2769706949/mods/P4TidyUpMeister/42.20/poster.png"
-    }
-   ]
-  },
-  "2776874515": {
-   "mods": [
-    {
-     "modId": "M13ReadingTweaks",
-     "modIds": [
-      "M13ReadingTweaks"
-     ],
-     "name": "M-13's Reading Tweaks",
-     "folder": "M13ReadingTweaks",
-     "versionFolders": [
-      "(root)",
-      "42",
-      "42.15"
-     ],
-     "activeFolder": "42.15",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.15.0",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "1.3.19.0-B42UNSTABLE",
-     "author": "General M-13",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2776874515\\mods\\M13ReadingTweaks",
-     "image": "2776874515/mods/M13ReadingTweaks/42.15/poster.png"
     }
    ]
   },
@@ -1229,64 +1014,6 @@
      "author": "KI5",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2811383142\\mods\\83amgeneralM923extra",
      "image": "2811383142/mods/83amgeneralM923extra/42.0/preview.png"
-    }
-   ]
-  },
-  "2812326159": {
-   "mods": [
-    {
-     "modId": "SpnOpenCloth",
-     "modIds": [
-      "SpnOpenCloth"
-     ],
-     "name": "Spongie's Open Jackets [VANILLA CLOTHING]",
-     "folder": "SpongieOpenJackets",
-     "versionFolders": [
-      "42.18"
-     ],
-     "activeFolder": "42.18",
-     "require": [
-      "SpnOpenClothBase"
-     ],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "SpnOpenClothBase",
-     "versionMin": "",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "14",
-     "author": "Spongie",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2812326159\\mods\\SpongieOpenJackets",
-     "image": "2812326159/mods/SpongieOpenJackets/common/poster.png"
-    },
-    {
-     "modId": "SpnOpenClothBase",
-     "modIds": [
-      "SpnOpenClothBase"
-     ],
-     "name": "Spongie's Open Jackets [BASE]",
-     "folder": "SpongieOpenJackets_Base",
-     "versionFolders": [
-      "42.18"
-     ],
-     "activeFolder": "42.18",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "1",
-     "author": "Spongie",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2812326159\\mods\\SpongieOpenJackets_Base",
-     "image": "2812326159/mods/SpongieOpenJackets_Base/common/poster.png"
     }
    ]
   },
@@ -2070,38 +1797,6 @@
      "author": "KI5",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2886833398\\mods\\89fordBronco",
      "image": "2886833398/mods/89fordBronco/42.13/preview.png"
-    }
-   ]
-  },
-  "2891170430": {
-   "mods": [
-    {
-     "modId": "SimpleShowXP",
-     "modIds": [
-      "SimpleShowXP"
-     ],
-     "name": "Simple Show XP",
-     "folder": "SSXP",
-     "versionFolders": [
-      "(root)",
-      "42",
-      "42.17"
-     ],
-     "activeFolder": "42.17",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.17",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\2891170430\\mods\\SSXP",
-     "image": "2891170430/mods/SSXP/42.17/poster.png"
     }
    ]
   },
@@ -2981,37 +2676,6 @@
      "author": "KI5",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3001592312\\mods\\93mustangSSP",
      "image": "3001592312/mods/93mustangSSP/42.13/preview.png"
-    }
-   ]
-  },
-  "3002666175": {
-   "mods": [
-    {
-     "modId": "KAMER_WallHealth",
-     "modIds": [
-      "KAMER_WallHealth"
-     ],
-     "name": "[K] Show Wall Health",
-     "folder": "[K] Show Wall Health",
-     "versionFolders": [
-      "(root)",
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "41.0.0",
-     "versionMax": "42.20.4",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "2.0",
-     "author": "Kamer",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3002666175\\mods\\[K] Show Wall Health",
-     "image": "3002666175/mods/[K] Show Wall Health/42/poster.png"
     }
    ]
   },
@@ -4679,37 +4343,6 @@
     }
    ]
   },
-  "3306168142": {
-   "mods": [
-    {
-     "modId": "ConditionOnDash",
-     "modIds": [
-      "ConditionOnDash"
-     ],
-     "name": "Condition On Dash",
-     "folder": "ConditionOnDash",
-     "versionFolders": [
-      "(root)",
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "Broadbent",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3306168142\\mods\\ConditionOnDash",
-     "image": "3306168142/mods/ConditionOnDash/42/poster.png"
-    }
-   ]
-  },
   "3322066592": {
    "mods": [
     {
@@ -6343,7 +5976,7 @@
      "versionMax": "",
      "versionFit": "",
      "pzversion": "",
-     "modversion": "2.19",
+     "modversion": "2.20",
      "author": "",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3404737883\\mods\\AutotsarMotorClub",
      "image": "3404737883/mods/AutotsarMotorClub/common/poster.png"
@@ -7230,37 +6863,6 @@
     }
    ]
   },
-  "3421271152": {
-   "mods": [
-    {
-     "modId": "1VCESTANDARD",
-     "modIds": [
-      "1VCESTANDARD"
-     ],
-     "name": "Vanilla Clothing Expansion [B42 MP]",
-     "folder": "Vanilla Clothing Expansion MP",
-     "versionFolders": [
-      "(root)",
-      "42.19"
-     ],
-     "activeFolder": "42.19",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.19",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "42",
-     "modversion": "1.07",
-     "author": "Reconspiracy",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3421271152\\mods\\Vanilla Clothing Expansion MP",
-     "image": "3421271152/mods/Vanilla Clothing Expansion MP/42.19/poster.png"
-    }
-   ]
-  },
   "3422220305": {
    "mods": [
     {
@@ -8137,7 +7739,7 @@
      "versionMax": "",
      "versionFit": "",
      "pzversion": "",
-     "modversion": "2.8.0",
+     "modversion": "2.8.1",
      "author": "Rocco, Afyrmo",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3437629766\\mods\\CleanUI",
      "image": "3437629766/mods/CleanUI/42.19/poster.png"
@@ -8266,38 +7868,6 @@
      "author": "Bender",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3444384263\\mods\\B42Eggjar",
      "image": "3444384263/mods/B42Eggjar/42/poster.png"
-    }
-   ]
-  },
-  "3444499190": {
-   "mods": [
-    {
-     "modId": "FE_RTS",
-     "modIds": [
-      "FE_RTS"
-     ],
-     "name": "Farming Expansion B42(Trees)",
-     "folder": "Farming Expansion",
-     "versionFolders": [
-      "(root)",
-      "42",
-      "common"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "1.0",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3444499190\\mods\\Farming Expansion",
-     "image": "3444499190/mods/Farming Expansion/42/poster.png"
     }
    ]
   },
@@ -9702,50 +9272,6 @@
      "author": "After8",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3487450124\\mods\\FeedThatAnimal_Multiplayer",
      "image": "3487450124/mods/FeedThatAnimal_Multiplayer/42/poster.png"
-    }
-   ]
-  },
-  "3488600400": {
-   "mods": [
-    {
-     "modId": "twistbettercharacterinfo",
-     "modIds": [
-      "twistbettercharacterinfo"
-     ],
-     "name": "TwisTonFire - Better Character Info",
-     "folder": "TwisTonFire - BetterCharacterInfo",
-     "versionFolders": [
-      "42.12",
-      "42.13",
-      "42.15",
-      "42.16",
-      "42.17",
-      "42.18",
-      "42.19",
-      "42.20",
-      "common"
-     ],
-     "activeFolder": "42.20",
-     "require": [],
-     "loadAfter": [
-      "SPNCC",
-      "improvedhairmenubuild42"
-     ],
-     "loadBefore": [
-      "KillCount",
-      "Bandits2"
-     ],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.20",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "1.0",
-     "author": "TwisTonFire",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3488600400\\mods\\TwisTonFire - BetterCharacterInfo",
-     "image": "3488600400/mods/TwisTonFire - BetterCharacterInfo/42.20/poster.png"
     }
    ]
   },
@@ -17692,7 +17218,7 @@
      "versionMax": "",
      "versionFit": "",
      "pzversion": "",
-     "modversion": "1.0.8",
+     "modversion": "1.0.9",
      "author": "Rocco, Afyrmo",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3508537032\\mods\\NeatUI_Framework",
      "image": "3508537032/mods/NeatUI_Framework/42/poster.png"
@@ -18449,7 +17975,7 @@
      "versionMax": "",
      "versionFit": "",
      "pzversion": "",
-     "modversion": "1.1.0",
+     "modversion": "1.2.0",
      "author": "Balance",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3540903327\\mods\\B42PackMule",
      "image": "3540903327/mods/B42PackMule/common/poster.png"
@@ -19414,36 +18940,6 @@
     }
    ]
   },
-  "3565698092": {
-   "mods": [
-    {
-     "modId": "InjuryIndicator",
-     "modIds": [
-      "InjuryIndicator"
-     ],
-     "name": "Injury Indicator",
-     "folder": "InjuryIndicator",
-     "versionFolders": [
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.0.0",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "BOBcat",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3565698092\\mods\\InjuryIndicator",
-     "image": "3565698092/mods/InjuryIndicator/42/poster.png"
-    }
-   ]
-  },
   "3566244478": {
    "mods": [
     {
@@ -19473,37 +18969,6 @@
      "author": "",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3566244478\\mods\\TwisTonFire - Outside Freezer",
      "image": "3566244478/mods/TwisTonFire - Outside Freezer/42.13/poster.png"
-    }
-   ]
-  },
-  "3566766862": {
-   "mods": [
-    {
-     "modId": "TrapManager",
-     "modIds": [
-      "TrapManager"
-     ],
-     "name": "Trap Manager",
-     "folder": "TrapManager",
-     "versionFolders": [
-      "42.12",
-      "42.15"
-     ],
-     "activeFolder": "42.15",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.15",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "1.5.3",
-     "author": "Afyrmo",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3566766862\\mods\\TrapManager",
-     "image": "3566766862/mods/TrapManager/42.15/poster.png"
     }
    ]
   },
@@ -21694,69 +21159,6 @@
     }
    ]
   },
-  "3626008449": {
-   "mods": [
-    {
-     "modId": "PlumbingFixed",
-     "modIds": [
-      "PlumbingFixed"
-     ],
-     "name": "PlumbingFixed [B42.19.0 - B42.20.2]",
-     "folder": "PlumbingFixed",
-     "versionFolders": [
-      "(root)",
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [
-      "b42plumbingfix"
-     ],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.19",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "2.2.4",
-     "author": "DuongC",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3626008449\\mods\\PlumbingFixed",
-     "image": "3626008449/mods/PlumbingFixed/42/poster.png"
-    }
-   ]
-  },
-  "3626823538": {
-   "mods": [
-    {
-     "modId": "OCsPacking",
-     "modIds": [
-      "OCsPacking"
-     ],
-     "name": "Hoarder's Delight - Box & Carton Bulk Packing",
-     "folder": "OCsPacking",
-     "versionFolders": [
-      "42.15"
-     ],
-     "activeFolder": "42.15",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.15",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "1.03",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3626823538\\mods\\OCsPacking",
-     "image": "3626823538/mods/OCsPacking/42.15/poster.png"
-    }
-   ]
-  },
   "3627071412": {
    "mods": [
     {
@@ -22069,38 +21471,7 @@
    ]
   },
   "3637486686": {
-   "mods": [
-    {
-     "modId": "StatZContinued",
-     "modIds": [
-      "StatZContinued"
-     ],
-     "name": "StatZContinued",
-     "folder": "StatZContinued",
-     "versionFolders": [
-      "(root)",
-      "42",
-      "42.13",
-      "42.15",
-      "42.20"
-     ],
-     "activeFolder": "42.20",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3637486686\\mods\\StatZContinued",
-     "image": "3637486686/mods/StatZContinued/42.20/poster.png"
-    }
-   ]
+   "mods": []
   },
   "3640105892": {
    "mods": [
@@ -25140,38 +24511,6 @@
     }
    ]
   },
-  "3694894350": {
-   "mods": [
-    {
-     "modId": "LootGoblin2000",
-     "modIds": [
-      "LootGoblin2000"
-     ],
-     "name": "Loot Goblin 2000",
-     "folder": "LootGoblin2000",
-     "versionFolders": [
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [
-      "NeatUI_Framework"
-     ],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "NeatUI_Framework",
-     "versionMin": "42.14",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "1.1.1",
-     "author": "deseven",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3694894350\\mods\\LootGoblin2000",
-     "image": "3694894350/mods/LootGoblin2000/42/poster.png"
-    }
-   ]
-  },
   "3695122429": {
    "mods": [
     {
@@ -27849,7 +27188,7 @@
      "versionMax": "",
      "versionFit": "",
      "pzversion": "",
-     "modversion": "0.9.2",
+     "modversion": "0.9.3",
      "author": "Carthon",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3739595559\\mods\\WaterPipes",
      "image": "3739595559/mods/WaterPipes/42.15/WaterPipesThumbnail.png"
@@ -29213,7 +28552,7 @@
      "versionMax": "",
      "versionFit": "",
      "pzversion": "",
-     "modversion": "0.2.6",
+     "modversion": "0.3.0",
      "author": "Hypoflex",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3777737368\\mods\\whatdidijustlearn"
     },
@@ -29404,36 +28743,6 @@
      "author": "",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3778511497\\mods\\SkullysZombieCollision",
      "image": "3778511497/mods/SkullysZombieCollision/42/poster.png"
-    }
-   ]
-  },
-  "3778709615": {
-   "mods": [
-    {
-     "modId": "FixedLightOnBeltAF",
-     "modIds": [
-      "FixedLightOnBeltAF"
-     ],
-     "name": "[B42.20] Simple Belt Flashlight+ (Better Flashlights Compatible)",
-     "folder": "Simple Belt Flashlight Plus",
-     "versionFolders": [
-      "42.20"
-     ],
-     "activeFolder": "42.20",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.20",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3778709615\\mods\\Simple Belt Flashlight Plus",
-     "image": "3778709615/mods/Simple Belt Flashlight Plus/42.20/poster.png"
     }
    ]
   },
@@ -29649,67 +28958,6 @@
      "author": "",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3779327129\\mods\\CompanionDogsLabrador",
      "image": "3779327129/mods/CompanionDogsLabrador/42/poster.png"
-    }
-   ]
-  },
-  "3779343349": {
-   "mods": [
-    {
-     "modId": "CustomLightSwitch",
-     "modIds": [
-      "CustomLightSwitch"
-     ],
-     "name": "Custom Light Switch",
-     "folder": "CustomLightSwitch",
-     "versionFolders": [
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.20",
-     "versionMax": "42.20.4",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "1.0.9",
-     "author": "Ghoosty",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3779343349\\mods\\CustomLightSwitch",
-     "image": "3779343349/mods/CustomLightSwitch/42/poster.png"
-    }
-   ]
-  },
-  "3779405481": {
-   "mods": [
-    {
-     "modId": "NestedHealthInfo",
-     "modIds": [
-      "NestedHealthInfo"
-     ],
-     "name": "Nested Health Info",
-     "folder": "NestedHealthInfo",
-     "versionFolders": [
-      "(root)",
-      "42"
-     ],
-     "activeFolder": "42",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.20.0",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "2.0.0",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3779405481\\mods\\NestedHealthInfo",
-     "image": "3779405481/mods/NestedHealthInfo/42/poster.png"
     }
    ]
   },
@@ -30603,7 +29851,7 @@
      "versionMax": "",
      "versionFit": "",
      "pzversion": "",
-     "modversion": "1.1",
+     "modversion": "2.1",
      "author": "Alice",
      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3783567014\\mods\\alicesKitsunesCrossbowMod",
      "image": "3783567014/mods/alicesKitsunesCrossbowMod/42/poster.png"
@@ -31470,73 +30718,6 @@
     }
    ]
   },
-  "3790614739": {
-   "mods": [
-    {
-     "modId": "TwisTonFireExercises",
-     "modIds": [
-      "TwisTonFireExercises",
-      "twistexercises"
-     ],
-     "name": "TwisTonFire - Exercises",
-     "folder": "TwisTonFire - Exercises",
-     "versionFolders": [
-      "42.20",
-      "common"
-     ],
-     "activeFolder": "42.20",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [
-      "twistexercisesplus",
-      "FWOFitnessWorkoutOverhaul",
-      "FWOBenchPressTreadmill"
-     ],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.20",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3790614739\\mods\\TwisTonFire - Exercises",
-     "image": "3790614739/mods/TwisTonFire - Exercises/42.20/poster.png"
-    },
-    {
-     "modId": "twistexercisesplus",
-     "modIds": [
-      "twistexercisesplus"
-     ],
-     "name": "TwisTonFire - Exercises Plus",
-     "folder": "TwisTonFire - Exercises Plus",
-     "versionFolders": [
-      "42.20",
-      "common"
-     ],
-     "activeFolder": "42.20",
-     "require": [],
-     "loadAfter": [],
-     "loadBefore": [],
-     "incompatible": [
-      "TwisTonFireExercises",
-      "FWOFitnessWorkoutOverhaul",
-      "FWOBenchPressTreadmill"
-     ],
-     "maps": [],
-     "requireRaw": "",
-     "versionMin": "42.20",
-     "versionMax": "",
-     "versionFit": "",
-     "pzversion": "",
-     "modversion": "",
-     "author": "",
-     "path": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\108600\\3790614739\\mods\\TwisTonFire - Exercises Plus",
-     "image": "3790614739/mods/TwisTonFire - Exercises Plus/42.20/poster.png"
-    }
-   ]
-  },
   "3790656296": {
    "mods": [
     {
@@ -32223,12 +31404,6 @@
   }
  ],
  "acf": {
-  "1962761540": {
-   "size": 1142766,
-   "timeupdated": 1786119576,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
   "2142622992": {
    "size": 57680,
    "timeupdated": 1785664447,
@@ -32301,21 +31476,9 @@
    "subscribedBy": "68661232",
    "subscribed": true
   },
-  "2642541073": {
-   "size": 23775418,
-   "timeupdated": 1768504542,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
   "2648152698": {
    "size": 3469461,
    "timeupdated": 1735201466,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "2684285534": {
-   "size": 3263623,
-   "timeupdated": 1785309984,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -32326,8 +31489,8 @@
    "subscribed": true
   },
   "2705406713": {
-   "size": 31541226,
-   "timeupdated": 1785598454,
+   "size": 31547512,
+   "timeupdated": 1786674221,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -32340,12 +31503,6 @@
   "2710167561": {
    "size": 806699,
    "timeupdated": 1773426268,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "2732294885": {
-   "size": 572547,
-   "timeupdated": 1786287000,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -32373,12 +31530,6 @@
    "subscribedBy": "68661232",
    "subscribed": true
   },
-  "2776874515": {
-   "size": 2345950,
-   "timeupdated": 1785355939,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
   "2788256295": {
    "size": 12444079,
    "timeupdated": 1787910337,
@@ -32400,12 +31551,6 @@
   "2811383142": {
    "size": 14030610,
    "timeupdated": 1756403688,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "2812326159": {
-   "size": 5032215,
-   "timeupdated": 1785309892,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -32514,12 +31659,6 @@
   "2886833398": {
    "size": 11390790,
    "timeupdated": 1775758271,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "2891170430": {
-   "size": 221583,
-   "timeupdated": 1778180585,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -32658,12 +31797,6 @@
   "3001592312": {
    "size": 25462756,
    "timeupdated": 1776363402,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3002666175": {
-   "size": 248781,
-   "timeupdated": 1785579168,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -32892,12 +32025,6 @@
   "3294592194": {
    "size": 653058,
    "timeupdated": 1777776452,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3306168142": {
-   "size": 32368,
-   "timeupdated": 1734808192,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33166,8 +32293,8 @@
    "subscribed": true
   },
   "3404737883": {
-   "size": 27293992,
-   "timeupdated": 1787827940,
+   "size": 27294731,
+   "timeupdated": 1788445020,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33250,8 +32377,8 @@
    "subscribed": true
   },
   "3416208765": {
-   "size": 882272,
-   "timeupdated": 1780912042,
+   "size": 1004512,
+   "timeupdated": 1786729313,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33300,12 +32427,6 @@
   "3418701509": {
    "size": 45679987,
    "timeupdated": 1785423044,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3421271152": {
-   "size": 17399942,
-   "timeupdated": 1787266360,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33418,8 +32539,8 @@
    "subscribed": true
   },
   "3437629766": {
-   "size": 11193342,
-   "timeupdated": 1788356862,
+   "size": 11292150,
+   "timeupdated": 1788436731,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33438,12 +32559,6 @@
   "3444384263": {
    "size": 162253,
    "timeupdated": 1784370133,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3444499190": {
-   "size": 11947595,
-   "timeupdated": 1787420557,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33538,8 +32653,8 @@
    "subscribed": true
   },
   "3480305875": {
-   "size": 15848854,
-   "timeupdated": 1788302681,
+   "size": 15850496,
+   "timeupdated": 1788409344,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33582,12 +32697,6 @@
   "3487450124": {
    "size": 179101,
    "timeupdated": 1773488150,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3488600400": {
-   "size": 96785256,
-   "timeupdated": 1788292558,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33640,8 +32749,8 @@
    "subscribed": true
   },
   "3498294068": {
-   "size": 13184854,
-   "timeupdated": 1787427964,
+   "size": 13182488,
+   "timeupdated": 1788403447,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33676,8 +32785,8 @@
    "subscribed": true
   },
   "3508537032": {
-   "size": 2297483,
-   "timeupdated": 1786186954,
+   "size": 2300916,
+   "timeupdated": 1788422021,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33778,8 +32887,8 @@
    "subscribed": true
   },
   "3540903327": {
-   "size": 120576,
-   "timeupdated": 1786352021,
+   "size": 112327,
+   "timeupdated": 1786668212,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -33885,21 +32994,9 @@
    "subscribedBy": "68661232",
    "subscribed": true
   },
-  "3565698092": {
-   "size": 1078579,
-   "timeupdated": 1788172845,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
   "3566244478": {
    "size": 736059,
    "timeupdated": 1765994217,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3566766862": {
-   "size": 6378700,
-   "timeupdated": 1787488613,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -34125,18 +33222,6 @@
    "subscribedBy": "68661232",
    "subscribed": true
   },
-  "3626008449": {
-   "size": 343915,
-   "timeupdated": 1786578561,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3626823538": {
-   "size": 229699,
-   "timeupdated": 1788180930,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
   "3627071412": {
    "size": 209444,
    "timeupdated": 1786637358,
@@ -34188,12 +33273,6 @@
   "3637364024": {
    "size": 3372393,
    "timeupdated": 1787832473,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3637486686": {
-   "size": 15747853,
-   "timeupdated": 1787902854,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -34312,8 +33391,8 @@
    "subscribed": true
   },
   "3657694399": {
-   "size": 2458505,
-   "timeupdated": 1786494742,
+   "size": 2460619,
+   "timeupdated": 1786671476,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -34617,12 +33696,6 @@
    "subscribedBy": "68661232",
    "subscribed": true
   },
-  "3694894350": {
-   "size": 808767,
-   "timeupdated": 1775214516,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
   "3695122429": {
    "size": 712805,
    "timeupdated": 1774835242,
@@ -34781,7 +33854,7 @@
   },
   "3718216106": {
    "size": 49371,
-   "timeupdated": 1786196897,
+   "timeupdated": 1786706573,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -34894,8 +33967,8 @@
    "subscribed": true
   },
   "3739595559": {
-   "size": 7796884,
-   "timeupdated": 1787790168,
+   "size": 7814929,
+   "timeupdated": 1788426076,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -35122,8 +34195,8 @@
    "subscribed": true
   },
   "3777737368": {
-   "size": 23089,
-   "timeupdated": 1785878867,
+   "size": 26240,
+   "timeupdated": 1788426576,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -35154,12 +34227,6 @@
   "3778511497": {
    "size": 281781,
    "timeupdated": 1786496899,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3778709615": {
-   "size": 536467,
-   "timeupdated": 1787586124,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -35199,18 +34266,6 @@
    "subscribedBy": "68661232",
    "subscribed": true
   },
-  "3779343349": {
-   "size": 3182158,
-   "timeupdated": 1788245925,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
-  "3779405481": {
-   "size": 99820,
-   "timeupdated": 1786309089,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
   "3779416068": {
    "size": 17676,
    "timeupdated": 1786325498,
@@ -35236,8 +34291,8 @@
    "subscribed": true
   },
   "3780938346": {
-   "size": 7695824,
-   "timeupdated": 1788388815,
+   "size": 7823268,
+   "timeupdated": 1788404927,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -35338,8 +34393,8 @@
    "subscribed": true
   },
   "3783567014": {
-   "size": 8857726,
-   "timeupdated": 1787726946,
+   "size": 12049593,
+   "timeupdated": 1788446172,
    "subscribedBy": "68661232",
    "subscribed": true
   },
@@ -35505,12 +34560,6 @@
    "subscribedBy": "68661232",
    "subscribed": true
   },
-  "3790614739": {
-   "size": 8844477,
-   "timeupdated": 1788300147,
-   "subscribedBy": "68661232",
-   "subscribed": true
-  },
   "3790656296": {
    "size": 945631,
    "timeupdated": 1788370027,
@@ -35584,6 +34633,6 @@
    "subscribed": true
   }
  },
- "scanned": "2026-09-03 02:53:19",
+ "scanned": "2026-09-03 19:56:40",
  "workshopError": ""
 }
