@@ -626,41 +626,84 @@ def empty_store():
             "dirty": False, "conflict": None, "lastSeed": "", "trailingSep": ";"}
 
 
-def seed_from_cfg(raw, kinds=None):
+def seed_from_cfg(raw, kinds=None, prev=None):
     """Read the whole grouping model out of the config file."""
     st = empty_store()
+    prev = prev or {}
     kind = {l["name"]: line_kind(l["name"], kinds) for l in raw}
     st["kinds"] = kind
     st["tagMods"] = {l["name"]: l["mods"] for l in raw if kind[l["name"]] == "tag"}
     st["tagOrder"] = [l["name"] for l in raw if kind[l["name"]] == "tag"]
     st["passthrough"] = {l["name"]: l["mods"] for l in raw if kind[l["name"]] == "passthrough"}
     st["lineOrder"] = [l["name"] for l in raw]
+    # A disabled mod is kept out of every config line on purpose, so its absence
+    # from one says nothing about whether its tag belongs there. Judge membership
+    # on the tag's enabled mods alone, or every switched-off mod reads as a gap the
+    # next Save is about to fill - which is exactly backwards.
+    off = set(st["tagMods"].get(DISABLED, []))
     for c in [l for l in raw if kind[l["name"]] == "config"]:
         cs = set(c["mods"])
         # Which tags is this config made of? A tag counts if the config contains all
         # of it, and also if it contains nearly all of it - somebody adding one mod
         # to a tag by hand must not make the whole tag stop belonging to the config.
-        picked, adds = [], {}
+        picked, unplaced = [], []
         for t, mods in st["tagMods"].items():
-            if not mods:
+            if t == DISABLED or not mods:
                 continue
-            here = [m for m in mods if m in cs]
-            if len(here) == len(mods):
+            live = [m for m in mods if m not in off]
+            if not live:
+                # Every mod on this tag is switched off, so the line cannot show
+                # whether the tag belongs here - there is nothing of it to find.
+                # Keep whatever was decided last time. With no previous decision
+                # to keep, neither answer can be guessed, so leave it out and say
+                # so: a guess either way is silent, and this must not be.
+                if t in (prev.get(c["name"], {}).get("tags") or []):
+                    picked.append(t)
+                elif not prev:
+                    unplaced.append(t)
+                continue
+            here = [m for m in live if m in cs]
+            if len(here) == len(live):
                 picked.append(t)
-            elif len(mods) >= 3 and len(here) / len(mods) >= 0.75:
+            elif len(live) >= 3 and len(here) / len(live) >= 0.75:
                 picked.append(t)
-                adds[t] = [m for m in mods if m not in cs]
-        # load order matters, so order the tags by where their mods first appear
+        # Load order matters, so the order the tags were unioned in has to come back
+        # out of the line. Ordering the tags by where their mods first appear does
+        # not do it: a mod enters at the FIRST tag of the config that holds it, so a
+        # tag that shares one mod with an earlier tag has that mod sitting up at the
+        # earlier tag's position, and the whole tag is dragged there with it. That
+        # answer is then written back to the file, and the next read believes it - so
+        # one shared mod quietly walks a tag towards the front of the load order,
+        # save after save. Walk the line instead: each tag, when its turn comes,
+        # contributes exactly the mods no earlier tag has contributed already.
         pos = {m: i for i, m in enumerate(c["mods"])}
-        picked.sort(key=lambda t: min((pos.get(m, 1 << 30) for m in st["tagMods"][t]),
-                                      default=1 << 30))
+        order, rest, claimed = [], list(picked), set()
+        for m in c["mods"]:
+            if m in claimed or not rest:
+                continue
+            here = [t for t in rest if m in st["tagMods"][t]]
+            if not here:
+                continue
+            # more than one of them can hold this mod; the one whose turn it really
+            # is has its unclaimed mods lying in the line as an unbroken run from here
+            pick = here[0]
+            for t in here:
+                want = [x for x in st["tagMods"][t]
+                        if x not in claimed and x not in off and x in pos]
+                if c["mods"][pos[m]:pos[m] + len(want)] == want:
+                    pick = t
+                    break
+            order.append(pick)
+            rest.remove(pick)
+            claimed |= set(st["tagMods"][pick])
+        picked = order + rest          # rest: tags the line never reaches, if any
         covered = set()
         for t in picked:
             covered |= set(st["tagMods"][t])
         st["configs"][c["name"]] = {
             "tags": picked,
             "extras": [m for m in c["mods"] if m not in covered],
-            "adds": adds,
+            "unplaced": unplaced,
         }
     # remember the file's own punctuation
     body = [l.rstrip("\r\n") for l in
@@ -719,7 +762,8 @@ def load_tags():
               "and re-reading everything from %s" % (stamp, CFG.name))
         st = None
     if st is None:
-        st = seed_from_cfg(read_cfg(), (jread(TAGS_FILE, {}) or {}).get("kinds"))
+        old = jread(TAGS_FILE, {}) or {}
+        st = seed_from_cfg(read_cfg(), old.get("kinds"), old.get("configs"))
         print("  read the tag model from %s" % CFG.name)
     for k, v in empty_store().items():
         st.setdefault(k, v)
@@ -745,7 +789,7 @@ def reconcile_cfg(st, log):
         return st
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     shutil.copy2(TAGS_FILE, DATA / ("tags.%s.json" % stamp)) if TAGS_FILE.exists() else None
-    new = seed_from_cfg(read_cfg(), st.get("kinds"))
+    new = seed_from_cfg(read_cfg(), st.get("kinds"), st.get("configs"))
     new["reloadedAt"] = now()
     log("the config file changed on disk - reloaded tags and configs from it")
     return new
@@ -1204,13 +1248,33 @@ def compute_issues(state):
          if i not in tagged_ws and (not subs or i in subs)],
         "These can never appear in any config.")
 
-    add("will_grow", "info", "Saving will add these to a config",
-        [{"config": c, "tag": t, "mods": ms}
+    # Every pending mod is shown under the tag that puts it there, so it is obvious
+    # why Save wants to add it.
+    grow = []
+    for c in sorted(state.get("pending") or {}):
+        by_tag, cfg = {}, state["configs"].get(c, {})
+        for m in state["pending"][c]:
+            owner = next((t for t in cfg.get("tags", []) if m in tags.get(t, [])),
+                         "carried, on no tag")
+            by_tag.setdefault(owner, []).append(m)
+        for t, ms in by_tag.items():
+            grow.append({"config": c, "tag": t, "mods": ms})
+    add("will_grow", "info", "Saving will add these to a config", grow,
+        "These are on a tag this config is made of, but the config line in the file does "
+        "not have them yet - you tagged them after the line was last written. Saving puts "
+        "them in, which is the point of tagging. Take the mod off the tag, or the tag off "
+        "the config, if that is not what you want.")
+
+    add("unplaced_tag", "warn", "Could not tell whether a tag belongs to a config",
+        [{"config": c, "tag": t, "mods": []}
          for c in sorted(state["configs"])
-         for t, ms in (state["configs"][c].get("adds") or {}).items()],
-        "The tag is part of this config, but the config line on disk is missing a few of "
-        "the tag's mods - somebody added them to the tag by hand. The next Save puts them in, "
-        "which is what tagging is for. Remove the tag from the config if that is not what you want.")
+         for t in (state["configs"][c].get("unplaced") or [])],
+        "Every mod on this tag is on the %s tag, so the config line on disk holds "
+        "none of them and there is nothing to recognise the tag by. pzmods had no "
+        "earlier record to fall back on, so it left the tag out rather than guess. "
+        "If the tag does belong to that config, add it on the Configs tab - "
+        "otherwise the mods will not come back when you switch them on again."
+        % DISABLED)
 
     add("config_gap", "warn", "A config names a tag that does not exist",
         [{"config": c, "theme": t} for c in state["configs"]
@@ -1448,6 +1512,14 @@ def load_state():
         "backups": sorted([p.name for p in BACKUPS.glob("pz_modlist_settings.*.cfg")],
                           reverse=True)[:40],
     }
+    # What would a Save actually change? Ask, rather than remember: diff the lines
+    # in the file against the lines that would be written. An earlier version cached
+    # this comparison at read time and reported the cache, which went wrong twice -
+    # once for mods switched off after the read, once for mods untagged after it.
+    on_disk = {l["name"]: set(l["mods"]) for l in read_cfg()}
+    state["pending"] = {c["name"]: [m for m in c["mods"] if m not in on_disk.get(c["name"], set())]
+                        for c in build_configs(st)}
+    state["pending"] = {k: v for k, v in state["pending"].items() if v}
     state["issues"] = compute_issues(state)
     return state
 
@@ -2124,7 +2196,6 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 made = write_cfg(lines, st.get("trailingSep", ";"))
                 for c in build_configs(st):
                     cfg = st["configs"].setdefault(c["name"], {"tags": [], "extras": []})
-                    cfg["adds"] = {}                       # now on disk, nothing pending
                 st["cfgFingerprint"] = cfg_fingerprint()
                 st["lineOrder"] = [l["name"] for l in lines]
                 st["dirty"] = False
@@ -2141,7 +2212,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
                     if TAGS_FILE.exists():
                         shutil.copy2(TAGS_FILE, DATA / ("tags.%s.json"
                                      % datetime.now().strftime("%Y%m%d-%H%M%S")))
-                    st = seed_from_cfg(read_cfg(), load_tags().get("kinds"))
+                    old = load_tags()
+                    st = seed_from_cfg(read_cfg(), old.get("kinds"), old.get("configs"))
                     st["reloadedAt"] = now()
                 elif choice == "keep":
                     st = load_tags()
@@ -2160,7 +2232,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
             with STATE_LOCK:
                 backup_cfg()
                 shutil.copy2(src, CFG)
-                st = seed_from_cfg(read_cfg(), load_tags().get("kinds"))
+                old = load_tags()
+                st = seed_from_cfg(read_cfg(), old.get("kinds"), old.get("configs"))
                 st["reloadedAt"] = now()
                 save_tags(st)
                 return self._send({"ok": True, "state": load_state()})

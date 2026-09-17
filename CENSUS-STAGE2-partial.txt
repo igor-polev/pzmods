@@ -1,0 +1,997 @@
+PZ MOD CENSUS
+build 42.20.4   655 mods   741 distinct media paths
+lua: 742 mod files parsed, 16783 vanilla globals from 1409 game files
+
+==============================================================================
+A. FILE PATHS SHIPPED BY MORE THAN ONE MOD  (0)
+  the later mod in the load order wins outright
+==============================================================================
+
+==============================================================================
+B. ITEM SCRIPT IDS DECLARED BY MORE THAN ONE MOD  (0)
+  the later declaration replaces the earlier item
+==============================================================================
+
+==============================================================================
+C. SANDBOX OPTION KEYS DECLARED BY MORE THAN ONE MOD  (0)
+  two mods reading one slider
+==============================================================================
+
+==============================================================================
+D. VANILLA FUNCTIONS REPLACED BY TWO OR MORE MODS  (16)
+  the headline: only one survives, and a mod that does not chain erases the others
+==============================================================================
+  1 of these have at least one mod that does not chain - listed first.
+
+  MainScreen.onEnterFromGame        <<< at least one mod does not chain
+      2896041179/errorMagnifier                    chains         
+          client/errorMagnifier_Main.lua:1098  function
+      3077900375/ChuckleberryFinnAlertSystem       DOES NOT CHAIN    (no original saved)
+          client/chuckleberryFinnModdingAlertSystem.lua:545  function
+
+  ISContextMenu.onJoypadDown
+      3290232938/SmarterStorage                    chains         
+          client/SmarterStorage.lua:372  function
+      3422220305/P4PickingMeister                  chains         
+          client/P4PickingMeister.lua:256  function
+
+  ISContextMenu.render
+      3290232938/SmarterStorage                    chains         
+          client/SmarterStorage.lua:348  function
+      3740052292/CompanionDogs                     chains         
+          client/CompanionDogs_ContextMenu.lua:806  function
+
+  ISDrinkFluidAction.stop
+      2313387159/BetterSortCC                      chains         
+          shared/FluidCategories.lua:67  function
+      2840805724/SimpleOverhaulTraitsAndOccupations chains         
+          client/SOTOAlcoholic.lua:219  function
+
+  ISInventoryPage.onBackpackRightMouseDown
+      3290232938/SmarterStorage                    chains         
+          client/SmarterStorage.lua:419  function
+      3587884762/SmarterStorageExtraPresets        chains         
+          client/SmarterStorageExtraPresets.lua:378  function
+
+  ISInventoryPage.prerender
+      3290232938/SmarterStorage                    chains         
+          client/SmarterStorage.lua:318  function
+      3498294068/twistonfireblacklist              chains         
+          client/zz_TwisTonFire_BlackList_WANTEDToggle.lua:289  function
+
+  ISInventoryPage.refreshBackpacks
+      3290232938/SmarterStorage                    chains         
+          client/SmarterStorageUI.lua:595  function
+      3616947250/MarkCorpse                        chains         
+          client/markCorpse_Client.lua:82  function
+
+  ISInventoryPane.doContextualDblClick
+      3557515648/vac_mod_b42_utils                 chains         
+          client/vac_mod_b42_utils_client.lua:938  assign
+      3606009875/ImmersiveReading                  chains         
+          client/ImmersiveReading_ReadBook.lua:86  function
+
+  ISInventoryPane.refreshContainer
+      3498294068/twistonfireblacklist              chains         
+          client/twistonfire_BlackList.lua:831  function
+      3557515648/vac_mod_b42_utils                 chains         
+          client/vac_mod_b42_utils_client.lua:974  assign
+      3734639991/SeedSeasonIndicator               chains         
+          client/SeedSeasonIndicator.lua:424  function
+
+  ISInventoryPane.renderdetails
+      3422220305/P4PickingMeister                  chains         
+          client/P4SameTypeHighlight.lua:71  function
+      3567695139/HasResearch                       chains         
+          client/HasResearch.lua:25  function
+      3718906754/SharpenableGlow                   chains         
+          client/SharpenableGlow.lua:100  function
+      3734639991/SeedSeasonIndicator               chains?        
+          client/SeedSeasonIndicator.lua:322  function
+      3785054147/ListenAndLearn                    chains         
+          client/client.lua:938  function
+
+  ISInventoryPaneContextMenu.addNewCraftingDynamicalContextMenu
+      3584890848/vac_mod_b42_10                    chains         
+          client/vac_mod_b42_10_client_default.lua:14  function
+      3707376688/SmartZOptimizer                   chains         
+          client/SmartZOptimizer.lua:107  assign
+
+  ISInventoryTransferAction.perform
+      2914650723/EasyLiterature                    chains         
+          client/easy_literature_post_item_transfer.lua:7  function
+      3495594275/LanternFix                        chains         
+          client/LanternFix_Grab.lua:5  assign
+      3723127305/Nihonto                           chains         
+          client/NihontoEvents.lua:155  function
+
+  ISMoveableSpriteProps.canPickUpMoveableInternal
+      3403870858/LifestyleHobbies                  chains         
+          shared/LSCompat.lua:80  function
+      3592172476/TakeABathAndShowerNew             chains         
+          shared/TABAS_MoveablesPatch.lua:27  function
+
+  ISToolTipInv.render
+      3470422050/KATTAJ1_ClothesCore               chains         
+          client/KATTAJ1_TooltipFixer.lua:4  function
+      3494474677/MoreItemInformation               chains         
+          client/ItemInfo.lua:756  function
+      3716522633/VHSSkillNameInTooltip             chains         
+          client/SVSIT_main.lua:101  function
+      3734639991/SeedSeasonIndicator               chains         
+          client/SeedSeasonIndicator.lua:291  function
+      3779164273/ImprovisedSilencers               chains         
+          client/ISIL_DurabilityTooltip.lua:112  function
+
+  ISVehicleMenu.showRadialMenu
+      3543229299/PROJECTRVInterior42               chains         
+          client/RVClientSP.lua:138  function
+      3780938346/RealisticVehicleMechanics         chains         
+          client/RVM_MechanicsUI.lua:2252  assign
+
+  isPlayerDoingActionThatCanBeCancelled
+      3769438826/BreakIntoTears                    chains         
+          client/BreakIntoTears_Overrides.lua:4  function
+      3778038193/BrutalHandwork                    chains         
+          client/zBrutalHandwork.lua:212  function
+
+
+==============================================================================
+E. VANILLA FUNCTIONS REPLACED WITHOUT CHAINING, BY ONE MOD  (58)
+  no conflict today, but any future mod touching these is erased by this one
+==============================================================================
+  ISAddBaitAction.complete
+      3573232324/twisttrappingvanilla              DOES NOT CHAIN    (no original saved)
+          shared/ISAddBaitActionPatch.lua:180  function
+  ISAddBaitAction.isValid
+      3573232324/twisttrappingvanilla              DOES NOT CHAIN    (no original saved)
+          shared/ISAddBaitActionPatch.lua:117  function
+  ISCraftAction.complete
+      3723127305/Nihonto                           DOES NOT CHAIN    (no original saved)
+          client/NihontoEvents.lua:11  function
+  ISFarmingInfo.RequiredWidth
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:421  function
+  ISFarmingInfo.getBlueBar
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:380  function
+  ISFarmingInfo.getCurrentGrowingPhase
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:509  function
+  ISFarmingInfo.getDisease
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:600  function
+  ISFarmingInfo.getDiseaseColor
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:578  function
+  ISFarmingInfo.getDiseaseName
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:624  function
+  ISFarmingInfo.getDiseaseStats
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:741  function
+  ISFarmingInfo.getDiseaseString
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:224  function
+  ISFarmingInfo.getFertilizerColor
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:767  function
+  ISFarmingInfo.getGreen
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:786  function
+  ISFarmingInfo.getHealth
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:288  function
+  ISFarmingInfo.getHealthColor
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:492  function
+  ISFarmingInfo.getLastWatedHour
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:762  function
+  ISFarmingInfo.getNextGrowingPhase
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:531  function
+  ISFarmingInfo.getNoWateredSinceColor
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:366  function
+  ISFarmingInfo.getOrange
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:822  function
+  ISFarmingInfo.getOrangeBar
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:385  function
+  ISFarmingInfo.getRed
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:798  function
+  ISFarmingInfo.getRedBar
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:390  function
+  ISFarmingInfo.getTitleColor
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:323  function
+  ISFarmingInfo.getWaterBarWidth
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:336  function
+  ISFarmingInfo.getWaterLvl
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:307  function
+  ISFarmingInfo.getWaterLvlBarColor
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:343  function
+  ISFarmingInfo.getWaterLvlColor
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:466  function
+  ISFarmingInfo.getWhite
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:846  function
+  ISFarmingInfo.hasDisease
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:220  function
+  ISFarmingInfo.initialise
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:16  function
+  ISFarmingInfo.isPlantValid
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:264  function
+  ISFarmingInfo.new
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:409  function
+  ISFarmingInfo.onGainJoypadFocus
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:269  function
+  ISFarmingInfo.onJoypadDown
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:279  function
+  ISFarmingInfo.onLoseJoypadFocus
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:274  function
+  ISFarmingInfo.prerender
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:29  function
+  ISFarmingInfo.render
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:43  function
+  ISFarmingInfo.setEnabled
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:25  function
+  ISFarmingInfo.setPlant
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:20  function
+  ISFarmingInfo.update
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          client/zISFarmingInfo.lua:237  function
+  ISFirearmRadialMenu.checkWeapon
+      2948824747/RiskyInspectWeapon                DOES NOT CHAIN    (no original saved)
+          client/risky_inspect_core.lua:536  function
+  ISFirearmRadialMenu.getWeapon
+      2948824747/RiskyInspectWeapon                DOES NOT CHAIN    (no original saved)
+          client/risky_inspect_core.lua:529  function
+  ISHandcraftAction.performRecipe
+      3723127305/Nihonto                           DOES NOT CHAIN    (no original saved)
+          client/NihontoEvents.lua:58  function
+  ISHotbar.activateSlot
+      2366717227/SwapIt                            DOES NOT CHAIN    (no original saved)
+          client/SwapIt Main.lua:39  function
+  ISHotbar.equipItem
+      2366717227/SwapIt                            DOES NOT CHAIN    (no original saved)
+          client/SwapIt Main.lua:81  function
+  ISHotbar.isAllowedToActivateSlot
+      2366717227/SwapIt                            DOES NOT CHAIN    (no original saved)
+          client/SwapIt Main.lua:21  function
+  ISInventoryPaneContextMenu.doEvorecipeMenu
+      3490768151/NeatIngredientsList               DOES NOT CHAIN    (no original saved)
+          client/NeatIngredientsList.lua:53  function
+  ISObjectClickHandler.doClickWindow
+      3480305875/twistresting                      DOES NOT CHAIN    (no original saved)
+          server/NoWindowInteraction.lua:3  assign
+  ISReadWorldMap.new
+      3239684616/FasterMapOpening                  DOES NOT CHAIN 
+          client/FasterMapOpeningHooks.lua:2  assign
+  ISSkillProgressBar.render
+      3572846242/EURY_DST                          DOES NOT CHAIN    (no original saved)
+          client/DST.lua:193  function
+  ISVehicleACUI.addKnobValues
+      3597169956/VehicleClimateControlB42          DOES NOT CHAIN    (no original saved)
+          client/VehicleClimateControl.lua:12  function
+  ISVehicleMechanics.renderPartDetail
+      3780938346/RealisticVehicleMechanics         DOES NOT CHAIN    (no original saved)
+          client/RVM_MechanicsUI.lua:26  function
+  ISVehicleMenu.onSleep
+      2998737588/ComfySleeping                     DOES NOT CHAIN 
+          client/ComfySleeping_Client.lua:393  function
+  ISWorldMapSymbols.canErase
+      3627539752/twistmapimprovements              DOES NOT CHAIN    (no original saved)
+          client/00_TTF_WorldMap_ColorMixPatch.lua:122  function
+  ISWorldMapSymbols.canWrite
+      3627539752/twistmapimprovements              DOES NOT CHAIN    (no original saved)
+          client/00_TTF_WorldMap_ColorMixPatch.lua:93  function
+  ISWorldMapSymbols.checkInventory
+      3627539752/twistmapimprovements              DOES NOT CHAIN    (no original saved)
+          client/00_TTF_WorldMap_ColorMixPatch.lua:185  function
+  ISWorldObjectContextMenu.onClearAshes
+      2816646537/cleanashes                        DOES NOT CHAIN    (no original saved)
+          client/AshesISWorldObjectContextMenu.lua:3  assign
+  farming_vegetableconf.calcDisease
+      3470852353/ImprovedFarmingInfoWindow         DOES NOT CHAIN    (no original saved)
+          server/zcalcDisease.lua:1  assign
+
+==============================================================================
+F. NON-VANILLA GLOBALS DECLARED BY TWO OR MORE MODS  (10)
+  usually an addon extending its base mod - check the ones that are not
+==============================================================================
+  GetTypeAsCleanString
+      3555558732/GRM-OgrimMachineUtils             DOES NOT CHAIN    (no original saved)
+          shared/OgrimMachinesCore.lua:119  function
+      3555588616/GRM-SewingWorkbranch              DOES NOT CHAIN    (no original saved)
+          shared/SewingWorkbranch.lua:2274  function
+  GetTypeAsString
+      3555558732/GRM-OgrimMachineUtils             DOES NOT CHAIN    (no original saved)
+          shared/OgrimMachinesCore.lua:115  function
+      3555588616/GRM-SewingWorkbranch              DOES NOT CHAIN    (no original saved)
+          shared/SewingWorkbranch.lua:2270  function
+  HasTag
+      3555558732/GRM-OgrimMachineUtils             DOES NOT CHAIN    (no original saved)
+          shared/OgrimMachinesCore.lua:145  function
+      3555588616/GRM-SewingWorkbranch              DOES NOT CHAIN    (no original saved)
+          shared/SewingWorkbranch.lua:2278  function
+  MF.ISMoodle.getXYPosition
+      3396446795/MoodleFramework                   DOES NOT CHAIN    (no original saved)
+          client/MF_ISMoodle.lua:429  function
+      3403870858/LifestyleHobbies                  DOES NOT CHAIN    (no original saved)
+          client/LSMoodleManager.lua:516  function
+  RET_LTS.CrawlUnderVehicleClientAction
+      3531611692/RET_LethalStealth                 DOES NOT CHAIN    (no original saved)
+          shared/LTSSync.lua:223  assign
+      3755731521/LethalStealthB4219Fix             DOES NOT CHAIN    (no original saved)
+          shared/LethalStealthB4219Fix.lua:81  assign
+  RET_LTS.LTSSyncProneStatesFromClient
+      3531611692/RET_LethalStealth                 DOES NOT CHAIN    (no original saved)
+          shared/LTSSync.lua:75  assign
+      3755731521/LethalStealthB4219Fix             DOES NOT CHAIN    (no original saved)
+          shared/LethalStealthB4219Fix.lua:24  assign
+  RET_LTS.LTSSyncProneStatesFromServer
+      3531611692/RET_LethalStealth                 DOES NOT CHAIN    (no original saved)
+          shared/LTSSync.lua:59  assign
+      3755731521/LethalStealthB4219Fix             DOES NOT CHAIN    (no original saved)
+          shared/LethalStealthB4219Fix.lua:13  assign
+  RET_LTS.LTSSyncSpeedFromClient
+      3531611692/RET_LethalStealth                 DOES NOT CHAIN    (no original saved)
+          shared/LTSSync.lua:147  assign
+      3755731521/LethalStealthB4219Fix             DOES NOT CHAIN    (no original saved)
+          shared/LethalStealthB4219Fix.lua:38  assign
+  RET_LTS.LTSSyncSpeedFromServer
+      3531611692/RET_LethalStealth                 DOES NOT CHAIN    (no original saved)
+          shared/LTSSync.lua:164  assign
+      3755731521/LethalStealthB4219Fix             DOES NOT CHAIN    (no original saved)
+          shared/LethalStealthB4219Fix.lua:57  assign
+  RET_LTS.OnSneakActionEvent
+      3531611692/RET_LethalStealth                 DOES NOT CHAIN    (no original saved)
+          shared/LTSSync.lua:185  assign
+      3755731521/LethalStealthB4219Fix             DOES NOT CHAIN    (no original saved)
+          shared/LethalStealthB4219Fix.lua:73  assign
+
+==============================================================================
+G. KEYBINDS REGISTERED ON THE SAME DEFAULT KEY  (1)
+  both fire; rebind one
+==============================================================================
+  157
+      3386906181/SandboxSettings                 open_sandbox_hotkey
+      3573672999/sandboxpresetsaver              open_presetsaver_hotkey
+
+==============================================================================
+H. EVENT HANDLERS BY EVENT  (57 events with 2+ mods)
+  per-frame events are a performance map: every handler runs every frame
+==============================================================================
+  event                              total  mods
+  OnGameStart                          103
+        3557515648/vac_mod_b42_utils                 8
+        3573232324/twisttrappingvanilla              5
+        2840805724/SimpleOverhaulTraitsAndOccupations 4
+        3498294068/twistonfireblacklist              4
+        3543229299/PROJECTRVInterior42               4
+        3573119313/RewardingNightCombatB42           4
+        3592172476/TakeABathAndShowerNew             4
+        3740052292/CompanionDogs                     4
+        3403870858/LifestyleHobbies                  3
+        3439305933/FunctionalGutters                 3
+        3478922403/vac_mod_b42_6                     3
+        3570485296/twistonfirebetterfishing          3
+        3778038193/BrutalHandwork                    3
+        3780938346/RealisticVehicleMechanics         3
+        2998737588/ComfySleeping                     2
+        3480790670/twistrestingmodonly               2
+        3557515648/vac_playing_utils                 2
+        3582024827/EURY_ANIMALCARE                   2
+        3583147716/twistorderlychaos                 2
+        3583724172/ElectricStoveForHeat              2
+        3779164273/ImprovisedSilencers               2
+        3785128703/LifestyleMoodleFrameworkCompat    2
+        3793911582/ZUET                              2
+        2313387159/BetterSortCC                      1
+        2863908612/SixthSenseMoodle                  1
+        2948824747/RiskyInspectWeapon                1
+        3007922923/ProperVehicleInjuriesMP           1
+        3171167894/damnlib                           1
+        3268487204/Bandits2                          1
+        3397819617/HideInCarB42                      1
+        3434796669/RiskyUnarmed                      1
+        3495594275/LanternFix                        1
+        3523472206/drivestraight                     1
+        3572846242/EURY_DST                          1
+        3573672999/sandboxpresetsaver                1
+        3587884762/SmarterStorageExtraPresets        1
+        3621001191/EDoors                            1
+        3627071412/FixNaNStats                       1
+        3645465273/B4213DrivingSkill                 1
+        3705530591/JeevesBuild                       1
+        3707376688/SmartZOptimizer                   1
+        3716522633/VHSSkillNameInTooltip             1
+        3718216106/Battery Drain Multiplier          1
+        3721577741/vac_batch_farming                 1
+        3734639991/SeedSeasonIndicator               1
+        3778201332/HydrocraftReinvented              1
+        3778861193/VisualSoundsB42                   1
+        3779211885/TanksHavePropaneFix               1
+        3779289530/FlashlightIndicatorB42            1
+        3780683663/CyesPushDoors                     1
+        3782033481/GrateEscape                       1
+        3782193024/AntibodiesB4220Community          1
+        3788758917/FoodesGOMLethalStealthCompatibility 1
+  OnInitWorld                           95
+        3618427553/RVInteriorExpansion               75
+        3622163276/RVInteriorExpansionPart2          11
+        3543229299/PROJECTRVInterior42               3
+        3346506593/Erikas_Tiles                      1
+        3439305933/FunctionalGutters                 1
+        3582024827/EURY_ANIMALCARE                   1
+        3583724172/ElectricStoveForHeat              1
+        3750253491/VB_CommonSense                    1
+        3785054147/ListenAndLearn                    1
+  OnTick                                75  <<< per-frame
+        3498347699/SomewhatTraitsCore                24
+        3498294068/twistonfireblacklist              6
+        3543229299/PROJECTRVInterior42               5
+        3511400502/donotpushplease                   3
+        3583147716/twistorderlychaos                 3
+        3740052292/CompanionDogs                     3
+        3007922923/ProperVehicleInjuriesMP           2
+        3403870858/LifestyleHobbies                  2
+        3531611692/RET_LethalStealth                 2
+        3583724172/ElectricStoveForHeat              2
+        3634630898/OCsChallengeTraits                2
+        3661430479/hrsys_towbars                     2
+        3779164273/ImprovisedSilencers               2
+        3780683663/CyesPushDoors                     2
+        3780938346/RealisticVehicleMechanics         2
+        2990322197/hf_point_blank                    1
+        2998737588/ComfySleeping                     1
+        3170356924/DangerAwareness                   1
+        3480790670/twistrestingmodonly               1
+        3495594275/LanternFix                        1
+        3566244478/twistoutsidefreezer               1
+        3570485296/twistonfirebetterfishing          1
+        3597169956/VehicleClimateControlB42          1
+        3684025083/JeevesPatches_Tanker              1
+        3707376688/SmartZOptimizer                   1
+        3739612285/VB_Cammo                          1
+        3755993986/GasPumpIndicator                  1
+        3785128703/LifestyleMoodleFrameworkCompat    1
+  OnPlayerUpdate                        55  <<< per-frame
+        2840805724/SimpleOverhaulTraitsAndOccupations 6
+        3498347699/SomewhatTraitsCore                6
+        3769438826/BreakIntoTears                    5
+        3480790670/twistrestingmodonly               2
+        3543229299/PROJECTRVInterior42               2
+        3599368309/PainSense                         2
+        3778038193/BrutalHandwork                    2
+        2769706949/P4TidyUpMeister                   1
+        2863908612/SixthSenseMoodle                  1
+        2907834593/CalorieFix                        1
+        3171167894/damnlib                           1
+        3392699932/AutoLoot                          1
+        3397819617/HideInCarB42                      1
+        3523472206/drivestraight                     1
+        3531611692/RET_LethalStealth                 1
+        3542662260/WorkingRunModifier                1
+        3545533939/ToughnessSkill                    1
+        3573232324/twisttrappingvanilla              1
+        3583724172/ElectricStoveForHeat              1
+        3592172476/TakeABathAndShowerNew             1
+        3625874308/UseulTents                        1
+        3694485272/WatchYourStep                     1
+        3718216106/Battery Drain Multiplier          1
+        3718438361/DynamicFitnessBoost               1
+        3723127305/Nihonto                           1
+        3732469752/twistnimblexp                     1
+        3739612285/VB_Cammo                          1
+        3777244656/SandbagTraits                     1
+        3777663603/EvenMoreTraits4220                1
+        3778511497/SkullysZombieCollision            1
+        3778861193/VisualSoundsB42                   1
+        3779164273/ImprovisedSilencers               1
+        3779289530/FlashlightIndicatorB42            1
+        3783567014/alicesKitsunesCrossbowMod         1
+        3785054147/ListenAndLearn                    1
+        3786534696/Kane_the_Merchant                 1
+        3788758917/FoodesGOMLethalStealthCompatibility 1
+  EveryOneMinute                        49
+        2840805724/SimpleOverhaulTraitsAndOccupations 24
+        3268487204/Bandits2                          4
+        3403870858/LifestyleHobbies                  3
+        3557515648/vac_mod_b42_utils                 2
+        3566244478/twistoutsidefreezer               2
+        3780938346/RealisticVehicleMechanics         2
+        3782193024/AntibodiesB4220Community          2
+        2956146279/RainCleansBlood                   1
+        3543229299/PROJECTRVInterior42               1
+        3549290115/GRM-MyOwnWell                     1
+        3572846242/EURY_DST                          1
+        3627071412/FixNaNStats                       1
+        3640105892/TheyKnewB42Patch                  1
+        3645465273/B4213DrivingSkill                 1
+        3646787580/ThumpingAttractsZombies           1
+        3648051123/InjuredZombiesStumble             1
+        3785054147/ListenAndLearn                    1
+  OnCreatePlayer                        48
+        3480790670/twistrestingmodonly               4
+        2840805724/SimpleOverhaulTraitsAndOccupations 3
+        3403870858/LifestyleHobbies                  3
+        3498294068/twistonfireblacklist              3
+        3396446795/MoodleFramework                   2
+        3645465273/B4213DrivingSkill                 2
+        3740052292/CompanionDogs                     2
+        3769438826/BreakIntoTears                    2
+        3779289530/FlashlightIndicatorB42            2
+        3785128703/LifestyleMoodleFrameworkCompat    2
+        2769706949/P4TidyUpMeister                   1
+        2948824747/RiskyInspectWeapon                1
+        3007922923/ProperVehicleInjuriesMP           1
+        3397819617/HideInCarB42                      1
+        3485382965/ConsolidatedAllFixB42             1
+        3486968089/AgeInfoMod                        1
+        3531611692/RET_LethalStealth                 1
+        3542662260/WorkingRunModifier                1
+        3557111695/SkillBookExpansionB42             1
+        3567695139/HasResearch                       1
+        3570485296/twistonfirebetterfishing          1
+        3572846242/EURY_DST                          1
+        3573232324/twisttrappingvanilla              1
+        3592172476/TakeABathAndShowerNew             1
+        3599368309/PainSense                         1
+        3606009875/ImmersiveReading                  1
+        3621001191/EDoors                            1
+        3627071412/FixNaNStats                       1
+        3718216106/Battery Drain Multiplier          1
+        3723127305/Nihonto                           1
+        3778038193/BrutalHandwork                    1
+        3778861193/VisualSoundsB42                   1
+        3780938346/RealisticVehicleMechanics         1
+  OnGameBoot                            36
+        3498294068/twistonfireblacklist              3
+        2313387159/BetterSortCC                      2
+        3592172476/TakeABathAndShowerNew             2
+        3684025083/JeevesPatches_Tanker              2
+        3785128703/LifestyleMoodleFrameworkCompat    2
+        3793911582/ZUET                              2
+        2142622992/RepairAnyClothes                  1
+        2366717227/SwapIt                            1
+        2863908612/SixthSenseMoodle                  1
+        2948824747/RiskyInspectWeapon                1
+        3007922923/ProperVehicleInjuriesMP           1
+        3171167894/damnlib                           1
+        3360392628/mapmodmanager                     1
+        3480305875/twistresting                      1
+        3480790670/twistrestingmodonly               1
+        3502122415/tehbigtrunk42                     1
+        3502122415/tehbigtrunk42ki5                  1
+        3543612325/Ivmakk_RestoreEngineQuality       1
+        3634630898/OCsChallengeTraits                1
+        3696291148/twistbetterpause                  1
+        3707376688/SmartZOptimizer                   1
+        3710281407/PeekAView                         1
+        3778038193/BrutalHandwork                    1
+        3778861193/VisualSoundsB42                   1
+        3779164273/ImprovisedSilencers               1
+        3779211885/TanksHavePropaneFix               1
+        3779289530/FlashlightIndicatorB42            1
+        3780683663/CyesPushDoors                     1
+        3782613536/ZBBetterFPSB4220Fix               1
+  OnClientCommand                       34
+        3268487204/Bandits2                          3
+        3531611692/RET_LethalStealth                 2
+        3583724172/ElectricStoveForHeat              2
+        3661430479/hrsys_towbars                     2
+        2788256295/ammomaker                         1
+        2990322197/hf_point_blank                    1
+        3006882690/KAMER_RepairWall                  1
+        3171167894/damnlib                           1
+        3403870858/LifestyleHobbies                  1
+        3439305933/FunctionalGutters                 1
+        3495594275/LanternFix                        1
+        3498347699/SomewhatTraitsCore                1
+        3511400502/donotpushplease                   1
+        3538602374/BreakBigRocks                     1
+        3543229299/PROJECTRVInterior42               1
+        3549290115/GRM-MyOwnWell                     1
+        3555558732/GRM-OgrimMachineUtils             1
+        3555588616/GRM-SewingWorkbranch              1
+        3557515648/vac_mod_b42_utils                 1
+        3583147716/twistorderlychaos                 1
+        3592172476/TakeABathAndShowerNew             1
+        3606009875/ImmersiveReading                  1
+        3684025083/JeevesPatches_Tanker              1
+        3694485272/WatchYourStep                     1
+        3732469752/twistnimblexp                     1
+        3740052292/CompanionDogs                     1
+        3780683663/CyesPushDoors                     1
+        3780938346/RealisticVehicleMechanics         1
+        3785054147/ListenAndLearn                    1
+  OnFillWorldObjectContextMenu          29
+        3543229299/PROJECTRVInterior42               2
+        3557515648/vac_mod_b42_utils                 2
+        3740052292/CompanionDogs                     2
+        2769706949/P4TidyUpMeister                   1
+        2998737588/ComfySleeping                     1
+        3006882690/KAMER_RepairWall                  1
+        3386906181/SandboxSettings                   1
+        3403870858/LifestyleHobbies                  1
+        3439305933/FunctionalGutters                 1
+        3478922403/vac_mod_b42_6                     1
+        3495594275/LanternFix                        1
+        3495788089/AutoSmashAndClimb                 1
+        3498347699/SomewhatTraitsCore                1
+        3531611692/RET_LethalStealth                 1
+        3538602374/BreakBigRocks                     1
+        3549290115/GRM-MyOwnWell                     1
+        3550032314/MoatsB42                          1
+        3583724172/ElectricStoveForHeat              1
+        3592172476/TakeABathAndShowerNew             1
+        3641642696/WarmUpB42                         1
+        3712407882/WashAll_v1                        1
+        3755993986/GasPumpIndicator                  1
+        3769438826/BreakIntoTears                    1
+        3780938346/RealisticVehicleMechanics         1
+        3782033481/GrateEscape                       1
+        3786534696/Kane_the_Merchant                 1
+  OnInitGlobalModData                   27
+        3538602374/BreakBigRocks                     3
+        3740052292/CompanionDogs                     3
+        2788256295/ammomaker                         2
+        3403870858/LifestyleHobbies                  2
+        3486968089/AgeInfoMod                        2
+        3555588616/GRM-SewingWorkbranch              2
+        2914650723/EasyLiterature                    1
+        3171167894/damnlib                           1
+        3512355115/Ivmakk_ProjectCookExtensionNutrientsSorting 1
+        3523472206/drivestraight                     1
+        3543612325/Ivmakk_RestoreEngineQuality       1
+        3549290115/GRM-MyOwnWell                     1
+        3550032314/MoatsB42                          1
+        3573119313/RewardingNightCombatB42           1
+        3606009875/ImmersiveReading                  1
+        3647810515/BACKOFF                           1
+        3723127305/Nihonto                           1
+        3778511497/SkullysZombieCollision            1
+        3789895769/GoM_Durability_Patch              1
+  EveryTenMinutes                       26
+        2840805724/SimpleOverhaulTraitsAndOccupations 7
+        3780938346/RealisticVehicleMechanics         4
+        2788256295/ammomaker                         2
+        3268487204/Bandits2                          2
+        3511400502/donotpushplease                   2
+        3403870858/LifestyleHobbies                  1
+        3470852353/ImprovedFarmingInfoWindow         1
+        3495594275/LanternFix                        1
+        3535139736/GRM-CleanRagsOnClothingWasher     1
+        3550032314/MoatsB42                          1
+        3557515648/vac_mod_b42_utils                 1
+        3573119313/RewardingNightCombatB42           1
+        3739612285/VB_Cammo                          1
+        3769438826/BreakIntoTears                    1
+  OnServerCommand                       25
+        2788256295/ammomaker                         1
+        2956146279/RainCleansBlood                   1
+        2990322197/hf_point_blank                    1
+        3006882690/KAMER_RepairWall                  1
+        3171167894/damnlib                           1
+        3268487204/Bandits2                          1
+        3403870858/LifestyleHobbies                  1
+        3495594275/LanternFix                        1
+        3511400502/donotpushplease                   1
+        3531611692/RET_LethalStealth                 1
+        3543229299/PROJECTRVInterior42               1
+        3549290115/GRM-MyOwnWell                     1
+        3555558732/GRM-OgrimMachineUtils             1
+        3555588616/GRM-SewingWorkbranch              1
+        3557515648/vac_mod_b42_utils                 1
+        3573119313/RewardingNightCombatB42           1
+        3592172476/TakeABathAndShowerNew             1
+        3606009875/ImmersiveReading                  1
+        3627071412/FixNaNStats                       1
+        3750253491/VB_CommonSense                    1
+        3779164273/ImprovisedSilencers               1
+        3779327129/CompanionDogsLabrador             1
+        3780683663/CyesPushDoors                     1
+        3780938346/RealisticVehicleMechanics         1
+        3782193024/AntibodiesB4220Community          1
+  OnPreFillInventoryObjectContextMenu    24
+        3557515648/vac_mod_b42_utils                 17
+        3557515648/vac_playing_utils                 3
+        3478922403/vac_mod_b42_6                     2
+        3498294068/twistonfireblacklist              1
+        3785054147/ListenAndLearn                    1
+  OnMainMenuEnter                       18
+        2896041179/errorMagnifier                    2
+        3396446795/MoodleFramework                   2
+        3619862853/ZombieBuddy                       2
+        3077900375/ChuckleberryFinnAlertSystem       1
+        3360392628/mapmodmanager                     1
+        3439305933/FunctionalGutters                 1
+        3480305875/twistresting                      1
+        3480790670/twistrestingmodonly               1
+        3573232324/twisttrappingvanilla              1
+        3582024827/EURY_ANIMALCARE                   1
+        3696291148/twistbetterpause                  1
+        3779289530/FlashlightIndicatorB42            1
+        3780683663/CyesPushDoors                     1
+        3782193024/AntibodiesB4220Community          1
+        3793911582/ZUET                              1
+  OnPreFillWorldObjectContextMenu       18
+        3557515648/vac_mod_b42_utils                 12
+        3268487204/Bandits2                          1
+        3469292499/BanditsCreator                    1
+        3549290115/GRM-MyOwnWell                     1
+        3555558732/GRM-OgrimMachineUtils             1
+        3557515648/vac_playing_utils                 1
+        3721577741/vac_batch_farming                 1
+  OnKeyPressed                          16
+        2948824747/RiskyInspectWeapon                1
+        3268487204/Bandits2                          1
+        3386906181/SandboxSettings                   1
+        3480790670/twistrestingmodonly               1
+        3486968089/AgeInfoMod                        1
+        3498294068/twistonfireblacklist              1
+        3531611692/RET_LethalStealth                 1
+        3570485296/twistonfirebetterfishing          1
+        3573119313/RewardingNightCombatB42           1
+        3573672999/sandboxpresetsaver                1
+        3707376688/SmartZOptimizer                   1
+        3710281407/PeekAView                         1
+        3723127305/Nihonto                           1
+        3739612285/VB_Cammo                          1
+        3778038193/BrutalHandwork                    1
+        3786534696/Kane_the_Merchant                 1
+  OnFillInventoryObjectContextMenu      15
+        3422220305/P4PickingMeister                  2
+        3557515648/vac_mod_b42_utils                 2
+        3779164273/ImprovisedSilencers               2
+        2914650723/EasyLiterature                    1
+        2948824747/RiskyInspectWeapon                1
+        3470422050/KATTAJ1_ClothesCore               1
+        3498294068/twistonfireblacklist              1
+        3584890848/vac_mod_b42_10                    1
+        3606009875/ImmersiveReading                  1
+        3640105892/TheyKnewB42Patch                  1
+        3740052292/CompanionDogs                     1
+        3780938346/RealisticVehicleMechanics         1
+  EveryHours                            14
+        2840805724/SimpleOverhaulTraitsAndOccupations 5
+        2998737588/ComfySleeping                     3
+        3403870858/LifestyleHobbies                  1
+        3549290115/GRM-MyOwnWell                     1
+        3557515648/vac_mod_b42_utils                 1
+        3573119313/RewardingNightCombatB42           1
+        3592172476/TakeABathAndShowerNew             1
+        3640105892/TheyKnewB42Patch                  1
+  OnPlayerDeath                         14
+        3396446795/MoodleFramework                   2
+        3403870858/LifestyleHobbies                  2
+        3268487204/Bandits2                          1
+        3480790670/twistrestingmodonly               1
+        3486968089/AgeInfoMod                        1
+        3531611692/RET_LethalStealth                 1
+        3570485296/twistonfirebetterfishing          1
+        3573232324/twisttrappingvanilla              1
+        3599368309/PainSense                         1
+        3718216106/Battery Drain Multiplier          1
+        3739612285/VB_Cammo                          1
+        3779289530/FlashlightIndicatorB42            1
+  LoadGridsquare                        12
+        3495594275/LanternFix                        2
+        3583147716/twistorderlychaos                 2
+        3583724172/ElectricStoveForHeat              2
+        3171167894/damnlib                           1
+        3549290115/GRM-MyOwnWell                     1
+        3566244478/twistoutsidefreezer               1
+        3573232324/twisttrappingvanilla              1
+        3755993986/GasPumpIndicator                  1
+        3782033481/GrateEscape                       1
+  OnPlayerMove                          12
+        2896041179/errorMagnifier                    9
+        2948824747/RiskyInspectWeapon                1
+        3625874308/UseulTents                        1
+        3732469752/twistnimblexp                     1
+  OnWeaponHitCharacter                  10
+        3403870858/LifestyleHobbies                  2
+        2840805724/SimpleOverhaulTraitsAndOccupations 1
+        2990322197/hf_point_blank                    1
+        3434796669/RiskyUnarmed                      1
+        3511400502/donotpushplease                   1
+        3543588687/LethalHeadHit                     1
+        3633082678/SentryTurret042                   1
+        3647810515/BACKOFF                           1
+        3783567014/alicesKitsunesCrossbowMod         1
+  OnServerStarted                        9
+        3439305933/FunctionalGutters                 3
+        3592172476/TakeABathAndShowerNew             3
+        3268487204/Bandits2                          1
+        3705530591/JeevesBuild                       1
+        3782193024/AntibodiesB4220Community          1
+  EveryDays                              8
+        3486968089/AgeInfoMod                        2
+        3769438826/BreakIntoTears                    2
+        2863908612/SixthSenseMoodle                  1
+        3051276857/KYRRealWeatherMod                 1
+        3403870858/LifestyleHobbies                  1
+        3557515648/vac_playing_utils                 1
+  OnLoad                                 8
+        2914650723/EasyLiterature                    2
+        2769706949/P4TidyUpMeister                   1
+        2896041179/errorMagnifier                    1
+        3051276857/KYRRealWeatherMod                 1
+        3077900375/ChuckleberryFinnAlertSystem       1
+        3439305933/FunctionalGutters                 1
+        3783567014/alicesKitsunesCrossbowMod         1
+  OnWeaponSwingHitPoint                  8
+        2840805724/SimpleOverhaulTraitsAndOccupations 4
+        2990322197/hf_point_blank                    1
+        3723127305/Nihonto                           1
+        3779164273/ImprovisedSilencers               1
+        3783567014/alicesKitsunesCrossbowMod         1
+  OnRefreshInventoryWindowContainers     6
+        3498294068/twistonfireblacklist              3
+        3392699932/AutoLoot                          2
+        2313387159/BetterSortCC                      1
+  OnWeaponSwing                          6
+        3498347699/SomewhatTraitsCore                2
+        2948824747/RiskyInspectWeapon                1
+        2990322197/hf_point_blank                    1
+        3779164273/ImprovisedSilencers               1
+        3788758917/FoodesGOMLethalStealthCompatibility 1
+  LevelPerk                              5
+        2840805724/SimpleOverhaulTraitsAndOccupations 3
+        2863908612/SixthSenseMoodle                  1
+        3531611692/RET_LethalStealth                 1
+  OnEquipPrimary                         5
+        2840805724/SimpleOverhaulTraitsAndOccupations 1
+        3570485296/twistonfirebetterfishing          1
+        3718216106/Battery Drain Multiplier          1
+        3779164273/ImprovisedSilencers               1
+        3783567014/alicesKitsunesCrossbowMod         1
+  OnNewGame                              5
+        2863908612/SixthSenseMoodle                  1
+        3486968089/AgeInfoMod                        1
+        3498347699/SomewhatTraitsCore                1
+        3511400502/donotpushplease                   1
+        3634630898/OCsChallengeTraits                1
+  OnObjectAdded                          5
+        3583724172/ElectricStoveForHeat              2
+        3439305933/FunctionalGutters                 1
+        3573232324/twisttrappingvanilla              1
+        3705530591/JeevesBuild                       1
+  OnResolutionChange                     5
+        3573232324/twisttrappingvanilla              2
+        2896041179/errorMagnifier                    1
+        3360392628/mapmodmanager                     1
+        3480790670/twistrestingmodonly               1
+  OnZombieUpdate                         5
+        3268487204/Bandits2                          2
+        3199474685/LongStandingMetalConstructions    1
+        3739612285/VB_Cammo                          1
+        3778861193/VisualSoundsB42                   1
+  AddXP                                  4
+        2840805724/SimpleOverhaulTraitsAndOccupations 3
+        3718438361/DynamicFitnessBoost               1
+  OnClothingUpdated                      4
+        3542662260/WorkingRunModifier                1
+        3718216106/Battery Drain Multiplier          1
+        3739612285/VB_Cammo                          1
+        3778038193/BrutalHandwork                    1
+  OnEnterVehicle                         4
+        3007922923/ProperVehicleInjuriesMP           1
+        3171167894/damnlib                           1
+        3397819617/HideInCarB42                      1
+        3645465273/B4213DrivingSkill                 1
+  OnExitVehicle                          4
+        3007922923/ProperVehicleInjuriesMP           1
+        3171167894/damnlib                           1
+        3397819617/HideInCarB42                      1
+        3645465273/B4213DrivingSkill                 1
+  OnHitZombie                            4
+        2990322197/hf_point_blank                    1
+        3268487204/Bandits2                          1
+        3498347699/SomewhatTraitsCore                1
+        3543588687/LethalHeadHit                     1
+  OnKeyStartPressed                      4
+        2863908612/SixthSenseMoodle                  1
+        3403870858/LifestyleHobbies                  1
+        3531611692/RET_LethalStealth                 1
+        3570485296/twistonfirebetterfishing          1
+  OnReceiveGlobalModData                 4
+        3495594275/LanternFix                        2
+        3403870858/LifestyleHobbies                  1
+        3550032314/MoatsB42                          1
+  OnZombieDead                           4
+        3268487204/Bandits2                          2
+        2863908612/SixthSenseMoodle                  1
+        3545533939/ToughnessSkill                    1
+  OnFillContainer                        3
+        2788256295/ammomaker                         1
+        3566244478/twistoutsidefreezer               1
+        3583147716/twistorderlychaos                 1
+  OnGameTimeLoaded                       3
+        3511400502/donotpushplease                   1
+        3573119313/RewardingNightCombatB42           1
+        3592172476/TakeABathAndShowerNew             1
+  OnPreDistributionMerge                 3
+        2788256295/ammomaker                         1
+        3740052292/CompanionDogs                     1
+        3785054147/ListenAndLearn                    1
+  OnPreUIDraw                            3
+        3268487204/Bandits2                          1
+        3480790670/twistrestingmodonly               1
+        3566244478/twistoutsidefreezer               1
+  OnDisconnect                           2
+        3397819617/HideInCarB42                      1
+        3583724172/ElectricStoveForHeat              1
+  OnEquipSecondary                       2
+        2840805724/SimpleOverhaulTraitsAndOccupations 1
+        3718216106/Battery Drain Multiplier          1
+  OnLoadMapZones                         2
+        3550032314/MoatsB42                          1
+        3557515648/vac_mod_b42_utils                 1
+  OnObjectAboutToBeRemoved               2
+        3583147716/twistorderlychaos                 1
+        3583724172/ElectricStoveForHeat              1
+  OnPressRackButton                      2
+        2788256295/ammomaker                         1
+        3783567014/alicesKitsunesCrossbowMod         1
+  OnPressReloadButton                    2
+        2788256295/ammomaker                         1
+        3783567014/alicesKitsunesCrossbowMod         1
+  OnRenderTick                           2  <<< per-frame
+        3573232324/twisttrappingvanilla              1
+        3783567014/alicesKitsunesCrossbowMod         1
+  OnTickEvenPaused                       2
+        2896041179/errorMagnifier                    1
+        2914650723/EasyLiterature                    1
+  OnWeaponHitTree                        2
+        2840805724/SimpleOverhaulTraitsAndOccupations 1
+        3403870858/LifestyleHobbies                  1
+  OnWeaponHitXp                          2
+        3545533939/ToughnessSkill                    1
+        3573119313/RewardingNightCombatB42           1
+  OnWorldSound                           2
+        3646787580/ThumpingAttractsZombies           1
+        3778861193/VisualSoundsB42                   1
+
+==============================================================================
+I. MODS THAT REPLACE VANILLA FUNCTIONS WITHOUT CHAINING  (top 15)
+  the mods most likely to erase another mod's work
+==============================================================================
+  mod                                              vanilla  no chain
+  3470852353/ImprovedFarmingInfoWindow                  38        38
+  3627539752/twistmapimprovements                        7         3
+  2366717227/SwapIt                                      4         3
+  3573232324/twisttrappingvanilla                       11         2
+  3723127305/Nihonto                                     7         2
+  2948824747/RiskyInspectWeapon                          3         2
+  3480305875/twistresting                                2         1
+  3572846242/EURY_DST                                    3         1
+  3780938346/RealisticVehicleMechanics                   7         1
+  3077900375/ChuckleberryFinnAlertSystem                 3         1
+  2998737588/ComfySleeping                               1         1
+  3239684616/FasterMapOpening                            1         1
+  2816646537/cleanashes                                  1         1
+  3597169956/VehicleClimateControlB42                    1         1
+  3490768151/NeatIngredientsList                         1         1

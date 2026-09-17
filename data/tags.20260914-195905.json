@@ -182,10 +182,7 @@
    "92amgeneralM998extra",
    "U.S.M113_APC_by_Papa_Chad",
    "U.S. M163 VADS by Papa_Chad by Papa_Chad",
-   "76chevyKseriesExpanded",
-   "83gmcGseriesVans",
-   "83gmcVanduraATeam",
-   "CATConstruction"
+   "76chevyKseriesExpanded"
   ],
   "06 Vehicles - Mechs": [
    "WayMoreCars",
@@ -211,9 +208,7 @@
    "SpecLootPC",
    "SpecLoot",
    "VMZNEW",
-   "HideInCarB42",
-   "ReverseDriveLights",
-   "W9004x20RVInterior"
+   "HideInCarB42"
   ],
   "07 Weapons": [
    "SWMG",
@@ -229,8 +224,7 @@
    "ExtraBombs2",
    "Explosives",
    "ShotgunSuppressorB42",
-   "ShotgunSuppressorB42GoM",
-   "GoMAttachmentWorkbench"
+   "ShotgunSuppressorB42GoM"
   ],
   "08 Gears": [
    "VanillaGearExpanded",
@@ -315,9 +309,7 @@
    "BreakBigRocks",
    "vac_mod_b42_19",
    "OxyRefill",
-   "StairsEastSouth",
-   "JumboStumpsDoneRight",
-   "RealisticRecipes"
+   "StairsEastSouth"
   ],
   "11 Traits & Skills": [
    "SimpleOverhaulTraitsAndOccupations",
@@ -455,8 +447,7 @@
    "uncheatRealFlashlights",
    "SpoilingLiquids",
    "SawTreeChopping",
-   "ArcadiaRefillablePropaneTanks_B42",
-   "ForestWildlifeDensity"
+   "ArcadiaRefillablePropaneTanks_B42"
   ],
   "17 AV": [
    "ETO_B",
@@ -478,9 +469,7 @@
    "TombBodyTexNUDE",
    "BlueMoonLightingMod",
    "HereGoesTheSun",
-   "ImmersiveOverlaysRetextureLessIntrusiveVersion",
-   "VisibleBeltsB42",
-   "CarSkins42KI5"
+   "ImmersiveOverlaysRetextureLessIntrusiveVersion"
   ],
   "18 QoL - Core UI": [
    "CleanUI",
@@ -510,8 +499,7 @@
    "VisualSoundsB42",
    "MoreItemInformation",
    "EasyLiterature",
-   "LayeredPlacement",
-   "NPCBases"
+   "LayeredPlacement"
   ],
   "19 QoL - Secondary UI": [
    "ComeBackLater",
@@ -554,8 +542,7 @@
    "NeatLockpicking",
    "SkillBookLibrary",
    "twistorderlychaos",
-   "VehicleDoorsHotkey",
-   "Neat_Crafting_AddonFetch"
+   "VehicleDoorsHotkey"
   ],
   "20 QoL - Actions": [
    "twisttool",
@@ -618,12 +605,7 @@
    "VFluidKI5Vehicles",
    "VFluidKI5Campers",
    "rWaterTrailerB42",
-   "rWaterTrailerSemiB42",
-   "Tatra815StabilityPatch",
-   "Alicepatchformule",
-   "Mad Crafter 42.20",
-   "tehbigtrunk42w900",
-   "Rin_DamnLib_Addon"
+   "rWaterTrailerSemiB42"
   ],
   "-- Disabled": [
    "twistqolrr",
@@ -711,8 +693,10 @@
    "tehbigtrunk42fhq",
    "ShotgunSuppressorB42VFE",
    "efficiencySkillMod2Beta",
+   "JeevesBuild",
    "ZItemTiers",
    "zdk",
+   "WoundsOverhaul",
    "twistorderlychaos"
   ]
  },
@@ -746,7 +730,7 @@
     "01 Utils"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-1- With Maps": {
    "tags": [
@@ -756,7 +740,7 @@
     "04 Maps"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-2- With Vehicles": {
    "tags": [
@@ -768,7 +752,7 @@
     "06 Vehicles - Mechs"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-3- With Stuff": {
    "tags": [
@@ -784,7 +768,7 @@
     "10 Craft"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-5- Overhaul": {
    "tags": [
@@ -806,7 +790,7 @@
     "16 Balance"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-6- Complete": {
    "tags": [
@@ -833,7 +817,7 @@
     "21 Patches"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   }
  },
  "lineOrder": [
@@ -901,10 +885,10 @@
   "21 Patches": "tag",
   "-- Disabled": "tag"
  },
- "cfgFingerprint": "3df832f9e0d3001faa9a9dce517d83039223d1fa",
+ "cfgFingerprint": "e08e96ea4a031ac01ff3be1d7d70887bac20f909",
  "dirty": false,
  "conflict": null,
- "lastSeed": "2026-09-15 21:05:59",
+ "lastSeed": "2026-09-14 18:13:38",
  "trailingSep": ";",
  "reloadedAt": ""
 }

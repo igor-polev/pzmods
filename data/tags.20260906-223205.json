@@ -17,7 +17,8 @@
    "SmartZOptimizer",
    "RemoveInventoryLimitsZB",
    "SecondChance",
-   "CheatMenuRebuild"
+   "CheatMenuRebuild",
+   "MumuTeleport"
   ],
   "03 Frameworks": [
    "zdk",
@@ -178,14 +179,11 @@
    "69fordMustang",
    "69fordMustangExtra",
    "RVTrailerTypeB42",
+   "76chevyKserieseExpanded",
    "92amgeneralM998",
    "92amgeneralM998extra",
    "U.S.M113_APC_by_Papa_Chad",
-   "U.S. M163 VADS by Papa_Chad by Papa_Chad",
-   "76chevyKseriesExpanded",
-   "83gmcGseriesVans",
-   "83gmcVanduraATeam",
-   "CATConstruction"
+   "U.S. M163 VADS by Papa_Chad by Papa_Chad"
   ],
   "06 Vehicles - Mechs": [
    "WayMoreCars",
@@ -211,15 +209,15 @@
    "SpecLootPC",
    "SpecLoot",
    "VMZNEW",
-   "HideInCarB42",
-   "ReverseDriveLights",
-   "W9004x20RVInterior"
+   "HideInCarB42"
   ],
   "07 Weapons": [
+   "HBVCEFb42",
    "SWMG",
    "GunsOfMarz",
    "GoM_Durability_Patch",
    "BobrMinigun",
+   "ImprovisedSilencers",
    "SentryTurret042",
    "ammomaker",
    "alicesKitsunesCrossbowMod",
@@ -229,8 +227,7 @@
    "ExtraBombs2",
    "Explosives",
    "ShotgunSuppressorB42",
-   "ShotgunSuppressorB42GoM",
-   "GoMAttachmentWorkbench"
+   "ShotgunSuppressorB42GoM"
   ],
   "08 Gears": [
    "VanillaGearExpanded",
@@ -282,10 +279,10 @@
    "WaterBidon",
    "DieselFuel",
    "GeneratorHose",
-   "MoreMapsB42Fixed",
-   "PickupAdvancedForge"
+   "MoreMapsB42Fixed"
   ],
   "10 Craft": [
+   "HydrocraftReinvented",
    "JeevesBuild",
    "KAMER_RepairWall",
    "RepairableWindows",
@@ -315,9 +312,7 @@
    "BreakBigRocks",
    "vac_mod_b42_19",
    "OxyRefill",
-   "StairsEastSouth",
-   "JumboStumpsDoneRight",
-   "RealisticRecipes"
+   "StairsEastSouth"
   ],
   "11 Traits & Skills": [
    "SimpleOverhaulTraitsAndOccupations",
@@ -367,6 +362,7 @@
    "ISAMP",
    "Bandits2",
    "BanditsCreator",
+   "HumanRemains",
    "TheyKnewB42",
    "TheyKnewB42Patch",
    "AntibodiesB4220Community",
@@ -419,8 +415,7 @@
    "Worm Digging",
    "StarvingZombies",
    "InjuredZombiesStumble",
-   "ThumpingAttractsZombies",
-   "UseulTents"
+   "ThumpingAttractsZombies"
   ],
   "16 Balance": [
    "sleeponit",
@@ -438,6 +433,7 @@
    "twistonfirebetterfishing",
    "NoHolesForBallisticArmor",
    "MoreVarietyLoot25%",
+   "UseulTents",
    "CalorieFix",
    "LanternFix",
    "SEG_Animalsdonotthump",
@@ -455,8 +451,7 @@
    "uncheatRealFlashlights",
    "SpoilingLiquids",
    "SawTreeChopping",
-   "ArcadiaRefillablePropaneTanks_B42",
-   "ForestWildlifeDensity"
+   "ArcadiaRefillablePropaneTanks_B42"
   ],
   "17 AV": [
    "ETO_B",
@@ -478,9 +473,7 @@
    "TombBodyTexNUDE",
    "BlueMoonLightingMod",
    "HereGoesTheSun",
-   "ImmersiveOverlaysRetextureLessIntrusiveVersion",
-   "VisibleBeltsB42",
-   "CarSkins42KI5"
+   "ImmersiveOverlaysRetextureLessIntrusiveVersion"
   ],
   "18 QoL - Core UI": [
    "CleanUI",
@@ -510,8 +503,7 @@
    "VisualSoundsB42",
    "MoreItemInformation",
    "EasyLiterature",
-   "LayeredPlacement",
-   "NPCBases"
+   "LayeredPlacement"
   ],
   "19 QoL - Secondary UI": [
    "ComeBackLater",
@@ -554,8 +546,7 @@
    "NeatLockpicking",
    "SkillBookLibrary",
    "twistorderlychaos",
-   "VehicleDoorsHotkey",
-   "Neat_Crafting_AddonFetch"
+   "VehicleDoorsHotkey"
   ],
   "20 QoL - Actions": [
    "twisttool",
@@ -578,6 +569,7 @@
    "better-auto-mechanics",
    "EDoors",
    "P4TidyUpMeister",
+   "twistrestingmodonly",
    "vac_mod_b42_10",
    "vac_mod_b42_4",
    "DontOpenNewOne",
@@ -618,12 +610,7 @@
    "VFluidKI5Vehicles",
    "VFluidKI5Campers",
    "rWaterTrailerB42",
-   "rWaterTrailerSemiB42",
-   "Tatra815StabilityPatch",
-   "Alicepatchformule",
-   "Mad Crafter 42.20",
-   "tehbigtrunk42w900",
-   "Rin_DamnLib_Addon"
+   "rWaterTrailerSemiB42"
   ],
   "-- Disabled": [
    "twistqolrr",
@@ -693,6 +680,7 @@
    "exampleMod",
    "TheyKnewB42Fix",
    "MarzGuns",
+   "HBTacReload",
    "twistorderlychaosmp",
    "RiversideMansionMod42Empty",
    "RiversideMansionMod42NoLoot",
@@ -703,23 +691,16 @@
    "vac_playing_utils",
    "Neat_Building",
    "SZ_MuldraughCrossroads_Checkpoint",
+   "MumuTeleport",
    "ShotgunSuppressorB42GoMOld",
    "ShotgunSuppressorB42Vanilla",
-   "ShotgunSuppressorB42VWP",
-   "TombBodyCompatBootsExpVanilla",
-   "tehbigtrunk42pzk",
-   "tehbigtrunk42fhq",
-   "ShotgunSuppressorB42VFE",
-   "efficiencySkillMod2Beta",
-   "ZItemTiers",
-   "zdk",
-   "twistorderlychaos"
+   "ShotgunSuppressorB42VWP"
   ]
  },
  "tagOrder": [
   "01 Utils",
-  "03 Frameworks",
   "02 Firsts",
+  "03 Frameworks",
   "04 Maps",
   "05 Vehicles - Items",
   "06 Vehicles - Mechs",
@@ -746,7 +727,7 @@
     "01 Utils"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-1- With Maps": {
    "tags": [
@@ -756,84 +737,84 @@
     "04 Maps"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-2- With Vehicles": {
    "tags": [
     "01 Utils",
     "02 Firsts",
     "03 Frameworks",
+    "06 Vehicles - Mechs",
     "04 Maps",
-    "05 Vehicles - Items",
-    "06 Vehicles - Mechs"
+    "05 Vehicles - Items"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-3- With Stuff": {
    "tags": [
     "01 Utils",
     "02 Firsts",
     "03 Frameworks",
+    "06 Vehicles - Mechs",
     "04 Maps",
     "05 Vehicles - Items",
-    "06 Vehicles - Mechs",
     "07 Weapons",
     "08 Gears",
     "09 Stuff",
     "10 Craft"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-5- Overhaul": {
    "tags": [
     "01 Utils",
     "02 Firsts",
+    "13 Mechs - Expansions",
     "03 Frameworks",
+    "06 Vehicles - Mechs",
     "04 Maps",
     "05 Vehicles - Items",
-    "06 Vehicles - Mechs",
     "07 Weapons",
     "08 Gears",
     "09 Stuff",
     "10 Craft",
     "11 Traits & Skills",
     "12 Mechs - Core",
-    "13 Mechs - Expansions",
     "14 Mechs - Combat",
     "15 Mechs - Environment",
     "16 Balance"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   },
   "-6- Complete": {
    "tags": [
     "01 Utils",
     "02 Firsts",
+    "17 AV",
+    "20 QoL - Actions",
+    "13 Mechs - Expansions",
     "03 Frameworks",
+    "18 QoL - Core UI",
+    "06 Vehicles - Mechs",
     "04 Maps",
     "05 Vehicles - Items",
-    "06 Vehicles - Mechs",
     "07 Weapons",
     "08 Gears",
     "09 Stuff",
     "10 Craft",
     "11 Traits & Skills",
     "12 Mechs - Core",
-    "13 Mechs - Expansions",
     "14 Mechs - Combat",
     "15 Mechs - Environment",
     "16 Balance",
-    "17 AV",
-    "18 QoL - Core UI",
     "19 QoL - Secondary UI",
-    "20 QoL - Actions",
     "21 Patches"
    ],
    "extras": [],
-   "unplaced": []
+   "adds": {}
   }
  },
  "lineOrder": [
@@ -901,10 +882,10 @@
   "21 Patches": "tag",
   "-- Disabled": "tag"
  },
- "cfgFingerprint": "3df832f9e0d3001faa9a9dce517d83039223d1fa",
+ "cfgFingerprint": "e1988573ce4db374706f11cbe5a7413c8f3d8723",
  "dirty": false,
  "conflict": null,
- "lastSeed": "2026-09-15 21:05:59",
+ "lastSeed": "2026-09-06 22:08:02",
  "trailingSep": ";",
  "reloadedAt": ""
 }
