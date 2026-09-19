@@ -8,7 +8,7 @@ backups/
 settings.local.json
 settings.json
 
-CENSUSCENSUS-STAGE2-partial.txt
+CENSUS-STAGE2-partial.txt
 OVERLAP-CENSUS.txt
 OVERLAP-REPORT.md
 PERF-MODS-ANALYSIS.md
