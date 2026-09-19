@@ -1,5 +1,14 @@
 # Python bytecode - regenerated on every run
 __pycache__/
 *.pyc
+.claude/
+Claude outputs/
+backups/
 
 settings.local.json
+settings.json
+
+CENSUSCENSUS-STAGE2-partial.txt
+OVERLAP-CENSUS.txt
+OVERLAP-REPORT.md
+PERF-MODS-ANALYSIS.md
